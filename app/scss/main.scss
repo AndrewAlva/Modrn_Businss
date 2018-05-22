@@ -1,7 +1,17 @@
+@import '_default/vars.scss';
+@import '_default/mixins.scss';
+@import '_default/head-nav.scss';
+@import '_default/sections.scss';
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
 body {
-  font-family: -apple-system, Sans-Serif;
-  text-align: center;
-  font-size: 24pt;
-  color: #fff;
-  background-color: #202020;
+	font-family: -apple-system, Sans-Serif;
+	text-align: center;
+	font-size: 24pt;
+	color: #fff;
+	background-color: #202020;
 }

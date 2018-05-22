@@ -3,13 +3,16 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Andrew Alvarado -- Front End Developer -- @andrew__alva
+    Zero Morales -- Web Designer -- @zero_alex
+
 
 # THANKS
 
-    <name>
+    Ryan Hicks, Host & Executive producer of Modrn Businss
+
 
 # TECHNOLOGY COLOPHON
 
     CSS3, HTML5
-    Apache Server Configs, jQuery, Modernizr, Normalize.css
+    npm, Brunch, jQuery, Waypoints

@@ -1,0 +1,55 @@
+.main-nav-wrapper{
+	z-index: 1000000;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: $header-height;
+	text-align: left;
+
+	.nav-logo{
+		position: relative;
+		display: inline-block;
+		float: left;
+	}
+
+	.inner-nav-wrapper{
+		position: relative;
+		display: inline-block;
+		float: left;
+
+		.list{
+			list-style: none;
+			position: relative;
+			display: table;
+			height: $header-height;
+			font-size: 0.5em;
+			@include smoothFont();
+
+			.single-option{
+				position: relative;
+				display: table-cell;
+				vertical-align: middle;
+				padding: 0 20px;
+
+				&.active{
+					a:before{
+						content: ">";
+						position: relative;
+						margin-right: 10px;
+					}
+				}
+			}
+		}
+
+		a{
+			display: block;
+			text-decoration: none;
+			color: #fff;
+
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+	}
+}

@@ -1,0 +1,48 @@
+@mixin smoothFont(){
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin boxSizeFit(){
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+@mixin dropShadow(){
+	-webkit-box-shadow: 0 2px 3px 2px rgba(52,52,52,0.15);
+	-moz-box-shadow: 0 2px 3px 2px rgba(52,52,52,0.15);
+	box-shadow: 0 2px 3px 2px rgba(52,52,52,0.15);
+}
+
+@mixin displayLeft(){
+	position: relative;
+	float: left;
+	display: inline-block;
+	vertical-align: top;
+	zoom: 1; /* Fix for IE7 */
+	*display: inline; /* Fix for IE7 */
+}
+
+@mixin translate($Xmove, $Ymove){
+    -webkit-transform: translate($Xmove, $Ymove);
+       -moz-transform: translate($Xmove, $Ymove);
+        -ms-transform: translate($Xmove, $Ymove);
+    	 -o-transform: translate($Xmove, $Ymove);
+    		transform: translate($Xmove, $Ymove);
+}
+
+@mixin transitions($timing){
+	-webkit-transition: all $timing cubic-bezier(.65,0,.25,1);
+	   -moz-transition: all $timing cubic-bezier(.65,0,.25,1);
+	    -ms-transition: all $timing cubic-bezier(.65,0,.25,1);
+	     -o-transition: all $timing cubic-bezier(.65,0,.25,1);
+	        transition: all $timing cubic-bezier(.65,0,.25,1);
+}
+
+@mixin opacity($val){
+	opacity: $val;
+	filter: alpha(opacity=($val * 100));
+	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=($val * 100));
+	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(($val * 100))';
+}

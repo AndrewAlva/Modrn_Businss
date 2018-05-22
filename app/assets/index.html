@@ -5,17 +5,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-        <title>Boilerplate | Brunch Sassy ES6 Babel</title>
-        <meta name="description" content="">
+        <title>Modrn Businss | Multi-media platform</title>
+        <meta name="description" content="Modrn Businss is a multi-media platform dedicated to evangelizing entrepreneurship, franchising, and great business technologies.">
 
         <!-- PLACE ORIGINAL FACEBOOK META TAGS -->
             <meta property="fb:admins" content="YOUR_ID_ADMIN_OF_THE_APP" />
             <meta property="fb:app_id" content="PLACE_YOUR_ID" />
             
-            <meta property="og:title" content="PLACE_YOUR_TITLE" />
-            <meta property="og:site_name" content="PLACE_YOUR_SITE_NAME"/>
+            <meta property="og:title" content="Ask, Learn, Grow." />
+            <meta property="og:site_name" content="Modrn Businss"/>
             <meta property="og:url" content="PLACE_YOUR_OFFICIAL_URL" />
-            <meta property="og:description" content="PLACE_YOUR_DESCRIPTION" />
+            <meta property="og:description" content="Modrn Businss is a multi-media platform dedicated to evangelizing entrepreneurship, franchising, and great business technologies." />
 
             <!-- PLACE WHAT KIND OF APP THIS IS -->
             <meta property="og:type" content="website" />
@@ -34,13 +34,60 @@
         <link rel="stylesheet" href="/css/app.css">
     </head>
     <body>
-        <header>
-            <h1>Boilerplate | Brunch Sassy ES6 Babel</h1>
-            <h2>Hello World</h2>
+        <header class="main-nav-wrapper">
+            <figure class="nav-logo">
+                <a class="nav-click" href="#section-01">
+                    <img src="http://via.placeholder.com/60x60" alt="Modrn Businss Logo">
+                </a>
+            </figure>
+
+            <nav class="inner-nav-wrapper">
+                <ul class="list">
+                    <li id="nav-to-s01" class="single-option active">
+                        <a class="nav-click" href="#section-01">
+                            Hello
+                        </a>
+                    </li>
+                    <li id="nav-to-s02" class="single-option">
+                        <a class="nav-click" href="#section-02">
+                            Section 2
+                        </a>
+                    </li>
+                    <li id="nav-to-s03" class="single-option">
+                        <a class="nav-click" href="#section-03">
+                            Section 3
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </header>
 
 
+        <section id="full-wrapper">
+            <section id="section-01" class="single-section">
+                <div class="inner-wrapper">
+                    <h1>I'm section 01</h1>
+                </div>
+            </section>
+
+            <section id="section-02" class="single-section">
+                <div class="inner-wrapper">
+                    <h1>I'm section 02</h1>
+                </div>
+            </section>
+
+            <section id="section-03" class="single-section">
+                <div class="inner-wrapper">
+                    <h1>I'm section 03</h1>
+                </div>
+            </section>
+        </section>
+
+
+        
         <script src="/js/vendor.js"></script>
+        <script src="/js/vendor/noframework.waypoints.min.js"></script>
+        <script src="/js/vendor/jquery-1.11.3.min.js"></script>
         <script src="/js/app.js"></script>
         <script>require('js/initialize');</script>
 
