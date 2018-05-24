@@ -3,14 +3,20 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 83.7%;
 	height: $header-height;
 	text-align: left;
+	font-family: $brand-font-regular;
 
 	.nav-logo{
 		position: relative;
 		display: inline-block;
 		float: left;
+		height: 100%;
+		margin-left: 80px;
+		margin-right: 55px;
+		padding: 38.5px 0;
+		@include boxSizeFit();
 	}
 
 	.inner-nav-wrapper{
@@ -23,20 +29,33 @@
 			position: relative;
 			display: table;
 			height: $header-height;
-			font-size: 0.5em;
+			text-transform: uppercase;
+			font-size: 0.65em;
 			@include smoothFont();
 
 			.single-option{
 				position: relative;
 				display: table-cell;
 				vertical-align: middle;
-				padding: 0 20px;
+
+				a{
+					padding: 0 25px;
+				}
 
 				&.active{
 					a:before{
-						content: ">";
-						position: relative;
-						margin-right: 10px;
+						content: "";
+						position: absolute;
+						width: 0;
+						height: 0;
+						margin: auto;
+						top: 0; bottom: 0; left: 0;
+						border-width: 6px;
+						border-style: solid;
+						border-left-color: $main-blue;
+						border-right-color: transparent;
+						border-top-color: transparent;
+						border-bottom-color: transparent;
 					}
 				}
 			}
