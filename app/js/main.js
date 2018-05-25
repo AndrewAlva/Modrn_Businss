@@ -9,6 +9,14 @@
 	});
 
 
+
+// Parallax init
+	// Doesn't need jQuery either
+	// var scene = document.getElementById('scene');
+	// var parallaxInstance = new Parallax(scene);
+
+
+
 // Header menu smooth click navigation
 	// Wait until jQuery has been loaded
 	$(document).ready(function(){

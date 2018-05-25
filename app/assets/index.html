@@ -78,16 +78,42 @@
 
         <section id="full-wrapper">
             <section id="section-01" class="single-section">
-                <canvas class="triangles-canvas"></canvas>
+                <div id="scene" class="triangles-canvas" viewBox="0 0 1920 900">
+                    <figure data-depth="0.6" class="inner-triangle bg-triangle"></figure>
+                    <figure data-depth="0.4" class="inner-triangle top-triangle"></figure>
+                    <figure data-depth="0.2" class="inner-triangle bottom-triangle"></figure>
+                </div>
 
                 <div class="inner-wrapper">
                     <section id="default-hero" class="shifting-hero-content">
                         <div class="hero-left-col">
-                            <figure class="triangle-bg"></figure>
-                            <img src="img/brand/modrn-businss-logo.png" alt="Modrn Businss Logo">
+                            <svg class="triangle-bg" viewBox="0 0 555 880">
+                                <defs>
+                                    <filter id="shadowBlur-sm" x="0" y="0">
+                                        <feGaussianBlur in="SourceGraphic" stdDeviation="20" />
+                                    </filter>
+                                    <filter id="shadowBlur-md" x="-5%" y="0">
+                                        <feGaussianBlur in="SourceGraphic" stdDeviation="35" />
+                                    </filter>
+                                </defs>
+
+                                <polygon points="20,20 535,460 20,900"
+                                style="fill:rgba(0,0,20,0.35);" filter="url(#shadowBlur-sm)" />
+                                <polygon points="0,0 515,440 0,880"
+                                style="fill:#2f70f4;" />
+                            </svg>
+
+                            <figure class="hero-img">
+                                <!-- Default Hero Image -->
+                                <img class="hero-logo" src="img/brand/modrn-businss-logo.png" alt="Modrn Businss Logo">
+                                
+                                <!-- Podcast Hero Image -->
+                                <!-- <img class="hero-mic" src="http://via.placeholder.com/577x1045" alt=""> -->
+                            </figure>
                         </div>
 
                         <div class="hero-center-col">
+                            <!-- Default Hero -->
                             <h1 class="hero-header">
                                 We create informative & <br>
                                 entertaining content about <br>
@@ -95,10 +121,31 @@
                                 for growth minded <br>
                                 Entrepreneurs.
                             </h1>
-
                             <button class="mb-btn" type="button">
                                 Subscribe
                             </button>
+
+
+                            <!-- Podcast Hero Texts -->
+                            <!-- <h1 id="podcast-header" class="hero-header">
+                                <div class="hero-highlight">Weekly Episodes</div> <br>
+                                with leaders in <br>
+                                franchising & <br>
+                                beyond.
+                            </h1>
+
+                            <div class="hero-channels">
+                                <h6 class="hero-label">Available on:</h6>
+                                <ul class="channels-list">
+                                    <li class="channel"><a href="#"><img src="http://via.placeholder.com/94x27" alt="Channel Logo"></a></li>
+                                    <li class="channel"><a href="#"><img src="http://via.placeholder.com/94x27" alt="Channel Logo"></a></li>
+                                    <li class="channel"><a href="#"><img src="http://via.placeholder.com/94x27" alt="Channel Logo"></a></li>
+                                </ul>
+                                <ul class="channels-list">
+                                    <li class="channel"><a href="#"><img src="http://via.placeholder.com/94x27" alt="Channel Logo"></a></li>
+                                    <li class="channel"><a href="#"><img src="http://via.placeholder.com/94x27" alt="Channel Logo"></a></li>
+                                </ul>
+                            </div> -->
                         </div>
                     </section>
                 </div>
@@ -165,6 +212,7 @@
         <script src="/js/vendor.js"></script>
         <script src="/js/vendor/jquery-1.11.3.min.js"></script>
         <script src="/js/vendor/jquery.waypoints.min.js"></script>
+        <script src="/js/vendor/parallax.min.js"></script>
         <script src="/js/app.js"></script>
         <script>require('js/initialize');</script>
 
