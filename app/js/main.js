@@ -1,7 +1,7 @@
 // Waypoints init
 	// Doesn't need jQuery
 	var waypoint = new Waypoint({
-		element: document.getElementById('section-03'),
+		element: document.getElementById('section-02'),
 		handler: function(direction) {
 			console.log('Basic waypoint triggered. Direction: ' + direction);
 		},
@@ -17,17 +17,72 @@
 
 
 
-// Header menu smooth click navigation
+// Switching topics with typewriter effect functions
+var TxtType = function(el, toRotate, period) {
+    this.toRotate = toRotate;
+    this.el = el;
+    this.loopNum = 0;
+    this.period = parseInt(period, 10) || 3000;
+    this.txt = '';
+    this.tick();
+    this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function() {
+    var i = this.loopNum % this.toRotate.length;
+    var fullTxt = this.toRotate[i];
+
+    if (this.isDeleting) {
+    	this.txt = fullTxt.substring(0, this.txt.length - 1);
+    } else {
+    	this.txt = fullTxt.substring(0, this.txt.length + 1);
+    }
+
+    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+    var that = this;
+    var delta = 150 - Math.random() * 100;
+
+    if (this.isDeleting) { delta /= 2; }
+
+    if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+    } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+    }
+
+    setTimeout(function() {
+    	that.tick();
+    }, delta);
+};
+
+
+
+// Functions dependable of jQuery
 	// Wait until jQuery has been loaded
 	$(document).ready(function(){
 		// Remove loading screen
 			TweenMax.to($('#loaderWrapper'), 0.6, {autoAlpha: 0, display:'none', delay:1, onComplete:insertBodyText});
 
 			function insertBodyText(){
-				TweenMax.staggerTo($('.intro-hero'), 1, {autoAlpha: 1}, 0.1);
+				// Show hidden element at hero section
+					TweenMax.staggerTo($('.intro-hero'), 1, {autoAlpha: 1}, 0.1);
+
+				// Start switching topics at default hero header
+			        var shiftPhrases = $('#mb-topics');
+			        for (var i=0; i<shiftPhrases.length; i++) {
+			            var toRotate = shiftPhrases[i].getAttribute('data-type');
+			            var period = shiftPhrases[i].getAttribute('data-period');
+			            if (toRotate) {
+			            	new TxtType(shiftPhrases[i], JSON.parse(toRotate), period);
+			            }
+			        }
 			}
 
-		// Add smooth scrolling to all nav links
+		// Header menu smooth scrolling to all nav links
 			$(".nav-click").on('click', function(event) {
 			    // Make sure this.hash has a value before overriding default behavior
 			    if (this.hash !== "") {
