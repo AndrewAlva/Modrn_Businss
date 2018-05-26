@@ -1,5 +1,5 @@
 #section-01{
-	overflow: hidden;
+	// overflow: hidden;
 }
 
 .triangles-canvas{
@@ -11,6 +11,7 @@
 	top: 0;
 	left: 0;
 	background-color: #00114e;
+	overflow: hidden;
 
 	.inner-triangle{
 		position: absolute;
@@ -65,15 +66,14 @@
 			}
 
 			.hero-img{
-				top: -95%;
-				left: 0;
+				top: -115%;
 
 				.hero-logo{
 					@include opacity(0);
 				}
 
 				.hero-mic, .hero-book, .hero-tv{
-					@include opacity(1);
+					// @include opacity(1);
 				}
 			}
 		}
@@ -96,6 +96,7 @@
 		width: 36.5%;
 		height: 100%;
 		top: 25px;
+		@include transitions(1s);
 
 		.triangle-bg{
 			position: absolute;
@@ -121,23 +122,24 @@
 			width: 55%;
 			height: 90px;
 			margin: auto;
-			left: 8.1%;
 			top: 30%;
 			bottom: 0;
 			@include transitions(1s);
 
 			.hero-media-photos{
-				@include transitions(1s);
+				// @include transitions(1s);
 			}
 
 			.hero-logo{
 				position: relative;
 				width: 100%;
+				left: 8.1%;
 			}
 
-			.hero-mic, .hero-mic, .hero-tv{
+			.hero-mic, .hero-book, .hero-tv{
 				position: absolute;
 				@include opacity(0);
+				// display: none;
 			}
 		}
 	}
@@ -147,10 +149,11 @@
 		float: left;
 		width: 63.5%;
 		height: 100%;
+		@include transitions(1s);
 
 		.hero-header{
 			position: relative;
-			margin-top: 11%;
+			margin-top: 10%;
 			margin-bottom: 45px;
 			text-align: left;
 			font-family: $brand-font-regular;
@@ -163,6 +166,8 @@
 			.hero-highlight{
 				position: relative;
 				display: inline-block;
+				// line-height: 0.3em;
+				margin-bottom: -20px;
 				color: $main-blue;
 
 				&:after{
@@ -176,6 +181,18 @@
 					background-color: $main-blue-op3;
 				}
 			}
+
+			&#book-header{
+				margin-top: 15%;
+			}
+			&#tv-header{
+				margin-top: 16.5%;
+			}
+		}
+
+		#podcast-hero-content, #book-hero-content, #tv-hero-content{
+			@include opacity(0);
+			display: none;
 		}
 
 		.hero-channels{
@@ -224,7 +241,7 @@
 				}
 
 				.single-card{
-					width: 19.3%;
+					width: 19%;
 					height: 140px;
 					text-align: center;
 					background-color: $timer-cards-bg;
@@ -270,7 +287,7 @@
 				}
 
 				.dots-box{
-					width: 6%;
+					width: 5.4%;
 					height: 140px;
 
 					.dot{
@@ -294,7 +311,7 @@
 
 			.timer-cta{
 				position: relative;
-				
+				width: 97%;
 				margin-top: 50px;
 				@include smoothFont();
 				font-family: $brand-font-regular;

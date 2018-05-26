@@ -1,6 +1,7 @@
 @import '_default/vars.scss';
 @import '_default/fonts.scss';
 @import '_default/mixins.scss';
+@import '_default/loader.scss';
 @import '_default/head-nav.scss';
 @import '_default/sections.scss';
 @import '_default/buttons.scss';
@@ -16,7 +17,7 @@ body {
 	font-family: -apple-system, Sans-Serif;
 	font-size: 20px;
 	color: #fff;
-	background-color: #202020;
+	background-color: #00114e;
 }
 
 #tester{

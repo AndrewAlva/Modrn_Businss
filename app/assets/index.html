@@ -37,8 +37,12 @@
         <!-- <div id="tester"></div> -->
         <!-- <div id="tester2"></div> -->
 
+        <section id="loaderWrapper">
+            <img src="img/brand/mb-logo.png" alt="Modrn Businss Logo">
+        </section>
+
         <header class="main-nav-wrapper">
-            <figure class="nav-logo">
+            <figure id="home-trigger" class="nav-logo intro-hero">
                 <a class="nav-click" href="#section-01">
                     <img src="img/brand/mb-logo.png" alt="Modrn Businss Logo">
                 </a>
@@ -46,27 +50,27 @@
 
             <nav class="inner-nav-wrapper">
                 <ul class="list">
-                    <li class="single-option active">
+                    <li class="single-option active intro-hero">
                         <a class="nav-click" href="#section-02">
                             About
                         </a>
                     </li>
-                    <li class="single-option">
+                    <li class="single-option active intro-hero">
                         <a class="nav-click" href="#section-03">
                             Top 5
                         </a>
                     </li>
-                    <li class="single-option">
+                    <li class="single-option active intro-hero">
                         <a class="nav-click" href="#section-04">
                             Founder
                         </a>
                     </li>
-                    <li class="single-option">
+                    <li class="single-option active intro-hero">
                         <a class="nav-click" href="#section-05">
                             Book
                         </a>
                     </li>
-                    <li class="single-option">
+                    <li class="single-option active intro-hero">
                         <a class="nav-click" href="#section-06">
                             Contact
                         </a>
@@ -78,15 +82,16 @@
 
         <section id="full-wrapper">
             <section id="section-01" class="single-section">
-                <div id="scene" class="triangles-canvas" viewBox="0 0 1920 900">
+                <div id="scene" class="triangles-canvas intro-hero" viewBox="0 0 1920 900">
                     <figure data-depth="0.6" class="inner-triangle bg-triangle"></figure>
                     <figure data-depth="0.4" class="inner-triangle top-triangle"></figure>
                     <figure data-depth="0.2" class="inner-triangle bottom-triangle"></figure>
                 </div>
 
                 <div class="inner-wrapper">
-                    <section id="default-hero" class="shifting-hero-content media-display">
-                        <div class="hero-left-col">
+                    <!-- Add/Remove "media-display" class to shift content -->
+                    <section id="default-hero" class="shifting-hero-content">
+                        <div class="hero-left-col intro-hero">
                             <svg class="triangle-bg" viewBox="0 0 555 880">
                                 <defs>
                                     <filter id="shadowBlur-sm" x="0" y="0">
@@ -105,140 +110,148 @@
 
                             <figure class="hero-img">
                                 <!-- Default Hero Image -->
-                                <!-- <img class="hero-logo hero-media-photos" src="img/brand/modrn-businss-logo.png" alt="Modrn Businss Logo"> -->
+                                <img id="logo-photo" class="hero-logo hero-media-photos" src="/img/brand/modrn-businss-logo.png" alt="Modrn Businss Logo">
                                 
                                 <!-- Podcast Hero Image -->
-                                <!-- <img class="hero-mic hero-media-photos" src="http://via.placeholder.com/490x690" alt="Modrn Businss Podcast"> -->
+                                <img id="podcast-photo" class="hero-mic hero-media-photos" src="/img/photos/podcast-photo.png" alt="Modrn Businss Podcast">
                                 
                                 <!-- Book Hero Image -->
-                                <img class="hero-mic hero-media-photos" src="http://via.placeholder.com/760x690" alt="Modrn Businss Podcast">
+                                <img id="book-photo" class="hero-book hero-media-photos" src="/img/photos/book-photo.png" alt="Modrn Businss Podcast">
 
                                 <!-- TV Hero Image -->
-                                <!-- <img class="hero-tv hero-media-photos" src="http://via.placeholder.com/645x690" alt="Modrn Businss TV"> -->
+                                <img id="tv-photo" class="hero-tv hero-media-photos" src="/img/photos/tv-photo.png" alt="Modrn Businss TV">
                             </figure>
                         </div>
 
-                        <div class="hero-center-col">
+                        <div class="hero-center-col intro-hero">
                             <!-- Default Hero -->
-                            <!-- <h1 id="default-header" class="hero-header">
-                                We create informative & <br>
-                                entertaining content about <br>
-                                <div class="hero-highlight">Entrepreneurship</div> <br>
-                                for growth minded <br>
-                                Entrepreneurs.
-                            </h1>
-                            <button id="default-hero-subscribe" class="mb-btn" type="button">
-                                Subscribe
-                            </button> -->
+                            <div id="default-hero-content">
+                                <h1 id="default-header" class="hero-header">
+                                    We create informative & <br>
+                                    entertaining content about <br>
+                                    <div class="hero-highlight">Entrepreneurship</div> <br>
+                                    for growth minded <br>
+                                    Entrepreneurs.
+                                </h1>
+                                <button id="default-hero-subscribe" class="mb-btn" type="button">
+                                    Subscribe
+                                </button>
+                            </div>
 
 
                             <!-- Podcast Hero Texts -->
-                            <!-- <h1 id="podcast-header" class="hero-header">
-                                <div class="hero-highlight">Weekly Episodes</div> <br>
-                                with leaders in <br>
-                                franchising & <br>
-                                beyond.
-                            </h1>
+                            <div id="podcast-hero-content">
+                                <h1 id="podcast-header" class="hero-header">
+                                    <div class="hero-highlight">Weekly Episodes</div> <br>
+                                    with leaders in <br>
+                                    franchising & <br>
+                                    beyond.
+                                </h1>
 
-                            <div class="hero-channels">
-                                <h6 class="hero-label">Available on:</h6>
-                                <ul class="channels-list">
-                                    <li class="channel"><a href="#"><img src="/img/channels/itunes.png" alt="iTunes Logo"></a></li>
-                                    <li class="channel"><a href="#"><img src="/img/channels/spotify.png" alt="Spotify Logo"></a></li>
-                                    <li class="channel"><a href="#"><img src="/img/channels/stitcher.png" alt="Stitcher Logo"></a></li>
-                                </ul>
-                                <ul class="channels-list">
-                                    <li class="channel"><a href="#"><img src="/img/channels/soundcloud.png" alt="Soundcloud Logo"></a></li>
-                                    <li class="channel"><a href="#"><img src="/img/channels/overcast.png" alt="Overcast Logo"></a></li>
-                                </ul>
-                            </div> -->
+                                <div class="hero-channels">
+                                    <h6 class="hero-label">Available on:</h6>
+                                    <ul class="channels-list">
+                                        <li class="channel"><a href="#"><img src="/img/channels/itunes.png" alt="iTunes Logo"></a></li>
+                                        <li class="channel"><a href="#"><img src="/img/channels/spotify.png" alt="Spotify Logo"></a></li>
+                                        <li class="channel"><a href="#"><img src="/img/channels/stitcher.png" alt="Stitcher Logo"></a></li>
+                                    </ul>
+                                    <ul class="channels-list">
+                                        <li class="channel"><a href="#"><img src="/img/channels/soundcloud.png" alt="Soundcloud Logo"></a></li>
+                                        <li class="channel"><a href="#"><img src="/img/channels/overcast.png" alt="Overcast Logo"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
 
 
                             <!-- Book Hero Texts -->
-                            <h1 id="book-header" class="hero-header">
-                                Coming out <div class="hero-highlight">This Year.</div>
-                            </h1>
+                            <div id="book-hero-content">
+                                <h1 id="book-header" class="hero-header">
+                                    Coming out <div class="hero-highlight">This Year.</div>
+                                </h1>
 
-                            <div class="hero-timer">
-                                <ul class="timer-cards">
-                                    <li id="01" class="single-card">
-                                        <h5 class="counter">95</h5>
-                                        <span class="card-label">D</span>
-                                    </li>
-                                    <li class="dots-box">
-                                        <div class="dot upper-dot"></div>
-                                        <div class="dot lower-dot"></div>
-                                    </li>
-
-
-                                    <li id="02" class="single-card">
-                                        <h5 class="counter">81</h5>
-                                        <span class="card-label">H</span>
-                                    </li>
-                                    <li class="dots-box">
-                                        <div class="dot upper-dot"></div>
-                                        <div class="dot lower-dot"></div>
-                                    </li>
+                                <div class="hero-timer">
+                                    <ul class="timer-cards">
+                                        <li id="01" class="single-card">
+                                            <h5 id="countdown-days" class="counter">--</h5>
+                                            <span class="card-label">D</span>
+                                        </li>
+                                        <li class="dots-box">
+                                            <div class="dot upper-dot"></div>
+                                            <div class="dot lower-dot"></div>
+                                        </li>
 
 
-                                    <li id="03" class="single-card">
-                                        <h5 class="counter">45</h5>
-                                        <span class="card-label">M</span>
-                                    </li>
-                                    <li class="dots-box">
-                                        <div class="dot upper-dot"></div>
-                                        <div class="dot lower-dot"></div>
-                                    </li>
+                                        <li id="02" class="single-card">
+                                            <h5 id="countdown-hours" class="counter">--</h5>
+                                            <span class="card-label">H</span>
+                                        </li>
+                                        <li class="dots-box">
+                                            <div class="dot upper-dot"></div>
+                                            <div class="dot lower-dot"></div>
+                                        </li>
 
 
-                                    <li id="04" class="single-card">
-                                        <h5 class="counter">19</h5>
-                                        <span class="card-label">S</span>
-                                    </li>
-                                </ul>
+                                        <li id="03" class="single-card">
+                                            <h5 id="countdown-mins" class="counter">--</h5>
+                                            <span class="card-label">M</span>
+                                        </li>
+                                        <li class="dots-box">
+                                            <div class="dot upper-dot"></div>
+                                            <div class="dot lower-dot"></div>
+                                        </li>
 
-                                <p class="timer-cta">
-                                    Time left to book launch
-                                </p>
+
+                                        <li id="04" class="single-card">
+                                            <h5 id="countdown-secs" class="counter">--</h5>
+                                            <span class="card-label">S</span>
+                                        </li>
+                                    </ul>
+
+                                    <p class="timer-cta">
+                                        Time left to book launch
+                                    </p>
+                                </div>
                             </div>
 
 
                             <!-- TV Hero Texts -->
-                            <!-- <h1 id="tv-header" class="hero-header">
-                                Taking you across <br>
-                                America to meet <br>
-                                <div class="hero-highlight">Great Leaders.</div>
-                            </h1>
+                            <div id="tv-hero-content">
+                                <h1 id="tv-header" class="hero-header">
+                                    Taking you across <br>
+                                    America to meet <br>
+                                    <div class="hero-highlight">Great Leaders.</div>
+                                </h1>
 
-                            <div class="hero-channels">
-                                <h6 class="hero-label">Available on:</h6>
-                                <ul class="channels-list">
-                                    <li class="channel"><a href="#"><img src="/img/channels/youtube.png" alt="Youtube Logo"></a></li>
-                                    <li class="channel"><a href="#"><img src="/img/channels/apple_tv.png" alt="Apple TV Logo"></a></li>
-                                    <li class="channel"><a href="#"><img src="/img/channels/amazon_prime.png" alt="Amazon Prime Logo"></a></li>
-                                </ul>
-                            </div> -->
+                                <div class="hero-channels">
+                                    <h6 class="hero-label">Available on:</h6>
+                                    <ul class="channels-list">
+                                        <li class="channel"><a href="#"><img src="/img/channels/youtube.png" alt="Youtube Logo"></a></li>
+                                        <li class="channel"><a href="#"><img src="/img/channels/apple_tv.png" alt="Apple TV Logo"></a></li>
+                                        <li class="channel"><a href="#"><img src="/img/channels/amazon_prime.png" alt="Amazon Prime Logo"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </section>
                 </div>
 
                 <aside class="hero-nav">
                     <ul class="media-triggers">
-                        <li id="podcast-trigger" class="media-button single-trigger">
+                        <li id="podcast-trigger" class="media-button single-trigger intro-hero">
                             <div class="media-label">
                                 <img src="img/brand/mic-symbol.png" alt="Podcast Symbol">
                                 <h2>Podcast</h2>
                             </div>
                         </li>
 
-                        <li id="book-trigger" class="media-button single-trigger">
+                        <li id="book-trigger" class="media-button single-trigger intro-hero">
                             <div class="media-label">
                                 <img src="img/brand/book-symbol.png" alt="Book Series Symbol">
                                 <h2>Book Series</h2>
                             </div>
                         </li>
 
-                        <li id="tv-trigger" class="media-button single-trigger">
+                        <li id="tv-trigger" class="media-button single-trigger intro-hero">
                             <div class="media-label">
                                 <img src="img/brand/tv-symbol.png" alt="TV Show Symbol">
                                 <h2>TV Show</h2>

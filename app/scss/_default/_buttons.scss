@@ -4,7 +4,7 @@
 	color: #fff;
 	border: none;
 	padding: 1px 25px;
-	margin-top: 15px;
+	margin-top: 20px;
 	text-transform: uppercase;
 	font-family: $brand-font-regular;
 	font-size: 0.8em;
@@ -19,14 +19,14 @@
 		@include transitions(0.4s);
 	}
 	&:before{
-		bottom: 98%;
-		border-bottom: 15px solid $main-blue;
-		border-right: 15px solid transparent;
+		bottom: 99%;
+		border-bottom: 20px solid $main-blue;
+		border-right: 20px solid transparent;
 	}
 	&:after{
-		top: 98%;
-		border-top: 15px solid $main-blue;
-		border-left: 15px solid transparent;
+		top: 99%;
+		border-top: 20px solid $main-blue;
+		border-left: 20px solid transparent;
 	}
 
 
