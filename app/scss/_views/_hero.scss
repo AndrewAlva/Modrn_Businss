@@ -1,5 +1,5 @@
 #section-01{
-	// overflow: hidden;
+	overflow: hidden;
 }
 
 .triangles-canvas{
@@ -62,19 +62,8 @@
 
 			.triangle-bg{
 				width: 137%;
-				top: 74%;
-			}
-
-			.hero-img{
-				top: -115%;
-
-				.hero-logo{
-					@include opacity(0);
-				}
-
-				.hero-mic, .hero-book, .hero-tv{
-					// @include opacity(1);
-				}
+				top: -8%;
+				bottom: auto;
 			}
 		}
 
@@ -102,8 +91,7 @@
 			position: absolute;
 			width: 93%;
 			margin: auto;
-			top: 30%;
-			bottom: 0;
+			top: 8%;
 			@include transitions(1s);
 			// @include translate(0, 19%);
 
@@ -119,27 +107,31 @@
 
 		.hero-img{
 			position: absolute;
-			width: 55%;
-			height: 90px;
-			margin: auto;
-			top: 30%;
-			bottom: 0;
+			width: 100%;
+			height: 100%;
+			top: 0;
 			@include transitions(1s);
-
-			.hero-media-photos{
-				// @include transitions(1s);
-			}
 
 			.hero-logo{
 				position: relative;
-				width: 100%;
+				width: 55.4%;
 				left: 8.1%;
+				top: 23.5vw;
 			}
 
 			.hero-mic, .hero-book, .hero-tv{
 				position: absolute;
+				left: 0;
 				@include opacity(0);
-				// display: none;
+			}
+			.hero-mic{
+				width: 72.2%;
+			}
+			.hero-book{
+				width: 112%;
+			}
+			.hero-tv{
+				width: 95.13%;
 			}
 		}
 	}
@@ -156,12 +148,6 @@
 			margin-top: 10%;
 			margin-bottom: 45px;
 			text-align: left;
-			font-family: $brand-font-regular;
-			font-size: 3.75em;
-			line-height: 0.92em;
-			font-weight: lighter;
-			letter-spacing: -0.05em;
-			@include smoothFont();
 
 			.hero-highlight{
 				position: relative;
@@ -266,7 +252,6 @@
 					.counter{
 						font-family: $title-font-light;
 						@include smoothFont();
-						font-size: 6.2em; /* Fallback */
 						font-size: 6.5vw;
 						font-weight: lighter;
 						line-height: 165px;
@@ -324,11 +309,14 @@
 }
 
 .hero-nav{
+	z-index: 1;
 	position: absolute;
 	top: 0;
 	right: 0;
 	width: 16.2%;
 	height: 100%;
+	min-height: 699px;
+	max-height: 1000px;
 
 	.media-triggers{
 		list-style: none;

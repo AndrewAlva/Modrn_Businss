@@ -2,6 +2,7 @@
 @import '_default/fonts.scss';
 @import '_default/mixins.scss';
 @import '_default/loader.scss';
+@import '_default/titles.scss';
 @import '_default/head-nav.scss';
 @import '_default/sections.scss';
 @import '_default/buttons.scss';
@@ -28,9 +29,8 @@ body {
 	margin: auto;
 
 	width: 100%;
-	height: 9px;
-	bottom: 0; top: 111px;
-	left: 0;
+	height: 90px;
+	top: 0;
 }
 
 #tester2{

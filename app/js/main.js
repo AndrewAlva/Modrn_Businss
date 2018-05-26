@@ -21,32 +21,32 @@
 	// Wait until jQuery has been loaded
 	$(document).ready(function(){
 		// Remove loading screen
-		TweenMax.to($('#loaderWrapper'), 0.6, {autoAlpha: 0, display:'none', delay:1, onComplete:insertBodyText});
+			TweenMax.to($('#loaderWrapper'), 0.6, {autoAlpha: 0, display:'none', delay:1, onComplete:insertBodyText});
 
-		function insertBodyText(){
-			TweenMax.staggerTo($('.intro-hero'), 1, {autoAlpha: 1}, 0.1);
-		}
+			function insertBodyText(){
+				TweenMax.staggerTo($('.intro-hero'), 1, {autoAlpha: 1}, 0.1);
+			}
 
-		// Add smooth scrolling to all links
-		$(".nav-click").on('click', function(event) {
-		    // Make sure this.hash has a value before overriding default behavior
-		    if (this.hash !== "") {
-				// Prevent default anchor click behavior
-				event.preventDefault();
+		// Add smooth scrolling to all nav links
+			$(".nav-click").on('click', function(event) {
+			    // Make sure this.hash has a value before overriding default behavior
+			    if (this.hash !== "") {
+					// Prevent default anchor click behavior
+					event.preventDefault();
 
-				// Store hash
-				var hash = this.hash;
+					// Store hash
+					var hash = this.hash;
 
-				// Using jQuery's animate() method to add smooth page scroll
-				// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-				$('html, body').animate({
-					scrollTop: $(hash).offset().top
-				}, 1000, function(){
-			        // Add hash (#) to URL when done scrolling (default click behavior)
-			    	window.location.hash = hash;
-			    });
-		    } // End if
-	  	});
+					// Using jQuery's animate() method to add smooth page scroll
+					// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+					$('html, body').animate({
+						scrollTop: $(hash).offset().top
+					}, 1000, function(){
+				        // Add hash (#) to URL when done scrolling (default click behavior)
+				    	window.location.hash = hash;
+				    });
+			    } // End if
+		  	});
 
 
 		// Hero section content shifting triggers
@@ -112,7 +112,6 @@
 							.to($('#podcast-hero-content'), 0.6, {autoAlpha: 1, display:'block'});
 						TweenMax.to($('#tv-photo'), 0.6, {autoAlpha: 0});
 						break;
-
 				}
 
 				activeHero = "podcast";
@@ -144,7 +143,6 @@
 							.to($('#book-hero-content'), 0.6, {autoAlpha: 1, display:'block'});
 						TweenMax.to($('#tv-photo'), 0.6, {autoAlpha: 0});
 						break;
-
 				}
 
 				activeHero = "book";
@@ -176,7 +174,6 @@
 							.to($('#tv-hero-content'), 0.6, {autoAlpha: 1, display:'block'});
 						TweenMax.to($('#podcast-photo'), 0.6, {autoAlpha: 0});
 						break;
-
 				}
 
 				activeHero = "tv";
