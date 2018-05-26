@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="inner-wrapper">
-                    <section id="default-hero" class="shifting-hero-content">
+                    <section id="default-hero" class="shifting-hero-content media-display">
                         <div class="hero-left-col">
                             <svg class="triangle-bg" viewBox="0 0 555 880">
                                 <defs>
@@ -105,25 +105,31 @@
 
                             <figure class="hero-img">
                                 <!-- Default Hero Image -->
-                                <img class="hero-logo" src="img/brand/modrn-businss-logo.png" alt="Modrn Businss Logo">
+                                <!-- <img class="hero-logo hero-media-photos" src="img/brand/modrn-businss-logo.png" alt="Modrn Businss Logo"> -->
                                 
                                 <!-- Podcast Hero Image -->
-                                <!-- <img class="hero-mic" src="http://via.placeholder.com/577x1045" alt=""> -->
+                                <!-- <img class="hero-mic hero-media-photos" src="http://via.placeholder.com/490x690" alt="Modrn Businss Podcast"> -->
+                                
+                                <!-- Book Hero Image -->
+                                <img class="hero-mic hero-media-photos" src="http://via.placeholder.com/760x690" alt="Modrn Businss Podcast">
+
+                                <!-- TV Hero Image -->
+                                <!-- <img class="hero-tv hero-media-photos" src="http://via.placeholder.com/645x690" alt="Modrn Businss TV"> -->
                             </figure>
                         </div>
 
                         <div class="hero-center-col">
                             <!-- Default Hero -->
-                            <h1 class="hero-header">
+                            <!-- <h1 id="default-header" class="hero-header">
                                 We create informative & <br>
                                 entertaining content about <br>
                                 <div class="hero-highlight">Entrepreneurship</div> <br>
                                 for growth minded <br>
                                 Entrepreneurs.
                             </h1>
-                            <button class="mb-btn" type="button">
+                            <button id="default-hero-subscribe" class="mb-btn" type="button">
                                 Subscribe
-                            </button>
+                            </button> -->
 
 
                             <!-- Podcast Hero Texts -->
@@ -137,13 +143,79 @@
                             <div class="hero-channels">
                                 <h6 class="hero-label">Available on:</h6>
                                 <ul class="channels-list">
-                                    <li class="channel"><a href="#"><img src="http://via.placeholder.com/94x27" alt="Channel Logo"></a></li>
-                                    <li class="channel"><a href="#"><img src="http://via.placeholder.com/94x27" alt="Channel Logo"></a></li>
-                                    <li class="channel"><a href="#"><img src="http://via.placeholder.com/94x27" alt="Channel Logo"></a></li>
+                                    <li class="channel"><a href="#"><img src="/img/channels/itunes.png" alt="iTunes Logo"></a></li>
+                                    <li class="channel"><a href="#"><img src="/img/channels/spotify.png" alt="Spotify Logo"></a></li>
+                                    <li class="channel"><a href="#"><img src="/img/channels/stitcher.png" alt="Stitcher Logo"></a></li>
                                 </ul>
                                 <ul class="channels-list">
-                                    <li class="channel"><a href="#"><img src="http://via.placeholder.com/94x27" alt="Channel Logo"></a></li>
-                                    <li class="channel"><a href="#"><img src="http://via.placeholder.com/94x27" alt="Channel Logo"></a></li>
+                                    <li class="channel"><a href="#"><img src="/img/channels/soundcloud.png" alt="Soundcloud Logo"></a></li>
+                                    <li class="channel"><a href="#"><img src="/img/channels/overcast.png" alt="Overcast Logo"></a></li>
+                                </ul>
+                            </div> -->
+
+
+                            <!-- Book Hero Texts -->
+                            <h1 id="book-header" class="hero-header">
+                                Coming out <div class="hero-highlight">This Year.</div>
+                            </h1>
+
+                            <div class="hero-timer">
+                                <ul class="timer-cards">
+                                    <li id="01" class="single-card">
+                                        <h5 class="counter">95</h5>
+                                        <span class="card-label">D</span>
+                                    </li>
+                                    <li class="dots-box">
+                                        <div class="dot upper-dot"></div>
+                                        <div class="dot lower-dot"></div>
+                                    </li>
+
+
+                                    <li id="02" class="single-card">
+                                        <h5 class="counter">81</h5>
+                                        <span class="card-label">H</span>
+                                    </li>
+                                    <li class="dots-box">
+                                        <div class="dot upper-dot"></div>
+                                        <div class="dot lower-dot"></div>
+                                    </li>
+
+
+                                    <li id="03" class="single-card">
+                                        <h5 class="counter">45</h5>
+                                        <span class="card-label">M</span>
+                                    </li>
+                                    <li class="dots-box">
+                                        <div class="dot upper-dot"></div>
+                                        <div class="dot lower-dot"></div>
+                                    </li>
+
+
+                                    <li id="04" class="single-card">
+                                        <h5 class="counter">19</h5>
+                                        <span class="card-label">S</span>
+                                    </li>
+                                </ul>
+
+                                <p class="timer-cta">
+                                    Time left to book launch
+                                </p>
+                            </div>
+
+
+                            <!-- TV Hero Texts -->
+                            <!-- <h1 id="tv-header" class="hero-header">
+                                Taking you across <br>
+                                America to meet <br>
+                                <div class="hero-highlight">Great Leaders.</div>
+                            </h1>
+
+                            <div class="hero-channels">
+                                <h6 class="hero-label">Available on:</h6>
+                                <ul class="channels-list">
+                                    <li class="channel"><a href="#"><img src="/img/channels/youtube.png" alt="Youtube Logo"></a></li>
+                                    <li class="channel"><a href="#"><img src="/img/channels/apple_tv.png" alt="Apple TV Logo"></a></li>
+                                    <li class="channel"><a href="#"><img src="/img/channels/amazon_prime.png" alt="Amazon Prime Logo"></a></li>
                                 </ul>
                             </div> -->
                         </div>
@@ -212,6 +284,7 @@
         <script src="/js/vendor.js"></script>
         <script src="/js/vendor/jquery-1.11.3.min.js"></script>
         <script src="/js/vendor/jquery.waypoints.min.js"></script>
+        <script src="/js/vendor/TweenMax.min.js"></script>
         <script src="/js/vendor/parallax.min.js"></script>
         <script src="/js/app.js"></script>
         <script>require('js/initialize');</script>

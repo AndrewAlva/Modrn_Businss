@@ -55,6 +55,41 @@
 	width: 83.7%;
 	height: 100%;
 
+	&.media-display{
+		.hero-left-col{
+			width: 42.2%;
+
+			.triangle-bg{
+				width: 137%;
+				top: 74%;
+			}
+
+			.hero-img{
+				top: -95%;
+				left: 0;
+
+				.hero-logo{
+					@include opacity(0);
+				}
+
+				.hero-mic, .hero-book, .hero-tv{
+					@include opacity(1);
+				}
+			}
+		}
+
+		.hero-center-col{
+			width: 57.8%;
+
+			#default-header{
+				@include opacity(0);
+			}
+			#default-hero-subscribe{
+				@include opacity(0);
+			}
+		}
+	}
+
 	.hero-left-col{
 		position: relative;
 		float: left;
@@ -68,6 +103,7 @@
 			margin: auto;
 			top: 30%;
 			bottom: 0;
+			@include transitions(1s);
 			// @include translate(0, 19%);
 
 			// width: 0;
@@ -88,15 +124,20 @@
 			left: 8.1%;
 			top: 30%;
 			bottom: 0;
+			@include transitions(1s);
+
+			.hero-media-photos{
+				@include transitions(1s);
+			}
 
 			.hero-logo{
 				position: relative;
 				width: 100%;
 			}
 
-			.hero-mic{
+			.hero-mic, .hero-mic, .hero-tv{
 				position: absolute;
-				bottom: 0;
+				@include opacity(0);
 			}
 		}
 	}
@@ -116,12 +157,11 @@
 			font-size: 3.75em;
 			line-height: 0.92em;
 			font-weight: lighter;
-			letter-spacing: -0.08em;
+			letter-spacing: -0.05em;
 			@include smoothFont();
 
 			.hero-highlight{
 				position: relative;
-				height: 0;
 				display: inline-block;
 				color: $main-blue;
 
@@ -136,10 +176,6 @@
 					background-color: $main-blue-op3;
 				}
 			}
-		}
-
-		#podcast-header{
-			margin-top: 30%;
 		}
 
 		.hero-channels{
@@ -159,7 +195,7 @@
 				list-style: none;
 
 				&:last-child{
-					margin-top: 30px;
+					margin-top: 20px;
 				}
 
 				.channel{
@@ -171,6 +207,100 @@
 						margin-left: 0;
 					}
 				}
+			}
+		}
+
+		.hero-timer{
+			position: relative;
+			width: 77.8%;
+			top: 30px;
+
+			.timer-cards{
+				list-style: none;
+
+				li{
+					position: relative;
+					display: inline-block;
+				}
+
+				.single-card{
+					width: 19.3%;
+					height: 140px;
+					text-align: center;
+					background-color: $timer-cards-bg;
+					@include drawShadow(-6px, 18px, 20px, 3px, rgba(0, 0, 22, 0.3));
+
+					&:before, &:after{
+						content: "";
+						position: absolute;
+						left: 0; right: 0;
+					}
+					&:before{
+						bottom: 99.5%;
+						border-bottom: 15px solid $timer-cards-bg;
+						border-right: 15px solid transparent;
+					}
+					&:after{
+						top: 99.5%;
+						border-top: 15px solid $timer-cards-bg;
+						border-left: 15px solid transparent;
+					}
+
+					.counter{
+						font-family: $title-font-light;
+						@include smoothFont();
+						font-size: 6.2em; /* Fallback */
+						font-size: 6.5vw;
+						font-weight: lighter;
+						line-height: 165px;
+						position: absolute;
+						margin: auto;
+						left: 0; right: 0;
+					}
+					.card-label{
+						font-family: $brand-font-regular;
+						@include smoothFont();
+						font-size: 0.6em;
+						position: absolute;
+						margin: auto;
+						left: 0; right: 0;
+						bottom: -40px;
+						color: $main-blue;
+					}
+				}
+
+				.dots-box{
+					width: 6%;
+					height: 140px;
+
+					.dot{
+						position: absolute;
+						width: 4px;
+						height: 4px;
+						border-radius: 50%;
+						margin: auto;
+						top: 0; bottom: 0;
+						left: 0; right: 0;
+						background-color: #fff;
+					}
+					.upper-dot{
+						top: -32px;
+					}
+					.lower-dot{
+						bottom: -32px;
+					}
+				}
+			}
+
+			.timer-cta{
+				position: relative;
+				
+				margin-top: 50px;
+				@include smoothFont();
+				font-family: $brand-font-regular;
+				font-size: 0.8em;
+				text-align: right;
+				text-transform: uppercase;
 			}
 		}
 	}
