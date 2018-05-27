@@ -1,0 +1,97 @@
+.what-we-do{
+	.intro-title{
+		color: $main-blue;		
+	}
+
+	.intro-description{
+		color: $body-color;
+		// width: 35.2%;
+		width: 685px;
+	}
+
+	.bullets-table{
+		position: relative;
+		width: 1200px;
+		margin: 0 auto;
+		margin-bottom: 100px;
+		overflow: hidden;
+
+		.bulleted-column{
+			position: relative;
+			display: inline-block;
+			float: left;
+			@include boxSizeFit();
+			padding: 0 20px;
+
+			&.half-sized{
+				width: 50%;
+			}
+
+			.column-intro{
+				position: relative;
+				display: table;
+				vertical-align: middle;
+				padding-bottom: 40px;
+
+				.column-icon, .column-title{
+					position: relative;
+					display: table-cell;
+					vertical-align: middle;
+				}
+				.column-title{
+					font-family: $brand-font-bold;
+					color: $dark-titles;
+					left: 32px;
+					font-size: 1.3em;
+					letter-spacing: -0.03em;
+					@include smoothFont();
+				}
+			}
+
+			.custom-bullets-list{
+				list-style: none;
+
+				&.circle-bullets{
+					& li:before{
+						width: 10px;
+						height: 10px;
+						background-color: $circle-bullet-color;
+						border-radius: 50%;
+						margin-top: 12px;
+					}
+				}
+				&.triangle-bullets{
+					& li:before{
+						width: 0;
+						height: 0;
+						border-left: 10px solid $main-blue;
+						border-top: 10px solid transparent;
+						border-bottom: 10px solid transparent;
+						margin-top: 7px;
+					}
+				}
+
+				li{
+					@include boxSizeFit();
+					padding-left: 35px;
+
+					&:before{
+						content: "";
+						position: absolute;
+						left: 23px;
+					}
+				}
+
+				.features{
+					font-family: $brand-font-regular;
+					color: $body-color;
+					font-size: 1.3em;
+					letter-spacing: -0.03em;
+					padding: 10px 0 10px 28px;
+					font-weight: lighter;
+					@include smoothFont();
+				}
+			}
+		}
+	}
+}

@@ -2,12 +2,13 @@
 @import '_default/fonts.scss';
 @import '_default/mixins.scss';
 @import '_default/loader.scss';
-@import '_default/titles.scss';
+@import '_default/texts.scss';
 @import '_default/head-nav.scss';
 @import '_default/sections.scss';
 @import '_default/buttons.scss';
 
 @import '_views/hero.scss';
+@import '_views/about.scss';
 
 *{
 	margin: 0;
