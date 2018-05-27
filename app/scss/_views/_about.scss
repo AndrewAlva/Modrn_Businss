@@ -11,7 +11,7 @@
 
 	.bullets-table{
 		position: relative;
-		width: 1200px;
+		width: 1180px;
 		margin: 0 auto;
 		margin-bottom: 100px;
 		overflow: hidden;
@@ -39,12 +39,8 @@
 					vertical-align: middle;
 				}
 				.column-title{
-					font-family: $brand-font-bold;
 					color: $dark-titles;
 					left: 32px;
-					font-size: 1.3em;
-					letter-spacing: -0.03em;
-					@include smoothFont();
 				}
 			}
 
@@ -85,8 +81,8 @@
 				.features{
 					font-family: $brand-font-regular;
 					color: $body-color;
-					font-size: 1.3em;
-					letter-spacing: -0.03em;
+					font-size: 1.28em;
+					letter-spacing: -0.02em;
 					padding: 10px 0 10px 28px;
 					font-weight: lighter;
 					@include smoothFont();
@@ -95,3 +91,241 @@
 		}
 	}
 }
+
+.about-break{
+	position: relative;
+	width: 100%;
+
+	.bg-elements{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		background-color: $main-blue;
+
+		.triangle{
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-top-color: transparent;
+			border-bottom-color: transparent;
+			border-top-style: solid;
+			border-bottom-style: solid;
+
+			&.point-right{}
+			&.point-left{}
+
+			&.t-01{
+				top: 9%;
+				left: 65%;
+				border-left: 70px solid #739ff7;
+				border-top-width: 70px;
+				border-bottom-width: 70px;
+				@include opacity(0.2);
+			}
+			&.t-02{
+				top: -25%;
+				left: 82%;
+
+				border-right: 172px solid #739ff7;
+				border-top-width: 172px;
+				border-bottom-width: 172px;
+				@include opacity(0.2);
+			}
+		}
+
+		.mask-triangle{
+			position: absolute;
+			width: 806px;
+			height: 806px;
+			overflow: hidden;
+			top: 50%;
+			right: 0;
+			@include translate(0, -38%);
+			@include opacity(0.18);
+
+			.inner-triangle{
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 50%;
+				right: -10%;
+				// @include transformFrom(center, center);
+
+				-webkit-transform: translate(50%, -50%) rotate(45deg);
+			       -moz-transform: translate(50%, -50%) rotate(45deg);
+			        -ms-transform: translate(50%, -50%) rotate(45deg);
+			    	 -o-transform: translate(50%, -50%) rotate(45deg);
+			    		transform: translate(50%, -50%) rotate(45deg);
+
+				&.gradient-vert{
+					background: rgb(147,189,252); /* Old browsers */
+					background: -moz-linear-gradient(top left, rgb(147,189,252) 0%, rgb(52,81,225) 100%); /* FF3.6-15 */
+					background: -webkit-linear-gradient(top left, rgb(147,189,252) 0%,rgb(52,81,225) 100%); /* Chrome10-25,Safari5.1-6 */
+					background: linear-gradient(to bottom right, rgb(147,189,252) 0%,rgb(52,81,225) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				}
+			}
+		}
+	}
+
+	.phrase{
+		position: relative;
+		width: 1040px;
+		margin: 0 auto;
+		color: $light-blue-brand;
+		text-transform: uppercase;
+		text-align: center;
+		padding: 128px 0;
+	}
+}
+
+.essential-values{
+	position: relative;
+	width: 100%;
+	background-color: #fff;
+	padding: 100px 0;
+	overflow: hidden;
+
+	.values-inner-wrapper{
+		position: relative;
+		width: 100%;
+		height: 400px;
+		display: block;
+
+		&:last-child{
+			margin-top: 97px;
+		}
+
+		.bg-title{
+			position: absolute;
+			width: 100%;
+			top: 0;
+			font-family: $brand-font-regular;
+			font-size: 28.5em;
+			line-height: 0.6em;
+			letter-spacing: -0.03em;
+			color: #fff;
+			text-shadow: 0 0 1.2px $dark-titles;
+			text-transform: uppercase;
+			white-space: nowrap;
+			pointer-events: none;
+		}
+		#core-values-bg{
+			@include translate(-28%,0);
+		}
+		#great-aims-bg{
+			@include translate(-55%,0);
+		}
+
+		.values-list{
+			position: absolute;
+			list-style: none;
+			width: 50%;
+
+			.list-title{
+				color: $dark-titles;
+				position: absolute;
+				text-align: right;
+				right: 106%;
+				white-space: nowrap;
+				line-height: 2.3em;
+			}
+
+			.single-value{
+				line-height: 1.35em;
+
+				&:nth-child(even){
+					color: $main-blue;
+				}
+				&:nth-child(odd){
+					color: $dark-titles;
+				}
+			}
+		}
+	}
+
+	#core-wrapper{
+		.values-list{
+			left: 50%;
+		}
+	}
+	#great-wrapper{
+
+		.values-list{
+			left: 31%;
+		}
+	}
+}
+
+.quote-break{
+	position: relative;
+	width: 100%;
+	background-color: #f5f7fc;
+	overflow: hidden;
+
+	.photo-wrapper{
+		position: relative;
+		display: inline-block;
+		float: left;
+		width: 50%;
+
+	}
+
+	.quote-wrapper{
+		position: relative;
+		display: inline-block;
+		float: left;
+		width: 50%;
+
+		.paragraph-box{
+			position: relative;
+			display: block;
+			width: 550px;
+			margin-top: 80px;
+			margin-left: 80px;
+			margin-bottom: 30px;
+			color: $body-color;
+			font-family: $brand-font-regular;
+
+			&:before, &:after{
+				content: "";
+				position: absolute;
+				top: 2px;
+				width: 0;
+				height: 17px;
+				border-left: 14px solid $main-blue;
+				border-bottom: 8px solid transparent;
+				border-right: 0 solid transparent;
+			}
+			&:before{
+				left: -52px;
+			}
+			&:after{
+				left: -35px;
+			}
+		}
+
+		.quote-author{
+			position: relative;
+			display: block;
+			margin-left: 80px;
+			color: $main-blue;
+
+			&:before{
+				content: "";
+				position: relative;
+				display: inline-block;
+				width: 50px;
+				height: 1px;
+				margin-right: 28px;
+				margin-bottom: 10px;
+				background-color: $main-blue;
+			}
+		}
+	}
+}
+
+
+
+
+

@@ -46,6 +46,22 @@
     		transform: scale($ratio);
 }
 
+@mixin rotate($degs){
+    -webkit-transform: rotate($degs);
+       -moz-transform: rotate($degs);
+        -ms-transform: rotate($degs);
+    	 -o-transform: rotate($degs);
+    		transform: rotate($degs);
+}
+
+@mixin transformFrom($xOrigin, $yOrigin){
+    -webkit-transform-origin: $xOrigin $yOrigin;
+       -moz-transform-origin: $xOrigin $yOrigin;
+        -ms-transform-origin: $xOrigin $yOrigin;
+    	 -o-transform-origin: $xOrigin $yOrigin;
+    		transform-origin: $xOrigin $yOrigin;
+}
+
 @mixin transitions($timing){
 	-webkit-transition: all $timing cubic-bezier(.77,0,0,1);
 	   -moz-transition: all $timing cubic-bezier(.77,0,0,1);
