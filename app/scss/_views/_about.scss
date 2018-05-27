@@ -260,8 +260,17 @@
 .quote-break{
 	position: relative;
 	width: 100%;
-	background-color: #f5f7fc;
+	padding-top: 18px;
 	overflow: hidden;
+
+	&:before{
+		content: "";
+		position: absolute;
+		top: 0; left: 0;
+		width: 100%;
+		height: 640px;
+		background-color: #f5f7fc;
+	}
 
 	.photo-wrapper{
 		position: relative;
@@ -269,6 +278,18 @@
 		float: left;
 		width: 50%;
 
+		.person-photo{
+			position: relative;
+			float: right;
+			right: 30px;
+		}
+		
+		.triangle-helper{
+			position: absolute;
+			z-index: 1;
+			bottom: 70px;
+			left: -100px;
+		}
 	}
 
 	.quote-wrapper{
@@ -276,6 +297,7 @@
 		display: inline-block;
 		float: left;
 		width: 50%;
+		margin-top: 40px;
 
 		.paragraph-box{
 			position: relative;
@@ -310,6 +332,10 @@
 			display: block;
 			margin-left: 80px;
 			color: $main-blue;
+			font-family: $author-font;
+			font-size: 1.1em;
+			font-weight: lighter;
+			@include smoothFont();
 
 			&:before{
 				content: "";
@@ -318,9 +344,64 @@
 				width: 50px;
 				height: 1px;
 				margin-right: 28px;
-				margin-bottom: 10px;
+				margin-bottom: 6px;
 				background-color: $main-blue;
 			}
+		}
+	}
+}
+
+.subscribe-section{
+	position: relative;
+
+	.intro-title{
+		color: $main-blue;		
+	}
+
+	.intro-description{
+		color: $body-color;
+		width: 890px;
+	}
+
+	.simple-form{
+		position: relative;
+		padding-top: 40px;
+		padding-bottom: 200px;
+		text-align: center;
+
+		.subscribe-inputs{
+			width: 380px;
+			height: 60px;
+			padding: 20px;
+			@include boxSizeFit();
+			color: $dark-titles;
+			border: none;
+			font-size: 0.9em;
+			background-color: #f5f7fc;
+
+			&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+			    color: $body-color;
+			    opacity: 1; /* Firefox */
+			    font-size: 0.9em;
+			}
+
+			&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			    color: $body-color;
+			    font-size: 0.9em;
+			}
+
+			&::-ms-input-placeholder { /* Microsoft Edge */
+			    color: $body-color;
+			    font-size: 0.9em;
+			}
+		}
+
+		#input-subscribe-name{
+			margin-right: 20px;
+		}
+		#submit-subscribe{
+			top: 1px;
+			margin-left: 40px;
 		}
 	}
 }

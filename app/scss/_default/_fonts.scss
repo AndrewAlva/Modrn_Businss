@@ -25,3 +25,16 @@
     font-weight: normal;
     font-style: normal;
 }
+
+@font-face {
+    font-family: 'Apercu';
+    src: url('/fonts/Apercu-Light.eot');
+    src: url('/fonts/Apercu-Light.eot?#iefix') format('embedded-opentype'),
+        url('/fonts/Apercu-Light.woff2') format('woff2'),
+        url('/fonts/Apercu-Light.woff') format('woff'),
+        url('/fonts/Apercu-Light.ttf') format('truetype'),
+        url('/fonts/Apercu-Light.svg#Apercu-Light') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
