@@ -1,17 +1,14 @@
-.mb-btn{
+.brand-btn{
 	position: relative;
-	background-color: $main-blue;
-	color: #fff;
-	border: none;
-	min-width: 140px;
 	padding: 0 29px;
 	margin-top: 20px;
+	border: none;
+	cursor: pointer;
+
 	text-transform: uppercase;
 	font-family: $author-font;
-	font-size: 0.8em;
-	letter-spacing: 0.02em;
 	@include smoothFont();
-	cursor: pointer;
+
 	@include transitions(0.4s);
 	
 	&:after, &:before{
@@ -22,30 +19,104 @@
 	}
 	&:before{
 		bottom: 99%;
-		border-bottom: 20px solid $main-blue;
-		border-right: 20px solid transparent;
+		border-right-color: transparent;
+		border-bottom-style: solid;
+		border-right-style: solid;
 	}
 	&:after{
 		top: 99%;
-		border-top: 20px solid $main-blue;
-		border-left: 20px solid transparent;
+		border-left-color: transparent;
+		border-top-style: solid;
+		border-left-style: solid;
 	}
 
+	// Size styling
+		&.md-btn{
+			min-width: 140px;
+			font-size: 0.8em;
+			letter-spacing: 0.02em;
 
-	&:hover, &:focus{
-		// @include drawShadow(6px, 18px, 30px, 3.2px, rgba(0, 0, 22, 0.5));
-		background-color: $main-blue-hover;
-
-		&:before{
-			border-right-width: 0;
-			border-bottom-color: $main-blue-hover;
-
+			&:before{
+				border-bottom-width: 20px;
+				border-right-width: 20px;
+			}
+			&:after{
+				border-top-width: 20px;
+				border-left-width: 20px;
+			}
 		}
 
-		&:after{
-			border-left-width: 0;
-			border-top-color: $main-blue-hover;
+		&.sm-btn{
+			min-width: 100px;
+			font-size: 0.7em;
+			letter-spacing: 0.015em;
 
+			&:before{
+				border-bottom-width: 10px;
+				border-right-width: 10px;
+			}
+			&:after{
+				border-top-width: 10px;
+				border-left-width: 10px;
+			}
 		}
-	}
+
+	
+	// Color styling
+		&.blue{
+			background-color: $main-blue;
+			color: #fff;
+
+			&:before{
+				border-bottom-color: $main-blue;
+			}
+			&:after{
+				border-top-color: $main-blue;
+			}
+
+			&:hover, &:focus{
+				background-color: $main-blue-hover;
+
+				&:before{
+					border-right-width: 0;
+					border-bottom-color: $main-blue-hover;
+
+				}
+
+				&:after{
+					border-left-width: 0;
+					border-top-color: $main-blue-hover;
+
+				}
+			}
+		}
+
+		&.dark-blue{
+			background-color: $dark-titles;
+			color: #fff;
+
+			&:before{
+				border-bottom-color: $dark-titles;
+			}
+			&:after{
+				border-top-color: $dark-titles;
+			}
+
+			&:hover, &:focus{
+				background-color: #000f3f;
+
+				&:before{
+					border-right-width: 0;
+					border-bottom-color: #000f3f;
+
+				}
+
+				&:after{
+					border-left-width: 0;
+					border-top-color: #000f3f;
+
+				}
+			}
+		}
+
 }

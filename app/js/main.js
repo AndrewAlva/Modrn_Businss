@@ -124,7 +124,7 @@
 					offset: 400
 				});
 
-			// Header-Nav text color change to keep visible in any section
+			// Header-Nav text color change to keep visible on any section
 				var headerNavTextColor = {}
 
 				headerNavTextColor.about = new Waypoint({
@@ -170,6 +170,50 @@
 							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#fff'});
 						} else {
 							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#2f70f4'});
+						}
+					},
+					offset: 60
+				});
+
+			// Header-Nav subscribe "cta" button hide/show on Hero section
+				var headerNavCtaDisplay = {};
+				headerNavCtaDisplay.subscribe = new Waypoint({
+					element: $('#section-02'),
+					handler: function(direction){
+						if (direction == "down"){
+							TweenMax.to($('#header-cta-subscribe'), 0.4, {autoAlpha: 1, display: 'block'});
+						} else {
+							TweenMax.to($('#header-cta-subscribe'), 0.4, {autoAlpha: 0, display: 'none'});
+						}
+					},
+					offset: 60
+				});
+
+			// Header-Nav subscribe "cta" change color to stay visible on any section
+				var headerNavCtaColor = {};
+				headerNavCtaColor.aboutMidBreak = new Waypoint({
+					element: $('#blue-about-break'),
+					handler: function(direction){
+						if (direction == "down"){
+							$('#header-nav-subscribe').addClass('dark-blue');
+							$('#header-nav-subscribe').removeClass('blue');
+						} else {
+							$('#header-nav-subscribe').addClass('blue');
+							$('#header-nav-subscribe').removeClass('dark-blue');
+						}
+					},
+					offset: 60
+				});
+
+				headerNavCtaColor.aboutPart2 = new Waypoint({
+					element: $('#end-about-break'),
+					handler: function(direction){
+						if (direction == "up"){
+							$('#header-nav-subscribe').addClass('dark-blue');
+							$('#header-nav-subscribe').removeClass('blue');
+						} else {
+							$('#header-nav-subscribe').addClass('blue');
+							$('#header-nav-subscribe').removeClass('dark-blue');
 						}
 					},
 					offset: 60

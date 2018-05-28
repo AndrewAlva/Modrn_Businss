@@ -3,7 +3,8 @@
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 83.7%;
+	// width: 83.7%;
+	width: 100%;
 	height: $header-height;
 	text-align: left;
 
@@ -69,5 +70,15 @@
 				text-decoration: underline;
 			}
 		}
+	}
+
+	.header-nav-cta{
+		position: relative;
+		float: right;
+		margin-top: 33px;
+		margin-right: 80px;
+
+		opacity: 0;
+		display: none;
 	}
 }
