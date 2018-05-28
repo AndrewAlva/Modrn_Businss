@@ -962,27 +962,46 @@
 			}
 
 			.quote-wrapper{
-				display: block;
+				// display: block;
 				float: none;
 				width: 100%;
 				max-width: 390px;
-				margin: 0 auto;
+				// margin: 0 auto;
+				left: 50%;
+				@include translate(-50%,0);
+				text-align: justify;
 
 				.paragraph-box{
 					width: 100%;
 					margin-top: 10px;
 					margin-left: 0;
 					margin-right: 0;
-					padding: 0 20px;
+					padding: 0 40px;
 					@include boxSizeFit();
+
+					&:before, &:after{
+						top: -4px;
+					}
+
+					&:before{
+						left: 10px;
+					}
+					&:after{
+						left: 20px;
+					}
 				}
 
 				.quote-author{
 					width: 100%;
 					margin-left: 0;
 					margin-right: 0;
-					padding: 0 20px;
+					padding: 0 40px;
 					@include boxSizeFit();
+
+					&:before{
+						width: 10px;
+						margin-right: 5px;
+					}
 				}
 			}
 		}
