@@ -84,6 +84,7 @@
 			        }
 			}
 
+
 		// Waypoints interactions
 			// Header-Nav links styled to point in which section user is
 				var headerNavPointers = {};
@@ -426,5 +427,9 @@
 
 				return numberToFormat;
 			}
+	
+
+		// Contact form "resize-able" inputs and textarea
+		
 	});
 

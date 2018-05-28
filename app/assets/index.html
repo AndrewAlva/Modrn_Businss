@@ -435,22 +435,22 @@
 
                         <figure class="form-division"></figure>
 
-                        <form action="#" id="contact-form" class="narrated-form">
+                        <form id="contact-form" class="narrated-form" name="main-contact-form" action="mail.php" method="POST" enctype="multipart/form-data">
                             <div class="narrated-line">
                                 <label for="contact-name" class="h3 regular-text">Hi, my name is</label>
-                                <input id="contact-name" class="narrated-input" type="text" placeholder="Your Name" required>
+                                <input id="contact-name" class="narrated-input" name="name" type="text" placeholder="Your Name" required>
                                 <span class="h3 regular-text">,</span>
                             </div>
 
                             <div class="narrated-line">
                                 <label for="contact-city" class="h3 regular-text">I'm from</label>
-                                <input id="contact-city" class="narrated-input" type="text" placeholder="Your City">
+                                <input id="contact-city" class="narrated-input" name="city" type="text" placeholder="Your City" required>
                                 <span class="h3 regular-text">and</span>
                             </div>
 
                             <div class="narrated-line">
                                 <label for="contact-email" class="h3 regular-text">my email address is</label>
-                                <input id="contact-email" class="narrated-input" type="email" placeholder="Your Email" required>
+                                <input id="contact-email" class="narrated-input" name="email" type="email" placeholder="Your Email" required>
                                 <span class="h3 regular-text">.</span>
                             </div>
 
@@ -459,7 +459,7 @@
                             </div>
 
                             <div class="narrated-line">
-                                <textarea id="contact-message" class="narrated-input" type="text" placeholder="Your Message" name="contactMessage" cols="30" rows="1" required></textarea>
+                                <textarea id="contact-message" class="narrated-input" name="message" type="text" placeholder="Your Message" name="contactMessage" cols="30" rows="1" required></textarea>
                             </div>
 
                             <button id="submit-contact-data" class="brand-btn md-btn blue" type="submit">
