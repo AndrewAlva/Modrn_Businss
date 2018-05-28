@@ -1,3 +1,18 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+*:focus {outline:0;}
+
+body {
+	font-family: -apple-system, Sans-Serif;
+	font-size: 20px;
+	color: #fff;
+	background-color: #00114e;
+}
+
+
 @import '_vendor/fontawesome.min.scss';
 
 @import '_default/vars.scss';
@@ -14,19 +29,8 @@
 @import '_views/about.scss';
 @import '_views/contact.scss';
 
-*{
-	margin: 0;
-	padding: 0;
-}
+@import '_default/responsive.scss';
 
-*:focus {outline:0;}
-
-body {
-	font-family: -apple-system, Sans-Serif;
-	font-size: 20px;
-	color: #fff;
-	background-color: #00114e;
-}
 
 #tester{
 	z-index: 1000000000;
