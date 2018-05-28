@@ -3,11 +3,13 @@
 	background-color: $main-blue;
 	color: #fff;
 	border: none;
-	padding: 1px 25px;
+	min-width: 140px;
+	padding: 0 29px;
 	margin-top: 20px;
 	text-transform: uppercase;
-	font-family: $brand-font-regular;
+	font-family: $author-font;
 	font-size: 0.8em;
+	letter-spacing: 0.02em;
 	@include smoothFont();
 	cursor: pointer;
 	@include transitions(0.4s);
@@ -30,15 +32,20 @@
 	}
 
 
-	&:hover{
-		@include drawShadow(6px, 18px, 30px, 3.2px, rgba(0, 0, 22, 0.5));
+	&:hover, &:focus{
+		// @include drawShadow(6px, 18px, 30px, 3.2px, rgba(0, 0, 22, 0.5));
+		background-color: $main-blue-hover;
 
 		&:before{
 			border-right-width: 0;
+			border-bottom-color: $main-blue-hover;
+
 		}
 
 		&:after{
 			border-left-width: 0;
+			border-top-color: $main-blue-hover;
+
 		}
 	}
 }

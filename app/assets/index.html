@@ -160,9 +160,12 @@
                                     for growth minded <br>
                                     Entrepreneurs.
                                 </h1>
-                                <button id="default-hero-subscribe" class="mb-btn" type="button">
-                                    Subscribe
-                                </button>
+
+                                <a href="#section-06" class="nav-click">
+                                    <button id="default-hero-subscribe" class="mb-btn" type="button">
+                                        Subscribe
+                                    </button>
+                                </a>
                             </div>
 
 
@@ -178,13 +181,13 @@
                                 <div class="hero-channels">
                                     <h6 class="hero-label">Available on:</h6>
                                     <ul class="channels-list">
-                                        <li class="channel"><a href="#"><img src="/img/channels/itunes.png" alt="iTunes Logo"></a></li>
-                                        <li class="channel"><a href="#"><img src="/img/channels/spotify.png" alt="Spotify Logo"></a></li>
-                                        <li class="channel"><a href="#"><img src="/img/channels/stitcher.png" alt="Stitcher Logo"></a></li>
+                                        <li class="channel"><a href="https://itunes.apple.com/us/podcast/modern-business/id1323641416?mt=2" target="_blank"><img src="/img/channels/itunes.png" alt="iTunes Logo"></a></li>
+                                        <li class="channel"><img src="/img/channels/spotify.png" alt="Spotify Logo"></li>
+                                        <li class="channel"><a href="https://www.stitcher.com/podcast/ryan-hicks/modern-business" target="_blank"><img src="/img/channels/stitcher.png" alt="Stitcher Logo"></a></li>
                                     </ul>
                                     <ul class="channels-list">
-                                        <li class="channel"><a href="#"><img src="/img/channels/soundcloud.png" alt="Soundcloud Logo"></a></li>
-                                        <li class="channel"><a href="#"><img src="/img/channels/overcast.png" alt="Overcast Logo"></a></li>
+                                        <li class="channel"><a href="https://soundcloud.com/modernbusiness/" target="_blank"><img src="/img/channels/soundcloud.png" alt="Soundcloud Logo"></a></li>
+                                        <li class="channel"><a href="https://overcast.fm/itunes1323641416/modern-business" target="_blank"><img src="/img/channels/overcast.png" alt="Overcast Logo"></a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -250,11 +253,11 @@
                                 </h1>
 
                                 <div class="hero-channels">
-                                    <h6 class="hero-label">Available on:</h6>
+                                    <h6 class="hero-label">Soon available on:</h6>
                                     <ul class="channels-list">
-                                        <li class="channel"><a href="#"><img src="/img/channels/youtube.png" alt="Youtube Logo"></a></li>
-                                        <li class="channel"><a href="#"><img src="/img/channels/apple_tv.png" alt="Apple TV Logo"></a></li>
-                                        <li class="channel"><a href="#"><img src="/img/channels/amazon_prime.png" alt="Amazon Prime Logo"></a></li>
+                                        <li class="channel"><img src="/img/channels/youtube.png" alt="Youtube Logo"></li>
+                                        <li class="channel"><img src="/img/channels/apple_tv.png" alt="Apple TV Logo"></li>
+                                        <li class="channel"><img src="/img/channels/amazon_prime.png" alt="Amazon Prime Logo"></li>
                                     </ul>
                                 </div>
                             </div>
@@ -406,16 +409,85 @@
                         </p>
 
                         <form id="subscribe-form" action="#" class="simple-form">
-                            <input id="input-subscribe-name" class="subscribe-inputs" type="text" placeholder="Name" name="subscribe-name">
-                            <input id="input-subscribe-cellphone" class="subscribe-inputs" type="text" placeholder="Cellphone" name="subscribe-cellphone">
+                            <input id="input-subscribe-name" class="subscribe-inputs" type="text" placeholder="Name" name="subscribe-name" required>
+                            <input id="input-subscribe-cellphone" class="subscribe-inputs" type="tel" placeholder="Cellphone" name="subscribe-cellphone" required>
 
                             <button id="submit-subscribe" class="mb-btn" type="submit">
                                 Subscribe
                             </button>
                         </form> 
                     </section>
+
+                    <section class="contact-section">
+                        <h3 class="intro-title h2">
+                            Want to share something?
+                        </h3>
+
+                        <p class="intro-description h4">
+                            Getting in touch is easy. Don't hesitate to fill out the contact form and get in touch.
+                        </p>
+
+                        <figure class="form-division"></figure>
+
+                        <form action="#" id="contact-form" class="narrated-form">
+                            <div class="narrated-line">
+                                <label for="contact-name" class="h3 regular-text">Hi, my name is</label>
+                                <input id="contact-name" class="narrated-input" type="text" placeholder="Your Name" required>
+                                <span class="h3 regular-text">,</span>
+                            </div>
+
+                            <div class="narrated-line">
+                                <label for="contact-city" class="h3 regular-text">I'm from</label>
+                                <input id="contact-city" class="narrated-input" type="text" placeholder="Your City">
+                                <span class="h3 regular-text">and</span>
+                            </div>
+
+                            <div class="narrated-line">
+                                <label for="contact-email" class="h3 regular-text">my email address is</label>
+                                <input id="contact-email" class="narrated-input" type="email" placeholder="Your Email" required>
+                                <span class="h3 regular-text">.</span>
+                            </div>
+
+                            <div class="narrated-line">
+                                <label for="contact-message" class="h3 regular-text">I have a message for you,</label>
+                            </div>
+
+                            <div class="narrated-line">
+                                <textarea id="contact-message" class="narrated-input" type="text" placeholder="Your Message" name="contactMessage" cols="30" rows="1" required></textarea>
+                            </div>
+
+                            <button id="submit-contact-data" class="mb-btn" type="submit">
+                                Submit
+                            </button>
+                        </form>
+                    </section>
                 </div>
             </section>
+
+            <footer class="footer-links">
+                <ul class="media-list">
+                    <li class="text-listed channels-list"><a href="https://itunes.apple.com/us/podcast/modern-business/id1323641416?mt=2" target="_blank">iTunes</a></li>
+                    <li class="text-listed channels-list"><a href="https://soundcloud.com/modernbusiness/" target="_blank">Soundcloud</a></li>
+                    <li class="text-listed channels-list"><a href="https://www.stitcher.com/podcast/ryan-hicks/modern-business" target="_blank">Stitcher</a></li>
+                    <li class="text-listed channels-list"><a href="https://overcast.fm/itunes1323641416/modern-business" target="_blank">Overcast</a></li>
+                    <li class="text-listed channels-list">Spotify</li>
+                    <li class="text-listed channels-list"><a href="https://medium.com/@ryanthomashicks" target="_blank">Medium</a></li>
+                    <li class="text-listed channels-list">Apple Tv</li>
+                    <li class="text-listed channels-list">Amazon Prime</li>
+                    <li class="text-listed channels-list">Youtube</li>
+                </ul>
+                <ul class="rrss-list">
+                    <li class="icon-listed"><a href="https://www.facebook.com/ModernBusinessPodcast/" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="icon-listed"><a href="https://www.instagram.com/ryanthomashicks/" target="_blank"><i id="ig-icon" class="fab fa-instagram"></i></a></li>
+                    <li class="icon-listed"><a href="https://www.linkedin.com/in/ryanthomashicks/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+
+                <figure class="legals-division"></figure>
+                <div class="legals-footer">
+                    <p class="legal-text brand-copyright">©2018 ModrnBusinss Inc.  All Right Reserved</p>
+                    <p class="legal-text studio-copyright"><a href="http://mandelbrot.mx/" target="_blank">Designed & Developed by ®Mandelbrot Studio</a></p>
+                </div>
+            </footer>
         </section>
 
 

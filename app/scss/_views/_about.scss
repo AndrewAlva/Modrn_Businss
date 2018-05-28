@@ -79,7 +79,7 @@
 				}
 
 				.features{
-					font-family: $brand-font-regular;
+					font-family: $author-font;
 					color: $body-color;
 					font-size: 1.28em;
 					letter-spacing: -0.02em;
@@ -175,6 +175,7 @@
 		color: $light-blue-brand;
 		text-transform: uppercase;
 		text-align: center;
+		font-family: $brand-font-regular;
 		padding: 128px 0;
 	}
 }
@@ -333,9 +334,8 @@
 			margin-left: 80px;
 			color: $main-blue;
 			font-family: $author-font;
-			font-size: 1.1em;
+			font-size: 1.15em;
 			font-weight: lighter;
-			@include smoothFont();
 
 			&:before{
 				content: "";
@@ -343,70 +343,12 @@
 				display: inline-block;
 				width: 50px;
 				height: 1px;
-				margin-right: 28px;
+				margin-right: 25px;
 				margin-bottom: 6px;
 				background-color: $main-blue;
 			}
 		}
 	}
 }
-
-.subscribe-section{
-	position: relative;
-
-	.intro-title{
-		color: $main-blue;		
-	}
-
-	.intro-description{
-		color: $body-color;
-		width: 890px;
-	}
-
-	.simple-form{
-		position: relative;
-		padding-top: 40px;
-		padding-bottom: 200px;
-		text-align: center;
-
-		.subscribe-inputs{
-			width: 380px;
-			height: 60px;
-			padding: 20px;
-			@include boxSizeFit();
-			color: $dark-titles;
-			border: none;
-			font-size: 0.9em;
-			background-color: #f5f7fc;
-
-			&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-			    color: $body-color;
-			    opacity: 1; /* Firefox */
-			    font-size: 0.9em;
-			}
-
-			&:-ms-input-placeholder { /* Internet Explorer 10-11 */
-			    color: $body-color;
-			    font-size: 0.9em;
-			}
-
-			&::-ms-input-placeholder { /* Microsoft Edge */
-			    color: $body-color;
-			    font-size: 0.9em;
-			}
-		}
-
-		#input-subscribe-name{
-			margin-right: 20px;
-		}
-		#submit-subscribe{
-			top: 1px;
-			margin-left: 40px;
-		}
-	}
-}
-
-
-
 
 

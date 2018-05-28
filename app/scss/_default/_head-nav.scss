@@ -6,7 +6,6 @@
 	width: 83.7%;
 	height: $header-height;
 	text-align: left;
-	font-family: $brand-font-regular;
 
 	.nav-logo{
 		position: relative;
@@ -29,14 +28,14 @@
 			position: relative;
 			display: table;
 			height: $header-height;
-			text-transform: uppercase;
-			font-size: 0.65em;
-			@include smoothFont();
 
 			.single-option{
 				position: relative;
 				display: table-cell;
 				vertical-align: middle;
+				font-family: $author-font;
+				text-transform: uppercase;
+				font-size: 0.65em;
 
 				a{
 					padding: 0 25px;
@@ -66,7 +65,7 @@
 			text-decoration: none;
 			color: #fff;
 
-			&:hover{
+			&:hover, &:focus{
 				text-decoration: underline;
 			}
 		}

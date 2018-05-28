@@ -334,8 +334,6 @@
 
 			text-align: center;
 			text-transform: uppercase;
-			font-family: $brand-font-bold;
-			@include smoothFont();
 
 			@include transitions(0.7s);
 
@@ -360,6 +358,9 @@
 					// font-size: 1.08em;
 					font-size: 1.1vw;
 					letter-spacing: -0.8px;
+					font-family: $brand-font-bold;
+					font-weight: lighter;
+					@include smoothFont();
 				}
 			}
 		}

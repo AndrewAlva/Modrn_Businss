@@ -1,19 +1,25 @@
+@import '_vendor/fontawesome.min.scss';
+
 @import '_default/vars.scss';
 @import '_default/fonts.scss';
 @import '_default/mixins.scss';
-@import '_default/loader.scss';
-@import '_default/texts.scss';
-@import '_default/head-nav.scss';
-@import '_default/sections.scss';
 @import '_default/buttons.scss';
+@import '_default/texts.scss';
+@import '_default/sections.scss';
+@import '_default/loader.scss';
+@import '_default/head-nav.scss';
+@import '_default/footer.scss';
 
 @import '_views/hero.scss';
 @import '_views/about.scss';
+@import '_views/contact.scss';
 
 *{
 	margin: 0;
 	padding: 0;
 }
+
+*:focus {outline:0;}
 
 body {
 	font-family: -apple-system, Sans-Serif;
@@ -29,9 +35,9 @@ body {
 	opacity: 0.6;
 	margin: auto;
 
-	width: 100%;
-	height: 100px;
-	top: -100px;
+	width: 245px;
+	height: 13px;
+	margin: auto;
 	left: 0;
 }
 

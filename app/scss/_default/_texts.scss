@@ -60,4 +60,18 @@
 	font-size: 1.3em;
 	letter-spacing: -0.03em;
 	@include smoothFont();
+	font-weight: lighter;
+}
+
+.channels-list{
+	font-family: $brand-font-bold;
+	font-size: 0.8em;
+	@include smoothFont();
+}
+
+.legal-text{
+	font-family: $author-font;
+	font-size: 0.635em;
+	line-height: 1em;
+	@include smoothFont();
 }

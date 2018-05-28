@@ -1,0 +1,177 @@
+.subscribe-section{
+	position: relative;
+
+	.intro-title{
+		color: $main-blue;		
+	}
+
+	.intro-description{
+		color: $body-color;
+		width: 890px;
+	}
+
+	.simple-form{
+		position: relative;
+		padding-top: 40px;
+		padding-bottom: 200px;
+		text-align: center;
+
+		.subscribe-inputs{
+			width: 380px;
+			height: 60px;
+			padding: 20px;
+			@include boxSizeFit();
+			color: $dark-titles;
+			border: none;
+			font-family: $brand-font-regular;
+			font-size: 1.3em;
+			font-weight: lighter;
+			@include smoothFont();
+			border: 1px solid rgba(155, 178, 204, 0.4);
+			background-color: #f5f7fc;
+
+			&:focus{
+				border: 1px solid rgba(0, 85, 255, 0.5);
+				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 4px 10px 0 rgba(0, 0, 0, 0.04);
+			}
+
+			&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+			    color: $body-color;
+			    font-family: $brand-font-regular;
+				font-size: 1em;
+				font-weight: lighter;
+				@include smoothFont();
+			}
+
+			&::-ms-input-placeholder { /* Microsoft Edge */
+			    color: $body-color;
+			    font-family: $brand-font-regular;
+				font-size: 1em;
+				font-weight: lighter;
+				@include smoothFont();
+			}
+			
+			&:-moz-placeholder { /* Firefox 18- */
+				color: $body-color;
+			    font-family: $brand-font-regular;
+				font-size: 1em;
+				font-weight: lighter;
+				@include smoothFont();
+			}
+
+			&::-moz-placeholder { /* Firefox 19+ */
+				color: $body-color;
+			    font-family: $brand-font-regular;
+				font-size: 1em;
+				font-weight: lighter;
+				@include smoothFont();
+			}
+
+			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+				color: $body-color;
+			    font-family: $brand-font-regular;
+				font-size: 1em;
+				font-weight: lighter;
+				@include smoothFont();
+			}
+
+			&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+			    color: $body-color;
+			    opacity: 1; /* Firefox */
+			    font-family: $brand-font-regular;
+				font-size: 1em;
+				font-weight: lighter;
+				@include smoothFont();
+			}
+		}
+
+		#input-subscribe-name{
+			margin-right: 20px;
+		}
+		#submit-subscribe{
+			top: -5px;
+			margin-left: 40px;
+		}
+	}
+}
+
+.contact-section{
+	padding-top: 120px;
+	padding-bottom: 160px;
+	color: $body-color;
+	background-color: $dark-titles;
+
+	.intro-title{
+		color: $main-blue;
+	}
+
+	.intro-description{
+		color: #fff;
+		width: 650px;
+		margin-bottom: 50px;
+	}
+
+	.form-division{
+		position: relative;
+		width: 180px;
+		height: 2px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+		background-color: $main-blue;
+	}
+
+	.narrated-form{
+		position: relative;
+		text-align: center;
+		color: #fff;
+		padding-bottom: 20px;
+
+		.narrated-line{
+			.regular-text{
+				font-family: $brand-font-regular;
+			}
+
+			.narrated-input{
+				font-family: $brand-font-regular;
+				font-weight: lighter;
+				@include smoothFont();
+				font-size: 1.85em;
+				line-height: 1.5em;
+				letter-spacing: -0.02em;
+				color: $light-blue-brand;
+				background-color: transparent;
+				border: none;
+				border-bottom: 1px solid $light-blue-brand;
+				text-align: center;
+
+				&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+				    color: $light-blue-brand;
+				}
+
+				&::-ms-input-placeholder { /* Microsoft Edge */
+				    color: $light-blue-brand;
+				}
+
+				&:-moz-placeholder { /* Firefox 18- */
+					color: $light-blue-brand;
+				}
+				&::-moz-placeholder { /* Firefox 19+ */
+					color: $light-blue-brand;
+				}
+
+				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+					color: $light-blue-brand;
+				}
+
+				&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+				    color: $light-blue-brand;
+				    opacity: 1; /* Firefox */
+				}
+			}
+		}
+
+		#submit-contact-data{
+			margin-top: 60px;
+		}
+	}
+}
