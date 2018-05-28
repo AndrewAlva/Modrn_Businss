@@ -1,3 +1,4 @@
+// Small desktop screens and laptops
 @media screen and (max-width: 1400px) {
 	body{
 		font-size: 16px;
@@ -32,6 +33,10 @@
 
 	// About section: "_views/about.scss"
 		.what-we-do {
+			.intro-description{
+				width: 470px;
+			}
+
 			.bullets-table{
 				width: 900px;
 
@@ -182,6 +187,12 @@
 			}
 		}
 
+		.contact-section{
+			.intro-description{
+				width: 520px;
+			}
+		}
+
 	// Footer section: "_default/footer.scss"
 		.footer-links {
 			.media-list, .rrss-list, .legals-footer{
@@ -209,6 +220,326 @@
 		}
 }
 
-@media screen and (max-width: 1024px) {}
 
-@media screen and (max-width: 768px) {}
+// Tablets
+@media screen and (max-width: 1024px) {
+	body{
+		font-size: 13px;
+	}
+
+	// Sections general style: "_default/sections.scss"
+		.single-section{
+			padding-top: 75px;
+		}
+
+		.single-section.full-height{
+			min-height: 300px;
+			max-height: 500px;
+		}
+
+	// Header nav: ""
+		.main-nav-wrapper {
+			.inner-nav-wrapper {
+				.list {
+					.single-option{
+						font-size: 0.8em;
+					}
+				}
+			}
+		}
+
+	// Buttons general style: "_default/buttons.scss"
+		.brand-btn{
+			padding: 0 20px;
+
+			&.md-btn{
+				min-width: 80px;
+
+				&:before{
+					border-bottom-width: 14px;
+					border-right-width: 14px;
+				}
+				&:after{
+					border-top-width: 14px;
+					border-left-width: 14px;
+				}
+			}
+
+			&.sm-btn{
+				min-width: 70px;
+			}
+		}
+
+	// Texts general style: "_default/texts.scss"
+		.intro-title{
+			margin-bottom: 25px;
+		}
+
+		.intro-description{
+			margin-bottom: 60px;
+		}
+
+
+	// Hero section: "_views/hero.scss"
+		.hero-nav{
+			min-height: 300px;
+			max-height: 500px;
+		}
+
+		.shifting-hero-content {
+			.hero-left-col{
+				top: 35px;
+
+				.hero-img{
+					.hero-mic{
+						top: -4%;
+					}
+				}
+			}
+
+			.hero-center-col{
+				top: 35px;
+
+				.hero-header {
+					margin-top: 5%;
+					margin-bottom: 20px;
+
+					.hero-highlight{
+						&:after{
+							height: 8px;
+							bottom: 8px;
+						}
+					}
+
+					&#podcast-header{
+						margin-top: 0;
+					}
+					&#book-header{
+						margin-top: 5%;
+					}
+					&#tv-header{
+						margin-top: 10%;
+					}
+				}
+
+				.hero-channels{
+					.channels-list{
+						.channel{
+							margin-left: 0;
+
+							img{
+								width: 70%;
+							}
+						}
+					}
+				}
+
+				.hero-timer{
+					top: 15px;
+					width: 90%;
+
+					.timer-cards{
+						.single-card{
+							height: 70px;
+
+							.counter{
+								line-height: 80px;
+							}
+						}
+
+						.dots-box{
+							height: 70px;
+						}
+					}
+				}
+			}
+		}
+
+	// About section: "_views/about.scss"
+		.what-we-do {
+			.intro-description{
+				width: 440px;
+			}
+
+			.bullets-table{
+				width: 650px;
+				margin-bottom: 60px;
+
+				.bulleted-column{
+					.column-intro{
+						padding-bottom: 20px;
+
+						.column-icon{
+							img{
+								width: 60%;
+							}
+						}
+
+						.column-title{
+							left: -5%;
+						}
+					}
+
+					.custom-bullets-list{
+						&.circle-bullets {
+							li:before{
+								margin-top: 6px;
+							}
+						}
+						&.triangle-bullets {
+							li:before{
+								margin-top: 4px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.about-break {
+			.bg-elements {
+				.triangle{
+					&.t-01{
+						top: 20%;
+						left: 60%;
+						border-left-width: 45px;
+						border-top-width: 32px;
+						border-bottom-width: 32px;
+					}
+					&.t-02{
+						top: 0;
+						left: 80%;
+						border-right-width: 70px;
+						border-top-width: 70px;
+						border-bottom-width: 70px;
+					}
+				}
+
+				.mask-triangle{
+					width: 400px;
+					height: 400px;
+					top: 50%;
+					right: -2%;
+				}
+			}
+
+			.phrase{
+				width: 680px;
+				padding: 80px 0;
+			}
+		}
+
+		.essential-values {
+			padding: 60px 0;
+
+			.values-inner-wrapper{
+				height: 260px;
+
+				&:last-child{
+					margin-top: 60px;
+				}
+			}
+
+			#great-wrapper {
+				.values-list{
+					left: 20%;
+				}
+			}
+		}
+
+		.quote-break{
+			padding-top: 5px;
+
+			&:before{
+				height: 300px;
+			}
+
+			.photo-wrapper{
+				.person-photo{
+					width: 320px;
+
+					.triangle-helper{
+						width: 80px;
+						left: -30px;
+						bottom: 55px;
+					}
+				}
+			}
+
+			.quote-wrapper{
+				.paragraph-box{
+					width: 320px;
+					margin-top: 35px;
+					margin-left: 25px;
+					margin-bottom: 15px;
+
+					&:before, &:after{
+						height: 10px;
+						border-left-width: 8px;
+						border-bottom-width: 5px;
+					}
+					&:before{
+						left: -35px;
+					}
+				}
+
+				.quote-author{
+					margin-left: 25px;
+
+					&:before{
+						width: 30px;
+						margin-right: 10px;
+						margin-bottom: 4px;
+					}
+				}
+			}
+		}
+
+	// Contact section: "_views/contact.scss"
+		.subscribe-section {
+			.intro-description{
+				width: 555px;
+			}
+
+			.simple-form {
+				padding-bottom: 80px;
+
+				.subscribe-inputs{
+					width: 220px;
+					height: 42px;
+				}
+				#input-subscribe-name{
+					margin-right: 10px;
+				}
+				#submit-subscribe{
+					margin-left: 20px;
+				}
+			}
+		}
+
+		.contact-section{
+			padding-top: 80px;
+			padding-bottom: 90px;
+
+			.intro-description{
+				width: 420px;
+				margin-bottom: 30px;
+			}
+
+			.form-division{
+				margin-bottom: 25px;
+			}
+
+			.narrated-form {
+				padding-bottom: 15px;
+				
+				#submit-contact-data{
+					margin-top: 40px;
+				}
+			}
+		}
+}
+
+
+// Mobile
+@media screen and (max-width: 767px) {}
