@@ -1,12 +1,14 @@
 // Waypoints init
 	// Doesn't need jQuery
-	var waypoint = new Waypoint({
-		element: document.getElementById('section-02'),
-		handler: function(direction) {
-			console.log('Basic waypoint triggered. Direction: ' + direction);
-		},
-		offset: 300
-	});
+	// var waypoint = new Waypoint({
+	// 	element: document.getElementById('section-02'),
+	// 	handler: function(direction) {
+	// 		console.log('Basic waypoint triggered. Direction: ' + direction);
+	// 	},
+	// 	offset: 300
+	// });
+
+	
 
 
 
@@ -18,46 +20,46 @@
 
 
 // Switching topics with typewriter effect functions
-var TxtType = function(el, toRotate, period) {
-    this.toRotate = toRotate;
-    this.el = el;
-    this.loopNum = 0;
-    this.period = parseInt(period, 10) || 3000;
-    this.txt = '';
-    this.tick();
-    this.isDeleting = false;
-};
+	var TxtType = function(el, toRotate, period) {
+	    this.toRotate = toRotate;
+	    this.el = el;
+	    this.loopNum = 0;
+	    this.period = parseInt(period, 10) || 3000;
+	    this.txt = '';
+	    this.tick();
+	    this.isDeleting = false;
+	};
 
-TxtType.prototype.tick = function() {
-    var i = this.loopNum % this.toRotate.length;
-    var fullTxt = this.toRotate[i];
+	TxtType.prototype.tick = function() {
+	    var i = this.loopNum % this.toRotate.length;
+	    var fullTxt = this.toRotate[i];
 
-    if (this.isDeleting) {
-    	this.txt = fullTxt.substring(0, this.txt.length - 1);
-    } else {
-    	this.txt = fullTxt.substring(0, this.txt.length + 1);
-    }
+	    if (this.isDeleting) {
+	    	this.txt = fullTxt.substring(0, this.txt.length - 1);
+	    } else {
+	    	this.txt = fullTxt.substring(0, this.txt.length + 1);
+	    }
 
-    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+	    this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
 
-    var that = this;
-    var delta = 150 - Math.random() * 100;
+	    var that = this;
+	    var delta = 150 - Math.random() * 100;
 
-    if (this.isDeleting) { delta /= 2; }
+	    if (this.isDeleting) { delta /= 2; }
 
-    if (!this.isDeleting && this.txt === fullTxt) {
-        delta = this.period;
-        this.isDeleting = true;
-    } else if (this.isDeleting && this.txt === '') {
-        this.isDeleting = false;
-        this.loopNum++;
-        delta = 500;
-    }
+	    if (!this.isDeleting && this.txt === fullTxt) {
+	        delta = this.period;
+	        this.isDeleting = true;
+	    } else if (this.isDeleting && this.txt === '') {
+	        this.isDeleting = false;
+	        this.loopNum++;
+	        delta = 500;
+	    }
 
-    setTimeout(function() {
-    	that.tick();
-    }, delta);
-};
+	    setTimeout(function() {
+	    	that.tick();
+	    }, delta);
+	};
 
 
 
@@ -82,6 +84,98 @@ TxtType.prototype.tick = function() {
 			        }
 			}
 
+		// Waypoints interactions
+			// Header-Nav links styled to point in which section user is
+				var headerNavPointers = {};
+				headerNavPointers.hero = new Waypoint({
+					element: $('#section-02'),
+					handler: function(){
+						$('#about-nav-pointer').removeClass('active');
+						$('#contact-nav-pointer').removeClass('active');
+					},
+					offset: 300
+				});
+
+
+				headerNavPointers.aboutTop = new Waypoint({
+					element: $('#section-02'),
+					handler: function(){
+						$('#about-nav-pointer').addClass('active');
+						$('#contact-nav-pointer').removeClass('active');
+					},
+					offset: 200
+				});
+				headerNavPointers.aboutBottom = new Waypoint({
+					element: $('#section-06'),
+					handler: function(){
+						$('#about-nav-pointer').addClass('active');
+						$('#contact-nav-pointer').removeClass('active');
+					},
+					offset: 500
+				});
+
+
+				headerNavPointers.contact = new Waypoint({
+					element: $('#section-06'),
+					handler: function(){
+						$('#contact-nav-pointer').addClass('active');
+						$('#about-nav-pointer').removeClass('active');
+					},
+					offset: 400
+				});
+
+			// Header-Nav text color change to keep visible in any section
+				var headerNavTextColor = {}
+
+				headerNavTextColor.about = new Waypoint({
+					element: $('#section-02'),
+					handler: function(direction){
+						if (direction == "up"){
+							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#fff'});
+						} else {
+							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#2f70f4'});
+						}
+					},
+					offset: 60
+				});
+
+				headerNavTextColor.aboutMidBreak = new Waypoint({
+					element: $('#blue-about-break'),
+					handler: function(direction){
+						if (direction == "down"){
+							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#fff'});
+						} else {
+							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#2f70f4'});
+						}
+					},
+					offset: 60
+				});
+
+				headerNavTextColor.aboutPart2 = new Waypoint({
+					element: $('#end-about-break'),
+					handler: function(direction){
+						if (direction == "up"){
+							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#fff'});
+						} else {
+							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#2f70f4'});
+						}
+					},
+					offset: 60
+				});
+
+				headerNavTextColor.contact = new Waypoint({
+					element: $('#dark-contact-section'),
+					handler: function(direction){
+						if (direction == "down"){
+							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#fff'});
+						} else {
+							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#2f70f4'});
+						}
+					},
+					offset: 60
+				});
+
+
 		// Header menu smooth scrolling to all nav links
 			$(".nav-click").on('click', function(event) {
 			    // Make sure this.hash has a value before overriding default behavior
@@ -96,9 +190,9 @@ TxtType.prototype.tick = function() {
 					// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
 					$('html, body').animate({
 						scrollTop: $(hash).offset().top
-					}, 1000, function(){
+					}, 2300, "easeInOutQuint", function(){
 				        // Add hash (#) to URL when done scrolling (default click behavior)
-				    	window.location.hash = hash;
+				    	// window.location.hash = hash;
 				    });
 			    } // End if
 		  	});
@@ -237,7 +331,7 @@ TxtType.prototype.tick = function() {
 
 
 			function noticeMe(){
-				console.log("Animation done!");
+				// console.log("Animation done!");
 			}
 
 
