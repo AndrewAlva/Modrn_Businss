@@ -429,7 +429,25 @@
 			}
 	
 
-		// Contact form "resize-able" inputs and textarea
+		// Subscribe mini form functionality
+		$("#submit-subscribe").on("click", function(){
+	  		$.ajax({
+	  			url: "/subscribe_tels.php",
+	  			type: "POST",
+	  			data: { name: $('#input-subscribe-name').val(), tel: $("#input-subscribe-cellphone").val()  },
+	  		})
+	  		.done(function(e) {
+		        console.log("e",e);
+		        TweenMax.to($('.subscribe-section'), 0.6, {autoAlpha: 0, display: 'none', onComplete:function(){
+		        	$('.subscribe-section').html('<h3 class="intro-title h2"> Thanks for subscribing! </h3> <p class="intro-description h4"> Wait news from us sooon. </p>').fadeIn();
+		        	TweenMax.to($('.subscribe-section'), 0.6, {autoAlpha: 1, display: 'block'  });
+		        } });
+		        
+		    });
+		});
+
+
+		// Contact form "resize-able" inputs and textarea (pending)
 		
 	});
 

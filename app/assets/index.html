@@ -414,11 +414,11 @@
                             Just leave me your name and your cell phone number and you'll be the first to know when we release new content.
                         </p>
 
-                        <form id="subscribe-form" action="#" class="simple-form">
+                        <form id="subscribe-form" class="simple-form" name="main-subscribe-form" action="subscribe_tels.php" method="POST" enctype="multipart/form-data">
                             <input id="input-subscribe-name" class="subscribe-inputs" type="text" placeholder="Name" name="subscribe-name" required>
                             <input id="input-subscribe-cellphone" class="subscribe-inputs" type="tel" placeholder="Cellphone" name="subscribe-cellphone" required>
 
-                            <button id="submit-subscribe" class="brand-btn md-btn blue" type="submit">
+                            <button id="submit-subscribe" class="brand-btn md-btn blue" type="button">
                                 Subscribe
                             </button>
                         </form> 
