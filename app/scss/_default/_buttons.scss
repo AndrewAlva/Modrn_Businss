@@ -18,13 +18,13 @@
 		@include transitions(0.4s);
 	}
 	&:before{
-		bottom: 99%;
+		bottom: 97%;
 		border-right-color: transparent;
 		border-bottom-style: solid;
 		border-right-style: solid;
 	}
 	&:after{
-		top: 99%;
+		top: 97%;
 		border-left-color: transparent;
 		border-top-style: solid;
 		border-left-style: solid;
