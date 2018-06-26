@@ -1,6 +1,6 @@
 .brand-btn{
 	position: relative;
-	padding: 0 29px;
+	padding: 0 10px;
 	margin-top: 20px;
 	border: none;
 	cursor: pointer;
@@ -32,32 +32,32 @@
 
 	// Size styling
 		&.md-btn{
-			min-width: 140px;
+			min-width: 80px;
 			font-size: 0.8em;
 			letter-spacing: 0.02em;
 
 			&:before{
-				border-bottom-width: 20px;
-				border-right-width: 20px;
+				border-bottom-width: 9px;
+				border-right-width: 9px;
 			}
 			&:after{
-				border-top-width: 20px;
-				border-left-width: 20px;
+				border-top-width: 9px;
+				border-left-width: 9px;
 			}
 		}
 
 		&.sm-btn{
-			min-width: 100px;
+			min-width: 40px;
 			font-size: 0.7em;
 			letter-spacing: 0.015em;
 
 			&:before{
-				border-bottom-width: 10px;
-				border-right-width: 10px;
+				border-bottom-width: 6px;
+				border-right-width: 6px;
 			}
 			&:after{
-				border-top-width: 10px;
-				border-left-width: 10px;
+				border-top-width: 6px;
+				border-left-width: 6px;
 			}
 		}
 

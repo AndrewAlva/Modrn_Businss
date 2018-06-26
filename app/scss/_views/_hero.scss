@@ -7,10 +7,10 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	width: 16.2%;
-	height: 100%;
-	min-height: 699px;
-	max-height: 1000px;
+	width: 25%;
+	height: 600px;
+	min-height: auto;
+	max-height: none;
 
 	.media-triggers{
 		list-style: none;
@@ -44,13 +44,12 @@
 				vertical-align: middle;
 
 				img{
-					width: 32%;
-					margin-bottom: 25px;
+					width: 50px;
+					margin-bottom: 10px;
 				}
 
 				h2{
-					// font-size: 1.08em;
-					font-size: 1.1vw;
+					font-size: 1em;
 					letter-spacing: -0.8px;
 					font-family: $brand-font-bold;
 					font-weight: lighter;
@@ -87,9 +86,9 @@
 		margin: auto;
 
 		&.bg-triangle{
-			left: 7.3%;
 			top: 0;
-			bottom: -10%;
+			bottom: auto;
+			left: 5%;
 			background-image: url(/img/hero_bg/bg_triangle.png);
 			background-repeat: no-repeat;
 			background-size: 100%;
@@ -97,9 +96,9 @@
 			height: 3097px;
 		}
 		&.top-triangle{
-			top: -84%;
+			top: 30%;
+			left: 58%;
 			bottom: 0;
-			left: 26%;
 			background-image: url(/img/hero_bg/top_triangle.png);
 			background-repeat: no-repeat;
 			background-size: 100%;
@@ -107,9 +106,9 @@
 			height: 759px;
 		}
 		&.bottom-triangle{
-			left: 52%;
 			top: 0;
-			bottom: -85%;
+			bottom: -245%;
+			left: 45%;
 			background-image: url(/img/hero_bg/bottom_triangle.png);
 			background-repeat: no-repeat;
 			background-size: 100%;
@@ -127,17 +126,18 @@
 
 	&.media-display{
 		.hero-left-col{
-			width: 42.2%;
+			width: 100%;
 
 			.triangle-bg{
-				width: 137%;
+				width: 130px;
 				top: -8%;
 				bottom: auto;
 			}
 		}
 
 		.hero-center-col{
-			width: 57.8%;
+			width: 180px;
+			top: 30px;
 
 			#default-header{
 				@include opacity(0);
@@ -151,14 +151,14 @@
 	.hero-left-col{
 		position: relative;
 		float: left;
-		width: 36.5%;
-		height: 100%;
-		top: 25px;
+		width: 100%;
+		height: 35%;
+		top: 0;
 		@include transitions(1s);
 
 		.triangle-bg{
 			position: absolute;
-			width: 93%;
+			width: 110px;
 			margin: auto;
 			top: 8%;
 			@include transitions(1s);
@@ -176,16 +176,16 @@
 
 		.hero-img{
 			position: absolute;
-			width: 100%;
+			width: 200px;
 			height: 100%;
 			top: 0;
 			@include transitions(1s);
 
 			.hero-logo{
 				position: relative;
-				width: 55.4%;
-				left: 8.1%;
-				top: 23.5vw;
+				width: 71px;
+				left: 10px;
+				top: 89px;
 			}
 
 			.hero-mic, .hero-book, .hero-tv{
@@ -194,13 +194,16 @@
 				@include opacity(0);
 			}
 			.hero-mic{
-				width: 72.2%;
+				width: 120px;
+				top: 10px;
 			}
 			.hero-book{
-				width: 112%;
+				width: 190px;
+				top: 10px;
 			}
 			.hero-tv{
-				width: 95.13%;
+				width: 170px;
+				top: 10px;
 			}
 		}
 	}
@@ -208,14 +211,16 @@
 	.hero-center-col{
 		position: relative;
 		float: left;
-		width: 63.5%;
-		height: 100%;
+		width: 80%;
+		height: 40%;
+		top: 50px;
+		left: 20px;
 		@include transitions(1s);
 
 		.hero-header{
 			position: relative;
-			margin-top: 10%;
-			margin-bottom: 45px;
+			// margin-top: 25px;
+			margin-bottom: 10px;
 			text-align: left;
 
 			.hero-highlight{
@@ -230,15 +235,15 @@
 					position: relative;
 					display: block;
 					width: 103%;
-					height: 23px;
+					height: 8px;
 					left: -1%;
-					bottom: 16px;
+					bottom: 8px;
 					background-color: $main-blue-op3;
 				}
 			}
 
 			&#default-header{
-				margin-top: 20%;
+				margin-top: 10%;
 			}
 
 			&#book-header{
@@ -264,7 +269,7 @@
 				font-weight: lighter;
 				text-transform: uppercase;
 				font-size: 0.8em;
-				margin-bottom: 20px;
+				margin-bottom: 15px;
 			}
 
 			.channels-list{
@@ -272,16 +277,22 @@
 				list-style: none;
 
 				&:last-child{
-					margin-top: 20px;
+					margin-top: 0;
 				}
 
 				.channel{
 					position: relative;
 					display: inline-block;
-					margin-left: 60px;
+					margin-left: 0;
+					// margin-left: 60px;
+					padding: 8px 0;
 
 					&:first-child{
 						margin-left: 0;
+					}
+
+					img{
+						width: 65%;
 					}
 				}
 			}
@@ -289,7 +300,7 @@
 
 		.hero-timer{
 			position: relative;
-			width: 77.8%;
+			width: 140%;
 			top: 30px;
 
 			.timer-cards{
@@ -301,11 +312,11 @@
 				}
 
 				.single-card{
-					width: 19%;
-					height: 140px;
+					width: 16%;
+					height: 40px;
+					@include drawShadow(-3px, 9px, 10px, 1px, rgba(0, 0, 22, 0.3));
 					text-align: center;
 					background-color: $timer-cards-bg;
-					@include drawShadow(-6px, 18px, 20px, 3px, rgba(0, 0, 22, 0.3));
 
 					&:before, &:after{
 						content: "";
@@ -314,21 +325,21 @@
 					}
 					&:before{
 						bottom: 99.5%;
-						border-bottom: 15px solid $timer-cards-bg;
-						border-right: 15px solid transparent;
+						border-bottom: 8px solid $timer-cards-bg;
+						border-right: 8px solid transparent;
 					}
 					&:after{
 						top: 99.5%;
-						border-top: 15px solid $timer-cards-bg;
-						border-left: 15px solid transparent;
+						border-top: 8px solid $timer-cards-bg;
+						border-left: 8px solid transparent;
 					}
 
 					.counter{
 						font-family: $title-font-light;
 						@include smoothFont();
-						font-size: 6.5vw;
+						font-size: 2.2em;
+						line-height: 45px;
 						font-weight: lighter;
-						line-height: 165px;
 						position: absolute;
 						margin: auto;
 						left: 0; right: 0;
@@ -340,19 +351,19 @@
 						position: absolute;
 						margin: auto;
 						left: 0; right: 0;
-						bottom: -40px;
+						bottom: -26px;
 						color: $main-blue;
 					}
 				}
 
 				.dots-box{
-					width: 5.4%;
-					height: 140px;
+					width: 3.5%;
+					height: 40px;
 
 					.dot{
 						position: absolute;
-						width: 4px;
-						height: 4px;
+						width: 3px;
+						height: 3px;
 						border-radius: 50%;
 						margin: auto;
 						top: 0; bottom: 0;
@@ -360,23 +371,23 @@
 						background-color: #fff;
 					}
 					.upper-dot{
-						top: -32px;
+						top: -12px;
 					}
 					.lower-dot{
-						bottom: -32px;
+						bottom: -12px;
 					}
 				}
 			}
 
 			.timer-cta{
 				position: relative;
-				width: 97%;
-				margin-top: 50px;
-				@include smoothFont();
-				font-family: $brand-font-regular;
-				font-size: 0.8em;
-				text-align: right;
+				width: 210px;
+				margin-top: 35px;
+				font-size: 1em;
+				text-align: left;
 				text-transform: uppercase;
+				font-family: $brand-font-regular;
+				@include smoothFont();
 			}
 		}
 	}

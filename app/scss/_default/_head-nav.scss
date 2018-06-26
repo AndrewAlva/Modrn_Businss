@@ -5,18 +5,23 @@
 	left: 0;
 	// width: 83.7%;
 	width: 100%;
-	height: $header-height;
+	height: 60px;
 	text-align: left;
 
 	.nav-logo{
 		position: relative;
 		display: inline-block;
 		float: left;
+		width: 30px;
 		height: 100%;
-		margin-left: 80px;
-		margin-right: 55px;
-		padding: 38.5px 0;
+		margin-left: 20px;
+		margin-right: 20px;
+		padding: 15px 0;
 		@include boxSizeFit();
+
+		img{
+			width: 100%;
+		}
 	}
 
 	.inner-nav-wrapper{
@@ -28,7 +33,7 @@
 			list-style: none;
 			position: relative;
 			display: table;
-			height: $header-height;
+			height: 60px;
 
 			.single-option{
 				position: relative;
@@ -39,7 +44,7 @@
 				font-size: 0.65em;
 
 				a{
-					padding: 0 25px;
+					padding: 0 15px;
 				}
 
 				&.active{
@@ -49,8 +54,9 @@
 						width: 0;
 						height: 0;
 						margin: auto;
-						top: 0; bottom: 1px; left: 8px;
-						border-width: 6px;
+						top: 0; bottom: 1px; 
+						left: 1px;
+						border-width: 5px;
 						border-style: solid;
 						border-left-color: $main-blue;
 						border-right-color: transparent;
@@ -75,8 +81,8 @@
 	.header-nav-cta{
 		position: relative;
 		float: right;
-		margin-top: 33px;
-		margin-right: 80px;
+		margin-top: 7px;
+		margin-right: 20px;
 
 		opacity: 0;
 		display: none;
