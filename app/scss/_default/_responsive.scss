@@ -426,6 +426,7 @@
 
 				.hero-center-col{
 					width: 57.8%;
+					top: 35px;
 				}
 			}
 
@@ -467,7 +468,6 @@
 			.hero-center-col{
 				width: 63.5%;
 				height: 100%;
-				top: 35px;
 				left: 0;
 
 				.hero-header {
@@ -490,6 +490,7 @@
 					}
 					&#book-header{
 						margin-top: 5%;
+						margin-bottom: 20px;
 					}
 					&#tv-header{
 						margin-top: 10%;
@@ -509,7 +510,6 @@
 				.hero-timer{
 					top: 15px;
 					width: 90%;
-					// width: 77.8%;
 
 					.timer-cards{
 						.single-card{
@@ -835,6 +835,11 @@
 						margin-top: 20%;
 					}
 
+					&#book-header{
+						margin-top: 15%;
+						margin-bottom: 45px;
+					}
+
 					.hero-highlight{
 						&:after{
 							height: 23px;
@@ -855,6 +860,25 @@
 							img{
 								width: 100%;
 							}
+						}
+					}
+				}
+
+				.hero-timer {
+					width: 77.8%;
+					
+					.timer-cards{
+						.single-card{
+							height: 140px;
+							@include drawShadow(-6px, 18px, 20px, 3px, rgba(0, 0, 22, 0.3));
+
+							.counter{
+								line-height: 165px;
+							}
+						}
+
+						.dots-box{
+							height: 140px;
 						}
 					}
 				}
@@ -1155,23 +1179,6 @@
 							img{
 								width: auto;
 							}
-						}
-					}
-				}
-
-				.hero-timer {
-					.timer-cards{
-						.single-card{
-							height: 140px;
-							@include drawShadow(-6px, 18px, 20px, 3px, rgba(0, 0, 22, 0.3));
-
-							.counter{
-								line-height: 165px;
-							}
-						}
-
-						.dots-box{
-							height: 140px;
 						}
 					}
 				}

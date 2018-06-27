@@ -219,7 +219,6 @@
 
 		.hero-header{
 			position: relative;
-			// margin-top: 25px;
 			margin-bottom: 10px;
 			text-align: left;
 
@@ -247,10 +246,9 @@
 			}
 
 			&#book-header{
-				margin-top: 15%;
+				margin-top: 5%;
 			}
 			&#tv-header{
-				// margin-top: 16.5%;
 				margin-top: 10%;
 			}
 		}
@@ -284,7 +282,6 @@
 					position: relative;
 					display: inline-block;
 					margin-left: 0;
-					// margin-left: 60px;
 					padding: 8px 0;
 
 					&:first-child{
@@ -301,7 +298,7 @@
 		.hero-timer{
 			position: relative;
 			width: 140%;
-			top: 30px;
+			top: 15px;
 
 			.timer-cards{
 				list-style: none;
