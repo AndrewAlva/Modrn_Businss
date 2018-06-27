@@ -1,273 +1,273 @@
 // Mobile == Default
-@media screen and (max-width: 767px) {
+// @media screen and (max-width: 767px) {
 	
-	// About section: "_views/about.scss"
-		.what-we-do {
-			.intro-description{
-				width: 280px;
-			}
+// 	// About section: "_views/about.scss"
+// 		.what-we-do {
+// 			.intro-description{
+// 				width: 280px;
+// 			}
 
-			.bullets-table{
-				width: 310px;
+// 			.bullets-table{
+// 				width: 310px;
 
-				.bulleted-column{
-					&.half-sized{
-						width: 100%;
+// 				.bulleted-column{
+// 					&.half-sized{
+// 						width: 100%;
 
-						&:last-child{
-							margin-top: 30px;
-						}
-					}
+// 						&:last-child{
+// 							margin-top: 30px;
+// 						}
+// 					}
 
-					.column-intro{
-						padding-bottom: 10px;
+// 					.column-intro{
+// 						padding-bottom: 10px;
 
-						.column-title{
-							left: 5%;
-						}
-					}
+// 						.column-title{
+// 							left: 5%;
+// 						}
+// 					}
 
-					.custom-bullets-list{
-						&.circle-bullets {
-							li:before{
-								width: 7px;
-								height: 7px;
-								margin-top: 5px;
-							}
-						}
+// 					.custom-bullets-list{
+// 						&.circle-bullets {
+// 							li:before{
+// 								width: 7px;
+// 								height: 7px;
+// 								margin-top: 5px;
+// 							}
+// 						}
 
-						&.triangle-bullets {
-							li:before{
-								margin-top: 3px;
-								border-left-width: 5px;
-								border-top-width: 5px;
-								border-bottom-width: 5px;
-							}
-						}
-					}
-				}
-			}
-		}
+// 						&.triangle-bullets {
+// 							li:before{
+// 								margin-top: 3px;
+// 								border-left-width: 5px;
+// 								border-top-width: 5px;
+// 								border-bottom-width: 5px;
+// 							}
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
 
-		.about-break {
-			.bg-elements {
-				.triangle{
-					&.t-01{
-						top: 10%;
-						left: 55%;
-					}
-					&.t-02{
-						top: -15%;
-						left: 75%;
-					}
-				}
+// 		.about-break {
+// 			.bg-elements {
+// 				.triangle{
+// 					&.t-01{
+// 						top: 10%;
+// 						left: 55%;
+// 					}
+// 					&.t-02{
+// 						top: -15%;
+// 						left: 75%;
+// 					}
+// 				}
 
-				.mask-triangle{
-					top: 60%;
-					right: -25%;
-				}
-			}
+// 				.mask-triangle{
+// 					top: 60%;
+// 					right: -25%;
+// 				}
+// 			}
 
-			.phrase{
-				width: 280px;
-				padding: 50px 0;
-			}
-		}
+// 			.phrase{
+// 				width: 280px;
+// 				padding: 50px 0;
+// 			}
+// 		}
 
-		.essential-values {
-			padding: 40px 0;
+// 		.essential-values {
+// 			padding: 40px 0;
 
-			.values-inner-wrapper {
-				height: 220px;
+// 			.values-inner-wrapper {
+// 				height: 220px;
 
-				&:last-child{
-					margin-top: 40px;
-				}
+// 				&:last-child{
+// 					margin-top: 40px;
+// 				}
 
-				.values-list{
-					font-size: 9px;
-				}
-			}
+// 				.values-list{
+// 					font-size: 9px;
+// 				}
+// 			}
 
-			#core-wrapper, #great-wrapper {
-				.values-list{
-					margin: auto;
-					left: 0; right: 0;
-				}
-			}
-		}
+// 			#core-wrapper, #great-wrapper {
+// 				.values-list{
+// 					margin: auto;
+// 					left: 0; right: 0;
+// 				}
+// 			}
+// 		}
 
-		.quote-break {
-			.photo-wrapper{
-				width: 100%;
+// 		.quote-break {
+// 			.photo-wrapper{
+// 				width: 100%;
 
-				.person-photo{
-					width: 100%;
-					max-width: 390px;
-					left: 0;
-					margin: 0 auto;
-					float: none;
+// 				.person-photo{
+// 					width: 100%;
+// 					max-width: 390px;
+// 					left: 0;
+// 					margin: 0 auto;
+// 					float: none;
 					
-					img{
-						display: block;
-						margin: 0 auto;
-					}
+// 					img{
+// 						display: block;
+// 						margin: 0 auto;
+// 					}
 
-					.triangle-helper{
-						width: 70px;
-						left: -10px;
-						bottom: 85px;
-					}
-				}
-			}
+// 					.triangle-helper{
+// 						width: 70px;
+// 						left: -10px;
+// 						bottom: 85px;
+// 					}
+// 				}
+// 			}
 
-			.quote-wrapper{
-				// display: block;
-				float: none;
-				width: 100%;
-				max-width: 390px;
-				// margin: 0 auto;
-				left: 50%;
-				@include translate(-50%,0);
-				text-align: justify;
+// 			.quote-wrapper{
+// 				// display: block;
+// 				float: none;
+// 				width: 100%;
+// 				max-width: 390px;
+// 				// margin: 0 auto;
+// 				left: 50%;
+// 				@include translate(-50%,0);
+// 				text-align: justify;
 
-				.paragraph-box{
-					width: 100%;
-					margin-top: 10px;
-					margin-left: 0;
-					margin-right: 0;
-					padding: 0 40px;
-					@include boxSizeFit();
+// 				.paragraph-box{
+// 					width: 100%;
+// 					margin-top: 10px;
+// 					margin-left: 0;
+// 					margin-right: 0;
+// 					padding: 0 40px;
+// 					@include boxSizeFit();
 
-					&:before, &:after{
-						top: -4px;
-					}
+// 					&:before, &:after{
+// 						top: -4px;
+// 					}
 
-					&:before{
-						left: 10px;
-					}
-					&:after{
-						left: 20px;
-					}
-				}
+// 					&:before{
+// 						left: 10px;
+// 					}
+// 					&:after{
+// 						left: 20px;
+// 					}
+// 				}
 
-				.quote-author{
-					width: 100%;
-					margin-left: 0;
-					margin-right: 0;
-					padding: 0 40px;
-					@include boxSizeFit();
+// 				.quote-author{
+// 					width: 100%;
+// 					margin-left: 0;
+// 					margin-right: 0;
+// 					padding: 0 40px;
+// 					@include boxSizeFit();
 
-					&:before{
-						width: 10px;
-						margin-right: 5px;
-					}
-				}
-			}
-		}
+// 					&:before{
+// 						width: 10px;
+// 						margin-right: 5px;
+// 					}
+// 				}
+// 			}
+// 		}
 
-	// Contact section: "_views/contact.scss"
-		#section-06{
-			padding-top: 45px;
-		}
+// 	// Contact section: "_views/contact.scss"
+// 		#section-06{
+// 			padding-top: 45px;
+// 		}
 
-		.subscribe-section {
-			.intro-title{
-				width: 280px;
-			}
+// 		.subscribe-section {
+// 			.intro-title{
+// 				width: 280px;
+// 			}
 
-			.intro-description{
-				width: 280px;
-			}
+// 			.intro-description{
+// 				width: 280px;
+// 			}
 
-			.simple-form {
-				padding-top: 0;
+// 			.simple-form {
+// 				padding-top: 0;
 
-				.subscribe-inputs{
-					display: block;
-					margin: 0 auto;
-					height: 30px;
-					padding: 8px;
-				}
+// 				.subscribe-inputs{
+// 					display: block;
+// 					margin: 0 auto;
+// 					height: 30px;
+// 					padding: 8px;
+// 				}
 
-				#input-subscribe-name{
-					margin-top: -15px;
-					margin-right: auto;
-					margin-bottom: 15px;
-				}
-				#submit-subscribe{
-					margin-left: auto;
-					top: 10px;
-				}
-			}
-		}
+// 				#input-subscribe-name{
+// 					margin-top: -15px;
+// 					margin-right: auto;
+// 					margin-bottom: 15px;
+// 				}
+// 				#submit-subscribe{
+// 					margin-left: auto;
+// 					top: 10px;
+// 				}
+// 			}
+// 		}
 
-		.contact-section {
-			padding-top: 50px;
-			padding-bottom: 60px;
+// 		.contact-section {
+// 			padding-top: 50px;
+// 			padding-bottom: 60px;
 
-			.intro-title{
-				width: 280px;
-			}
+// 			.intro-title{
+// 				width: 280px;
+// 			}
 
-			.intro-description{
-				width: 280px;
-			}
+// 			.intro-description{
+// 				width: 280px;
+// 			}
 
-			.narrated-form{
-				width: 90%;
-				margin: 0 auto;
-				// overflow: hidden;
+// 			.narrated-form{
+// 				width: 90%;
+// 				margin: 0 auto;
+// 				// overflow: hidden;
 
-				.narrated-line{
-					margin-bottom: 8px;
+// 				.narrated-line{
+// 					margin-bottom: 8px;
 
-					input{
-						max-width: 170px;
-					}
-					#contact-email{
-						max-width: 95%;
-					}
+// 					input{
+// 						max-width: 170px;
+// 					}
+// 					#contact-email{
+// 						max-width: 95%;
+// 					}
 
-					textarea{
-						max-width: 95%;
-					}
-				}
-			}
-		}
+// 					textarea{
+// 						max-width: 95%;
+// 					}
+// 				}
+// 			}
+// 		}
 
-	// Footer section: "_default/footer.scss"
-		.footer-links {
-			.media-list, .rrss-list, .legals-footer{
-				padding-left: 20px;
-				padding-right: 20px;
-			}
+// 	// Footer section: "_default/footer.scss"
+// 		.footer-links {
+// 			.media-list, .rrss-list, .legals-footer{
+// 				padding-left: 20px;
+// 				padding-right: 20px;
+// 			}
 
-			.media-list{
-				display: block;
-				padding-top: 16px;
-				padding-bottom: 16px;
+// 			.media-list{
+// 				display: block;
+// 				padding-top: 16px;
+// 				padding-bottom: 16px;
 
-				.channels-list{
-					display: inline-block;
-					padding: 8px 10px;
-				}
-			}
-			.rrss-list{
-				font-size: 16px;
-			}
+// 				.channels-list{
+// 					display: inline-block;
+// 					padding: 8px 10px;
+// 				}
+// 			}
+// 			.rrss-list{
+// 				font-size: 16px;
+// 			}
 
-			.legals-footer{
-				.legal-text{
-					text-align: center;
-					float: none;
-					font-size: 0.9em;
-					line-height: 1.9em;
-				}
-			}
-		}
+// 			.legals-footer{
+// 				.legal-text{
+// 					text-align: center;
+// 					float: none;
+// 					font-size: 0.9em;
+// 					line-height: 1.9em;
+// 				}
+// 			}
+// 		}
 
-}
+// }
 
 
 
@@ -372,7 +372,6 @@
 			font-size: 3.9vw;
 			line-height: 3.92vw;
 		}
-
 
 	// Hero section: "_views/hero.scss"
 		.hero-nav{
@@ -563,6 +562,7 @@
 			}
 		}
 
+
 	// About section: "_views/about.scss"
 		.what-we-do {
 			.intro-description{
@@ -574,14 +574,16 @@
 				margin-bottom: 60px;
 
 				.bulleted-column{
+					&.half-sized{
+						width: 50%;
+
+						&:last-child{
+							margin-top: 0;
+						}
+					}
+
 					.column-intro{
 						padding-bottom: 20px;
-
-						.column-icon{
-							img{
-								width: 60%;
-							}
-						}
 
 						.column-title{
 							left: -5%;
@@ -591,12 +593,18 @@
 					.custom-bullets-list{
 						&.circle-bullets {
 							li:before{
+								width: 10px;
+								height: 10px;
 								margin-top: 6px;
 							}
 						}
+
 						&.triangle-bullets {
 							li:before{
-								margin-top: 4px;
+								margin-top: 5px;
+								border-left-width: 7px;
+								border-top-width: 7px;
+								border-bottom-width: 7px;
 							}
 						}
 					}
@@ -648,6 +656,18 @@
 				}
 			}
 
+			#core-wrapper, #great-wrapper {
+				.values-list{
+					right: auto;
+				}
+			}
+
+			#core-wrapper {
+				.values-list{
+					left: 50%;
+				}
+			}
+
 			#great-wrapper {
 				.values-list{
 					left: 20%;
@@ -665,6 +685,10 @@
 			.photo-wrapper{
 				.person-photo{
 					width: 320px;
+
+					img{
+						width: auto;
+					}
 
 					.triangle-helper{
 						width: 80px;
@@ -894,6 +918,17 @@
 
 			.bullets-table{
 				width: 900px;
+				margin-bottom: 100px;
+
+				.bulleted-column{
+					.column-intro{
+						.column-icon{
+							img{
+								width: auto;
+							}
+						}
+					}
+				}
 
 				.bulleted-column{ 
 					.custom-bullets-list{
@@ -905,10 +940,10 @@
 
 						&.triangle-bullets {
 							li:before{
-								margin-top: 5px;
-								border-left-width: 7px;
-								border-top-width: 7px;
-								border-bottom-width: 7px;
+								margin-top: 4px;
+								border-left-width: 10px;
+								border-top-width: 10px;
+								border-bottom-width: 10px;
 							}
 						}
 					}
@@ -1122,7 +1157,6 @@
 			}
 		}
 
-	
 	// Hero section: "_views/hero.scss"
 		.hero-nav{
 			min-height: 699px;
@@ -1191,44 +1225,30 @@
 	// About section: "_views/about.scss"
 		.what-we-do {
 			.intro-description{
-				width: 280px;
+				width: 685px;
 			}
 
 			.bullets-table{
-				width: 310px;
+				width: 1180px;
 
 				.bulleted-column{
-					&.half-sized{
-						width: 100%;
-
-						&:last-child{
-							margin-top: 30px;
-						}
-					}
-
 					.column-intro{
-						padding-bottom: 10px;
+						padding-bottom: 40px;
 
 						.column-title{
-							left: 5%;
+							left: 32px;
 						}
 					}
 
 					.custom-bullets-list{
 						&.circle-bullets {
 							li:before{
-								width: 7px;
-								height: 7px;
-								margin-top: 5px;
+								margin-top: 12px;
 							}
 						}
-
 						&.triangle-bullets {
 							li:before{
-								margin-top: 3px;
-								border-left-width: 5px;
-								border-top-width: 5px;
-								border-bottom-width: 5px;
+								margin-top: 7px;
 							}
 						}
 					}
@@ -1240,114 +1260,95 @@
 			.bg-elements {
 				.triangle{
 					&.t-01{
-						top: 10%;
-						left: 55%;
+						top: 9%;
+						left: 65%;
 					}
 					&.t-02{
-						top: -15%;
-						left: 75%;
+						top: -25%;
+						left: 82%;
 					}
 				}
 
 				.mask-triangle{
-					top: 60%;
-					right: -25%;
+					top: 50%;
+					right: 0;
 				}
 			}
 
 			.phrase{
-				width: 280px;
-				padding: 50px 0;
+				width: 1040px;
+				padding: 128px 0;
 			}
 		}
 
 		.essential-values {
-			padding: 40px 0;
+			padding: 100px 0;
 
 			.values-inner-wrapper {
-				height: 220px;
+				height: 400px;
 
 				&:last-child{
-					margin-top: 40px;
+					margin-top: 97px;
 				}
 
 				.values-list{
-					font-size: 9px;
-				}
-			}
-
-			#core-wrapper, #great-wrapper {
-				.values-list{
-					margin: auto;
-					left: 0; right: 0;
+					font-size: 1em;
 				}
 			}
 		}
 
 		.quote-break {
 			.photo-wrapper{
-				width: 100%;
+				width: 50%;
 
 				.person-photo{
-					width: 100%;
-					max-width: 390px;
-					left: 0;
-					margin: 0 auto;
-					float: none;
-					
-					img{
-						display: block;
-						margin: 0 auto;
-					}
-
-					.triangle-helper{
-						width: 70px;
-						left: -10px;
-						bottom: 85px;
-					}
+					width: auto;
+					max-width: auto;
+					left: auto;
+					float: right;
+					right: 30px;
 				}
 			}
 
 			.quote-wrapper{
-				// display: block;
-				float: none;
-				width: 100%;
-				max-width: 390px;
-				// margin: 0 auto;
-				left: 50%;
-				@include translate(-50%,0);
-				text-align: justify;
+				width: 50%;
+				max-width: unset;
+				left: 0;
+				@include translate(0,0);
+				float: left;
+				text-align: left;
+				margin-top: 40px;
 
 				.paragraph-box{
-					width: 100%;
-					margin-top: 10px;
-					margin-left: 0;
-					margin-right: 0;
+					width: 550px;
+					margin-top: 80px;
+					margin-left: 80px;
+					margin-bottom: 30px;
 					padding: 0 40px;
-					@include boxSizeFit();
+					box-sizing: content-box;
 
 					&:before, &:after{
-						top: -4px;
+						top: 2px;
 					}
 
 					&:before{
-						left: 10px;
+						left: -52px;
 					}
 					&:after{
-						left: 20px;
+						left: -35px;
 					}
 				}
 
 				.quote-author{
-					width: 100%;
-					margin-left: 0;
-					margin-right: 0;
-					padding: 0 40px;
-					@include boxSizeFit();
+					width: auto;
+					margin-left: 80px;
+					margin-right: auto;
+					padding: auto;
+					box-sizing: content-box;
 
 					&:before{
-						width: 10px;
-						margin-right: 5px;
+						width: 50px;
+						margin-right: 25px;
 					}
 				}
 			}

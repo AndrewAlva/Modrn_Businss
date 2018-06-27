@@ -6,14 +6,14 @@
 	.intro-description{
 		color: $body-color;
 		// width: 35.2%;
-		width: 685px;
+		width: 280px;
 	}
 
 	.bullets-table{
 		position: relative;
-		width: 1180px;
+		width: 310px;
 		margin: 0 auto;
-		margin-bottom: 100px;
+		margin-bottom: 60px;
 		overflow: hidden;
 
 		.bulleted-column{
@@ -24,23 +24,32 @@
 			padding: 0 20px;
 
 			&.half-sized{
-				width: 50%;
+				width: 100%;
+
+				&:last-child{
+					margin-top: 30px;
+				}
 			}
 
 			.column-intro{
 				position: relative;
 				display: table;
 				vertical-align: middle;
-				padding-bottom: 40px;
+				padding-bottom: 10px;
 
 				.column-icon, .column-title{
 					position: relative;
 					display: table-cell;
 					vertical-align: middle;
 				}
+				.column-icon{
+					img{
+						width: 60%;
+					}
+				}
 				.column-title{
 					color: $dark-titles;
-					left: 32px;
+					left: 5%;
 				}
 			}
 
@@ -48,22 +57,22 @@
 				list-style: none;
 
 				&.circle-bullets{
-					& li:before{
-						width: 10px;
-						height: 10px;
+					li:before{
+						width: 7px;
+						height: 7px;
 						background-color: $circle-bullet-color;
 						border-radius: 50%;
-						margin-top: 12px;
+						margin-top: 5px;
 					}
 				}
 				&.triangle-bullets{
-					& li:before{
+					li:before{
 						width: 0;
 						height: 0;
-						border-left: 10px solid $main-blue;
-						border-top: 10px solid transparent;
-						border-bottom: 10px solid transparent;
-						margin-top: 7px;
+						border-left: 5px solid $main-blue;
+						border-top: 5px solid transparent;
+						border-bottom: 5px solid transparent;
+						margin-top: 3px;
 					}
 				}
 
@@ -116,31 +125,39 @@
 			&.point-left{}
 
 			&.t-01{
-				top: 9%;
-				left: 65%;
-				border-left: 70px solid #739ff7;
-				border-top-width: 70px;
-				border-bottom-width: 70px;
+				top: 10%;
+				left: 55%;
+				// border-left: 70px solid #739ff7;
+				// border-top-width: 70px;
+				// border-bottom-width: 70px;
+				border-left: 45px solid #739ff7;
+				border-top-width: 32px;
+				border-bottom-width: 32px;
 				@include opacity(0.2);
 			}
 			&.t-02{
-				top: -25%;
-				left: 82%;
+				top: -15%;
+				left: 75%;
 
-				border-right: 172px solid #739ff7;
-				border-top-width: 172px;
-				border-bottom-width: 172px;
+				// border-right: 172px solid #739ff7;
+				// border-top-width: 172px;
+				// border-bottom-width: 172px;
+				border-right: 70px solid #739ff7;
+				border-top-width: 70px;
+				border-bottom-width: 70px;
 				@include opacity(0.2);
 			}
 		}
 
 		.mask-triangle{
 			position: absolute;
-			width: 806px;
-			height: 806px;
+			// width: 806px;
+			// height: 806px;
+			width: 400px;
+			height: 400px;
 			overflow: hidden;
-			top: 50%;
-			right: 0;
+			top: 60%;
+			right: -25%;
 			@include translate(0, -38%);
 			@include opacity(0.18);
 
@@ -170,13 +187,13 @@
 
 	.phrase{
 		position: relative;
-		width: 1040px;
+		width: 280px;
+		padding: 50px 0;
 		margin: 0 auto;
 		color: $light-blue-brand;
 		text-transform: uppercase;
 		text-align: center;
 		font-family: $brand-font-regular;
-		padding: 128px 0;
 	}
 }
 
@@ -184,17 +201,17 @@
 	position: relative;
 	width: 100%;
 	background-color: #fff;
-	padding: 100px 0;
+	padding: 40px 0;
 	overflow: hidden;
 
 	.values-inner-wrapper{
 		position: relative;
 		width: 100%;
-		height: 400px;
+		height: 220px;
 		display: block;
 
 		&:last-child{
-			margin-top: 97px;
+			margin-top: 40px;
 		}
 
 		.bg-title{
@@ -222,6 +239,9 @@
 			position: absolute;
 			list-style: none;
 			width: 50%;
+			font-size: 9px;
+			margin: auto;
+			left: 0; right: 0;
 
 			.list-title{
 				color: $dark-titles;
@@ -244,16 +264,9 @@
 			}
 		}
 	}
-
-	#core-wrapper{
-		.values-list{
-			left: 50%;
-		}
-	}
 	#great-wrapper{
-
 		.values-list{
-			left: 31%;
+			// left: 31%;
 		}
 	}
 }
@@ -261,7 +274,8 @@
 .quote-break{
 	position: relative;
 	width: 100%;
-	padding-top: 18px;
+	// padding-top: 18px;
+	padding-top: 5px;
 	overflow: hidden;
 
 	&:before{
@@ -277,12 +291,26 @@
 		position: relative;
 		display: inline-block;
 		float: left;
-		width: 50%;
+		width: 100%;
 
 		.person-photo{
 			position: relative;
-			float: right;
-			right: 30px;
+			width: 100%;
+			max-width: 390px;
+			left: 0;
+			margin: 0 auto;
+
+			img{
+				display: block;
+				margin: 0 auto;
+				width: 100%;
+			}
+
+			.triangle-helper{
+				width: 70px;
+				left: -10px;
+				bottom: 85px;
+			}
 		}
 		
 		.triangle-helper{
@@ -296,42 +324,57 @@
 	.quote-wrapper{
 		position: relative;
 		display: inline-block;
-		float: left;
-		width: 50%;
-		margin-top: 40px;
+		float: none;
+		width: 100%;
+		max-width: 390px;
+		left: 50%;
+		@include translate(-50%,0);
+		// margin-top: 40px;
+		margin-top: 15px;
+		text-align: justify;
 
 		.paragraph-box{
 			position: relative;
 			display: block;
-			width: 550px;
-			margin-top: 80px;
-			margin-left: 80px;
-			margin-bottom: 30px;
+			width: 100%;
+			margin-top: 10px;
+			margin-bottom: 15px;
+			margin-left: 0;
+			margin-right: 0;
+			padding: 0 40px;
+			@include boxSizeFit();
 			color: $body-color;
 			font-family: $brand-font-regular;
 
 			&:before, &:after{
 				content: "";
 				position: absolute;
-				top: 2px;
+				top: -4px;
 				width: 0;
-				height: 17px;
-				border-left: 14px solid $main-blue;
-				border-bottom: 8px solid transparent;
+				// height: 17px;
+				height: 10px;
+				border-left: 8px solid $main-blue;
+				// border-left: 14px solid $main-blue;
+				border-bottom: 5px solid transparent;
+				// border-bottom: 8px solid transparent;
 				border-right: 0 solid transparent;
 			}
 			&:before{
-				left: -52px;
+				left: 10px;
 			}
 			&:after{
-				left: -35px;
+				left: 20px;
 			}
 		}
 
 		.quote-author{
 			position: relative;
+			width: 100%;
 			display: block;
-			margin-left: 80px;
+			margin-left: 0;
+			margin-right: 0;
+			padding: 0 40px;
+			@include boxSizeFit();
 			color: $main-blue;
 			font-family: $author-font;
 			font-size: 1.15em;
@@ -341,9 +384,9 @@
 				content: "";
 				position: relative;
 				display: inline-block;
-				width: 50px;
+				width: 10px;
 				height: 1px;
-				margin-right: 25px;
+				margin-right: 5px;
 				margin-bottom: 6px;
 				background-color: $main-blue;
 			}
