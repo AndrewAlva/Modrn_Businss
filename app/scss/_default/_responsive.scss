@@ -1,273 +1,38 @@
 // Mobile == Default
-// @media screen and (max-width: 767px) {
-	
-// 	// About section: "_views/about.scss"
-// 		.what-we-do {
-// 			.intro-description{
-// 				width: 280px;
-// 			}
+@media screen and (max-width: 767px) {
 
-// 			.bullets-table{
-// 				width: 310px;
+	// Footer section: "_default/footer.scss"
+		.footer-links {
+			.media-list, .rrss-list, .legals-footer{
+				padding-left: 20px;
+				padding-right: 20px;
+			}
 
-// 				.bulleted-column{
-// 					&.half-sized{
-// 						width: 100%;
+			.media-list{
+				display: block;
+				padding-top: 16px;
+				padding-bottom: 16px;
 
-// 						&:last-child{
-// 							margin-top: 30px;
-// 						}
-// 					}
+				.channels-list{
+					display: inline-block;
+					padding: 8px 10px;
+				}
+			}
+			.rrss-list{
+				font-size: 16px;
+			}
 
-// 					.column-intro{
-// 						padding-bottom: 10px;
+			.legals-footer{
+				.legal-text{
+					text-align: center;
+					float: none;
+					font-size: 0.9em;
+					line-height: 1.9em;
+				}
+			}
+		}
 
-// 						.column-title{
-// 							left: 5%;
-// 						}
-// 					}
-
-// 					.custom-bullets-list{
-// 						&.circle-bullets {
-// 							li:before{
-// 								width: 7px;
-// 								height: 7px;
-// 								margin-top: 5px;
-// 							}
-// 						}
-
-// 						&.triangle-bullets {
-// 							li:before{
-// 								margin-top: 3px;
-// 								border-left-width: 5px;
-// 								border-top-width: 5px;
-// 								border-bottom-width: 5px;
-// 							}
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}
-
-// 		.about-break {
-// 			.bg-elements {
-// 				.triangle{
-// 					&.t-01{
-// 						top: 10%;
-// 						left: 55%;
-// 					}
-// 					&.t-02{
-// 						top: -15%;
-// 						left: 75%;
-// 					}
-// 				}
-
-// 				.mask-triangle{
-// 					top: 60%;
-// 					right: -25%;
-// 				}
-// 			}
-
-// 			.phrase{
-// 				width: 280px;
-// 				padding: 50px 0;
-// 			}
-// 		}
-
-// 		.essential-values {
-// 			padding: 40px 0;
-
-// 			.values-inner-wrapper {
-// 				height: 220px;
-
-// 				&:last-child{
-// 					margin-top: 40px;
-// 				}
-
-// 				.values-list{
-// 					font-size: 9px;
-// 				}
-// 			}
-
-// 			#core-wrapper, #great-wrapper {
-// 				.values-list{
-// 					margin: auto;
-// 					left: 0; right: 0;
-// 				}
-// 			}
-// 		}
-
-// 		.quote-break {
-// 			.photo-wrapper{
-// 				width: 100%;
-
-// 				.person-photo{
-// 					width: 100%;
-// 					max-width: 390px;
-// 					left: 0;
-// 					margin: 0 auto;
-// 					float: none;
-					
-// 					img{
-// 						display: block;
-// 						margin: 0 auto;
-// 					}
-
-// 					.triangle-helper{
-// 						width: 70px;
-// 						left: -10px;
-// 						bottom: 85px;
-// 					}
-// 				}
-// 			}
-
-// 			.quote-wrapper{
-// 				// display: block;
-// 				float: none;
-// 				width: 100%;
-// 				max-width: 390px;
-// 				// margin: 0 auto;
-// 				left: 50%;
-// 				@include translate(-50%,0);
-// 				text-align: justify;
-
-// 				.paragraph-box{
-// 					width: 100%;
-// 					margin-top: 10px;
-// 					margin-left: 0;
-// 					margin-right: 0;
-// 					padding: 0 40px;
-// 					@include boxSizeFit();
-
-// 					&:before, &:after{
-// 						top: -4px;
-// 					}
-
-// 					&:before{
-// 						left: 10px;
-// 					}
-// 					&:after{
-// 						left: 20px;
-// 					}
-// 				}
-
-// 				.quote-author{
-// 					width: 100%;
-// 					margin-left: 0;
-// 					margin-right: 0;
-// 					padding: 0 40px;
-// 					@include boxSizeFit();
-
-// 					&:before{
-// 						width: 10px;
-// 						margin-right: 5px;
-// 					}
-// 				}
-// 			}
-// 		}
-
-// 	// Contact section: "_views/contact.scss"
-// 		#section-06{
-// 			padding-top: 45px;
-// 		}
-
-// 		.subscribe-section {
-// 			.intro-title{
-// 				width: 280px;
-// 			}
-
-// 			.intro-description{
-// 				width: 280px;
-// 			}
-
-// 			.simple-form {
-// 				padding-top: 0;
-
-// 				.subscribe-inputs{
-// 					display: block;
-// 					margin: 0 auto;
-// 					height: 30px;
-// 					padding: 8px;
-// 				}
-
-// 				#input-subscribe-name{
-// 					margin-top: -15px;
-// 					margin-right: auto;
-// 					margin-bottom: 15px;
-// 				}
-// 				#submit-subscribe{
-// 					margin-left: auto;
-// 					top: 10px;
-// 				}
-// 			}
-// 		}
-
-// 		.contact-section {
-// 			padding-top: 50px;
-// 			padding-bottom: 60px;
-
-// 			.intro-title{
-// 				width: 280px;
-// 			}
-
-// 			.intro-description{
-// 				width: 280px;
-// 			}
-
-// 			.narrated-form{
-// 				width: 90%;
-// 				margin: 0 auto;
-// 				// overflow: hidden;
-
-// 				.narrated-line{
-// 					margin-bottom: 8px;
-
-// 					input{
-// 						max-width: 170px;
-// 					}
-// 					#contact-email{
-// 						max-width: 95%;
-// 					}
-
-// 					textarea{
-// 						max-width: 95%;
-// 					}
-// 				}
-// 			}
-// 		}
-
-// 	// Footer section: "_default/footer.scss"
-// 		.footer-links {
-// 			.media-list, .rrss-list, .legals-footer{
-// 				padding-left: 20px;
-// 				padding-right: 20px;
-// 			}
-
-// 			.media-list{
-// 				display: block;
-// 				padding-top: 16px;
-// 				padding-bottom: 16px;
-
-// 				.channels-list{
-// 					display: inline-block;
-// 					padding: 8px 10px;
-// 				}
-// 			}
-// 			.rrss-list{
-// 				font-size: 16px;
-// 			}
-
-// 			.legals-footer{
-// 				.legal-text{
-// 					text-align: center;
-// 					float: none;
-// 					font-size: 0.9em;
-// 					line-height: 1.9em;
-// 				}
-// 			}
-// 		}
-
-// }
+}
 
 
 
@@ -372,6 +137,7 @@
 			font-size: 3.9vw;
 			line-height: 3.92vw;
 		}
+
 
 	// Hero section: "_views/hero.scss"
 		.hero-nav{
@@ -562,7 +328,6 @@
 			}
 		}
 
-
 	// About section: "_views/about.scss"
 		.what-we-do {
 			.intro-description{
@@ -743,23 +508,38 @@
 			}
 		}
 
+
+
 	// Contact section: "_views/contact.scss"
+		#section-06{
+			padding-top: 60px;
+		}
+
 		.subscribe-section {
+			.intro-title{
+				width: initial;
+			}
+
 			.intro-description{
 				width: 555px;
 			}
 
 			.simple-form {
-				padding-bottom: 80px;
+				padding-top: 10px;
 
 				.subscribe-inputs{
 					width: 220px;
 					height: 42px;
+					display: initial;
+					padding: 20px;
 				}
 				#input-subscribe-name{
+					margin-top: initial;
+					margin-bottom: initial;
 					margin-right: 10px;
 				}
 				#submit-subscribe{
+					top: -4px;
 					margin-left: 20px;
 				}
 			}
@@ -768,6 +548,10 @@
 		.contact-section{
 			padding-top: 80px;
 			padding-bottom: 90px;
+
+			.intro-title{
+				width: initial;
+			}
 
 			.intro-description{
 				width: 420px;
@@ -780,9 +564,13 @@
 
 			.narrated-form {
 				padding-bottom: 15px;
-				
-				#submit-contact-data{
-					margin-top: 40px;
+
+				.narrated-line{
+					margin-bottom: 0;
+
+					.narrated-input{
+						max-width: initial;
+					}
 				}
 			}
 		}
@@ -834,6 +622,11 @@
 		.intro-description{
 			margin-bottom: 80px;
 		}
+
+		.legal-text{
+			font-size: 0.72em;
+		}
+
 
 	// Hero section: "_views/hero.scss"
 		.hero-nav{
@@ -933,7 +726,6 @@
 				}
 			}
 		}
-
 
 	// About section: "_views/about.scss"
 		.what-we-do {
@@ -1081,11 +873,9 @@
 			}
 		}
 
-	// Contact section: "_views/contact.scss"
-		#section-06{
-			padding-top: 60px;
-		}
 
+
+	// Contact section: "_views/contact.scss"
 		.subscribe-section {
 			.intro-description{
 				width: 685px;
@@ -1100,15 +890,34 @@
 					height: 56px;
 				}
 
+				#input-subscribe-name{
+					margin-right: 20px;
+				}
+
 				#submit-subscribe{
 					top: -4px;
+					margin-left: 40px;
 				}
 			}
 		}
 
 		.contact-section{
+			padding-top: 120px;
+			padding-bottom: 160px;
+
 			.intro-description{
 				width: 520px;
+				margin-bottom: 50px;
+			}
+
+			.form-division{
+				margin-bottom: 40px;
+			}
+
+			.narrated-form{
+				#submit-contact-data{
+					margin-top: 60px;
+				}
 			}
 		}
 
@@ -1133,10 +942,6 @@
 			}
 		}
 
-	// Texts helper: "_default/texts.scss"
-		.legal-text{
-			font-size: 0.72em;
-		}
 }
 
 
@@ -1185,6 +990,7 @@
 				min-width: 100px;
 			}
 		}
+
 
 	// Hero section: "_views/hero.scss"
 		.hero-nav{
@@ -1247,9 +1053,6 @@
 				}
 			}
 		}
-
-
-
 
 	// About section: "_views/about.scss"
 		.what-we-do {
@@ -1391,71 +1194,75 @@
 			}
 		}
 
+
+
 	// Contact section: "_views/contact.scss"
 		#section-06{
-			padding-top: 45px;
+			padding-top: 80px;
 		}
 
 		.subscribe-section {
 			.intro-title{
-				width: 280px;
+				width: auto;
 			}
 
 			.intro-description{
-				width: 280px;
+				width: 890px;
 			}
 
 			.simple-form {
-				padding-top: 0;
+				padding-top: 40px;
+				padding-bottom: 200px;
 
 				.subscribe-inputs{
-					display: block;
-					margin: 0 auto;
-					height: 30px;
-					padding: 8px;
+					display: initial;
+					margin: initial;
+					width: 380px;
+					height: 60px;
+					padding: 20px;
 				}
 
 				#input-subscribe-name{
-					margin-top: -15px;
-					margin-right: auto;
-					margin-bottom: 15px;
+					margin-top: initial;
+					margin-bottom: initial;
+					margin-right: 20px;
 				}
 				#submit-subscribe{
-					margin-left: auto;
-					top: 10px;
+					top: -5px;
+					margin-left: 40px;
 				}
 			}
 		}
 
 		.contact-section {
-			padding-top: 50px;
-			padding-bottom: 60px;
+			padding-top: 120px;
+			padding-bottom: 160px;
 
 			.intro-title{
-				width: 280px;
+				width: auto;
 			}
 
 			.intro-description{
-				width: 280px;
+				width: 650px;
 			}
 
 			.narrated-form{
-				width: 90%;
-				margin: 0 auto;
+				width: initial;
+				margin: initial;
 				// overflow: hidden;
 
 				.narrated-line{
-					margin-bottom: 8px;
+					margin-bottom: 0;
 
 					input{
-						max-width: 170px;
+						max-width: initial;
 					}
 					#contact-email{
-						max-width: 95%;
+						max-width: initial;
 					}
 
 					textarea{
-						max-width: 95%;
+						max-width: initial;
 					}
 				}
 			}

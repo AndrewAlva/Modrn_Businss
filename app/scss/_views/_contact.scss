@@ -2,24 +2,27 @@
 	position: relative;
 
 	.intro-title{
-		color: $main-blue;		
+		width: 280px;
+		color: $main-blue;
 	}
 
 	.intro-description{
 		color: $body-color;
-		width: 890px;
+		width: 280px;
 	}
 
 	.simple-form{
 		position: relative;
-		padding-top: 40px;
-		padding-bottom: 200px;
+		padding-top: 0;
+		padding-bottom: 80px;
 		text-align: center;
 
 		.subscribe-inputs{
-			width: 380px;
-			height: 60px;
-			padding: 20px;
+			display: block;
+			width: 220px;
+			height: 30px;
+			padding: 8px;
+			margin: 0 auto;
 			@include boxSizeFit();
 			color: $dark-titles;
 			border: none;
@@ -86,29 +89,30 @@
 		}
 
 		#input-subscribe-name{
-			margin-right: 20px;
+			margin-top: -15px;
+			margin-bottom: 15px;
 		}
 		#submit-subscribe{
-			top: -5px;
-			margin-left: 40px;
+			top: 10px;
 		}
 	}
 }
 
 .contact-section{
-	padding-top: 120px;
-	padding-bottom: 160px;
+	padding-top: 50px;
+	padding-bottom: 60px;
 	color: $body-color;
 	background-color: $dark-titles;
 
 	.intro-title{
 		color: $main-blue;
+		width: 280px;
 	}
 
 	.intro-description{
 		color: #fff;
-		width: 650px;
-		margin-bottom: 50px;
+		width: 280px;
+		margin-bottom: 30px;
 	}
 
 	.form-division{
@@ -116,22 +120,27 @@
 		width: 180px;
 		height: 2px;
 		margin: 0 auto;
-		margin-bottom: 40px;
+		margin-bottom: 25px;
 		background-color: $main-blue;
 	}
 
 	.narrated-form{
 		position: relative;
+		width: 90%;
+		margin: 0 auto;
+		padding-bottom: 15px;
 		text-align: center;
 		color: #fff;
-		padding-bottom: 20px;
 
 		.narrated-line{
+			margin-bottom: 8px;
+
 			.regular-text{
 				font-family: $brand-font-regular;
 			}
 
 			.narrated-input{
+				max-width: 170px;
 				font-family: $brand-font-regular;
 				font-weight: lighter;
 				@include smoothFont();
@@ -168,10 +177,18 @@
 				    opacity: 1; /* Firefox */
 				}
 			}
+
+			#contact-email{
+				max-width: 95%;
+			}
+
+			textarea.narrated-input{
+				max-width: 95%;
+			}
 		}
 
 		#submit-contact-data{
-			margin-top: 60px;
+			margin-top: 40px;
 		}
 	}
 }
