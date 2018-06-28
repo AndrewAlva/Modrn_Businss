@@ -5,11 +5,6 @@
 	ul{
 		list-style: none;
 		text-align: center;
-		// display: table;
-
-		li{
-			// display: table-cell;
-		}
 	}
 
 	a{
@@ -25,30 +20,23 @@
 	.media-list, .rrss-list, .legals-footer{
 		position: relative;
 		display: block;
-		width: 1040px;
+		width: auto;
 		margin: 0 auto;
 	}
 
 	.media-list{
-		display: -webkit-box;      /* OLD - iOS 6-, Safari 3.1-6 */
-		display: -moz-box;         /* OLD - Firefox 19- (buggy but mostly works) */
-		display: -ms-flexbox;      /* TWEENER - IE 10 */
-		display: -webkit-flex;     /* NEW - Chrome */
-		display: flex;             /* NEW, Spec - Opera 12.1, Firefox 20+ */
-
-		-webkit-justify-content: space-between;
-		-moz-justify-content: space-between;
-		justify-content: space-between;
-		padding: 32px 0;
+		padding: 16px 20px;
 		text-transform: uppercase;
 
-		.text-listed{
-			// display: table-cell;
+		.channels-list{
+			display: inline-block;
+			padding: 8px 10px;
 		}
 	}
 
 	.rrss-list{
-		padding-bottom: 23px;
+		padding: 0 20px 18px;
+		font-size: 16px;
 
 		.icon-listed{
 			display: inline-block;
@@ -70,9 +58,11 @@
 	.legals-footer{
 		overflow: hidden;
 		color: $body-color;
-		padding: 18px 0;
-
-		.brand-copyright{float: left; text-align: left;}
-		.studio-copyright{float: right; text-align: right;}
+		padding: 14px 20px;
+		
+		.legal-text{
+			text-align: center;
+			float: none;
+		}
 	}
 }
