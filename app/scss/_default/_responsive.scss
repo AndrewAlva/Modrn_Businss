@@ -571,7 +571,6 @@
 
 			.bullets-table{
 				width: 650px;
-				margin-bottom: 60px;
 
 				.bulleted-column{
 					&.half-sized{
@@ -654,6 +653,10 @@
 				&:last-child{
 					margin-top: 60px;
 				}
+
+				.values-list{
+					font-size: unset;
+				}
 			}
 
 			#core-wrapper, #great-wrapper {
@@ -683,12 +686,14 @@
 			}
 
 			.photo-wrapper{
+				width: 50%;
+
 				.person-photo{
 					width: 320px;
-
-					img{
-						width: auto;
-					}
+					max-width: unset;
+					left: auto;
+					float: right;
+					right: 30px;
 
 					.triangle-helper{
 						width: 80px;
@@ -699,24 +704,35 @@
 			}
 
 			.quote-wrapper{
+				width: 50%;
+				max-width: unset;
+				left: 0;
+				@include translate(0,0);
+				float: left;
+				text-align: left;
+
 				.paragraph-box{
 					width: 320px;
 					margin-top: 35px;
 					margin-left: 25px;
 					margin-bottom: 15px;
+					padding: 0;
 
 					&:before, &:after{
+						top: 2px;
 						height: 10px;
-						border-left-width: 8px;
-						border-bottom-width: 5px;
 					}
 					&:before{
 						left: -35px;
+					}
+					&:after{
+						left: -25px;
 					}
 				}
 
 				.quote-author{
 					margin-left: 25px;
+					padding: 0;
 
 					&:before{
 						width: 30px;
@@ -808,6 +824,15 @@
 					border-left-width: 20px;
 				}
 			}
+		}
+
+	// Texts general style: "_default/texts.scss"
+		.intro-title{
+			margin-bottom: 35px;
+		}
+
+		.intro-description{
+			margin-bottom: 80px;
 		}
 
 	// Hero section: "_views/hero.scss"
@@ -922,10 +947,16 @@
 
 				.bulleted-column{
 					.column-intro{
+						padding-bottom: 40px;
+
 						.column-icon{
 							img{
 								width: auto;
 							}
+						}
+
+						.column-title{
+							left: 32px;
 						}
 					}
 				}
@@ -937,13 +968,9 @@
 								margin-top: 7px;
 							}
 						}
-
 						&.triangle-bullets {
 							li:before{
 								margin-top: 4px;
-								border-left-width: 10px;
-								border-top-width: 10px;
-								border-bottom-width: 10px;
 							}
 						}
 					}
@@ -956,6 +983,7 @@
 				.triangle{
 					&.t-01{
 						top: 14%;
+						left: 65%;
 						border-left-width: 60px;
 						border-top-width: 50px;
 						border-bottom-width: 50px;
@@ -984,6 +1012,7 @@
 		}
 
 		.essential-values {
+			padding: 100px 0;
 			.values-inner-wrapper{
 				height: 320px;
 
@@ -1000,6 +1029,8 @@
 		}
 
 		.quote-break {
+			padding-top: 18px;
+
 			&:before{
 				height: 450px;
 			}
@@ -1027,6 +1058,7 @@
 					width: 380px;
 					margin-top: 60px;
 					margin-left: 50px;
+					margin-bottom: 30px;
 
 					&:before, &:after{
 						height: 12px;
@@ -1035,9 +1067,6 @@
 					}
 					&:before{
 						left: -38px;
-					}
-					&:after{
-						left: -25px;
 					}
 				}
 
@@ -1249,6 +1278,9 @@
 						&.triangle-bullets {
 							li:before{
 								margin-top: 7px;
+								border-left-width: 10px;
+								border-top-width: 10px;
+								border-bottom-width: 10px;
 							}
 						}
 					}
@@ -1261,7 +1293,6 @@
 				.triangle{
 					&.t-01{
 						top: 9%;
-						left: 65%;
 					}
 					&.t-02{
 						top: -25%;
@@ -1295,42 +1326,49 @@
 					font-size: 1em;
 				}
 			}
+
+			#great-wrapper{
+				.values-list{
+					left: 31%;
+				}
+			}
 		}
 
 		.quote-break {
-			.photo-wrapper{
-				width: 50%;
+			&:before{
+				height: 640px;
+			}
 
+			.photo-wrapper{
 				.person-photo{
 					width: auto;
-					max-width: auto;
-					left: auto;
-					float: right;
-					right: 30px;
+
+					.triangle-helper{
+						width: auto;
+						left: -100px;
+						bottom: 70px;
+					}
+
+					img{
+						width: auto;
+					}
 				}
 			}
 
 			.quote-wrapper{
-				width: 50%;
-				max-width: unset;
-				left: 0;
-				@include translate(0,0);
-				float: left;
-				text-align: left;
 				margin-top: 40px;
 
 				.paragraph-box{
 					width: 550px;
 					margin-top: 80px;
 					margin-left: 80px;
-					margin-bottom: 30px;
-					padding: 0 40px;
 					box-sizing: content-box;
-
+					
 					&:before, &:after{
-						top: 2px;
+						height: 17px;
+						border-left-width: 14px;
+						border-bottom-width: 8px;
 					}
-
 					&:before{
 						left: -52px;
 					}
@@ -1343,7 +1381,6 @@
 					width: auto;
 					margin-left: 80px;
 					margin-right: auto;
-					padding: auto;
 					box-sizing: content-box;
 
 					&:before{

@@ -5,7 +5,6 @@
 
 	.intro-description{
 		color: $body-color;
-		// width: 35.2%;
 		width: 280px;
 	}
 
@@ -127,9 +126,6 @@
 			&.t-01{
 				top: 10%;
 				left: 55%;
-				// border-left: 70px solid #739ff7;
-				// border-top-width: 70px;
-				// border-bottom-width: 70px;
 				border-left: 45px solid #739ff7;
 				border-top-width: 32px;
 				border-bottom-width: 32px;
@@ -139,9 +135,6 @@
 				top: -15%;
 				left: 75%;
 
-				// border-right: 172px solid #739ff7;
-				// border-top-width: 172px;
-				// border-bottom-width: 172px;
 				border-right: 70px solid #739ff7;
 				border-top-width: 70px;
 				border-bottom-width: 70px;
@@ -151,8 +144,6 @@
 
 		.mask-triangle{
 			position: absolute;
-			// width: 806px;
-			// height: 806px;
 			width: 400px;
 			height: 400px;
 			overflow: hidden;
@@ -167,7 +158,6 @@
 				height: 100%;
 				top: 50%;
 				right: -10%;
-				// @include transformFrom(center, center);
 
 				-webkit-transform: translate(50%, -50%) rotate(45deg);
 			       -moz-transform: translate(50%, -50%) rotate(45deg);
@@ -264,17 +254,11 @@
 			}
 		}
 	}
-	#great-wrapper{
-		.values-list{
-			// left: 31%;
-		}
-	}
 }
 
 .quote-break{
 	position: relative;
 	width: 100%;
-	// padding-top: 18px;
 	padding-top: 5px;
 	overflow: hidden;
 
@@ -283,7 +267,7 @@
 		position: absolute;
 		top: 0; left: 0;
 		width: 100%;
-		height: 640px;
+		height: 300px;
 		background-color: #f5f7fc;
 	}
 
@@ -329,7 +313,6 @@
 		max-width: 390px;
 		left: 50%;
 		@include translate(-50%,0);
-		// margin-top: 40px;
 		margin-top: 15px;
 		text-align: justify;
 
@@ -351,12 +334,9 @@
 				position: absolute;
 				top: -4px;
 				width: 0;
-				// height: 17px;
 				height: 10px;
 				border-left: 8px solid $main-blue;
-				// border-left: 14px solid $main-blue;
 				border-bottom: 5px solid transparent;
-				// border-bottom: 8px solid transparent;
 				border-right: 0 solid transparent;
 			}
 			&:before{
