@@ -1,9 +1,10 @@
 .main-nav-wrapper{
-	z-index: 1000;
+	z-index: 100000;
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
+	// width: 100%;
+	width: 70px;
 	height: 60px;
 	text-align: left;
 
@@ -11,11 +12,11 @@
 		position: relative;
 		display: inline-block;
 		float: left;
-		width: 30px;
+		width: 28px;
 		height: 100%;
 		margin-left: 20px;
 		margin-right: 20px;
-		padding: 15px 0;
+		padding: 24px 0 0;
 		@include boxSizeFit();
 
 		img{
@@ -25,7 +26,8 @@
 
 	.inner-nav-wrapper{
 		position: relative;
-		display: inline-block;
+		// display: inline-block;
+		display: none;
 		float: left;
 
 		.list{
@@ -85,5 +87,67 @@
 
 		opacity: 0;
 		display: none;
+	}
+}
+
+.mobile-burger-container{
+	position: fixed;
+	z-index: 1000000;
+	width: 70px;
+	height: 60px;
+	top: 0; right: 0;
+
+	.burger-icon{
+		position: relative;
+		float: right;
+		width: 20px;
+		height: 15px;
+		top: 29px;
+		right: 20px;
+		transition: all 1.2s cubic-bezier(.57,0,.1,1);
+
+		.bars{
+			position: absolute;
+			width: 20px;
+			height: 1px;
+			margin: auto;
+			background-color: #fff;
+			transition: all 1.2s cubic-bezier(.57,0,.1,1);
+
+			&.top-bar{
+				transform-origin: left;
+			}
+			&.mid-bar{
+				top: 0;
+				bottom: 0;
+			}
+			&.bottom-bar{
+				transform-origin: left;
+				bottom: 0;
+			}
+		}
+
+		&.opened, &:hover {
+			height: 20px;
+
+			.bars{
+				height: 2px;
+				background-color: #1b2a61;
+
+				&.top-bar{
+					top: -1px;
+					transform: rotate(45deg);
+					width: 28px;
+				}
+				&.mid-bar{
+					transform: scaleX(0);
+				}
+				&.bottom-bar{
+					bottom: -1px;
+					transform: rotate(-45deg);
+					width: 28px;
+				}
+			}
+		}
 	}
 }

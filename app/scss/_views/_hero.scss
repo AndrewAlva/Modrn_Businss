@@ -1,16 +1,15 @@
 #section-01{
+	height: 607px;
 	overflow: hidden;
 }
 
 .hero-nav{
 	z-index: 10000;
 	position: absolute;
-	top: 0;
-	right: 0;
-	width: 25%;
-	height: 600px;
-	min-height: auto;
-	max-height: none;
+	width: 100%;
+	height: 144px;
+	top: 463px;
+	overflow: hidden;
 
 	.media-triggers{
 		list-style: none;
@@ -44,14 +43,13 @@
 				vertical-align: middle;
 
 				img{
-					width: 50px;
-					margin-bottom: 10px;
+					display: none;
 				}
 
 				h2{
-					font-size: 1em;
+					font-size: 1.2em;
 					letter-spacing: -0.8px;
-					font-family: $brand-font-bold;
+					font-family: $brand-font-regular;
 					font-weight: lighter;
 					@include smoothFont();
 				}
@@ -121,7 +119,7 @@
 .shifting-hero-content{
 	position: relative;
 	float: left;
-	width: 83.7%;
+	width: 100%;
 	height: 100%;
 
 	&.media-display{
@@ -149,18 +147,18 @@
 	}
 
 	.hero-left-col{
-		position: relative;
-		float: left;
+		position: absolute;
 		width: 100%;
 		height: 35%;
-		top: 0;
+		bottom: 78px;
+		
 		@include transitions(1s);
 
 		.triangle-bg{
 			position: absolute;
-			width: 110px;
+			width: 194px;
 			margin: auto;
-			top: 8%;
+			bottom: 0;
 			@include transitions(1s);
 			// @include translate(0, 19%);
 
@@ -178,14 +176,14 @@
 			position: absolute;
 			width: 200px;
 			height: 100%;
-			top: 0;
+			bottom: 138px;
 			@include transitions(1s);
 
 			.hero-logo{
-				position: relative;
-				width: 71px;
-				left: 10px;
-				top: 89px;
+				position: absolute;
+				width: 112px;
+				left: 18px;
+				bottom: 0;
 			}
 
 			.hero-mic, .hero-book, .hero-tv{
@@ -209,18 +207,19 @@
 	}
 
 	.hero-center-col{
-		position: relative;
-		float: left;
-		width: 80%;
+		position: absolute;
+		width: 100%;
 		height: 40%;
 		top: 50px;
-		left: 20px;
 		@include transitions(1s);
+
+		#default-hero-content{
+			text-align: center;
+		}
 
 		.hero-header{
 			position: relative;
 			margin-bottom: 10px;
-			text-align: left;
 
 			.hero-highlight{
 				position: relative;
@@ -242,7 +241,7 @@
 			}
 
 			&#default-header{
-				margin-top: 10%;
+				margin-top: 5px;
 			}
 
 			&#book-header{

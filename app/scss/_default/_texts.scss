@@ -1,7 +1,9 @@
 .h1-hero{
 	font-family: $brand-font-regular;
-	font-size: 1.6em;
-	line-height: 1em;
+	// font-size: 1.6em;
+	// line-height: 1em;
+	font-size: 2.18em;
+	line-height: 1.1em;
 	letter-spacing: -0.04em;
 	font-weight: lighter;
 	@include smoothFont();
