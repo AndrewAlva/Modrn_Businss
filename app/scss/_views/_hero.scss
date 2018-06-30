@@ -125,17 +125,24 @@
 	&.media-display{
 		.hero-left-col{
 			width: 100%;
+			bottom: 20px;
 
 			.triangle-bg{
-				width: 130px;
-				top: -8%;
-				bottom: auto;
+				width: 260px;
+			}
+
+			.hero-img{
+				bottom: 95%;
+
+				img{
+					bottom: 0;
+				}
 			}
 		}
 
 		.hero-center-col{
-			width: 180px;
-			top: 30px;
+			width: 48%;
+			left: 149px;
 
 			#default-header{
 				@include opacity(0);
@@ -192,16 +199,18 @@
 				@include opacity(0);
 			}
 			.hero-mic{
-				width: 120px;
-				top: 10px;
+				width: 177px;
+				top: auto;
+				left: -40px;
 			}
 			.hero-book{
-				width: 190px;
-				top: 10px;
+				width: 275px;
+				top: -20px;
+				left: -15px;
 			}
 			.hero-tv{
-				width: 170px;
-				top: 10px;
+				width: 211px;
+				top: 35px;
 			}
 		}
 	}
@@ -215,6 +224,9 @@
 
 		#default-hero-content{
 			text-align: center;
+		}
+		#tv-hero-content{
+			width: 120%;
 		}
 
 		.hero-header{
@@ -244,11 +256,23 @@
 				margin-top: 5px;
 			}
 
+			&#podcast-header{
+				margin-top: 5px;
+				margin-bottom: 27px;
+			}
+
 			&#book-header{
-				margin-top: 5%;
+				position: absolute;
+				margin-top: -12px;
+				margin-left: 20%;
+				-webkit-writing-mode: vertical-lr;
+				-ms-writing-mode: vertical-lr;
+				writing-mode: vertical-lr;
+				transform: rotate(180deg);
 			}
 			&#tv-header{
-				margin-top: 10%;
+				margin-top: -10px;
+				margin-bottom: 25px;
 			}
 		}
 
@@ -265,8 +289,8 @@
 				@include smoothFont();
 				font-weight: lighter;
 				text-transform: uppercase;
-				font-size: 0.8em;
-				margin-bottom: 15px;
+				font-size: 1em;
+				margin-bottom: 6px;
 			}
 
 			.channels-list{
@@ -288,7 +312,7 @@
 					}
 
 					img{
-						width: 65%;
+						width: 56%;
 					}
 				}
 			}
@@ -296,20 +320,25 @@
 
 		.hero-timer{
 			position: relative;
-			width: 140%;
-			top: 15px;
+			width: 128%;
+			height: 375px;
+			top: -25px;
 
 			.timer-cards{
+				position: relative;
+				width: 60px;
+				margin-left: 38%;
 				list-style: none;
 
 				li{
 					position: relative;
-					display: inline-block;
+					display: block;
+					margin-bottom: 36px;
 				}
 
 				.single-card{
-					width: 16%;
-					height: 40px;
+					width: 60px;
+					height: 60px;
 					@include drawShadow(-3px, 9px, 10px, 1px, rgba(0, 0, 22, 0.3));
 					text-align: center;
 					background-color: $timer-cards-bg;
@@ -333,8 +362,8 @@
 					.counter{
 						font-family: $title-font-light;
 						@include smoothFont();
-						font-size: 2.2em;
-						line-height: 45px;
+						font-size: 4.6em;
+						line-height: 70px;
 						font-weight: lighter;
 						position: absolute;
 						margin: auto;
@@ -347,43 +376,32 @@
 						position: absolute;
 						margin: auto;
 						left: 0; right: 0;
-						bottom: -26px;
+						bottom: -22px;
 						color: $main-blue;
 					}
 				}
 
 				.dots-box{
-					width: 3.5%;
-					height: 40px;
-
-					.dot{
-						position: absolute;
-						width: 3px;
-						height: 3px;
-						border-radius: 50%;
-						margin: auto;
-						top: 0; bottom: 0;
-						left: 0; right: 0;
-						background-color: #fff;
-					}
-					.upper-dot{
-						top: -12px;
-					}
-					.lower-dot{
-						bottom: -12px;
-					}
+					display: none;
 				}
 			}
 
 			.timer-cta{
-				position: relative;
-				width: 210px;
-				margin-top: 35px;
+				position: absolute;
+				width: auto;
+				height: 220px;
+				bottom: 0;
+				right: 12%;
 				font-size: 1em;
-				text-align: left;
+				text-align: right;
 				text-transform: uppercase;
 				font-family: $brand-font-regular;
 				@include smoothFont();
+
+				-webkit-writing-mode: vertical-rl;
+				-ms-writing-mode: vertical-rl;
+				writing-mode: vertical-rl;
+				transform: rotate(180deg);
 			}
 		}
 	}
