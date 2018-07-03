@@ -165,7 +165,7 @@
 
 					.triangle-bg{
 						width: 137%;
-						bottom: initial;
+						top: -9%;
 					}
 
 					.hero-img{
@@ -195,21 +195,18 @@
 				.triangle-bg{
 					width: 93%;
 					top: -8%;
-					bottom: 0;
 				}
 
 				.hero-img{
 					width: 100%;
 					height: 100%;
 					top: 0;
-					bottom: initial;
 
 					.hero-logo{
 						position: relative;
-						width: 55.4%;
+						width: 55%;
 						left: 8.1%;
-						top: 23.5vw;
-						bottom: initial;
+						top: 16.5vw;
 					}
 
 					.hero-mic{
@@ -744,6 +741,12 @@
 
 		.shifting-hero-content {
 			&.media-display{
+				.hero-left-col{
+					.triangle-bg{
+						top: -11%;
+					}
+				}
+
 				.hero-center-col{
 					top: 0;
 				}
@@ -752,7 +755,15 @@
 			.hero-left-col{
 				top: 25px;
 
+				.triangle-bg{
+					top: 11%;
+				}
+
 				.hero-img{
+					.hero-logo{
+						top: 25.5vw;
+					}
+
 					.hero-mic{
 						top: 0;
 					}
@@ -1097,6 +1108,26 @@
 		}
 
 		.shifting-hero-content {
+			&.media-display{
+				.hero-left-col{
+					.triangle-bg{
+						top: -8%;
+					}
+				}
+			}
+
+			.hero-left-col{
+				.triangle-bg{
+					top: 2%;
+				}
+
+				.hero-img{
+					.hero-logo{
+						top: 21vw;
+					}
+				}
+			}
+
 			.hero-center-col{
 				top: unset;
 				left: unset;
