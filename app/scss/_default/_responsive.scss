@@ -170,10 +170,6 @@
 
 					.hero-img{
 						bottom: initial;
-
-						img{
-							bottom: 138px;
-						}
 					}
 				}
 
@@ -194,7 +190,7 @@
 
 				.triangle-bg{
 					width: 93%;
-					top: -8%;
+					top: 1vw;
 				}
 
 				.hero-img{
@@ -206,22 +202,22 @@
 						position: relative;
 						width: 55%;
 						left: 8.1%;
-						top: 16.5vw;
+						top: 21.5vw;
 					}
 
 					.hero-mic{
 						width: 72.2%;
-						top: -4%;
+						top: 0;
 						left: 0;
 					}
 					.hero-book{
 						width: 112%;
-						top: unset;
+						top: 2vh;
 						left: 0;
 					}
 					.hero-tv{
 						width: 95.13%;
-						top: unset;
+						top: 2vh;
 					}
 				}
 			}
@@ -250,7 +246,7 @@
 					}
 
 					&#default-header{
-						margin-top: 14%;
+						margin-top: 5vw;
 					}
 
 					&#podcast-header{
@@ -781,6 +777,10 @@
 						margin-top: 20%;
 					}
 
+					&#podcast-header{
+						margin-top: 12%;
+					}
+
 					&#book-header{
 						margin-top: 15%;
 						margin-bottom: 45px;
@@ -1047,11 +1047,6 @@
 		font-size: 20px;
 	}
 
-	// Sections general style: "_default/sections.scss"
-		.single-section{
-			padding-top: $header-height;
-		}
-
 	// Header nav: "_default/head-nav.scss"{}
 		.main-nav-wrapper {
 			height: $header-height;
@@ -1137,7 +1132,15 @@
 					margin-bottom: 45px;
 
 					&#default-header{
-						margin-top: 20%;
+						margin-top: 16%;
+					}
+
+					&#podcast-header{
+						margin-top: 10%;
+					}
+
+					&#book-header, &#tv-header{
+						margin-top: 14%;
 					}
 				}
 

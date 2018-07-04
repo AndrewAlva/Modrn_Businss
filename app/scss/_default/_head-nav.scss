@@ -136,7 +136,7 @@
 
 				&.top-bar{
 					top: -1px;
-					transform: rotate(405deg);
+					transform: rotate(45deg);
 					width: 28px;
 				}
 				&.mid-bar{
@@ -144,7 +144,7 @@
 				}
 				&.bottom-bar{
 					bottom: -1px;
-					transform: rotate(-405deg);
+					transform: rotate(-45deg);
 					width: 28px;
 				}
 			}
