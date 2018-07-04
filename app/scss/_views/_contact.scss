@@ -2,25 +2,26 @@
 	position: relative;
 
 	.intro-title{
-		width: 280px;
-		color: $main-blue;
+		width: 230px;
+		color: $main-titles-color;
 	}
 
 	.intro-description{
 		color: $body-color;
 		width: 280px;
+		margin-bottom: 35px;
 	}
 
 	.simple-form{
 		position: relative;
 		padding-top: 0;
-		padding-bottom: 80px;
+		padding-bottom: 68px;
 		text-align: center;
 
 		.subscribe-inputs{
 			display: block;
 			width: 220px;
-			height: 30px;
+			height: 44px;
 			padding: 8px;
 			margin: 0 auto;
 			@include boxSizeFit();
@@ -30,7 +31,7 @@
 			font-size: 1.3em;
 			font-weight: lighter;
 			@include smoothFont();
-			border: 1px solid rgba(155, 178, 204, 0.4);
+			border: 1px solid transparent;
 			background-color: #f5f7fc;
 
 			&:focus{
@@ -89,11 +90,13 @@
 		}
 
 		#input-subscribe-name{
-			margin-top: -15px;
-			margin-bottom: 15px;
+			// margin-top: -15px;
+			// margin-bottom: 15px;
+			margin-bottom: 8px;
 		}
 		#submit-subscribe{
-			top: 10px;
+			// top: 10px;
+			margin-top: 52px;
 		}
 	}
 }
@@ -102,10 +105,10 @@
 	padding-top: 50px;
 	padding-bottom: 60px;
 	color: $body-color;
-	background-color: $dark-titles;
+	background-color: $main-blue;
 
 	.intro-title{
-		color: $main-blue;
+		color: $main-titles-color;
 		width: 280px;
 	}
 

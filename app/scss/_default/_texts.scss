@@ -20,7 +20,7 @@
 
 .h2{
 	font-family: $brand-font-regular;
-	font-size: 2.72em;
+	font-size: 2.12em;
 	letter-spacing: -0.035em;
 	font-weight: lighter;
 	@include smoothFont();
@@ -28,7 +28,7 @@
 
 .h3{
 	font-family: $brand-font-bold;
-	font-size: 1.85em;
+	font-size: 1.74em;
 	line-height: 1.1em;
 	letter-spacing: -0.02em;
 	font-weight: lighter;
@@ -37,8 +37,8 @@
 
 .h4{
 	font-family: $brand-font-regular;
-	font-size: 1.5em;
-	letter-spacing: -0.02em;
+	font-size: 1.27em;
+	letter-spacing: -0.03em;
 	font-weight: lighter;
 	@include smoothFont();
 }
@@ -48,7 +48,7 @@
 	text-align: center;
 	margin: 0 auto;
 	// margin-bottom: 35px;
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 }
 
 .intro-description{
@@ -56,12 +56,12 @@
 	text-align: center;
 	margin: 0 auto;
 	// margin-bottom: 80px;
-	margin-bottom: 60px;
+	margin-bottom: 45px;
 }
 
 .demi-title{
 	font-family: $brand-font-bold;
-	font-size: 1.3em;
+	font-size: 1.1em;
 	letter-spacing: -0.03em;
 	@include smoothFont();
 	font-weight: lighter;

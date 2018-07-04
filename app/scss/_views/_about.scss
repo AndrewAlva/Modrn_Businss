@@ -1,6 +1,6 @@
 .what-we-do{
 	.intro-title{
-		color: $main-blue;		
+		color: $main-titles-color;
 	}
 
 	.intro-description{
@@ -12,7 +12,7 @@
 		position: relative;
 		width: 310px;
 		margin: 0 auto;
-		margin-bottom: 60px;
+		margin-bottom: 30px;
 		overflow: hidden;
 
 		.bulleted-column{
@@ -26,7 +26,7 @@
 				width: 100%;
 
 				&:last-child{
-					margin-top: 30px;
+					margin-top: 35px;
 				}
 			}
 
@@ -42,13 +42,15 @@
 					vertical-align: middle;
 				}
 				.column-icon{
+					width: 30px;
+
 					img{
-						width: 60%;
+						width: 100%;
 					}
 				}
 				.column-title{
 					color: $dark-titles;
-					left: 5%;
+					left: 20px;
 				}
 			}
 
@@ -57,8 +59,8 @@
 
 				&.circle-bullets{
 					li:before{
-						width: 7px;
-						height: 7px;
+						width: 5px;
+						height: 5px;
 						background-color: $circle-bullet-color;
 						border-radius: 50%;
 						margin-top: 5px;
@@ -71,7 +73,7 @@
 						border-left: 5px solid $main-blue;
 						border-top: 5px solid transparent;
 						border-bottom: 5px solid transparent;
-						margin-top: 3px;
+						margin-top: 1px;
 					}
 				}
 
@@ -82,16 +84,16 @@
 					&:before{
 						content: "";
 						position: absolute;
-						left: 23px;
+						left: 20px;
 					}
 				}
 
 				.features{
 					font-family: $author-font;
 					color: $body-color;
-					font-size: 1.28em;
+					font-size: 1.1em;
 					letter-spacing: -0.02em;
-					padding: 10px 0 10px 28px;
+					padding: 7px 0 7px 15px;
 					font-weight: lighter;
 					@include smoothFont();
 				}
@@ -109,7 +111,11 @@
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
-		background-color: $main-blue;
+		background: rgb(73,130,247); /* Old browsers */
+		background: -moz-linear-gradient(left, rgb(73,130,247) 0%, rgb(47,112,244) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(left, rgb(73,130,247) 0%,rgb(47,112,244) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(to right, rgb(73,130,247) 0%,rgb(47,112,244) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4982f7', endColorstr='#2f70f4',GradientType=1 ); /* IE6-9 */
 
 		.triangle{
 			position: absolute;
@@ -120,24 +126,13 @@
 			border-top-style: solid;
 			border-bottom-style: solid;
 
-			&.point-right{}
-			&.point-left{}
-
 			&.t-01{
-				top: 10%;
-				left: 55%;
-				border-left: 45px solid #739ff7;
-				border-top-width: 32px;
-				border-bottom-width: 32px;
-				@include opacity(0.2);
-			}
-			&.t-02{
-				top: -15%;
-				left: 75%;
+				top: -21%;
+				right: 9%;
 
-				border-right: 70px solid #739ff7;
-				border-top-width: 70px;
-				border-bottom-width: 70px;
+				border-right: 67px solid #739ff7;
+				border-top-width: 56px;
+				border-bottom-width: 56px;
 				@include opacity(0.2);
 			}
 		}
@@ -157,7 +152,7 @@
 				width: 100%;
 				height: 100%;
 				top: 50%;
-				right: -10%;
+				right: -5%;
 
 				-webkit-transform: translate(50%, -50%) rotate(45deg);
 			       -moz-transform: translate(50%, -50%) rotate(45deg);
@@ -178,7 +173,7 @@
 	.phrase{
 		position: relative;
 		width: 280px;
-		padding: 50px 0;
+		padding: 38px 0;
 		margin: 0 auto;
 		color: $light-blue-brand;
 		text-transform: uppercase;
@@ -191,17 +186,17 @@
 	position: relative;
 	width: 100%;
 	background-color: #fff;
-	padding: 40px 0;
+	padding: 42px 0;
 	overflow: hidden;
 
 	.values-inner-wrapper{
 		position: relative;
 		width: 100%;
-		height: 220px;
+		height: 135px;
 		display: block;
 
 		&:last-child{
-			margin-top: 40px;
+			margin-top: 50px;
 		}
 
 		.bg-title{
@@ -209,7 +204,7 @@
 			width: 100%;
 			top: 0;
 			font-family: $brand-font-regular;
-			font-size: 28.5em;
+			font-size: 17.5em;
 			line-height: 0.6em;
 			letter-spacing: -0.03em;
 			color: #fff;
@@ -219,31 +214,37 @@
 			pointer-events: none;
 		}
 		#core-values-bg{
-			@include translate(-28%,0);
+			@include translate(-58%,0);
 		}
 		#great-aims-bg{
-			@include translate(-55%,0);
+			@include translate(-83%,0);
 		}
 
 		.values-list{
 			position: absolute;
 			list-style: none;
-			width: 50%;
+			width: 38%;
 			font-size: 9px;
 			margin: auto;
+			margin-top: 8px;
 			left: 0; right: 0;
 
 			.list-title{
 				color: $dark-titles;
 				position: absolute;
 				text-align: right;
-				right: 106%;
+				right: 110%;
 				white-space: nowrap;
 				line-height: 2.3em;
 			}
 
 			.single-value{
-				line-height: 1.35em;
+				font-family: $brand-font-regular;
+				font-size: 2.7em;
+				line-height: 1.39em;
+				letter-spacing: -0.035em;
+				font-weight: lighter;
+				@include smoothFont();
 
 				&:nth-child(even){
 					color: $main-blue;
@@ -252,6 +253,12 @@
 					color: $dark-titles;
 				}
 			}
+		}
+	}
+
+	#great-wrapper{
+		.values-list{
+			margin-top: -12px;
 		}
 	}
 }
