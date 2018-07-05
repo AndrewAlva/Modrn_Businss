@@ -102,36 +102,36 @@
 }
 
 .contact-section{
-	padding-top: 50px;
+	padding-top: 55px;
 	padding-bottom: 60px;
 	color: $body-color;
 	background-color: $main-blue;
 
 	.intro-title{
 		color: $main-titles-color;
-		width: 280px;
+		width: 20m0px;
 	}
 
 	.intro-description{
 		color: #fff;
 		width: 280px;
-		margin-bottom: 30px;
+		margin-bottom: 24px;
 	}
 
 	.form-division{
 		position: relative;
-		width: 180px;
-		height: 2px;
+		width: 33px;
+		height: 1px;
 		margin: 0 auto;
-		margin-bottom: 25px;
-		background-color: $main-blue;
+		margin-bottom: 20px;
+		background-color: #fff;
 	}
 
 	.narrated-form{
 		position: relative;
 		width: 90%;
 		margin: 0 auto;
-		padding-bottom: 15px;
+		padding-bottom: 8px;
 		text-align: center;
 		color: #fff;
 
@@ -148,7 +148,7 @@
 				font-weight: lighter;
 				@include smoothFont();
 				font-size: 1.85em;
-				line-height: 1.5em;
+				line-height: 1em;
 				letter-spacing: -0.02em;
 				color: $light-blue-brand;
 				background-color: transparent;
@@ -187,11 +187,12 @@
 
 			textarea.narrated-input{
 				max-width: 95%;
+				height: 25px;
 			}
 		}
 
 		#submit-contact-data{
-			margin-top: 40px;
+			margin-top: 35px;
 		}
 	}
 }

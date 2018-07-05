@@ -370,6 +370,7 @@
 
 			.bullets-table{
 				width: 650px;
+				margin-bottom: 50px;
 
 				.bulleted-column{
 					&.half-sized{
@@ -382,27 +383,18 @@
 
 					.column-intro{
 						padding-bottom: 20px;
-
-						.column-title{
-							left: -5%;
-						}
 					}
 
 					.custom-bullets-list{
 						&.circle-bullets {
 							li:before{
-								width: 10px;
-								height: 10px;
-								margin-top: 6px;
+								margin-top: 7px;
 							}
 						}
 
 						&.triangle-bullets {
 							li:before{
-								margin-top: 5px;
-								border-left-width: 7px;
-								border-top-width: 7px;
-								border-bottom-width: 7px;
+								margin-top: 4px;
 							}
 						}
 					}
@@ -440,14 +432,26 @@
 			padding: 60px 0;
 
 			.values-inner-wrapper{
-				height: 260px;
+				height: 230px;
 
 				&:last-child{
 					margin-top: 60px;
 				}
 
+				.bg-title{
+					font-size: 25em;
+				}
+
 				.values-list{
 					font-size: unset;
+				}
+
+				#core-values-bg{
+					@include translate(-35%,0);
+				}
+
+				#great-aims-bg{
+					@include translate(-60%,0);
 				}
 			}
 
@@ -465,7 +469,7 @@
 
 			#great-wrapper {
 				.values-list{
-					left: 20%;
+					left: 30%;
 				}
 			}
 		}
@@ -571,9 +575,6 @@
 		}
 
 		.contact-section{
-			padding-top: 80px;
-			padding-bottom: 90px;
-
 			.intro-title{
 				width: initial;
 			}
@@ -591,10 +592,12 @@
 				padding-bottom: 15px;
 
 				.narrated-line{
-					margin-bottom: 0;
-
 					.narrated-input{
 						max-width: initial;
+					}
+
+					textarea.narrated-input{
+						height: 30px;
 					}
 				}
 			}
@@ -603,6 +606,8 @@
 
 	// Footer section: "_default/footer.scss"
 		.footer-links {
+			display: block;
+
 			.media-list, .rrss-list, .legals-footer{
 				padding-left: 50px;
 				padding-right: 50px;
@@ -625,17 +630,25 @@
 				.channels-list{
 					display: inline-block;
 					padding: 0;
+					font-size: 1em;
 				}
 			}
 
 			.rrss-list{
-				font-size: inherit;
+				font-size: 1.4em;
+				padding-top: 0;
 			}
 
 			.legals-footer{
 				.legal-text{
-					font-size: 0.72em;
-					line-height: 1em;
+					font-size: 0.9em;
+
+					&.brand-copyright{
+						margin-bottom: initial;
+					}
+					&.studio-copyright{
+						padding: initial;
+					}
 				}
 
 				.brand-copyright{float: left; text-align: left;}
@@ -700,6 +713,10 @@
 
 		.intro-description{
 			margin-bottom: 80px;
+		}
+
+		.demi-title{
+			font-size: 1.3em;
 		}
 
 		.legal-text{
@@ -834,10 +851,8 @@
 				width: 900px;
 				margin-bottom: 100px;
 
-				.bulleted-column{
+				.bulleted-column{ 
 					.column-intro{
-						padding-bottom: 40px;
-
 						.column-icon{
 							img{
 								width: auto;
@@ -848,19 +863,24 @@
 							left: 32px;
 						}
 					}
-				}
 
-				.bulleted-column{ 
 					.custom-bullets-list{
 						&.circle-bullets {
 							li:before{
-								margin-top: 7px;
+								width: 7px;
+								height: 7px;
 							}
 						}
 						&.triangle-bullets {
 							li:before{
-								margin-top: 4px;
+								border-left-width: 7px;
+								border-top-width: 7px;
+								border-bottom-width: 7px;
 							}
+						}
+
+						.features{
+							padding: 14px 0 14px 35px;
 						}
 					}
 				}
@@ -871,19 +891,19 @@
 			.bg-elements {
 				.triangle{
 					&.t-01{
-						top: -15%;
+						top: -32%;
 						left: 85%;
-						border-right-width: 100px;
-						border-top-width: 90px;
-						border-bottom-width: 90px;
+						border-right-width: 115px;
+						border-top-width: 120px;
+						border-bottom-width: 120px;
 					}
 				}
 
 				.mask-triangle{
 					width: 600px;
 					height: 600px;
-					top: 60%;
-					right: -5%;
+					top: 40%;
+					right: -12%;
 				}
 			}
 
@@ -894,18 +914,22 @@
 		}
 
 		.essential-values {
-			padding: 100px 0;
+			padding: 80px 0;
+
 			.values-inner-wrapper{
 				height: 320px;
 
 				&:last-child{
 					margin-top: 75px;
 				}
-			}
 
-			#great-wrapper{
 				.values-list{
-					left: 23%;
+					margin-top: 22px;
+
+					.single-value{
+						font-size: 3.1em;
+						line-height: 1.2em;
+					}
 				}
 			}
 		}
@@ -964,6 +988,10 @@
 		}
 
 	// Contact section: "_views/contact.scss"
+		#section-06{
+			padding-top: 100px;
+		}
+
 		.subscribe-section {
 			.intro-description{
 				width: 685px;
@@ -992,6 +1020,8 @@
 		.contact-section{
 			padding-top: 120px;
 			padding-bottom: 160px;
+			// padding-top: 80px;
+			// padding-bottom: 90px;
 
 			.intro-description{
 				width: 520px;
@@ -1003,6 +1033,12 @@
 			}
 
 			.narrated-form{
+				.narrated-line{
+					textarea.narrated-input{
+						height: 35px;
+					}
+				}
+
 				#submit-contact-data{
 					margin-top: 60px;
 				}
@@ -1012,9 +1048,11 @@
 
 	// Footer section: "_default/footer.scss"
 		.footer-links {
-			.rrss-list{
-				padding-bottom: 18px;
+			.media-list{
+				padding-top: 30px;
+				padding-bottom: 30px;
 			}
+
 			.legals-footer{
 				padding-top: 14px;
 				padding-bottom: 14px;
@@ -1156,6 +1194,7 @@
 		.what-we-do {
 			.intro-description{
 				width: 685px;
+				margin-bottom: 95px;
 			}
 
 			.bullets-table{
@@ -1163,7 +1202,7 @@
 
 				.bulleted-column{
 					.column-intro{
-						padding-bottom: 40px;
+						padding-bottom: 25px;
 
 						.column-title{
 							left: 32px;
@@ -1173,12 +1212,13 @@
 					.custom-bullets-list{
 						&.circle-bullets {
 							li:before{
-								margin-top: 12px;
+								width: 10px;
+								height: 10px;
 							}
 						}
 						&.triangle-bullets {
 							li:before{
-								margin-top: 7px;
+								margin-top: 3px;
 								border-left-width: 10px;
 								border-top-width: 10px;
 								border-bottom-width: 10px;
@@ -1193,8 +1233,11 @@
 			.bg-elements {
 				.triangle{
 					&.t-01{
-						top: -25%;
+						top: -29%;
 						left: 82%;
+						border-right-width: 160px;
+						border-top-width: 160px;
+						border-bottom-width: 160px;
 					}
 				}
 
@@ -1205,7 +1248,7 @@
 			}
 
 			.phrase{
-				width: 1040px;
+				width: 940px;
 				padding: 128px 0;
 			}
 		}
@@ -1220,14 +1263,18 @@
 					margin-top: 97px;
 				}
 
-				.values-list{
-					font-size: 1em;
+				#great-aims-bg{
+					@include translate(-40%, 0);
 				}
-			}
 
-			#great-wrapper{
 				.values-list{
-					left: 31%;
+					margin-top: 28px;
+					font-size: 1em;
+
+					.single-value{
+						font-size: 3.6em;
+						line-height: 1.16em;
+					}
 				}
 			}
 		}
@@ -1291,7 +1338,7 @@
 
 	// Contact section: "_views/contact.scss"
 		#section-06{
-			padding-top: 80px;
+			padding-top: 120px;
 		}
 
 		.subscribe-section {
@@ -1300,7 +1347,7 @@
 			}
 
 			.intro-description{
-				width: 890px;
+				width: 710px;
 			}
 
 			.simple-form {
@@ -1313,6 +1360,7 @@
 					width: 380px;
 					height: 60px;
 					padding: 20px;
+					font-size: 1.2em;
 				}
 
 				#input-subscribe-name{
@@ -1336,7 +1384,7 @@
 			}
 
 			.intro-description{
-				width: 650px;
+				width: 530px;
 			}
 
 			.narrated-form{
@@ -1344,8 +1392,6 @@
 				margin: initial;
 
 				.narrated-line{
-					margin-bottom: 0;
-
 					input{
 						max-width: initial;
 					}
@@ -1355,6 +1401,10 @@
 
 					textarea{
 						max-width: initial;
+					}
+
+					textarea.narrated-input{
+						height: 45px;
 					}
 				}
 			}
@@ -1373,10 +1423,19 @@
 			.media-list{
 				padding-top: 32px;
 				padding-bottom: 32px;
+
+				.channels-list{
+					font-size: 0.75em;
+				}
 			}
 
 			.rrss-list{
 				padding-bottom: 23px;
+				font-size: 21px;
+
+				.icon-listed{
+					padding: 0 20px;
+				}
 			}
 
 			.legals-footer{

@@ -69,13 +69,13 @@
 
 .channels-list{
 	font-family: $brand-font-bold;
-	font-size: 0.8em;
+	font-size: 1.1em;
 	@include smoothFont();
 }
 
 .legal-text{
 	font-family: $author-font;
-	font-size: 0.9em;
-	line-height: 1.9em;
+	font-size: 1.1em;
+	line-height: 1.3em;
 	@include smoothFont();
 }

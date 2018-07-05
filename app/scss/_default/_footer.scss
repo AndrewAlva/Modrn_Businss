@@ -1,6 +1,16 @@
 .footer-links{
 	color: $body-color;
 	background-color: #fff;
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 
 	ul{
 		list-style: none;
@@ -25,22 +35,34 @@
 	}
 
 	.media-list{
-		padding: 16px 20px;
+		-webkit-box-ordinal-group: 2;
+	    -moz-box-ordinal-group: 2;
+	    -ms-flex-order: 2;
+	    -webkit-order: 2;
+	    order: 2;
+
+		padding: 0 20px 16px;
 		text-transform: uppercase;
 
 		.channels-list{
-			display: inline-block;
+			display: block;
 			padding: 8px 10px;
 		}
 	}
 
 	.rrss-list{
-		padding: 0 20px 18px;
-		font-size: 16px;
+		padding: 36px 20px 25px;
+		font-size: 21px;
+
+		-webkit-box-ordinal-group: 1;
+	    -moz-box-ordinal-group: 1;
+	    -ms-flex-order: 1;
+	    -webkit-order: 1;
+	    order: 1;
 
 		.icon-listed{
 			display: inline-block;
-			padding: 0 18px;
+			padding: 0 13px;
 
 			#ig-icon{
 				font-size: 1.1em;
@@ -53,16 +75,36 @@
 		width: 100%;
 		height: 1px;
 		background-color: #d8e6fd;
+
+		-webkit-box-ordinal-group: 3;
+	    -moz-box-ordinal-group: 3;
+	    -ms-flex-order: 3;
+	    -webkit-order: 3;
+	    order: 3;
 	}
 
 	.legals-footer{
 		overflow: hidden;
 		color: $body-color;
-		padding: 14px 20px;
+		padding: 22px 20px;
+
+		-webkit-box-ordinal-group: 4;
+	    -moz-box-ordinal-group: 4;
+	    -ms-flex-order: 4;
+	    -webkit-order: 4;
+	    order: 4;
 		
 		.legal-text{
 			text-align: center;
 			float: none;
+
+			&.brand-copyright{
+				margin-bottom: 20px;
+			}
+
+			&.studio-copyright{
+				padding: 0 80px;
+			}
 		}
 	}
 }

@@ -220,6 +220,20 @@
 					offset: 60
 				});
 
+				headerNavCtaColor.contact = new Waypoint({
+					element: $('#dark-contact-section'),
+					handler: function(direction){
+						if (direction == "up"){
+							$('#header-nav-subscribe').addClass('blue');
+							$('#header-nav-subscribe').removeClass('dark-blue');
+						} else {
+							$('#header-nav-subscribe').addClass('dark-blue');
+							$('#header-nav-subscribe').removeClass('blue');
+						}
+					},
+					offset: 60
+				});
+
 
 		// Header menu smooth scrolling to all nav links
 			$(".nav-click").on('click', function(event) {
