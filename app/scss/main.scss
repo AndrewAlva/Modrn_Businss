@@ -19,6 +19,7 @@ body {
 @import '_default/fonts.scss';
 @import '_default/mixins.scss';
 @import '_default/buttons.scss';
+@import '_default/quotes.scss';
 @import '_default/texts.scss';
 @import '_default/sections.scss';
 @import '_default/loader.scss';
@@ -27,6 +28,8 @@ body {
 
 @import '_views/hero.scss';
 @import '_views/about.scss';
+
+@import '_views/founder.scss';
 @import '_views/contact.scss';
 
 @import '_default/responsive.scss';

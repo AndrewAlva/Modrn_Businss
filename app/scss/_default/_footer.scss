@@ -61,11 +61,28 @@
 	    order: 1;
 
 		.icon-listed{
+			position: relative;
+			width: 21px;
 			display: inline-block;
 			padding: 0 13px;
 
+			&#fb-li{
+				text-align: right;
+			}
+
+			#fb-icon{
+				font-size: 0.9em;
+				position: relative;
+				top: -2px;
+			}
 			#ig-icon{
-				font-size: 1.1em;
+				font-size: 1.05em;
+				position: relative;
+				top: -1px;
+			}
+			#in-icon{
+				position: relative;
+				top: -2px;
 			}
 		}
 	}

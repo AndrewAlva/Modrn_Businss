@@ -30,9 +30,8 @@
 			@include transitions(0.7s);
 
 			&:hover{
-				@include drawShadow(0px, 22px, 36.8px, 3.2px, rgba(0, 0, 22, 0.22));
+				@include drawShadow(0px, 7px, 12px, 2px, rgba(0, 0, 22, 0.22));
 				z-index: 10;
-				width: 105%;
 			}
 
 			.media-label{
@@ -57,12 +56,15 @@
 
 		#podcast-trigger{
 			background-color: $mic-bg;
+			z-index: 3;
 		}
 		#book-trigger{
 			background-color: $book-bg;
+			z-index: 2;
 		}
 		#tv-trigger{
 			background-color: $tv-bg;
+			z-index: 1;
 		}
 	}
 }
