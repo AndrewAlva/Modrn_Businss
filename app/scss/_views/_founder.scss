@@ -21,6 +21,8 @@
 			max-width: 390px;
 			left: 0;
 			margin: 0 auto;
+			padding: 0 13px;
+			@include boxSizeFit();
 
 			img{
 				display: block;
@@ -29,9 +31,9 @@
 			}
 
 			.triangle-helper{
-				width: 70px;
-				left: -10px;
-				bottom: 85px;
+				width: 105px;
+				left: -28px;
+				bottom: 48px;
 			}
 		}
 		
@@ -43,7 +45,7 @@
 		}
 	}
 
-	.quote-wrapper{
+	.description-wrapper{
 		position: relative;
 		display: inline-block;
 		float: none;
@@ -58,7 +60,7 @@
 			display: block;
 			width: 100%;
 			margin-top: 15px;
-			margin-bottom: 15px;
+			margin-bottom: 35px;
 			margin-left: 0;
 			margin-right: 0;
 			padding: 0 30px;
@@ -89,6 +91,59 @@
 				margin-right: 5px;
 				margin-bottom: 6px;
 				background-color: $main-blue;
+			}
+		}
+	}
+
+	.card-quote-wrapper{
+		position: relative;
+		width: 100%;
+		@include boxSizeFit();
+		padding: 0 30px;
+		margin: 36px 0;
+		font-family: $brand-font-regular;
+		@include smoothFont();
+
+		.card-quote{
+			position: relative;
+			width: 100%;
+			padding: 24px 0;
+	
+			&:before, &:after{
+				content: "";
+				position: absolute;
+				left: 0; right: 0;
+			}
+			&:before{
+				bottom: 100%;
+				border-right-color: transparent;
+				border-bottom-style: solid;
+				border-right-style: solid;
+	
+				border-bottom-width: 36px;
+				border-right-width: 36px;
+			}
+			&:after{
+				top: 100%;
+				border-left-color: transparent;
+				border-top-style: solid;
+				border-left-style: solid;
+				border-top-width: 36px;
+				border-left-width: 36px;
+			}
+	
+			&--blue{
+				color: #fff;
+				background-color: $main-blue;
+
+				&:before{border-bottom-color: $main-blue;}
+				&:after{border-top-color: $main-blue;}
+
+				.quote-p{
+					&:before, &:after{
+						border-left-color: $dark-titles;
+					}
+				}
 			}
 		}
 	}
