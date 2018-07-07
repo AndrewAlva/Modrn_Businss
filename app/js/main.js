@@ -1,17 +1,3 @@
-// Waypoints init
-	// Doesn't need jQuery
-	// var waypoint = new Waypoint({
-	// 	element: document.getElementById('section-02'),
-	// 	handler: function(direction) {
-	// 		console.log('Basic waypoint triggered. Direction: ' + direction);
-	// 	},
-	// 	offset: 300
-	// });
-
-	
-
-
-
 // Parallax init
 	// Doesn't need jQuery either
 	// var scene = document.getElementById('scene');

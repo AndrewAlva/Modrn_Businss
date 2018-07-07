@@ -531,8 +531,12 @@
 			position: absolute;
 			top: 0; left: 0;
 			width: 100%;
-			height: 300px;
-			background-color: #f5f7fc;
+			height: 360px;
+			background: rgb(245,247,252); /* Old browsers */
+			background: -moz-linear-gradient(left, rgb(245,247,252) 0%, rgb(255,255,255) 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(left, rgb(245,247,252) 0%,rgb(255,255,255) 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(to right, rgb(245,247,252) 0%,rgb(255,255,255) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f7fc', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
 		}
 
 		.photo-wrapper{
@@ -547,8 +551,69 @@
 
 				.triangle-helper{
 					width: 80px;
-					left: -30px;
-					bottom: 55px;
+					left: -20px;
+					bottom: 50px;
+				}
+			}
+		}
+
+		.description-wrapper{
+			width: 50%;
+			float: left;
+			left: initial;
+			@include translate(0,0);
+
+			.founder-name{
+				margin-top: 15px;
+			}
+			.founder-name, .paragraph-box{
+				padding-right: 70px;
+			}
+		}
+
+		.card-quote-wrapper{
+			width: 47%;
+			float: left;
+			display: inline-block;
+		}
+		#ryan-quote{
+			margin-top: -20vh;
+		}
+	}
+
+	.philosophy-break{
+		.philo-title{
+			position: absolute;
+			margin: auto;
+			left: 0; right: 0;
+			padding: 35px 350px 0 0;
+			text-align: center;
+		}
+
+		.phrases-wrapper{
+			.single-phrase-container{
+				max-width: 700px;
+				margin: 0 auto;
+
+				.single-phrase{
+					padding-left: 0;
+				}
+
+				&#ask-motto{
+					.single-phrase{
+						text-align: right;
+						padding-right: 10vw;
+					}
+				}
+				&#learn-motto{
+					.single-phrase{
+						text-align: center;
+					}
+				}
+				&#grow-motto{
+					.single-phrase{
+						padding-left: 10vw;
+					}
 				}
 			}
 		}
@@ -988,6 +1053,8 @@
 
 // Founder section: "_views/founder.scss"
 	.bio-info{
+		padding-bottom: 60px;
+
 		&:before{
 			height: 450px;
 		}
@@ -1003,7 +1070,72 @@
 				.triangle-helper{
 					width: 140px;
 					left: -50px;
-					bottom: 100px;
+				}
+			}
+		}
+
+		.description-wrapper{
+			max-width: initial;
+			width: 41%;
+			margin-bottom: 80px;
+
+			.founder-name{
+				margin-top: 30px;
+			}
+		}
+		
+		#lawrence-quote{
+			width: 42%;
+		}
+		#ryan-quote{
+			width: 42%;
+			left: 5%;
+			margin-top: -30vh;
+		}
+		.card-quote-wrapper{
+			.single-quote{
+				padding: 0 70px;
+			}
+
+			.quote-author{
+				padding: 0 70px;
+			}
+		}
+	}
+
+	.philosophy-break{
+		.philo-title{
+			padding-top: 75px;
+			padding-right: 53vw;
+		}
+
+		.phrases-wrapper {
+			.single-phrase-container{
+				max-width: initial;
+				height: 200px;
+
+				.phrase-bg{
+					font-size: 14em;
+					line-height: 200px;
+				}
+
+				&#ask-motto{
+					.phrase-bg{
+						right: -25px;
+					}
+
+					.single-phrase{
+						padding-right: 16vw;
+					}
+				}
+				&#grow-motto{
+					.phrase-bg{
+						left: -40px;
+					}
+
+					.single-phrase{
+						padding-left: 16vw;
+					}
 				}
 			}
 		}
@@ -1342,22 +1474,134 @@
 
 // Founder section: "_views/founder.scss"
 	.bio-info{
+		padding-top: 20px;
+
 		&:before{
-			height: 640px;
+			height: 550px;
 		}
 
 		.photo-wrapper{
 			.person-photo{
 				width: auto;
+				right: 0;
 
 				.triangle-helper{
 					width: auto;
-					left: -100px;
-					bottom: 70px;
+					left: -88px;
+					bottom: 84px;
 				}
 
 				img{
 					width: auto;
+				}
+			}
+		}
+
+		.description-wrapper{
+			width: 640px;
+			margin-bottom: 180px;
+
+			.founder-name{
+				margin-top: 60px;
+				padding-left: 80px;
+			}
+
+			.paragraph-box{
+				margin-top: 40px;
+				padding-left: 80px;
+			}
+		}
+
+		#lawrence-quote{
+			max-width: 750px;
+			width: 50%;
+		}
+		#ryan-quote{
+			width: 50%;
+			left: 0;
+			margin-top: -292px;
+			padding: 0;
+
+			.card-quote{
+				width: 598px;
+				float: right;
+				right: 47px;
+			}
+		}
+		.card-quote-wrapper{
+			padding: 0 80px;
+
+			.card-quote{
+				padding: 48px 0;
+
+				&:before{
+					border-right-width: 72px;
+					border-bottom-width: 72px;
+				}
+				&:after{
+					border-left-width: 72px;
+					border-top-width: 72px;
+				}
+			}
+
+			.single-quote{
+				padding: 0 105px;
+				margin-bottom: 40px;
+
+				&:before, &:after{
+					top: 41px;
+					height: 16px;
+					border-left-width: 13px;
+					border-bottom-width: 7px;
+				}
+				&:before{
+					margin-left: -46px;
+				}
+				&:after{
+					margin-left: -30px;
+				}
+			}
+
+			.quote-author{
+				padding: 0 105px;
+
+				&:before{
+					width: 25px;
+					margin-bottom: 7px;
+				}
+			}
+		}
+	}
+
+	.philosophy-break{
+		.philo-title{
+			padding-top: 110px;
+		}
+
+		.phrases-wrapper{
+			.single-phrase-container{
+				height: 310px;
+
+				&#ask-motto{
+					.phrase-bg{
+						right: -40px;
+					}
+					.single-phrase{
+						padding-right: 15vw;
+					}
+				}
+				&#grow-motto{
+					.phrase-bg{
+						left: -70px;
+					}
+					.single-phrase{
+						padding-left: 16.5vw;
+					}
+				}
+
+				.phrase-bg{
+					font-size: 17em;
+					line-height: 310px;
 				}
 			}
 		}

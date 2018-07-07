@@ -49,7 +49,6 @@
 	.description-wrapper{
 		position: relative;
 		display: inline-block;
-		float: none;
 		width: 100%;
 		max-width: 390px;
 		left: 50%;
@@ -230,7 +229,67 @@
 
 	.philo-title{
 		padding: 0 30px;
+		margin-bottom: 10px;
 		color: $dark-titles;
+	}
+
+	.phrases-wrapper{
+		position: relative;
+		width: 100%;
+		overflow: hidden;
+
+		.single-phrase-container{
+			position: relative;
+			width: 100%;
+			height: 110px;
+			display: table;
+
+			&#ask-motto{
+				.phrase-bg{
+					right: -15px;
+					text-align: right;
+				}
+			}
+			&#learn-motto{
+				.phrase-bg{
+					text-align: center;
+				}
+			}
+			&#grow-motto{
+				.phrase-bg{
+					left: -25px;
+				}
+			}
+
+			.phrase-bg{
+				position: absolute;
+				width: 100%;
+				font-size: 9.2em;
+				line-height: 110px;
+				text-transform: uppercase;
+				color: #fff;
+				text-shadow: 0 0 1.2px #00145a;
+				white-space: nowrap;
+				pointer-events: none;
+			}
+
+			.single-phrase{
+				position: relative;
+				display: table-cell;
+				vertical-align: middle;
+				padding-left: 99px;
+				padding-bottom: 0.5em;
+				font-family: $brand-font-regular;
+				font-size: 2.2em;
+				letter-spacing: -0.05em;
+				@include smoothFont();
+				color: $body-color;
+
+				.motto{
+					color: $main-blue;
+				}
+			}
+		}
 	}
 }
 
