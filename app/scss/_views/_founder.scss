@@ -7,6 +7,7 @@
 	position: relative;
 	width: 100%;
 	padding-top: 5px;
+	padding-bottom: 23px;
 	overflow: hidden;
 
 	.photo-wrapper{
@@ -54,13 +55,13 @@
 		left: 50%;
 		@include translate(-50%,0);
 		margin-top: 15px;
+		margin-bottom: 40px;
 
 		.paragraph-box{
 			position: relative;
 			display: block;
 			width: 100%;
 			margin-top: 15px;
-			margin-bottom: 35px;
 			margin-left: 0;
 			margin-right: 0;
 			padding: 0 30px;
@@ -104,6 +105,10 @@
 		font-family: $brand-font-regular;
 		@include smoothFont();
 
+		&:last-child{
+			margin-top: 100px;
+		}
+
 		.card-quote{
 			position: relative;
 			width: 100%;
@@ -139,13 +144,93 @@
 				&:before{border-bottom-color: $main-blue;}
 				&:after{border-top-color: $main-blue;}
 
-				.quote-p{
+				.single-quote{
 					&:before, &:after{
 						border-left-color: $dark-titles;
 					}
 				}
+
+				.quote-author{
+					color: $dark-titles;
+
+					&:before{
+						background-color: $dark-titles;
+					}
+				}
+			}
+
+			&--dark-blue{
+				color: $light-blue-brand;
+				background-color: $dark-titles;
+
+				&:before{border-bottom-color: $dark-titles;}
+				&:after{border-top-color: $dark-titles;}
+
+				.single-quote{
+					&:before, &:after{
+						border-left-color: $main-blue;
+					}
+				}
+
+				.quote-author{
+					color: $main-blue;
+
+					&:before{
+						background-color: $main-blue;
+					}
+				}
 			}
 		}
+
+		.single-quote{
+			padding: 0 50px;
+			margin-bottom: 20px;
+			font-family: $brand-font-regular;
+
+			&:before, &:after{
+				content: '';
+				position: absolute;
+				display: block;
+				height: 10px;
+				top: 22px;
+
+				border-bottom-width: 4px;
+				border-bottom-style: solid;
+				border-bottom-color: transparent;
+
+				border-left-width: 7px;
+				border-left-style: solid;
+			}
+			&:before{margin-left: -26px;}
+			&:after{margin-left: -17px;}
+		}
+
+		.quote-author{
+			padding: 0 50px;
+			font-size: 1.28em;
+			font-family: $author-font;
+			font-weight: lighter;
+			@include smoothFont();
+
+			&:before{
+				content: "";
+				position: relative;
+				display: inline-block;
+				width: 13px;
+				height: 2px;
+				margin-right: 15px;
+				margin-bottom: 4px;
+			}
+		}
+	}
+}
+
+.philosophy-break{
+	padding-top: 23px;
+
+	.philo-title{
+		padding: 0 30px;
+		color: $dark-titles;
 	}
 }
 
