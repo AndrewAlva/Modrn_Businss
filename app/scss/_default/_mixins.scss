@@ -76,3 +76,11 @@
 	filter:progid:DXImageTransform.Microsoft.Alpha(Opacity=($val * 100));
 	-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(($val * 100))';
 }
+
+@mixin grayGradient(){
+	background: rgb(245,247,252); /* Old browsers */
+	background: -moz-linear-gradient(left, rgb(245,247,252) 0%, rgb(255,255,255) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left, rgb(245,247,252) 0%,rgb(255,255,255) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right, rgb(245,247,252) 0%,rgb(255,255,255) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f7fc', endColorstr='#ffffff',GradientType=1 ); /* IE6-9 */
+}

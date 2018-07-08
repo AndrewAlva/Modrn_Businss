@@ -265,45 +265,34 @@
 .quote-break{
 	position: relative;
 	width: 100%;
-	padding-top: 5px;
+	padding: 40px 0;
 	overflow: hidden;
+	@include grayGradient();
 
 	.quote-wrapper{
 		position: relative;
-		display: inline-block;
-		float: none;
 		width: 100%;
-		max-width: 390px;
-		left: 50%;
-		@include translate(-50%,0);
-		margin-top: 15px;
 
 		.paragraph-box{
 			position: relative;
 			display: block;
-			width: 100%;
-			margin-top: 15px;
+			width: 275px;
+			margin: 0 auto;
 			margin-bottom: 15px;
-			margin-left: 0;
-			margin-right: 0;
-			padding: 0 30px;
-			@include boxSizeFit();
 			color: $body-color;
 			font-family: $brand-font-regular;
+			text-align: center;
 		}
 
 		.quote-author{
 			position: relative;
-			width: 100%;
-			display: block;
-			margin-left: 0;
-			margin-right: 0;
-			padding: 0 40px;
-			@include boxSizeFit();
+			width: 280px;
+			margin: 0 auto;
 			color: $main-blue;
 			font-family: $author-font;
 			font-size: 1.15em;
 			font-weight: lighter;
+			text-align: center;
 
 			&:before{
 				content: "";
@@ -311,8 +300,8 @@
 				display: inline-block;
 				width: 10px;
 				height: 1px;
-				margin-right: 5px;
-				margin-bottom: 6px;
+				margin-right: 10px;
+				margin-bottom: 3px;
 				background-color: $main-blue;
 			}
 		}
