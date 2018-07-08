@@ -658,6 +658,23 @@
 		}
 
 		.contact-section{
+			.contact-triangles-bg{
+				.triangle--top{
+					top: -16.2vw;
+					left: 18vw;
+					border-left-width: 28.85vw;
+					border-top-width: 24.2vw;
+					border-bottom-width: 24.2vw;
+				}
+
+				.triangle--bottom{
+					top: -12vw;
+					border-left-width: 60vw;
+					border-top-width: 53.2vw;
+					border-bottom-width: 53.2vw;
+				}
+			}
+
 			.intro-title{
 				width: initial;
 			}
@@ -1199,7 +1216,7 @@
 				}
 
 				#submit-contact-data{
-					margin-top: 60px;
+					margin-top: 40px;
 				}
 			}
 		}
@@ -1642,12 +1659,22 @@
 			padding-top: 120px;
 			padding-bottom: 160px;
 
+			.contact-triangles-bg{
+				.triangle--top{
+					top: -17.4vw;
+				}
+
+				.triangle--bottom{
+					top: -19vw;
+				}
+			}
+
 			.intro-title{
 				width: auto;
 			}
 
 			.intro-description{
-				width: 530px;
+				width: 550px;
 			}
 
 			.narrated-form{
