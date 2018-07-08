@@ -64,6 +64,7 @@
 			margin-left: 0;
 			margin-right: 0;
 			padding: 0 30px;
+			line-height: 1.2em;
 			@include boxSizeFit();
 			color: $body-color;
 			font-family: $brand-font-regular;
