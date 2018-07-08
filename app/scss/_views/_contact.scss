@@ -102,14 +102,58 @@
 }
 
 .contact-section{
+	position: relative;
 	padding-top: 55px;
 	padding-bottom: 60px;
 	color: $body-color;
 	background-color: $main-blue;
 
+	.contact-triangles-bg{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		overflow: hidden;
+
+		.triangle{
+			position: absolute;
+			width: 0;
+			height: 0;
+			display: block;
+			@include opacity(0.4);
+
+			border-top-style: solid;
+			border-top-color: transparent;
+			border-bottom-style: solid;
+			border-bottom-color: transparent;
+
+			border-left-style: solid;
+
+			&--top{
+				top: 56px;
+
+				border-left-width: 150px;
+				border-top-width: 130px;
+				border-bottom-width: 130px;
+				
+				border-left-color: $contact-top-triangle-bg;
+			}
+
+			&--bottom{
+				top: 160px;
+
+				border-left-width: 277px;
+				border-top-width: 246px;
+				border-bottom-width: 246px;
+
+				border-left-color: $contact-bottom-triangle-bg;
+			}
+		}
+	}
+
 	.intro-title{
 		color: $main-titles-color;
-		width: 20m0px;
+		width: 200px;
 	}
 
 	.intro-description{
@@ -136,7 +180,7 @@
 		color: #fff;
 
 		.narrated-line{
-			margin-bottom: 8px;
+			margin-bottom: 12px;
 
 			.regular-text{
 				font-family: $brand-font-regular;
@@ -183,6 +227,7 @@
 
 			#contact-email{
 				max-width: 95%;
+				margin-top: 10px;
 			}
 
 			textarea.narrated-input{
