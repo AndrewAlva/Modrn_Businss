@@ -26,13 +26,16 @@
 	}
 }
 
-#section-02{
+// 02 = About
+// 03 = Top 5 Podcasts
+// 04 = Book
+// 05 = Founder
+// 06 = Contact
+#section-02, #section-03, #section-04, #section-05, #section-06{
 	background-color: #fff;
 }
-#section-04{
-	background-color: #fff;
-}
+
+// Contact section
 #section-06{
-	background-color: #fff;
 	padding-top: 45px;
 }

@@ -1,0 +1,68 @@
+.book-release{
+	position: relative;
+	width: 100%;
+	padding: 30px 0 0;
+	overflow: hidden;
+
+	.book-description-wrapper{
+		position: relative;
+		width: 100%;
+		max-width: 390px;
+		padding: 0 30px;
+		margin-bottom: 35px;
+		@include boxSizeFit();
+		left: 50%;
+		@include translate(-50%, 0);	
+
+		.book-title{
+			margin-bottom: 15px;
+			color: $dark-titles;
+		}
+
+		.book-intro{
+			color: $body-color;
+		}
+	}
+
+	.book-news-wrapper{
+		position: relative;
+		display: inline-block;
+		background-color: $dark-titles;
+
+		.book-news{
+			position: relative;
+			padding: 24px 32px 35px;
+			text-transform: uppercase;
+			font-size: 1.4em;
+			color: $light-blue-brand;
+		}
+	}
+
+	.book-photo-wrapper{
+		position: relative;
+		width: 100%;
+		margin-top: -15px;
+		margin-bottom: 20px;
+		padding: 0 30px;
+		@include boxSizeFit();
+		text-align: center;
+
+		.book-photo{
+			position: relative;
+			width: 100%;
+			max-width: 330px;
+			@include drawShadow(5px, 5px, 20px, 0, rgba(0,0,0,0.2));
+		}
+	}
+
+	.book-date{
+		position: relative;
+		float: right;
+		width: 250px;
+		padding: 0 30px;
+		text-align: right;
+		text-transform: uppercase;
+		font-family: $brand-font-regular;
+		color: $main-blue;
+	}
+}
