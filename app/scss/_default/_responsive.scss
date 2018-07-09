@@ -496,7 +496,56 @@
 			}
 		}
 	
-// Book section: "_views/book.scss"
+	// Book section: "_views/book.scss"
+		.book-release{
+			padding-bottom: 20px;
+
+			.book-description-wrapper{
+				width: 50%;
+				max-width: initial;
+				left: 0;
+				@include translate(0,0);
+				float: left;
+				display: inline-block;
+
+				.book-title, .book-intro{
+					max-width: 320px;
+					margin-left: auto;
+					margin-right: auto;
+				}
+			}
+
+			.book-news-wrapper{
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				-webkit-writing-mode: vertical-lr;
+				-ms-writing-mode: vertical-lr;
+				writing-mode: vertical-lr;
+
+				.book-news{
+					padding: 32px 24px;
+				}
+			}
+
+			.book-photo-wrapper{
+				width: 50%;
+				float: left;
+				display: inline-block;
+				margin-top: 0;
+				padding-left: 0;
+				padding-right: 70px;
+
+				.book-photo{
+					max-width: initial;
+				}
+			}
+
+			.book-date{
+				width: 400px;
+				padding-right: 120px;
+			}
+		}
 
 	// Founder section: "_views/founder.scss"
 		.bio-info{
@@ -1038,7 +1087,42 @@
 			}
 		}
 	
-// Book section: "_views/book.scss"
+	// Book section: "_views/book.scss"
+		.book-release{
+			padding-top: 0;
+
+			.book-description-wrapper{
+				width: 45%;
+				margin-left: 5%;
+
+				.book-title, .book-intro{
+					max-width: 390px;
+					margin-left: 0;
+				}
+				.book-title{
+					margin-bottom: 25px;
+				}
+			}
+
+			.book-news-wrapper{
+				.book-news{
+					padding: 60px 20px 60px 60px;
+				}
+			}
+
+			.book-photo-wrapper{
+				.book-photo{
+					@include drawShadow(16px, 16px, 30px, 0, rgba(0,55,112,0.2));
+				}
+			}
+
+			.book-date{
+				width: 500px;
+				padding-right: 200px;
+				margin-top: 50px;
+				margin-bottom: 30px;
+			}
+		}
 
 	// Founder section: "_views/founder.scss"
 		.bio-info{
@@ -1079,7 +1163,7 @@
 			#ryan-quote{
 				width: 42%;
 				left: 5%;
-				margin-top: -30vh;
+				margin-top: -25vh;
 			}
 			.card-quote-wrapper{
 				.single-quote{
@@ -1236,12 +1320,20 @@
 			}
 		}
 
-
+	
 	// Buttons general style: "_default/buttons.scss"
 		.brand-btn{
 			&.sm-btn{
 				min-width: 100px;
 			}
+		}
+	// Texts general style: "_default/texts.scss"
+		.h2{
+			font-size: 2.8em;
+		}
+
+		.h4{
+			font-size: 1.4em;
 		}
 	// Quotes general style: "_default/quotes.scss"
 		.quote-p{
@@ -1455,8 +1547,54 @@
 			}
 		}
 	
-// Book section: "_views/book.scss"
-	
+	// Book section: "_views/book.scss"
+		.book-release{
+			padding-bottom: 80px;
+
+			.book-description-wrapper{
+				width: 48%;
+				margin-left: 0;
+				padding: 0;
+
+				.book-title, .book-intro{
+					margin-left: auto;
+				}
+				.book-title{
+					max-width: 540px;
+					margin-right: 70px;
+
+					margin-top: 30px;
+					margin-bottom: 40px;
+				}
+				.book-intro{
+					max-width: 530px;
+					margin-right: 80px;
+				}
+			}
+
+			.book-news-wrapper{
+				.book-news{
+					padding: 125px 3.6vw 152px 112px;
+					font-size: 2.7em;
+					white-space: nowrap;
+				}
+			}
+
+			.book-photo-wrapper{
+				left: -20px;
+
+				.book-photo{
+					max-width: 800px;
+				}
+			}
+
+			.book-date{
+				width: 630px;
+				padding-right: 330px;
+				margin-top: 70px;
+			}
+		}
+
 	// Founder section: "_views/founder.scss"
 		.bio-info{
 			padding-top: 20px;
@@ -1703,7 +1841,24 @@
 }
 
 
-
+// Big desktop
+// Special query for book title arrow helper
+@media screen and (min-width: 1650px){
+	.book-title{
+		&:before{
+			content: "";
+			position: absolute;
+			display: block;
+			width: 195px;
+			height: 270px;
+			top: 10px;
+			left: -50px;
+			background-image: url(../img/icons/photo-triangle-helper.png);
+			background-size: 100%;
+			background-repeat: no-repeat;
+		}
+	}
+}
 
 
 

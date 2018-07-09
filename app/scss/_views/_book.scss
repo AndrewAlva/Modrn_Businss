@@ -51,7 +51,7 @@
 			position: relative;
 			width: 100%;
 			max-width: 330px;
-			@include drawShadow(5px, 5px, 20px, 0, rgba(0,0,0,0.2));
+			@include drawShadow(5px, 5px, 20px, 0, rgba(0,55,112,0.2));
 		}
 	}
 

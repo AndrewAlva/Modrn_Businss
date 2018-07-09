@@ -78,35 +78,67 @@
 					element: $('#section-02'),
 					handler: function(){
 						$('#about-nav-pointer').removeClass('active');
+						$('#book-nav-pointer').removeClass('active');
+						$('#founder-nav-pointer').removeClass('active');
 						$('#contact-nav-pointer').removeClass('active');
 					},
 					offset: 300
 				});
 
 
-				headerNavPointers.aboutTop = new Waypoint({
+				headerNavPointers.about = new Waypoint({
 					element: $('#section-02'),
-					handler: function(){
-						$('#about-nav-pointer').addClass('active');
-						$('#contact-nav-pointer').removeClass('active');
+					handler: function(direction){
+						if(direction == "down"){
+							$('#about-nav-pointer').addClass('active');
+						} else {
+							$('#about-nav-pointer').removeClass('active');
+						}
 					},
 					offset: 200
 				});
-				headerNavPointers.aboutBottom = new Waypoint({
-					element: $('#section-06'),
-					handler: function(){
-						$('#about-nav-pointer').addClass('active');
-						$('#contact-nav-pointer').removeClass('active');
+
+
+				headerNavPointers.book = new Waypoint({
+					element: $('#section-04'),
+					handler: function(direction){
+						if(direction == "down"){
+							$('#book-nav-pointer').addClass('active');
+							$('#about-nav-pointer').removeClass('active');
+						} else {
+							$('#book-nav-pointer').removeClass('active');
+							$('#about-nav-pointer').addClass('active');
+						}
 					},
-					offset: 500
+					offset: 200
+				});
+
+
+				headerNavPointers.founder = new Waypoint({
+					element: $('#section-05'),
+					handler: function(direction){
+						if(direction == "down"){
+							$('#founder-nav-pointer').addClass('active');
+							$('#book-nav-pointer').removeClass('active');
+						} else {
+							$('#founder-nav-pointer').removeClass('active');
+							$('#book-nav-pointer').addClass('active');
+						}
+					},
+					offset: 200
 				});
 
 
 				headerNavPointers.contact = new Waypoint({
 					element: $('#section-06'),
-					handler: function(){
-						$('#contact-nav-pointer').addClass('active');
-						$('#about-nav-pointer').removeClass('active');
+					handler: function(direction){
+						if(direction == "down"){
+							$('#contact-nav-pointer').addClass('active');
+							$('#founder-nav-pointer').removeClass('active');
+						} else {
+							$('#founder-nav-pointer').addClass('active');
+							$('#contact-nav-pointer').removeClass('active');
+						}
 					},
 					offset: 400
 				});
