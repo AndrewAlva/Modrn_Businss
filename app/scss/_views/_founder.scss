@@ -99,9 +99,10 @@
 	.card-quote-wrapper{
 		position: relative;
 		width: 100%;
+		max-width: 390px;
 		@include boxSizeFit();
 		padding: 0 30px;
-		margin: 36px 0;
+		margin: 36px auto;
 		font-family: $brand-font-regular;
 		@include smoothFont();
 
