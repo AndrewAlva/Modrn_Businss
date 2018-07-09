@@ -99,15 +99,30 @@
 				});
 
 
+				headerNavPointers.podcasts = new Waypoint({
+					element: $('#section-03'),
+					handler: function(direction){
+						if(direction == "down"){
+							$('#podcast-nav-pointer').addClass('active');
+							$('#about-nav-pointer').removeClass('active');
+						} else {
+							$('#about-nav-pointer').addClass('active');
+							$('#podcast-nav-pointer').removeClass('active');
+						}
+					},
+					offset: 200
+				});
+
+
 				headerNavPointers.book = new Waypoint({
 					element: $('#section-04'),
 					handler: function(direction){
 						if(direction == "down"){
 							$('#book-nav-pointer').addClass('active');
-							$('#about-nav-pointer').removeClass('active');
+							$('#podcast-nav-pointer').removeClass('active');
 						} else {
 							$('#book-nav-pointer').removeClass('active');
-							$('#about-nav-pointer').addClass('active');
+							$('#podcast-nav-pointer').addClass('active');
 						}
 					},
 					offset: 200
