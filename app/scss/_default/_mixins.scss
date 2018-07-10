@@ -23,10 +23,10 @@
 	box-shadow: 0 2px 3px 2px rgba(52,52,52,0.15);
 }
 
-@mixin drawShadow($xMove, $yMove, $distance, $blur, $color){
-	-webkit-box-shadow: $xMove $yMove $distance $blur $color;
-	-moz-box-shadow: $xMove $yMove $distance $blur $color;
-	box-shadow: $xMove $yMove $distance $blur $color;
+@mixin drawShadow($xMove, $yMove, $blur, $spread, $color){
+	-webkit-box-shadow: $xMove $yMove $blur $spread $color;
+	-moz-box-shadow: $xMove $yMove $blur $spread $color;
+	box-shadow: $xMove $yMove $blur $spread $color;
 }
 
 @mixin displayLeft(){
