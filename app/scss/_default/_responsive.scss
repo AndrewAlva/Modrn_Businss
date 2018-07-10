@@ -496,6 +496,86 @@
 			}
 		}
 	
+	// Podcast section: "_views/podcast.scss"
+		.top-5{
+			white-space: nowrap;
+
+			.episodes-wrapper{
+				width: 50%;
+				display: inline-block;
+				vertical-align: top;
+
+				.list-episodes-container{
+					padding: 0 15px;
+
+					.episode-container{
+						@include eraseShadow();
+
+						.podcast-cover-wrapper{
+							.podcast-cover{}
+						}
+
+						.podcast-description{
+							white-space: normal;
+
+							.podcast-title{}
+							.podcast-guest{}
+							.podcast-intro{}
+						}
+
+						.link-mobile-only{
+							display: none;
+						}
+					}
+				}
+			}
+
+			#best-episode-wrapper{
+				.episode-container{
+					display: block;
+					padding: 0;
+
+					.podcast-cover-wrapper{
+						display: block;
+						width: 100%;
+						height: initial;
+
+						.podcast-cover{
+							width: 100%;
+							height: initial;
+						}
+					}
+
+					.podcast-description{
+						display: block;
+						width: 100%;
+						padding-top: 40px;
+						padding-left: 0;
+
+						.podcast-title{
+							margin-bottom: 3px;
+						}
+						.podcast-intro{
+							margin-top: 12px;
+						}
+					}
+				}
+			}
+
+			#other-top-wrapper{
+				@include boxSizeFit();
+				border-left: 1px solid #a4b2d5;
+
+				.episode-container{
+					@include transitions(0.5s);
+
+					&:hover{
+						background-color: $light-gray;
+					}
+				}
+			}
+		}
+
 	// Book section: "_views/book.scss"
 		.book-release{
 			padding-bottom: 20px;
@@ -1089,6 +1169,25 @@
 			}
 		}
 	
+	// Podcast section: "_views/podcast.scss"
+		.top-5{
+			.episodes-wrapper{
+				.list-episodes-container{
+					.episode-container{
+						.podcast-cover-wrapper{
+							.podcast-cover{}
+						}
+
+						.podcast-description{
+							.podcast-title{}
+							.podcast-guest{}
+							.podcast-intro{}
+						}
+					}
+				}
+			}
+		}
+
 	// Book section: "_views/book.scss"
 		.book-release{
 			padding-top: 0;
@@ -1554,6 +1653,25 @@
 			}
 		}
 	
+	// Podcast section: "_views/podcast.scss"
+		.top-5{
+			.episodes-wrapper{
+				.list-episodes-container{
+					.episode-container{
+						.podcast-cover-wrapper{
+							.podcast-cover{}
+						}
+
+						.podcast-description{
+							.podcast-title{}
+							.podcast-guest{}
+							.podcast-intro{}
+						}
+					}
+				}
+			}
+		}
+
 	// Book section: "_views/book.scss"
 		.book-release{
 			padding-bottom: 80px;

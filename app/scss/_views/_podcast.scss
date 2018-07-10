@@ -1,14 +1,14 @@
 .top-5{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	
 	.intro-title{
 		color: $dark-titles;
 	}
 
-	.best-episode-wrapper{
+	.episodes-wrapper{
 		position: relative;
-	}
-	.other-top-wrapper{
-		position: relative;
-	}
 
 		.list-episodes-container{
 			position: relative;
@@ -90,4 +90,35 @@
 				}
 			}
 		}
+	}
+	
+	a{text-decoration: none;}
+	.podcast-cta{
+		position: relative;
+		width: 100%;
+		padding-right: 30px;
+		margin-top: 25px;
+		@include boxSizeFit();
+
+		text-align: right;
+		font-family: $brand-font-regular;
+		font-size: 1.3em;
+		line-height: 1.1em;
+		letter-spacing: -0.03em;
+		font-weight: lighter;
+		@include smoothFont();
+		color: $main-blue;
+
+		&:before{
+			content: "";
+			position: relative;
+			display: inline-block;
+			width: 0;
+			height: 0;
+			margin-right: 9px;
+			border-left: 6px solid $main-blue;
+			border-top: 4px solid transparent;
+			border-bottom: 4px solid transparent;
+		}
+	}
 }

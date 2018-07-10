@@ -29,6 +29,12 @@
 	box-shadow: $xMove $yMove $blur $spread $color;
 }
 
+@mixin eraseShadow(){
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
 @mixin displayLeft(){
 	position: relative;
 	float: left;
