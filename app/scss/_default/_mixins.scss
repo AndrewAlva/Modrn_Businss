@@ -77,11 +77,11 @@
 }
 
 @mixin transitions($timing){
-	-webkit-transition: all $timing cubic-bezier(.77,0,0,1);
-	   -moz-transition: all $timing cubic-bezier(.77,0,0,1);
-	    -ms-transition: all $timing cubic-bezier(.77,0,0,1);
-	     -o-transition: all $timing cubic-bezier(.77,0,0,1);
-	        transition: all $timing cubic-bezier(.77,0,0,1);
+	-webkit-transition: all $timing cubic-bezier(.57,0,0.33,1);
+	   -moz-transition: all $timing cubic-bezier(.57,0,0.33,1);
+	    -ms-transition: all $timing cubic-bezier(.57,0,0.33,1);
+	     -o-transition: all $timing cubic-bezier(.57,0,0.33,1);
+	        transition: all $timing cubic-bezier(.57,0,0.33,1);
 }
 
 @mixin opacity($val){
