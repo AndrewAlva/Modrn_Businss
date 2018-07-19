@@ -46,6 +46,11 @@
 
 				a{
 					padding: 0 15px;
+					@include transitions(.25s);
+
+					&:before{
+						@include transitions(.25s);
+					}
 				}
 
 				&.active{
@@ -63,6 +68,26 @@
 						border-right-color: transparent;
 						border-top-color: transparent;
 						border-bottom-color: transparent;
+					}
+				}
+			}
+
+			&.white{
+				.single-option a{
+					color: #fff;
+
+					&:before{
+						border-left-color: #fff;
+					}
+				}
+			}
+
+			&.blue{
+				.single-option a{
+					color: $main-blue;
+
+					&:before{
+						border-left-color: $main-blue;
 					}
 				}
 			}

@@ -160,14 +160,22 @@
 
 			// Header-Nav text color change to keep visible on any section
 				var headerNavTextColor = {}
+				var turnNavWhite = function() {
+					$('#header-nav-links').addClass('white');
+					$('#header-nav-links').removeClass('blue');
+				}
+				var turnNavBlue = function() {
+					$('#header-nav-links').addClass('blue');
+					$('#header-nav-links').removeClass('white');
+				}
 
 				headerNavTextColor.about = new Waypoint({
 					element: $('#section-02'),
 					handler: function(direction){
 						if (direction == "up"){
-							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#fff'});
+							turnNavWhite();
 						} else {
-							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#2f70f4'});
+							turnNavBlue();
 						}
 					},
 					offset: 60
@@ -177,9 +185,9 @@
 					element: $('#blue-about-break'),
 					handler: function(direction){
 						if (direction == "down"){
-							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#fff'});
+							turnNavWhite();
 						} else {
-							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#2f70f4'});
+							turnNavBlue();
 						}
 					},
 					offset: 60
@@ -189,9 +197,9 @@
 					element: $('#end-about-break'),
 					handler: function(direction){
 						if (direction == "up"){
-							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#fff'});
+							turnNavWhite();
 						} else {
-							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#2f70f4'});
+							turnNavBlue();
 						}
 					},
 					offset: 60
@@ -201,9 +209,9 @@
 					element: $('#dark-contact-section'),
 					handler: function(direction){
 						if (direction == "down"){
-							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#fff'});
+							turnNavWhite();
 						} else {
-							TweenMax.to($('#header-nav-links').find('a'), 0.4, {color: '#2f70f4'});
+							turnNavBlue();
 						}
 					},
 					offset: 60
