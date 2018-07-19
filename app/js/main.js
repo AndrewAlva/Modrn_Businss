@@ -223,9 +223,9 @@
 					element: $('#section-02'),
 					handler: function(direction){
 						if (direction == "down"){
-							TweenMax.to($('#header-cta-subscribe'), 0.4, {autoAlpha: 1, display: 'block'});
+							$('#header-cta-subscribe').addClass('show-except-mobile');
 						} else {
-							TweenMax.to($('#header-cta-subscribe'), 0.4, {autoAlpha: 0, display: 'none'});
+							$('#header-cta-subscribe').removeClass('show-except-mobile');
 						}
 					},
 					offset: 60

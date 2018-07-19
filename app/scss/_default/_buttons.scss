@@ -75,19 +75,28 @@
 				border-top-color: $main-blue;
 			}
 
-			&:hover, &:focus{
+			&:hover{
 				background-color: $main-blue-hover;
 
 				&:before{
 					border-right-width: 0;
 					border-bottom-color: $main-blue-hover;
-
 				}
 
 				&:after{
 					border-left-width: 0;
 					border-top-color: $main-blue-hover;
+				}
+			}
 
+			&:focus{
+				background-color: $main-blue-hover;
+				&:before{
+					border-bottom-color: $main-blue-hover;
+				}
+
+				&:after{
+					border-top-color: $main-blue-hover;
 				}
 			}
 		}
@@ -103,19 +112,28 @@
 				border-top-color: $dark-titles;
 			}
 
-			&:hover, &:focus{
+			&:hover{
 				background-color: #000f3f;
 
 				&:before{
 					border-right-width: 0;
 					border-bottom-color: #000f3f;
-
 				}
 
 				&:after{
 					border-left-width: 0;
 					border-top-color: #000f3f;
+				}
+			}
 
+			&:focus{
+				background-color: #000f3f;
+				&:before{
+					border-bottom-color: #000f3f;
+				}
+
+				&:after{
+					border-top-color: #000f3f;
 				}
 			}
 		}

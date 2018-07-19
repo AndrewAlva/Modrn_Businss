@@ -57,8 +57,20 @@
 			}
 
 			.header-nav-cta{
+				display: block;
+				position: relative;
+				float: right;
 				margin-top: 23px;
 				margin-right: 50px;
+				pointer-events: none;
+
+				@include opacity(0);
+				@include transitionThis(opacity, .3s);
+
+				&.show-except-mobile{
+					@include opacity(1);
+					pointer-events: initial;
+				}
 			}
 		}
 
