@@ -16,7 +16,11 @@
 				max-height: 500px;
 			}
 		}
-
+	
+	// Mobile nav: "_default/mobile-nav.scss"
+		#mobile-nav-wrapper{
+			display: none;
+		}
 	// Header nav: "_default/head-nav.scss"
 		.mobile-burger-container{
 			display: none;

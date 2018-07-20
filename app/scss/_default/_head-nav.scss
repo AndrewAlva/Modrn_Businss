@@ -156,8 +156,8 @@
 			width: 20px;
 			height: 1px;
 			margin: auto;
-			// background-color: #fff;
-			background-color: $dark-titles;
+			background-color: #fff;
+			// background-color: $dark-titles;
 			transition: all 1s cubic-bezier(.57,0,.1,1);
 
 			&.top-bar{
@@ -173,7 +173,7 @@
 			}
 		}
 
-		&.opened, &:hover {
+		&.open{
 			height: 20px;
 
 			.bars{
@@ -193,6 +193,12 @@
 					transform: rotate(-45deg);
 					width: 28px;
 				}
+			}
+		}
+
+		&.onWhite{
+			.bars{
+				background-color: $dark-titles;
 			}
 		}
 	}

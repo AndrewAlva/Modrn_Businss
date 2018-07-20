@@ -175,9 +175,13 @@
 						if (direction == "up"){
 							turnNavWhite();
 							$('#header-nav-links').addClass('onDarkBlue');
+
+							$('#mobile-burger').removeClass('onWhite');
 						} else {
 							turnNavBlue();
 							$('#header-nav-links').removeClass('onDarkBlue');
+
+							$('#mobile-burger').addClass('onWhite');
 						}
 					},
 					offset: 60
@@ -278,6 +282,36 @@
 				});
 
 
+		// Mobile | Open/close menu
+			var mobileMenuOpen = false;
+			var toggleMobileMenu = function() {
+				$('#mobile-nav-wrapper').toggleClass('open');
+				$('#mobile-burger').toggleClass('open');
+
+				$.each($('.mobile-menu-intro'), function(index, el) {
+					setTimeout(function(){
+				       $(el).toggleClass('show');
+				    }, ( index * 90 ));
+				});
+				
+				if(!mobileMenuOpen){
+					mobileMenuOpen = true;
+				} else {
+					mobileMenuOpen = false;
+				}
+			}
+
+			$('#mobile-menu-trigger').on("click", function(e){
+				toggleMobileMenu();
+			});
+			$('#home-trigger').find('.nav-click').on("click", function(e){
+				if(mobileMenuOpen){
+					toggleMobileMenu();
+				}
+			});
+			$('#mobile-nav-wrapper').find('.nav-click').on("click", function(e){
+				toggleMobileMenu();
+			});
 		// Header menu smooth scrolling to all nav links
 			$(".nav-click").on('click', function(event) {
 			    // Make sure this.hash has a value before overriding default behavior
