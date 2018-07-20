@@ -1,0 +1,18 @@
+#mobile-nav-wrapper{
+	z-index: 100000;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	padding: 24px 30px;
+	@include boxSizeFit;
+	background-color: #fff;
+
+	.inner-wrapper{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		background-color: aqua;
+	}
+}

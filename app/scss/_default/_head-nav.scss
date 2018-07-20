@@ -1,5 +1,5 @@
 .main-nav-wrapper{
-	z-index: 100000;
+	z-index: 1000000;
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -156,7 +156,8 @@
 			width: 20px;
 			height: 1px;
 			margin: auto;
-			background-color: #fff;
+			// background-color: #fff;
+			background-color: $dark-titles;
 			transition: all 1s cubic-bezier(.57,0,.1,1);
 
 			&.top-bar{
