@@ -22,8 +22,29 @@
 		text-decoration: none;
 		@include transitions(0.4s);
 
+		.hover-mask{
+			position: relative;
+			display: block;
+			overflow: hidden;
+		}
+
+		.hover-container{
+			position: relative;
+			display: inline-block;
+			@include transitionThis(transform, .2s);
+
+			&:before{
+				content: attr(fx-text);
+				position: absolute;
+				top: 120%;
+				color: $main-blue;
+			}
+		}
+
 		&:hover, &:focus{
-			color: $main-blue;
+			.hover-container{
+				@include translate(0, -120%);
+			}
 		}
 	}
 
@@ -47,6 +68,10 @@
 		.channels-list{
 			display: block;
 			padding: 8px 10px;
+
+			a{
+				
+			}
 		}
 	}
 
@@ -68,6 +93,14 @@
 
 			&#fb-li{
 				text-align: right;
+				a .hover-container:before{
+					font-size: 0.85em;
+				}
+			}
+			&#in-li{
+				a .hover-container:before{
+					font-size: .96em;
+				}
 			}
 
 			#fb-icon{
@@ -83,6 +116,12 @@
 			#in-icon{
 				position: relative;
 				top: -2px;
+			}
+
+			a{
+				.hover-container{
+					font-family: 'Font Awesome 5 Brands';
+				}
 			}
 		}
 	}
@@ -121,6 +160,11 @@
 
 			&.studio-copyright{
 				padding: 0 80px;
+				@include transitionThis(color, .2s);
+
+				a:hover{
+					color: $main-blue;
+				}
 			}
 		}
 	}
