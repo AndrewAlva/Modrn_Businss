@@ -56,8 +56,11 @@
 			TweenMax.to($('#loaderWrapper'), 0.6, {autoAlpha: 0, display:'none', delay:1, onComplete:insertBodyText});
 
 			function insertBodyText(){
-				// Show hidden element at hero section
+				// Show hidden elements at hero section
 					TweenMax.staggerTo($('.intro-hero'), 1, {autoAlpha: 1}, 0.1);
+
+				// Show hidden elements within viewport (activate InView)
+					inviewTransitions();
 
 				// Start switching topics at default hero header
 			        var shiftPhrases = $('#mb-topics');
@@ -280,6 +283,37 @@
 					},
 					offset: 60
 				});
+
+			// Reveal items while scrolling
+				function inviewTransitions() {
+					var inviewElements = $('.listen-inview');
+
+					inviewElements.each(function(el){
+						new Waypoint.Inview({
+							element: this,
+							entered: function(){
+								// console.log('Section entering: ' + this.element);
+								// TweenMax.staggerTo($(this.element).find('.inview-children'), 0.5, {autoAlpha: 1, y: 0}, 0.05);
+								$.each($(this.element).find('.inview-children'), function(index, el) {
+									setTimeout(function(){
+								       $(el).addClass('active');
+								    }, ( index * 90 ));
+								});
+							},
+							exited: function(){
+								// TweenMax.staggerTo($(this.element).find('.inview-children'), 0, {autoAlpha: 0, y: 20}, 0);
+								$.each($(this.element).find('.inview-children'), function(index, el) {
+									setTimeout(function(){
+								       $(el).removeClass('active');
+								    }, ( index * 90 ));
+								});
+							},
+							offset: 0
+						});
+					});
+				}
+
+				
 
 
 		// Mobile | Open/close menu

@@ -228,16 +228,16 @@
 				margin-bottom: -20px;
 				color: $main-blue;
 
-				&:after{
-					content: "";
-					position: relative;
-					display: block;
-					width: 103%;
-					height: 8px;
-					left: -1%;
-					bottom: 8px;
-					background-color: $main-blue-op3;
-				}
+				// &:after{
+				// 	content: "";
+				// 	position: relative;
+				// 	display: block;
+				// 	width: 103%;
+				// 	height: 8px;
+				// 	left: -1%;
+				// 	bottom: 8px;
+				// 	background-color: $main-blue-op3;
+				// }
 			}
 
 			&#default-header{

@@ -65,6 +65,14 @@
     		transform: scale($ratio);
 }
 
+@mixin scaleX($ratio){
+    -webkit-transform: scaleX($ratio);
+       -moz-transform: scaleX($ratio);
+        -ms-transform: scaleX($ratio);
+    	 -o-transform: scaleX($ratio);
+    		transform: scaleX($ratio);
+}
+
 @mixin rotate($degs){
     -webkit-transform: rotate($degs);
        -moz-transform: rotate($degs);
