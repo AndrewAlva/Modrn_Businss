@@ -82,7 +82,7 @@
 	.book-description-wrapper{
 		.inview-children-peek{
 			opacity: 0;
-			@include translate(0, 15px);
+			@include translate(-15px, 0);
 
 			&.active{
 				opacity: 1;
@@ -122,7 +122,7 @@
 	.book-date{
 		.inview-children{
 			opacity: 0;
-			@include translate(0, 15px);
+			@include translate(15px, 0);
 			display: inherit;
 
 			&.active{

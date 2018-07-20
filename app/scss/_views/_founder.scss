@@ -1,328 +1,383 @@
-.founder-name{
-	padding: 0 30px;
-	color: $dark-titles;
-}
-
-.bio-info{
-	position: relative;
-	width: 100%;
-	padding-top: 5px;
-	padding-bottom: 23px;
-	overflow: hidden;
-
-	.photo-wrapper{
-		position: relative;
-		display: inline-block;
-		float: left;
-		width: 100%;
-
-		.person-photo{
-			position: relative;
-			width: 100%;
-			max-width: 390px;
-			left: 0;
-			margin: 0 auto;
-			padding: 0 13px;
-			@include boxSizeFit();
-
-			img{
-				display: block;
-				margin: 0 auto;
-				width: 100%;
-			}
-
-			.triangle-helper{
-				width: 105px;
-				left: -28px;
-				bottom: 48px;
-			}
-		}
-		
-		.triangle-helper{
-			position: absolute;
-			z-index: 1;
-			bottom: 70px;
-			left: -100px;
-		}
-	}
-
-	.description-wrapper{
-		position: relative;
-		display: inline-block;
-		width: 100%;
-		max-width: 390px;
-		left: 50%;
-		@include translate(-50%,0);
-		margin-top: 15px;
-		margin-bottom: 35px;
-
-		.paragraph-box{
-			position: relative;
-			display: block;
-			width: 100%;
-			margin-top: 15px;
-			margin-left: 0;
-			margin-right: 0;
-			padding: 0 30px;
-			line-height: 1.2em;
-			@include boxSizeFit();
-			color: $body-color;
-			font-family: $brand-font-regular;
-		}
-
-		.quote-author{
-			position: relative;
-			width: 100%;
-			display: block;
-			margin-left: 0;
-			margin-right: 0;
-			padding: 0 40px;
-			@include boxSizeFit();
-			color: $main-blue;
-			font-family: $author-font;
-			font-size: 1.15em;
-			font-weight: lighter;
-
-			&:before{
-				content: "";
-				position: relative;
-				display: inline-block;
-				width: 10px;
-				height: 1px;
-				margin-right: 5px;
-				margin-bottom: 6px;
-				background-color: $main-blue;
-			}
-		}
-	}
-
-	.card-quote-wrapper{
-		position: relative;
-		width: 100%;
-		max-width: 390px;
-		@include boxSizeFit();
+// General style
+	.founder-name{
 		padding: 0 30px;
-		margin: 36px auto;
-		font-family: $brand-font-regular;
-		@include smoothFont();
-
-		&:last-child{
-			margin-top: 100px;
-		}
-
-		.card-quote{
-			position: relative;
-			width: 100%;
-			padding: 24px 0;
-	
-			&:before, &:after{
-				content: "";
-				position: absolute;
-				left: 0; right: 0;
-			}
-			&:before{
-				bottom: 100%;
-				border-right-color: transparent;
-				border-bottom-style: solid;
-				border-right-style: solid;
-	
-				border-bottom-width: 36px;
-				border-right-width: 36px;
-			}
-			&:after{
-				top: 100%;
-				border-left-color: transparent;
-				border-top-style: solid;
-				border-left-style: solid;
-				border-top-width: 36px;
-				border-left-width: 36px;
-			}
-	
-			&--blue{
-				color: #fff;
-				background-color: $main-blue;
-
-				&:before{border-bottom-color: $main-blue;}
-				&:after{border-top-color: $main-blue;}
-
-				.single-quote{
-					&:before, &:after{
-						border-left-color: $dark-titles;
-					}
-				}
-
-				.quote-author{
-					color: $dark-titles;
-
-					&:before{
-						background-color: $dark-titles;
-					}
-				}
-			}
-
-			&--dark-blue{
-				color: $light-blue-brand;
-				background-color: $dark-titles;
-
-				&:before{border-bottom-color: $dark-titles;}
-				&:after{border-top-color: $dark-titles;}
-
-				.single-quote{
-					&:before, &:after{
-						border-left-color: $main-blue;
-					}
-				}
-
-				.quote-author{
-					color: $main-blue;
-
-					&:before{
-						background-color: $main-blue;
-					}
-				}
-			}
-		}
-
-		.single-quote{
-			padding: 0 50px;
-			margin-bottom: 20px;
-			font-family: $brand-font-regular;
-
-			&:before, &:after{
-				content: '';
-				position: absolute;
-				display: block;
-				height: 10px;
-				top: 22px;
-
-				border-bottom-width: 4px;
-				border-bottom-style: solid;
-				border-bottom-color: transparent;
-
-				border-left-width: 7px;
-				border-left-style: solid;
-			}
-			&:before{margin-left: -26px;}
-			&:after{margin-left: -17px;}
-		}
-
-		.quote-author{
-			padding: 0 50px;
-			font-size: 1.28em;
-			font-family: $author-font;
-			font-weight: lighter;
-			@include smoothFont();
-
-			&:before{
-				content: "";
-				position: relative;
-				display: inline-block;
-				width: 13px;
-				height: 2px;
-				margin-right: 15px;
-				margin-bottom: 4px;
-			}
-		}
-	}
-}
-
-.philosophy-break{
-	padding-top: 23px;
-
-	.philo-title{
-		padding: 0 30px;
-		margin-bottom: 10px;
 		color: $dark-titles;
 	}
 
-	.phrases-wrapper{
+	.bio-info{
 		position: relative;
 		width: 100%;
+		padding-top: 5px;
+		padding-bottom: 23px;
 		overflow: hidden;
 
-		.single-phrase-container{
+		.photo-wrapper{
+			position: relative;
+			display: inline-block;
+			float: left;
+			width: 100%;
+
+			.person-photo{
+				position: relative;
+				width: 100%;
+				max-width: 390px;
+				left: 0;
+				margin: 0 auto;
+				padding: 0 13px;
+				@include boxSizeFit();
+
+				img{
+					display: block;
+					margin: 0 auto;
+					width: 100%;
+				}
+
+				.triangle-helper{
+					width: 105px;
+					left: -28px;
+					bottom: 48px;
+				}
+			}
+			
+			.triangle-helper{
+				position: absolute;
+				z-index: 1;
+				bottom: 70px;
+				left: -100px;
+			}
+		}
+
+		.description-wrapper{
+			position: relative;
+			display: inline-block;
+			width: 100%;
+			max-width: 390px;
+			left: 50%;
+			@include translate(-50%,0);
+			margin-top: 15px;
+			margin-bottom: 35px;
+
+			.paragraph-box{
+				position: relative;
+				display: block;
+				width: 100%;
+				margin-top: 15px;
+				margin-left: 0;
+				margin-right: 0;
+				padding: 0 30px;
+				line-height: 1.2em;
+				@include boxSizeFit();
+				color: $body-color;
+				font-family: $brand-font-regular;
+			}
+
+			.quote-author{
+				position: relative;
+				width: 100%;
+				display: block;
+				margin-left: 0;
+				margin-right: 0;
+				padding: 0 40px;
+				@include boxSizeFit();
+				color: $main-blue;
+				font-family: $author-font;
+				font-size: 1.15em;
+				font-weight: lighter;
+
+				&:before{
+					content: "";
+					position: relative;
+					display: inline-block;
+					width: 10px;
+					height: 1px;
+					margin-right: 5px;
+					margin-bottom: 6px;
+					background-color: $main-blue;
+				}
+			}
+		}
+
+		.card-quote-wrapper{
 			position: relative;
 			width: 100%;
-			height: 110px;
-			display: table;
+			max-width: 390px;
+			@include boxSizeFit();
+			padding: 0 30px;
+			margin: 36px auto;
+			font-family: $brand-font-regular;
+			@include smoothFont();
 
-			&#ask-motto{
-				.phrase-bg{
-					right: -15px;
-					text-align: right;
-				}
-			}
-			&#learn-motto{
-				.phrase-bg{
-					text-align: center;
-				}
-			}
-			&#grow-motto{
-				.phrase-bg{
-					left: -25px;
-				}
+			&:last-child{
+				margin-top: 100px;
 			}
 
-			.phrase-bg{
-				position: absolute;
-				width: 100%;
-				font-size: 9.2em;
-				line-height: 110px;
-				text-transform: uppercase;
-				color: #fff;
-				text-shadow: 0 0 1.2px #00145a;
-				white-space: nowrap;
-				pointer-events: none;
-			}
-
-			.single-phrase{
+			.card-quote{
 				position: relative;
-				display: table-cell;
-				vertical-align: middle;
-				padding-left: 99px;
-				padding-bottom: 0.5em;
-				font-family: $brand-font-regular;
-				font-size: 2.2em;
-				letter-spacing: -0.05em;
-				@include smoothFont();
-				color: $body-color;
+				width: 100%;
+				padding: 24px 0;
+		
+				&:before, &:after{
+					content: "";
+					position: absolute;
+					left: 0; right: 0;
+				}
+				&:before{
+					bottom: 100%;
+					border-right-color: transparent;
+					border-bottom-style: solid;
+					border-right-style: solid;
+		
+					border-bottom-width: 36px;
+					border-right-width: 36px;
+				}
+				&:after{
+					top: 100%;
+					border-left-color: transparent;
+					border-top-style: solid;
+					border-left-style: solid;
+					border-top-width: 36px;
+					border-left-width: 36px;
+				}
+		
+				&--blue{
+					color: #fff;
+					background-color: $main-blue;
 
-				.motto{
-					color: $main-blue;
+					&:before{border-bottom-color: $main-blue;}
+					&:after{border-top-color: $main-blue;}
+
+					.single-quote{
+						&:before, &:after{
+							border-left-color: $dark-titles;
+						}
+					}
+
+					.quote-author{
+						color: $dark-titles;
+
+						&:before{
+							background-color: $dark-titles;
+						}
+					}
+				}
+
+				&--dark-blue{
+					color: $light-blue-brand;
+					background-color: $dark-titles;
+
+					&:before{border-bottom-color: $dark-titles;}
+					&:after{border-top-color: $dark-titles;}
+
+					.single-quote{
+						&:before, &:after{
+							border-left-color: $main-blue;
+						}
+					}
+
+					.quote-author{
+						color: $main-blue;
+
+						&:before{
+							background-color: $main-blue;
+						}
+					}
 				}
 			}
+
+			.single-quote{
+				padding: 0 50px;
+				margin-bottom: 20px;
+				font-family: $brand-font-regular;
+
+				&:before, &:after{
+					content: '';
+					position: absolute;
+					display: block;
+					height: 10px;
+					top: 22px;
+
+					border-bottom-width: 4px;
+					border-bottom-style: solid;
+					border-bottom-color: transparent;
+
+					border-left-width: 7px;
+					border-left-style: solid;
+				}
+				&:before{margin-left: -26px;}
+				&:after{margin-left: -17px;}
+			}
+
+			.quote-author{
+				padding: 0 50px;
+				font-size: 1.28em;
+				font-family: $author-font;
+				font-weight: lighter;
+				@include smoothFont();
+
+				&:before{
+					content: "";
+					position: relative;
+					display: inline-block;
+					width: 13px;
+					height: 2px;
+					margin-right: 15px;
+					margin-bottom: 4px;
+				}
+			}
+		}
+	}
+
+	.philosophy-break{
+		padding-top: 23px;
+
+		.philo-title{
+			padding: 0 30px;
+			margin-bottom: 10px;
+			color: $dark-titles;
+		}
+
+		.phrases-wrapper{
+			position: relative;
+			width: 100%;
+			overflow: hidden;
+
+			.single-phrase-container{
+				position: relative;
+				width: 100%;
+				height: 110px;
+				display: table;
+
+				&#ask-motto{
+					.phrase-bg{
+						right: -15px;
+						text-align: right;
+					}
+				}
+				&#learn-motto{
+					.phrase-bg{
+						text-align: center;
+					}
+				}
+				&#grow-motto{
+					.phrase-bg{
+						left: -25px;
+					}
+				}
+
+				.phrase-bg{
+					position: absolute;
+					width: 100%;
+					font-size: 9.2em;
+					line-height: 110px;
+					text-transform: uppercase;
+					color: #fff;
+					text-shadow: 0 0 1.2px #00145a;
+					white-space: nowrap;
+					pointer-events: none;
+				}
+
+				.single-phrase{
+					position: relative;
+					display: table-cell;
+					vertical-align: middle;
+					padding-left: 99px;
+					padding-bottom: 0.5em;
+					font-family: $brand-font-regular;
+					font-size: 2.2em;
+					letter-spacing: -0.05em;
+					@include smoothFont();
+					color: $body-color;
+
+					.motto{
+						color: $main-blue;
+					}
+				}
+			}
+		}
+	}
+
+
+
+
+
+// "InView" animation style
+// #section-05 is the "Founder" section ID 
+#section-05{
+	.photo-wrapper{
+		.person-photo.inview-children-peek{
+			@include transformFrom(center, left);
+			@include scaleX(0);
+
+			&:after{
+				content: '';
+				position: absolute;
+				top: 0; left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: $main-blue;
+				@include transformFrom(center, right);
+				@include scaleX(1);
+			}
+
+			&.active{
+				@include transitions(.8s);
+				@include scaleX(1);
+
+				&:after{
+					@include transitionsDelayed(.8s, .6s);
+					@include scaleX(0);
+				}
+			}
+		}
+
+		.triangle-helper.inview-children-peek{
+			&.active{
+				@include transitionsDelayed(.8s, 1.1s);
+			}
+		}
+	}
+
+
+	.description-wrapper .inview-children-peek, #lawrence-quote .inview-children-peek{
+		@include translate(15px, 0);
+	}
+
+	.photo-wrapper img.inview-children-peek, #ryan-quote .inview-children-peek{
+		@include translate(-15px, 0);
+	}
+
+	.description-wrapper .inview-children-peek, #lawrence-quote .inview-children-peek, .photo-wrapper img.inview-children-peek, #ryan-quote .inview-children-peek{
+		opacity: 0;
+
+		&.active{
+			opacity: 1;
+			@include translate(0,0);
 		}
 	}
 }
 
 
 
+// #div-tester{
+// 	position: relative;
+// 	width: 100%;
+// 	padding: 50px 0;
+// 	background-color: #999;
+// 	overflow: hidden;
+// }
 
+// .div-1,.div-2,.div-3,.div-4{
+// 	position: relative;
+// 	height: 100px;
+// 	background-color: #aaa;
+// 	border: 1px solid red;
+// 	box-sizing: border-box;
 
+// 	display: inline-block;
+// 	float: left;
+// }
 
-
-
-
-#div-tester{
-	position: relative;
-	width: 100%;
-	padding: 50px 0;
-	background-color: #999;
-	overflow: hidden;
-}
-
-.div-1,.div-2,.div-3,.div-4{
-	position: relative;
-	height: 100px;
-	background-color: #aaa;
-	border: 1px solid red;
-	box-sizing: border-box;
-
-	display: inline-block;
-	float: left;
-}
-
-.div-1{width: 20%; height: 200px;}
-.div-2{width: 80%;}
-.div-3{width: 60%;}
-.div-4{width: 60%;}
+// .div-1{width: 20%; height: 200px;}
+// .div-2{width: 80%;}
+// .div-3{width: 60%; height: 150px;}
+// .div-4{width: 60%;}
