@@ -457,6 +457,7 @@
 
 				.bg-title{
 					font-size: 25em;
+					text-shadow: 0 0 2px #00145a;
 				}
 
 				.values-list{
@@ -716,6 +717,10 @@
 				.single-phrase-container{
 					max-width: 700px;
 					margin: 0 auto;
+
+					.phrase-bg{
+						text-shadow: 0 0 2px #00145a;
+					}
 
 					.single-phrase{
 						padding-left: 0;
