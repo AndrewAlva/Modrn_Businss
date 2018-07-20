@@ -1262,24 +1262,17 @@
 			.podcast-cta{
 				max-width: 460px;
 				padding: 0 8px;
-				@include transitions(.9s);
 
 				&:before{
 					margin-right: 20px;
 					border-left-width: 9px;
 					border-top-width: 7px;
 					border-bottom-width: 7px;
-					left: 0;
-
-					@include transitions(.9s);
 				}
 
 				&:hover{
-					color: $dark-titles;
-
 					&:before{
 						left: 3%;
-						border-left-color: $dark-titles;
 					}
 				}
 			}

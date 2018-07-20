@@ -1,141 +1,188 @@
-.brand-btn{
-	position: relative;
-	padding: 3px 23px;
-	margin-top: 35px;
-	border: none;
-	cursor: pointer;
+// Cornered button
+	.brand-btn{
+		position: relative;
+		padding: 3px 23px;
+		margin-top: 35px;
+		border: none;
+		cursor: pointer;
 
-	text-transform: uppercase;
-	font-family: $author-font;
-	@include smoothFont();
+		text-transform: uppercase;
+		font-family: $author-font;
+		@include smoothFont();
 
-	@include transitions(0.4s);
-	
-	&:after, &:before{
-		content: "";
-		position: absolute;
-		display: block;
-		left: 0; right: 0;
 		@include transitions(0.4s);
+		
+		&:after, &:before{
+			content: "";
+			position: absolute;
+			display: block;
+			left: 0; right: 0;
+			@include transitions(0.4s);
+		}
+		&:before{
+			bottom: 97%;
+			border-right-color: transparent;
+			border-bottom-style: solid;
+			border-right-style: solid;
+		}
+		&:after{
+			top: 97%;
+			border-left-color: transparent;
+			border-top-style: solid;
+			border-left-style: solid;
+		}
+
+		// Size styling
+			&.md-btn{
+				min-width: 100px;
+				font-size: 1.1em;
+				letter-spacing: 0.02em;
+
+				&:before{
+					border-bottom-width: 9px;
+					border-right-width: 9px;
+				}
+				&:after{
+					border-top-width: 9px;
+					border-left-width: 9px;
+				}
+			}
+
+			&.sm-btn{
+				min-width: 40px;
+				font-size: 0.7em;
+				letter-spacing: 0.015em;
+
+				&:before{
+					border-bottom-width: 6px;
+					border-right-width: 6px;
+				}
+				&:after{
+					border-top-width: 6px;
+					border-left-width: 6px;
+				}
+			}
+
+		
+		// Color styling
+			&.blue{
+				background-color: $main-blue;
+				color: #fff;
+
+				&:before{
+					border-bottom-color: $main-blue;
+				}
+				&:after{
+					border-top-color: $main-blue;
+				}
+
+				&:hover{
+					background-color: $main-blue-hover;
+
+					&:before{
+						border-right-width: 0;
+						border-bottom-color: $main-blue-hover;
+					}
+
+					&:after{
+						border-left-width: 0;
+						border-top-color: $main-blue-hover;
+					}
+				}
+
+				&:focus{
+					background-color: $main-blue-hover;
+					&:before{
+						border-bottom-color: $main-blue-hover;
+					}
+
+					&:after{
+						border-top-color: $main-blue-hover;
+					}
+				}
+			}
+
+			&.dark-blue{
+				background-color: $dark-titles;
+				color: #fff;
+
+				&:before{
+					border-bottom-color: $dark-titles;
+				}
+				&:after{
+					border-top-color: $dark-titles;
+				}
+
+				&:hover{
+					background-color: #000f3f;
+
+					&:before{
+						border-right-width: 0;
+						border-bottom-color: #000f3f;
+					}
+
+					&:after{
+						border-left-width: 0;
+						border-top-color: #000f3f;
+					}
+				}
+
+				&:focus{
+					background-color: #000f3f;
+					&:before{
+						border-bottom-color: #000f3f;
+					}
+
+					&:after{
+						border-top-color: #000f3f;
+					}
+				}
+			}
 	}
-	&:before{
-		bottom: 97%;
-		border-right-color: transparent;
-		border-bottom-style: solid;
-		border-right-style: solid;
+
+// Roulette effect hover
+	.link-hover-shift{
+		@include transitions(0.4s);
+
+		.hover-mask{
+			position: relative;
+			display: block;
+			overflow: hidden;
+		}
+
+		.hover-container{
+			position: relative;
+			display: inline-block;
+			@include transitionTransform(.2s);
+
+			&:before{
+				content: attr(fx-text);
+				position: absolute;
+				top: 120%;
+				color: $main-blue;
+				@include smoothFont;
+			}
+		}
+
+		&:hover, &:focus{
+			.hover-container{
+				@include translate(0, -120%);
+			}
+		}
 	}
-	&:after{
-		top: 97%;
-		border-left-color: transparent;
-		border-top-style: solid;
-		border-left-style: solid;
+
+	#fb-li{
+		.link-hover-shift .hover-container:before{
+			font-size: 0.85em;
+		}
 	}
-
-	// Size styling
-		&.md-btn{
-			min-width: 100px;
-			font-size: 1.1em;
-			letter-spacing: 0.02em;
-
-			&:before{
-				border-bottom-width: 9px;
-				border-right-width: 9px;
-			}
-			&:after{
-				border-top-width: 9px;
-				border-left-width: 9px;
-			}
+	#ig-li{
+		.link-hover-shift .hover-container:before{
+			font-size: 1em;
 		}
-
-		&.sm-btn{
-			min-width: 40px;
-			font-size: 0.7em;
-			letter-spacing: 0.015em;
-
-			&:before{
-				border-bottom-width: 6px;
-				border-right-width: 6px;
-			}
-			&:after{
-				border-top-width: 6px;
-				border-left-width: 6px;
-			}
+	}
+	#in-li{
+		.link-hover-shift .hover-container:before{
+			@include translate(0,-2px);
 		}
-
-	
-	// Color styling
-		&.blue{
-			background-color: $main-blue;
-			color: #fff;
-
-			&:before{
-				border-bottom-color: $main-blue;
-			}
-			&:after{
-				border-top-color: $main-blue;
-			}
-
-			&:hover{
-				background-color: $main-blue-hover;
-
-				&:before{
-					border-right-width: 0;
-					border-bottom-color: $main-blue-hover;
-				}
-
-				&:after{
-					border-left-width: 0;
-					border-top-color: $main-blue-hover;
-				}
-			}
-
-			&:focus{
-				background-color: $main-blue-hover;
-				&:before{
-					border-bottom-color: $main-blue-hover;
-				}
-
-				&:after{
-					border-top-color: $main-blue-hover;
-				}
-			}
-		}
-
-		&.dark-blue{
-			background-color: $dark-titles;
-			color: #fff;
-
-			&:before{
-				border-bottom-color: $dark-titles;
-			}
-			&:after{
-				border-top-color: $dark-titles;
-			}
-
-			&:hover{
-				background-color: #000f3f;
-
-				&:before{
-					border-right-width: 0;
-					border-bottom-color: #000f3f;
-				}
-
-				&:after{
-					border-left-width: 0;
-					border-top-color: #000f3f;
-				}
-			}
-
-			&:focus{
-				background-color: #000f3f;
-				&:before{
-					border-bottom-color: #000f3f;
-				}
-
-				&:after{
-					border-top-color: #000f3f;
-				}
-			}
-		}
-
-}
+	}

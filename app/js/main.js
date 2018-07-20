@@ -161,12 +161,12 @@
 			// Header-Nav text color change to keep visible on any section
 				var headerNavTextColor = {}
 				var turnNavWhite = function() {
-					$('#header-nav-links').addClass('white');
-					$('#header-nav-links').removeClass('blue');
+					$('#header-nav-links').addClass('onBlue');
+					$('#header-nav-links').removeClass('onWhite');
 				}
 				var turnNavBlue = function() {
-					$('#header-nav-links').addClass('blue');
-					$('#header-nav-links').removeClass('white');
+					$('#header-nav-links').addClass('onWhite');
+					$('#header-nav-links').removeClass('onBlue');
 				}
 
 				headerNavTextColor.about = new Waypoint({
@@ -174,8 +174,10 @@
 					handler: function(direction){
 						if (direction == "up"){
 							turnNavWhite();
+							$('#header-nav-links').addClass('onDarkBlue');
 						} else {
 							turnNavBlue();
+							$('#header-nav-links').removeClass('onDarkBlue');
 						}
 					},
 					offset: 60
