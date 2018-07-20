@@ -1,0 +1,7 @@
+.inview-children, .inview-children-peek{
+	@include transitions(.3s);
+
+	&.active{
+		@include transitions(1.1s);
+	}
+}

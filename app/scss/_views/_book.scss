@@ -1,68 +1,134 @@
-.book-release{
-	position: relative;
-	width: 100%;
-	padding: 30px 0 0;
-	overflow: hidden;
-
-	.book-description-wrapper{
+// General style
+	.book-release{
 		position: relative;
 		width: 100%;
-		max-width: 390px;
-		padding: 0 30px;
-		margin-bottom: 35px;
-		@include boxSizeFit();
-		left: 50%;
-		@include translate(-50%, 0);	
+		padding: 30px 0 0;
+		overflow: hidden;
 
-		.book-title{
-			margin-bottom: 15px;
-			color: $dark-titles;
+		.book-description-wrapper{
+			position: relative;
+			width: 100%;
+			max-width: 390px;
+			padding: 0 30px;
+			margin-bottom: 35px;
+			@include boxSizeFit();
+			left: 50%;
+			@include translate(-50%, 0);	
+
+			.book-title{
+				margin-bottom: 15px;
+				color: $dark-titles;
+			}
+
+			.book-intro{
+				color: $body-color;
+			}
 		}
 
-		.book-intro{
-			color: $body-color;
+		.book-news-wrapper{
+			position: relative;
+			display: inline-block;
+			background-color: $dark-titles;
+
+			.book-news{
+				position: relative;
+				padding: 24px 32px 35px;
+				text-transform: uppercase;
+				font-size: 1.4em;
+				color: $light-blue-brand;
+			}
+		}
+
+		.book-photo-wrapper{
+			position: relative;
+			width: 100%;
+			margin-top: -15px;
+			margin-bottom: 20px;
+			padding: 0 30px;
+			@include boxSizeFit();
+			text-align: center;
+
+			.photo-curtain{
+				position: relative;
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+
+			.book-photo{
+				position: relative;
+				width: 100%;
+				max-width: 330px;
+				@include drawShadow(5px, 5px, 20px, 0, rgba(0,55,112,0.2));
+			}
+		}
+
+		.book-date{
+			position: relative;
+			float: right;
+			width: 250px;
+			padding: 0 30px;
+			text-align: right;
+			text-transform: uppercase;
+			font-family: $brand-font-regular;
+			color: $main-blue;
 		}
 	}
 
-	.book-news-wrapper{
-		position: relative;
-		display: inline-block;
-		background-color: $dark-titles;
 
-		.book-news{
-			position: relative;
-			padding: 24px 32px 35px;
-			text-transform: uppercase;
-			font-size: 1.4em;
-			color: $light-blue-brand;
+// "InView" animation style
+// #section-04 is the "Book" section ID 
+#section-04{
+	.book-description-wrapper{
+		.inview-children-peek{
+			opacity: 0;
+			@include translate(0, 15px);
+
+			&.active{
+				opacity: 1;
+				@include translate(0,0);
+			}
 		}
 	}
 
 	.book-photo-wrapper{
-		position: relative;
-		width: 100%;
-		margin-top: -15px;
-		margin-bottom: 20px;
-		padding: 0 30px;
-		@include boxSizeFit();
-		text-align: center;
+		.inview-children-peek{
+			@include transformFrom(center, left);
+			@include scaleX(0);
 
-		.book-photo{
-			position: relative;
-			width: 100%;
-			max-width: 330px;
-			@include drawShadow(5px, 5px, 20px, 0, rgba(0,55,112,0.2));
+			&:after{
+				content: '';
+				position: absolute;
+				top: 0; left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: $main-blue;
+				@include transformFrom(center, right);
+				@include scaleX(1);
+			}
+
+			&.active{
+				@include transitions(.8s);
+				@include scaleX(1);
+
+				&:after{
+					@include transitionsDelayed(.8s, .6s);
+					@include scaleX(0);
+				}
+			}
 		}
 	}
 
 	.book-date{
-		position: relative;
-		float: right;
-		width: 250px;
-		padding: 0 30px;
-		text-align: right;
-		text-transform: uppercase;
-		font-family: $brand-font-regular;
-		color: $main-blue;
+		.inview-children{
+			opacity: 0;
+			@include translate(0, 15px);
+			display: inherit;
+
+			&.active{
+				opacity: 1;
+				@include translate(0,0);
+			}
+		}
 	}
 }

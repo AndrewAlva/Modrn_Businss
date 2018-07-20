@@ -1,147 +1,171 @@
-.top-5{
-	position: relative;
-	width: 100%;
-	overflow: hidden;
-	
-	.intro-title{
-		color: $dark-titles;
-	}
-
-	.episodes-wrapper{
+// General style
+	.top-5{
 		position: relative;
+		width: 100%;
+		overflow: hidden;
+		
+		.intro-title{
+			color: $dark-titles;
+		}
 
-		.list-episodes-container{
+		.episodes-wrapper{
+			position: relative;
+
+			.list-episodes-container{
+				position: relative;
+				width: 100%;
+				max-width: 390px;
+				margin: 0 auto;
+				padding: 0 8px;
+				@include boxSizeFit();
+
+				.episode-container{
+					position: relative;
+					width: 100%;
+					
+					.inner-container{
+						position: relative;
+						width: 100%;
+						min-height: 116px;
+						padding: 8px;
+						margin: 4px 0;
+						@include boxSizeFit();
+						@include flexIt();
+						@include drawShadow(0, 1px, 3px, 1px, rgba(70,70,70,0.2));
+					}
+
+					.podcast-cover-wrapper{
+						position: relative;
+						min-width: 100px;
+						width: 100px;
+						height: 100px;
+
+						.podcast-cover{
+							position: relative;
+							height: 100%;
+						}
+					}
+
+					.podcast-description{
+						position: relative;
+						padding: 8px 10px 8px 20px;
+
+						.podcast-title{
+							position: relative;
+
+							font-family: $brand-font-regular;
+							font-size: 1.3em;
+							line-height: 1.1em;
+							letter-spacing: -0.03em;
+							font-weight: lighter;
+							@include smoothFont();
+							color: $main-blue;
+						}
+
+						.podcast-guest{
+							position: relative;
+
+							font-family: $brand-font-regular;
+							font-size: 1em;
+							line-height: 1.1em;
+							letter-spacing: -0.02em;
+							font-weight: lighter;
+							@include smoothFont();
+							color: $dark-titles;
+						}
+
+						.podcast-intro{
+							position: relative;
+							margin-top: 10px;
+
+							font-family: $author-font;
+							font-size: 1em;
+							line-height: 1.1em;
+							letter-spacing: -0.02em;
+							font-weight: lighter;
+							@include smoothFont();
+							color: $body-color;
+						}
+					}
+
+					.link-mobile-only{
+						position: absolute;
+						display: block;
+						width: 100%;
+						height: 100%;
+						top: 0;
+						left: 0;
+					}
+				}
+			}
+		}
+		
+		a{text-decoration: none;}
+		.podcast-cta{
 			position: relative;
 			width: 100%;
 			max-width: 390px;
-			margin: 0 auto;
-			padding: 0 8px;
+			overflow: hidden;
+			padding-right: 30px;
+			margin: 25px auto 0;
+			// margin-top: 25px;
 			@include boxSizeFit();
 
-			.episode-container{
+			text-align: right;
+			font-family: $author-font;
+			font-size: 1.3em;
+			line-height: 1.1em;
+			letter-spacing: -0.03em;
+			font-weight: lighter;
+			@include smoothFont();
+			color: $main-blue;
+
+			@include transitions(.9s);
+
+			&:before{
+				content: "";
 				position: relative;
-				width: 100%;
-				min-height: 116px;
-				padding: 8px;
-				margin: 4px 0;
-				@include boxSizeFit();
-				@include flexIt();
-				@include drawShadow(0, 1px, 3px, 1px, rgba(70,70,70,0.2));
+				display: inline-block;
+				width: 0;
+				height: 0;
+				left: 0;
+				margin-right: 9px;
+				border-left: 6px solid $main-blue;
+				border-top: 4px solid transparent;
+				border-bottom: 4px solid transparent;
 
-				.podcast-cover-wrapper{
-					position: relative;
-					min-width: 100px;
-					width: 100px;
-					height: 100px;
+				@include transitions(.9s);
+			}
 
-					.podcast-cover{
-						position: relative;
-						height: 100%;
-					}
-				}
+			.hover-container:before{
+				color: $dark-titles;
+			}
 
-				.podcast-description{
-					position: relative;
-					padding: 8px 10px 8px 20px;
+			&:hover{
+				color: $dark-titles;
 
-					.podcast-title{
-						position: relative;
-
-						font-family: $brand-font-regular;
-						font-size: 1.3em;
-						line-height: 1.1em;
-						letter-spacing: -0.03em;
-						font-weight: lighter;
-						@include smoothFont();
-						color: $main-blue;
-					}
-
-					.podcast-guest{
-						position: relative;
-
-						font-family: $brand-font-regular;
-						font-size: 1em;
-						line-height: 1.1em;
-						letter-spacing: -0.02em;
-						font-weight: lighter;
-						@include smoothFont();
-						color: $dark-titles;
-					}
-
-					.podcast-intro{
-						position: relative;
-						margin-top: 10px;
-
-						font-family: $author-font;
-						font-size: 1em;
-						line-height: 1.1em;
-						letter-spacing: -0.02em;
-						font-weight: lighter;
-						@include smoothFont();
-						color: $body-color;
-					}
-				}
-
-				.link-mobile-only{
-					position: absolute;
-					display: block;
-					width: 100%;
-					height: 100%;
-					top: 0;
-					left: 0;
+				&:before{
+					left: 1%;
+					border-left-color: $dark-titles;
 				}
 			}
 		}
 	}
-	
-	a{text-decoration: none;}
-	.podcast-cta{
-		position: relative;
-		width: 100%;
-		max-width: 390px;
-		overflow: hidden;
-		padding-right: 30px;
-		margin: 25px auto 0;
-		// margin-top: 25px;
-		@include boxSizeFit();
 
-		text-align: right;
-		font-family: $author-font;
-		font-size: 1.3em;
-		line-height: 1.1em;
-		letter-spacing: -0.03em;
-		font-weight: lighter;
-		@include smoothFont();
-		color: $main-blue;
+// "InView" animation style
+// #section-03 is the "Top 5 Podcasts" section ID 
+#section-03{
+	.intro-title .inview-children{
+		display: inherit;
+	}
 
-		@include transitions(.9s);
+	.intro-title .inview-children, .episode-container .inview-children-peek, .podcast-cta.inview-children{
+		opacity: 0;
+		@include translate(0, 15px);
 
-		&:before{
-			content: "";
-			position: relative;
-			display: inline-block;
-			width: 0;
-			height: 0;
-			left: 0;
-			margin-right: 9px;
-			border-left: 6px solid $main-blue;
-			border-top: 4px solid transparent;
-			border-bottom: 4px solid transparent;
-
-			@include transitions(.9s);
-		}
-
-		.hover-container:before{
-			color: $dark-titles;
-		}
-
-		&:hover{
-			color: $dark-titles;
-
-			&:before{
-				left: 1%;
-				border-left-color: $dark-titles;
-			}
+		&.active{
+			opacity: 1;
+			@include translate(0, 0);
 		}
 	}
 }

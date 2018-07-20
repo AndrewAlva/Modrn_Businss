@@ -90,34 +90,34 @@
 }
 
 @mixin transitions($timing){
-	-webkit-transition: all $timing cubic-bezier(.57,0,0.33,1);
-	   -moz-transition: all $timing cubic-bezier(.57,0,0.33,1);
-	    -ms-transition: all $timing cubic-bezier(.57,0,0.33,1);
-	     -o-transition: all $timing cubic-bezier(.57,0,0.33,1);
-	        transition: all $timing cubic-bezier(.57,0,0.33,1);
+	-webkit-transition: all $timing cubic-bezier(.57,0,0.2,1);
+	   -moz-transition: all $timing cubic-bezier(.57,0,0.2,1);
+	    -ms-transition: all $timing cubic-bezier(.57,0,0.2,1);
+	     -o-transition: all $timing cubic-bezier(.57,0,0.2,1);
+	        transition: all $timing cubic-bezier(.57,0,0.2,1);
 }
 
 @mixin transitionsDelayed($timing, $delay){
-	-webkit-transition: all $timing cubic-bezier(.57,0,0.33,1) $delay;
-	   -moz-transition: all $timing cubic-bezier(.57,0,0.33,1) $delay;
-	    -ms-transition: all $timing cubic-bezier(.57,0,0.33,1) $delay;
-	     -o-transition: all $timing cubic-bezier(.57,0,0.33,1) $delay;
-	        transition: all $timing cubic-bezier(.57,0,0.33,1) $delay;
+	-webkit-transition: all $timing cubic-bezier(.57,0,0.2,1) $delay;
+	   -moz-transition: all $timing cubic-bezier(.57,0,0.2,1) $delay;
+	    -ms-transition: all $timing cubic-bezier(.57,0,0.2,1) $delay;
+	     -o-transition: all $timing cubic-bezier(.57,0,0.2,1) $delay;
+	        transition: all $timing cubic-bezier(.57,0,0.2,1) $delay;
 }
 
 @mixin transitionThis($property, $timing){
-	-webkit-transition: $property $timing cubic-bezier(.57,0,0.33,1);
-	   -moz-transition: $property $timing cubic-bezier(.57,0,0.33,1);
-	    -ms-transition: $property $timing cubic-bezier(.57,0,0.33,1);
-	     -o-transition: $property $timing cubic-bezier(.57,0,0.33,1);
-	        transition: $property $timing cubic-bezier(.57,0,0.33,1);
+	-webkit-transition: $property $timing cubic-bezier(.57,0,0.2,1);
+	   -moz-transition: $property $timing cubic-bezier(.57,0,0.2,1);
+	    -ms-transition: $property $timing cubic-bezier(.57,0,0.2,1);
+	     -o-transition: $property $timing cubic-bezier(.57,0,0.2,1);
+	        transition: $property $timing cubic-bezier(.57,0,0.2,1);
 }
 
 @mixin transitionTransform($timing){
-	-webkit-transition: -webkit-transform $timing cubic-bezier(.57,0,0.33,1);
-    -moz-transition: transform $timing cubic-bezier(.57,0,0.33,1);
-    -o-transition: transform $timing cubic-bezier(.57,0,0.33,1);
-    transition: transform $timing cubic-bezier(.57,0,0.33,1);
+	-webkit-transition: -webkit-transform $timing cubic-bezier(.57,0,0.2,1);
+    -moz-transition: transform $timing cubic-bezier(.57,0,0.2,1);
+    -o-transition: transform $timing cubic-bezier(.57,0,0.2,1);
+    transition: transform $timing cubic-bezier(.57,0,0.2,1);
 }
 
 @mixin opacity($val){

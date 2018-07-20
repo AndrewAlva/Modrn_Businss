@@ -526,7 +526,9 @@
 					padding: 0 15px;
 
 					.episode-container{
-						@include eraseShadow();
+						.inner-container{
+							@include eraseShadow();
+						}
 
 						.podcast-description{
 							white-space: normal;
@@ -537,9 +539,11 @@
 
 			#best-episode-wrapper{
 				.episode-container{
-					display: block;
-					padding: 0;
-					margin-top: 12px;
+					.inner-container{
+						display: block;
+						padding: 0;
+						margin-top: 12px;
+					}
 
 					.podcast-cover-wrapper{
 						display: block;
@@ -1211,7 +1215,9 @@
 					padding: 25px 0;
 
 					.episode-container{
-						margin: 0;
+						.inner-container{
+							margin: 0;
+						}
 
 						.link-mobile-only{
 							display: none;
@@ -1229,7 +1235,9 @@
 					padding: 13px 0;
 
 					.episode-container{
-						padding: 12px;
+						.inner-container{
+							padding: 12px;
+						}
 
 						.podcast-cover-wrapper{
 							min-width: 120px;

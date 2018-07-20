@@ -291,22 +291,24 @@
 					inviewElements.each(function(el){
 						new Waypoint.Inview({
 							element: this,
+							enter: function(){
+								$.each($(this.element).find('.inview-children-peek'), function(index, el) {
+									setTimeout(function(){
+								    	$(el).addClass('active');
+								    }, ( index * 90 ));
+								});
+							},
 							entered: function(){
 								// console.log('Section entering: ' + this.element);
-								// TweenMax.staggerTo($(this.element).find('.inview-children'), 0.5, {autoAlpha: 1, y: 0}, 0.05);
 								$.each($(this.element).find('.inview-children'), function(index, el) {
 									setTimeout(function(){
-								       $(el).addClass('active');
+								    	$(el).addClass('active');
 								    }, ( index * 90 ));
 								});
 							},
 							exited: function(){
-								// TweenMax.staggerTo($(this.element).find('.inview-children'), 0, {autoAlpha: 0, y: 20}, 0);
-								$.each($(this.element).find('.inview-children'), function(index, el) {
-									setTimeout(function(){
-								       $(el).removeClass('active');
-								    }, ( index * 90 ));
-								});
+								$(this.element).find('.inview-children').removeClass('active');
+								$(this.element).find('.inview-children-peek').removeClass('active');
 							},
 							offset: 0
 						});
