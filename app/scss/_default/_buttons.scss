@@ -164,7 +164,7 @@
 			}
 		}
 
-		&:hover, &:focus{
+		&:hover{
 			.hover-container{
 				@include translate(0, -120%);
 			}
