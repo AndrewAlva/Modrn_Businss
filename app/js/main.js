@@ -57,7 +57,7 @@
 
 			function insertBodyText(){
 				// Show hidden elements at hero section
-					TweenMax.staggerTo($('.intro-hero'), 1, {autoAlpha: 1}, 0.1);
+					TweenMax.staggerTo($('.intro-hero'), 1, {autoAlpha: 1}, 0.2);
 
 				// Show hidden elements within viewport (activate InView)
 					inviewTransitions();
@@ -295,7 +295,7 @@
 								$.each($(this.element).find('.inview-children-peek'), function(index, el) {
 									setTimeout(function(){
 								    	$(el).addClass('active');
-								    }, ( index * 90 ));
+								    }, ( index * 220 ));
 								});
 							},
 							entered: function(){
@@ -303,7 +303,7 @@
 								$.each($(this.element).find('.inview-children'), function(index, el) {
 									setTimeout(function(){
 								    	$(el).addClass('active');
-								    }, ( index * 90 ));
+								    }, ( index * 110 ));
 								});
 							},
 							exited: function(){
@@ -557,25 +557,30 @@
 	
 
 		// Subscribe mini form functionality
-		$("#submit-subscribe").on("click", function(){
-			if($('#input-subscribe-name').val() == "" || $('#input-subscribe-cellphone').val() == ""){
-				alert("You must fill both fields to subscribe!");
-			} else {
-		  		$.ajax({
-		  			url: "/subscribe_tels.php",
-		  			type: "POST",
-		  			data: { name: $('#input-subscribe-name').val(), tel: $("#input-subscribe-cellphone").val()  },
-		  		})
-		  		.done(function(e) {
-			        console.log("e",e);
-			        TweenMax.to($('.subscribe-section'), 0.6, {autoAlpha: 0, display: 'none', onComplete:function(){
-			        	$('.subscribe-section').html('<h3 class="intro-title h2"> Thanks for subscribing! </h3> <p class="intro-description h4"> Wait news from us sooon. </p>').fadeIn();
-			        	TweenMax.to($('.subscribe-section'), 0.6, {autoAlpha: 1, display: 'block'  });
-			        } });
-			        
-			    });
-		  	}
-		});
+			$("#submit-subscribe").on("click", function(){
+				if($('#input-subscribe-name').val() == "" || $('#input-subscribe-cellphone').val() == ""){
+					alert("You must fill both fields to subscribe!");
+				} else {
+			  		$.ajax({
+			  			url: "/subscribe_tels.php",
+			  			type: "POST",
+			  			data: { name: $('#input-subscribe-name').val(), tel: $("#input-subscribe-cellphone").val()  },
+			  		})
+			  		.done(function(e) {
+				        console.log("e",e);
+				        TweenMax.to($('.subscribe-section'), 0.6, {autoAlpha: 0, display: 'none', onComplete:function(){
+				        	$('.subscribe-section').html('<h3 class="intro-title h2"> Thanks for subscribing! </h3> <p class="intro-description h4"> Wait news from us sooon. </p>').fadeIn();
+				        	TweenMax.to($('.subscribe-section'), 0.6, {autoAlpha: 1, display: 'block'  });
+				        } });
+				        
+				    });
+			  	}
+			});
+
+		// Detect scroll and slide texts
+			$(window).scroll(function(e){
+				console.log($(window).scrollTop());
+			});
 
 
 		// Contact form "resize-able" inputs and textarea (pending)

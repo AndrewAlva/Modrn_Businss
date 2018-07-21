@@ -1,396 +1,454 @@
-#section-01{
-	height: 607px;
-	overflow: hidden;
-}
+// General
+	#section-01{
+		height: 607px;
+		overflow: hidden;
+	}
 
-.hero-nav{
-	z-index: 10000;
-	position: absolute;
-	width: 100%;
-	height: 144px;
-	top: 463px;
+	.hero-nav{
+		z-index: 10000;
+		position: absolute;
+		width: 100%;
+		height: 144px;
+		top: 463px;
 
-	.media-triggers{
-		list-style: none;
+		.media-triggers{
+			list-style: none;
+			position: relative;
+			height: 100%;
+
+			.media-button{
+				position: relative;
+				width: 100%;
+				height: 33.334%;
+				float: right;
+				display: table;
+				vertical-align: middle;
+				cursor: pointer;
+
+				text-align: center;
+				text-transform: uppercase;
+
+				@include transitions(0.7s);
+
+				&:hover{
+					@include drawShadow(0px, 7px, 12px, 2px, rgba(0, 0, 22, 0.22));
+					z-index: 10;
+				}
+
+				.media-label{
+					position: relative;
+					overflow: hidden;
+					display: table-cell;
+					vertical-align: middle;
+
+					img{
+						display: none;
+					}
+
+					h2{
+						font-size: 1.2em;
+						letter-spacing: -0.8px;
+						font-family: $brand-font-regular;
+						font-weight: lighter;
+						@include smoothFont();
+					}
+				}
+			}
+
+			#podcast-trigger{
+				background-color: $mic-bg;
+				z-index: 3;
+			}
+			#book-trigger{
+				background-color: $book-bg;
+				z-index: 2;
+			}
+			#tv-trigger{
+				background-color: $tv-bg;
+				z-index: 1;
+			}
+		}
+	}
+
+	.triangles-canvas{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		top: 0;
+		left: 0;
+		background-color: #00114e;
+		overflow: hidden;
+
+		.inner-triangle{
+			position: absolute;
+			margin: auto;
+
+			&.bg-triangle{
+				top: 0;
+				bottom: auto;
+				left: 5%;
+				background-image: url(/img/hero_bg/bg_triangle.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+				width: 100%;
+				height: 3097px;
+			}
+			&.top-triangle{
+				top: 30%;
+				left: 58%;
+				bottom: 0;
+				background-image: url(/img/hero_bg/top_triangle.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+				width: 24.47%;
+				height: 759px;
+			}
+			&.bottom-triangle{
+				top: 0;
+				bottom: -245%;
+				left: 45%;
+				background-image: url(/img/hero_bg/bottom_triangle.png);
+				background-repeat: no-repeat;
+				background-size: 100%;
+				width: 39%;
+				height: 1210px;
+			}
+		}
+	}
+
+	.shifting-hero-content{
 		position: relative;
+		float: left;
+		width: 100%;
 		height: 100%;
 
-		.media-button{
-			position: relative;
-			width: 100%;
-			height: 33.334%;
-			float: right;
-			display: table;
-			vertical-align: middle;
-			cursor: pointer;
+		&.media-display{
+			.hero-left-col{
+				width: 100%;
+				bottom: 20px;
 
-			text-align: center;
-			text-transform: uppercase;
-
-			@include transitions(0.7s);
-
-			&:hover{
-				@include drawShadow(0px, 7px, 12px, 2px, rgba(0, 0, 22, 0.22));
-				z-index: 10;
-			}
-
-			.media-label{
-				position: relative;
-				overflow: hidden;
-				display: table-cell;
-				vertical-align: middle;
-
-				img{
-					display: none;
+				.triangle-bg{
+					width: 260px;
+					top: -108%;
 				}
 
-				h2{
-					font-size: 1.2em;
-					letter-spacing: -0.8px;
-					font-family: $brand-font-regular;
-					font-weight: lighter;
-					@include smoothFont();
+				.hero-img{
+					bottom: 95%;
+				}
+			}
+
+			.hero-center-col{
+				width: 48%;
+				left: 39%;
+
+				#default-header{
+					@include opacity(0);
+				}
+				#default-hero-subscribe{
+					@include opacity(0);
 				}
 			}
 		}
 
-		#podcast-trigger{
-			background-color: $mic-bg;
-			z-index: 3;
-		}
-		#book-trigger{
-			background-color: $book-bg;
-			z-index: 2;
-		}
-		#tv-trigger{
-			background-color: $tv-bg;
-			z-index: 1;
-		}
-	}
-}
-
-.triangles-canvas{
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	top: 0;
-	left: 0;
-	background-color: #00114e;
-	overflow: hidden;
-
-	.inner-triangle{
-		position: absolute;
-		margin: auto;
-
-		&.bg-triangle{
-			top: 0;
-			bottom: auto;
-			left: 5%;
-			background-image: url(/img/hero_bg/bg_triangle.png);
-			background-repeat: no-repeat;
-			background-size: 100%;
-			width: 100%;
-			height: 3097px;
-		}
-		&.top-triangle{
-			top: 30%;
-			left: 58%;
-			bottom: 0;
-			background-image: url(/img/hero_bg/top_triangle.png);
-			background-repeat: no-repeat;
-			background-size: 100%;
-			width: 24.47%;
-			height: 759px;
-		}
-		&.bottom-triangle{
-			top: 0;
-			bottom: -245%;
-			left: 45%;
-			background-image: url(/img/hero_bg/bottom_triangle.png);
-			background-repeat: no-repeat;
-			background-size: 100%;
-			width: 39%;
-			height: 1210px;
-		}
-	}
-}
-
-.shifting-hero-content{
-	position: relative;
-	float: left;
-	width: 100%;
-	height: 100%;
-
-	&.media-display{
 		.hero-left-col{
+			position: absolute;
 			width: 100%;
-			bottom: 20px;
+			height: 35%;
+			bottom: 78px;
+			
+			@include transitions(1s);
 
 			.triangle-bg{
-				width: 260px;
-				top: -108%;
+				position: absolute;
+				width: 194px;
+				margin: auto;
+				top: -55%;
+				@include transitions(1s);
 			}
 
 			.hero-img{
-				bottom: 95%;
+				position: absolute;
+				width: 200px;
+				height: 100%;
+				bottom: 138px;
+				@include transitions(1s);
+
+				.hero-logo{
+					position: absolute;
+					width: 112px;
+					left: 18px;
+					bottom: 0;
+				}
+
+				.hero-mic, .hero-book, .hero-tv{
+					position: absolute;
+					left: 0;
+					@include opacity(0);
+				}
+				.hero-mic{
+					width: 177px;
+					left: -40px;
+					bottom: 0;
+				}
+				.hero-book{
+					width: 275px;
+					top: -20px;
+					left: -15px;
+				}
+				.hero-tv{
+					width: 211px;
+					top: 35px;
+				}
 			}
 		}
 
 		.hero-center-col{
-			width: 48%;
-			left: 39%;
-
-			#default-header{
-				@include opacity(0);
-			}
-			#default-hero-subscribe{
-				@include opacity(0);
-			}
-		}
-	}
-
-	.hero-left-col{
-		position: absolute;
-		width: 100%;
-		height: 35%;
-		bottom: 78px;
-		
-		@include transitions(1s);
-
-		.triangle-bg{
 			position: absolute;
-			width: 194px;
-			margin: auto;
-			top: -55%;
-			@include transitions(1s);
-		}
-
-		.hero-img{
-			position: absolute;
-			width: 200px;
-			height: 100%;
-			bottom: 138px;
+			width: 100%;
+			height: 40%;
+			top: 50px;
+			left: 0;
 			@include transitions(1s);
 
-			.hero-logo{
-				position: absolute;
-				width: 112px;
-				left: 18px;
-				bottom: 0;
+			#default-hero-content{
+				text-align: center;
+			}
+			#tv-hero-content{
+				width: 120%;
 			}
 
-			.hero-mic, .hero-book, .hero-tv{
-				position: absolute;
-				left: 0;
-				@include opacity(0);
-			}
-			.hero-mic{
-				width: 177px;
-				left: -40px;
-				bottom: 0;
-			}
-			.hero-book{
-				width: 275px;
-				top: -20px;
-				left: -15px;
-			}
-			.hero-tv{
-				width: 211px;
-				top: 35px;
-			}
-		}
-	}
-
-	.hero-center-col{
-		position: absolute;
-		width: 100%;
-		height: 40%;
-		top: 50px;
-		left: 0;
-		@include transitions(1s);
-
-		#default-hero-content{
-			text-align: center;
-		}
-		#tv-hero-content{
-			width: 120%;
-		}
-
-		.hero-header{
-			position: relative;
-			margin-bottom: 10px;
-
-			.hero-highlight{
+			.hero-header{
 				position: relative;
-				display: inline-block;
-				margin-bottom: -20px;
-				color: $main-blue;
+				margin-bottom: 10px;
 
-				// &:after{
-				// 	content: "";
-				// 	position: relative;
-				// 	display: block;
-				// 	width: 103%;
-				// 	height: 8px;
-				// 	left: -1%;
-				// 	bottom: 8px;
-				// 	background-color: $main-blue-op3;
-				// }
-			}
-
-			&#default-header{
-				margin-top: 5px;
-			}
-
-			&#podcast-header{
-				margin-top: 5px;
-				margin-bottom: 27px;
-			}
-
-			&#book-header{
-				position: absolute;
-				margin-top: -12px;
-				margin-left: 20%;
-				-webkit-writing-mode: vertical-lr;
-				-ms-writing-mode: vertical-lr;
-				writing-mode: vertical-lr;
-				transform: rotate(180deg);
-			}
-			&#tv-header{
-				margin-top: -15px;
-				margin-bottom: 25px;
-			}
-		}
-
-		#podcast-hero-content, #book-hero-content, #tv-hero-content{
-			@include opacity(0);
-			display: none;
-		}
-
-		.hero-channels{
-			position: relative;
-
-			.hero-label{
-				font-family: $brand-font-regular;
-				@include smoothFont();
-				font-weight: lighter;
-				text-transform: uppercase;
-				font-size: 1em;
-				margin-bottom: 6px;
-			}
-
-			.channels-list{
-				position: relative;
-				list-style: none;
-
-				&:last-child{
-					margin-top: 0;
-				}
-
-				.channel{
+				.hero-highlight{
 					position: relative;
 					display: inline-block;
-					margin-left: 0;
-					padding: 8px 0;
+					margin-bottom: -20px;
+					color: $main-blue;
 
-					&:first-child{
+					// &:after{
+					// 	content: "";
+					// 	position: relative;
+					// 	display: block;
+					// 	width: 103%;
+					// 	height: 8px;
+					// 	left: -1%;
+					// 	bottom: 8px;
+					// 	background-color: $main-blue-op3;
+					// }
+				}
+
+				&#default-header{
+					margin-top: 5px;
+				}
+
+				&#podcast-header{
+					margin-top: 5px;
+					margin-bottom: 27px;
+				}
+
+				&#book-header{
+					position: absolute;
+					margin-top: -12px;
+					margin-left: 20%;
+					-webkit-writing-mode: vertical-lr;
+					-ms-writing-mode: vertical-lr;
+					writing-mode: vertical-lr;
+					transform: rotate(180deg);
+				}
+				&#tv-header{
+					margin-top: -15px;
+					margin-bottom: 25px;
+				}
+			}
+
+			#podcast-hero-content, #book-hero-content, #tv-hero-content{
+				@include opacity(0);
+				display: none;
+			}
+
+			.hero-channels{
+				position: relative;
+
+				.hero-label{
+					font-family: $brand-font-regular;
+					@include smoothFont();
+					font-weight: lighter;
+					text-transform: uppercase;
+					font-size: 1em;
+					margin-bottom: 6px;
+				}
+
+				.channels-list{
+					position: relative;
+					list-style: none;
+
+					&:last-child{
+						margin-top: 0;
+					}
+
+					.channel{
+						position: relative;
+						display: inline-block;
 						margin-left: 0;
+						padding: 8px 0;
+
+						&:first-child{
+							margin-left: 0;
+						}
+
+						img{
+							width: 56%;
+						}
+					}
+				}
+			}
+
+			.hero-timer{
+				position: relative;
+				width: 128%;
+				height: 375px;
+				top: -25px;
+
+				.timer-cards{
+					position: relative;
+					width: 60px;
+					margin-left: 38%;
+					list-style: none;
+
+					li{
+						position: relative;
+						display: block;
+						margin-bottom: 36px;
 					}
 
-					img{
-						width: 56%;
+					.single-card{
+						width: 60px;
+						height: 60px;
+						@include drawShadow(-3px, 9px, 10px, 1px, rgba(0, 0, 22, 0.3));
+						text-align: center;
+						background-color: $timer-cards-bg;
+
+						&:before, &:after{
+							content: "";
+							position: absolute;
+							left: 0; right: 0;
+						}
+						&:before{
+							bottom: 99.5%;
+							border-bottom: 8px solid $timer-cards-bg;
+							border-right: 8px solid transparent;
+						}
+						&:after{
+							top: 99.5%;
+							border-top: 8px solid $timer-cards-bg;
+							border-left: 8px solid transparent;
+						}
+
+						.counter{
+							font-family: $title-font-light;
+							@include smoothFont();
+							font-size: 4.6em;
+							line-height: 70px;
+							font-weight: lighter;
+							position: absolute;
+							margin: auto;
+							left: 0; right: 0;
+						}
+						.card-label{
+							font-family: $brand-font-regular;
+							@include smoothFont();
+							font-size: 0.6em;
+							position: absolute;
+							margin: auto;
+							left: 0; right: 0;
+							bottom: -22px;
+							color: $main-blue;
+						}
 					}
+
+					.dots-box{
+						display: none;
+					}
+				}
+
+				.timer-cta{
+					position: absolute;
+					width: auto;
+					height: 220px;
+					bottom: 0;
+					right: 12%;
+					font-size: 1em;
+					text-align: right;
+					text-transform: uppercase;
+					font-family: $brand-font-regular;
+					@include smoothFont();
+
+					-webkit-writing-mode: vertical-rl;
+					-ms-writing-mode: vertical-rl;
+					writing-mode: vertical-rl;
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+
+
+// "InView" animation style
+// #section-01 is the "Hero" section ID 
+	#section-01{
+		.hero-center-col{
+			&.inview-children-peek{
+				@include translate(20px, 0);
+
+				&.active{
+					@include translate(0, 0);
 				}
 			}
 		}
 
-		.hero-timer{
-			position: relative;
-			width: 128%;
-			height: 375px;
-			top: -25px;
+		.triangles-canvas{
+			.inview-children-peek{
+				@include translate(250px, 0);
 
-			.timer-cards{
-				position: relative;
-				width: 60px;
-				margin-left: 38%;
-				list-style: none;
-
-				li{
-					position: relative;
-					display: block;
-					margin-bottom: 36px;
-				}
-
-				.single-card{
-					width: 60px;
-					height: 60px;
-					@include drawShadow(-3px, 9px, 10px, 1px, rgba(0, 0, 22, 0.3));
-					text-align: center;
-					background-color: $timer-cards-bg;
-
-					&:before, &:after{
-						content: "";
-						position: absolute;
-						left: 0; right: 0;
-					}
-					&:before{
-						bottom: 99.5%;
-						border-bottom: 8px solid $timer-cards-bg;
-						border-right: 8px solid transparent;
-					}
-					&:after{
-						top: 99.5%;
-						border-top: 8px solid $timer-cards-bg;
-						border-left: 8px solid transparent;
-					}
-
-					.counter{
-						font-family: $title-font-light;
-						@include smoothFont();
-						font-size: 4.6em;
-						line-height: 70px;
-						font-weight: lighter;
-						position: absolute;
-						margin: auto;
-						left: 0; right: 0;
-					}
-					.card-label{
-						font-family: $brand-font-regular;
-						@include smoothFont();
-						font-size: 0.6em;
-						position: absolute;
-						margin: auto;
-						left: 0; right: 0;
-						bottom: -22px;
-						color: $main-blue;
-					}
-				}
-
-				.dots-box{
-					display: none;
+				&.active{
+					@include transitions(2.5s);
+					@include translate(0, 0);
 				}
 			}
+		}
+	}
 
-			.timer-cta{
-				position: absolute;
-				width: auto;
-				height: 220px;
-				bottom: 0;
-				right: 12%;
-				font-size: 1em;
-				text-align: right;
-				text-transform: uppercase;
-				font-family: $brand-font-regular;
-				@include smoothFont();
+	.hero-nav{
+		.inview-children-peek{
+			@include translate(0, 30px);
 
-				-webkit-writing-mode: vertical-rl;
-				-ms-writing-mode: vertical-rl;
-				writing-mode: vertical-rl;
-				transform: rotate(180deg);
+			&.active{
+				@include translate(0, 0);
 			}
+		}
+	}
+	
+
+	// Responsive
+		@media screen and (min-width: 768px) {
+			.hero-nav{
+				.inview-children-peek{
+					@include translate(50px, 0);
+				}
+			}
+		}
+
+
+.hero-nav, #section-01 .triangles-canvas, #section-01 .shifting-hero-content{
+	.inview-children-peek{
+		opacity: 0;
+
+		&.active{
+			opacity: 1;
 		}
 	}
 }

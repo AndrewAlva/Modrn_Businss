@@ -44,7 +44,7 @@
         </section>
 
         <header class="main-nav-wrapper">
-            <figure id="home-trigger" class="nav-logo intro-hero">
+            <figure id="home-trigger" class="nav-logo">
                 <a class="nav-click" href="#section-01">
                     <img src="img/brand/mb-logo.png" alt="Modrn Businss Logo">
                 </a>
@@ -163,23 +163,23 @@
             </div>
         </section>
 
-        <aside class="hero-nav intro-hero">
+        <aside class="hero-nav listen-inview">
             <ul class="media-triggers">
-                <li id="podcast-trigger" class="media-button single-trigger intro-hero">
+                <li id="podcast-trigger" class="media-button single-trigger inview-children-peek">
                     <div class="media-label">
                         <img src="img/brand/mic-symbol.png" alt="Podcast Symbol">
                         <h2>Podcast</h2>
                     </div>
                 </li>
 
-                <li id="book-trigger" class="media-button single-trigger intro-hero">
+                <li id="book-trigger" class="media-button single-trigger inview-children-peek">
                     <div class="media-label">
                         <img src="img/brand/book-symbol.png" alt="Book Series Symbol">
                         <h2>Book Series</h2>
                     </div>
                 </li>
 
-                <li id="tv-trigger" class="media-button single-trigger intro-hero">
+                <li id="tv-trigger" class="media-button single-trigger inview-children-peek">
                     <div class="media-label">
                         <img src="img/brand/tv-symbol.png" alt="TV Show Symbol">
                         <h2>TV Show</h2>
@@ -192,16 +192,16 @@
         <section id="full-wrapper">
             <!-- Hero | Section -->
             <section id="section-01" class="single-section full-height">
-                <div id="scene" class="triangles-canvas intro-hero" viewBox="0 0 1920 900">
-                    <figure data-depth="0.6" class="inner-triangle bg-triangle"></figure>
-                    <figure data-depth="0.4" class="inner-triangle top-triangle"></figure>
-                    <figure data-depth="0.2" class="inner-triangle bottom-triangle"></figure>
+                <div id="scene" class="triangles-canvas listen-inview" viewBox="0 0 1920 900">
+                    <figure data-depth="0.6" class="inner-triangle bg-triangle inview-children-peek"></figure>
+                    <figure data-depth="0.4" class="inner-triangle top-triangle inview-children-peek"></figure>
+                    <figure data-depth="0.2" class="inner-triangle bottom-triangle inview-children-peek"></figure>
                 </div>
 
                 <div class="inner-wrapper">
                     <!-- Add/Remove "media-display" class to shift content -->
-                    <section id="default-hero" class="shifting-hero-content">
-                        <div class="hero-left-col intro-hero">
+                    <section id="default-hero" class="shifting-hero-content listen-inview">
+                        <div class="hero-left-col inview-children-peek">
                             <svg class="triangle-bg" viewBox="0 0 555 880">
                                 <defs>
                                     <filter id="shadowBlur-sm" x="0" y="0">
@@ -233,7 +233,7 @@
                             </figure>
                         </div>
 
-                        <div class="hero-center-col intro-hero">
+                        <div class="hero-center-col inview-children-peek">
                             <!-- Default Hero -->
                             <div id="default-hero-content">
                                 <h1 id="default-header" class="hero-header h1-hero">
@@ -383,8 +383,8 @@
                                     <li class="features inview-children">Origin stories and lessons learned.</li>
                                     <li class="features inview-children">Education and latest news on franchising.</li>
                                 </ul>
-
                             </div>
+
                             <div class="bulleted-column half-sized listen-inview">
                                 <div class="column-intro inview-children">
                                     <figure class="column-icon">
@@ -400,7 +400,6 @@
                                     <li class="features inview-children">To achieve their goals both personality and professionally.</li>
                                     <li class="features inview-children">To realize their version of the American dream through entrepreneurship.</li>
                                 </ul>
-
                             </div>
                         </div>
                     </section>
@@ -664,22 +663,22 @@
 
                         <div class="phrases-wrapper">
                             <div id="ask-motto" class="single-phrase-container listen-inview">
-                                <figure class="phrase-bg">Ask</figure>
-                                <p class="single-phrase">
+                                <figure class="phrase-bg inview-children">Ask</figure>
+                                <p class="single-phrase inview-children">
                                     <span class="motto">Ask</span> the right questions
                                 </p>
                             </div>
 
                             <div id="learn-motto" class="single-phrase-container listen-inview">
-                                <figure class="phrase-bg">Learn</figure>
-                                <p class="single-phrase">
+                                <figure class="phrase-bg inview-children">Learn</figure>
+                                <p class="single-phrase inview-children">
                                     Always <span class="motto">Learn</span>
                                 </p>
                             </div>
 
                             <div id="grow-motto" class="single-phrase-container listen-inview">
-                                <figure class="phrase-bg">Grow</figure>
-                                <p class="single-phrase">
+                                <figure class="phrase-bg inview-children">Grow</figure>
+                                <p class="single-phrase inview-children">
                                     Focus on <span class="motto">Growth</span>
                                 </p>
                             </div>
@@ -698,69 +697,73 @@
             <!-- Contact | Section -->
             <section id="section-06" class="single-section">
                 <div class="inner-wrapper">
-                    <section class="subscribe-section">
-                        <h3 class="intro-title h2">
+                    <section class="subscribe-section listen-inview">
+                        <h3 class="intro-title h2 inview-children-peek">
                             Get the content as soon as it comes out
                         </h3>
 
-                        <p class="intro-description h4">
+                        <p class="intro-description h4 inview-children-peek">
                             Just leave me your name and your cell phone number and you'll be the first to know when we release new content.
                         </p>
 
                         <form id="subscribe-form" class="simple-form" name="main-subscribe-form" action="subscribe_tels.php" method="POST" enctype="multipart/form-data">
-                            <input id="input-subscribe-name" class="subscribe-inputs" type="text" placeholder="Name" name="subscribe-name" required>
-                            <input id="input-subscribe-cellphone" class="subscribe-inputs" type="tel" placeholder="Cellphone" name="subscribe-cellphone" required>
+                            <input id="input-subscribe-name" class="subscribe-inputs inview-children-peek" type="text" placeholder="Name" name="subscribe-name" required>
+                            <input id="input-subscribe-cellphone" class="subscribe-inputs inview-children-peek" type="tel" placeholder="Cellphone" name="subscribe-cellphone" required>
 
-                            <button id="submit-subscribe" class="brand-btn md-btn blue" type="button">
+                            <button id="submit-subscribe" class="brand-btn md-btn blue inview-children-peek" type="button">
                                 Subscribe
                             </button>
                         </form> 
                     </section>
 
                     <section id="dark-contact-section" class="contact-section">
-                        <div class="contact-triangles-bg">
-                            <figure class="triangle triangle--top"></figure>
-                            <figure class="triangle triangle--bottom"></figure>
+                        <div class="contact-triangles-bg listen-inview">
+                            <figure class="triangle triangle--top inview-children-peek"></figure>
+                            <figure class="triangle triangle--bottom inview-children-peek"></figure>
                         </div>
 
-                        <h3 class="intro-title h2">
-                            Want to share something?
-                        </h3>
+                        <div class="listen-inview">
+                            <h3 class="intro-title h2 inview-children">
+                                Want to share something?
+                            </h3>
 
-                        <p class="intro-description h4">
-                            Getting in touch is easy. Don't hesitate to fill out the contact form and get in touch.
-                        </p>
+                            <p class="intro-description h4 inview-children">
+                                Getting in touch is easy. Don't hesitate to fill out the contact form and get in touch.
+                            </p>
+                        </div>
 
-                        <figure class="form-division"></figure>
+                        <div class="listen-inview">
+                            <figure class="form-division inview-children"></figure>
+                        </div>
 
-                        <form id="contact-form" class="narrated-form" name="main-contact-form" action="mail.php" method="POST" enctype="multipart/form-data">
-                            <div class="narrated-line">
+                        <form id="contact-form" class="narrated-form listen-inview" name="main-contact-form" action="mail.php" method="POST" enctype="multipart/form-data">
+                            <div class="narrated-line inview-children-peek">
                                 <label for="contact-name" class="h3 regular-text">Hi, my name is</label>
                                 <input id="contact-name" class="narrated-input" name="name" type="text" placeholder="Your Name" required>
                                 <span class="h3 regular-text">,</span>
                             </div>
 
-                            <div class="narrated-line">
+                            <div class="narrated-line inview-children-peek">
                                 <label for="contact-city" class="h3 regular-text">I'm from</label>
                                 <input id="contact-city" class="narrated-input" name="city" type="text" placeholder="Your City" required>
                                 <span class="h3 regular-text">and</span>
                             </div>
 
-                            <div class="narrated-line">
+                            <div class="narrated-line inview-children-peek">
                                 <label for="contact-email" class="h3 regular-text">my email address is</label>
                                 <input id="contact-email" class="narrated-input" name="email" type="email" placeholder="Your Email" required>
                                 <span class="h3 regular-text">.</span>
                             </div>
 
-                            <div class="narrated-line">
+                            <div class="narrated-line inview-children-peek">
                                 <label for="contact-message" class="h3 regular-text">I have a message for you,</label>
                             </div>
 
-                            <div class="narrated-line">
+                            <div class="narrated-line inview-children-peek">
                                 <textarea id="contact-message" class="narrated-input" name="message" type="text" placeholder="Your Message" name="contactMessage" cols="30" rows="1" required></textarea>
                             </div>
 
-                            <button id="submit-contact-data" class="brand-btn md-btn dark-blue" type="submit">
+                            <button id="submit-contact-data" class="brand-btn md-btn dark-blue inview-children-peek" type="submit">
                                 Submit
                             </button>
                         </form>

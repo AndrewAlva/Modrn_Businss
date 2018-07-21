@@ -1,243 +1,278 @@
-.subscribe-section{
-	position: relative;
-
-	.intro-title{
-		width: 230px;
-		color: $main-titles-color;
-	}
-
-	.intro-description{
-		color: $body-color;
-		width: 300px;
-		margin-bottom: 35px;
-	}
-
-	.simple-form{
+// General style
+	.subscribe-section{
 		position: relative;
-		padding-top: 0;
-		padding-bottom: 68px;
-		text-align: center;
 
-		.subscribe-inputs{
-			display: block;
-			width: 220px;
-			height: 44px;
-			padding: 8px;
-			margin: 0 auto;
-			@include boxSizeFit();
-			color: $dark-titles;
-			border: none;
-			font-family: $brand-font-regular;
-			font-size: 1.3em;
-			font-weight: lighter;
-			@include smoothFont();
-			border: 1px solid transparent;
-			background-color: #f5f7fc;
-
-			&:focus{
-				border: 1px solid rgba(0, 85, 255, 0.5);
-				box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 4px 10px 0 rgba(0, 0, 0, 0.04);
-			}
-
-			&:-ms-input-placeholder { /* Internet Explorer 10-11 */
-			    color: $body-color;
-			    font-family: $brand-font-regular;
-				font-size: 1em;
-				font-weight: lighter;
-				@include smoothFont();
-			}
-
-			&::-ms-input-placeholder { /* Microsoft Edge */
-			    color: $body-color;
-			    font-family: $brand-font-regular;
-				font-size: 1em;
-				font-weight: lighter;
-				@include smoothFont();
-			}
-			
-			&:-moz-placeholder { /* Firefox 18- */
-				color: $body-color;
-			    font-family: $brand-font-regular;
-				font-size: 1em;
-				font-weight: lighter;
-				@include smoothFont();
-			}
-
-			&::-moz-placeholder { /* Firefox 19+ */
-				color: $body-color;
-			    font-family: $brand-font-regular;
-				font-size: 1em;
-				font-weight: lighter;
-				@include smoothFont();
-			}
-
-			&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-				color: $body-color;
-			    font-family: $brand-font-regular;
-				font-size: 1em;
-				font-weight: lighter;
-				@include smoothFont();
-			}
-
-			&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-			    color: $body-color;
-			    opacity: 1; /* Firefox */
-			    font-family: $brand-font-regular;
-				font-size: 1em;
-				font-weight: lighter;
-				@include smoothFont();
-			}
+		.intro-title{
+			width: 230px;
+			color: $main-titles-color;
 		}
 
-		#input-subscribe-name{
-			// margin-top: -15px;
-			// margin-bottom: 15px;
-			margin-bottom: 8px;
+		.intro-description{
+			color: $body-color;
+			width: 300px;
+			margin-bottom: 35px;
 		}
-		#submit-subscribe{
-			// top: 10px;
-			margin-top: 52px;
-		}
-	}
-}
 
-.contact-section{
-	position: relative;
-	padding-top: 55px;
-	padding-bottom: 60px;
-	color: $body-color;
-	background-color: $main-blue;
+		.simple-form{
+			position: relative;
+			padding-top: 0;
+			padding-bottom: 68px;
+			text-align: center;
 
-	.contact-triangles-bg{
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		overflow: hidden;
-
-		.triangle{
-			position: absolute;
-			width: 0;
-			height: 0;
-			display: block;
-			@include opacity(0.4);
-
-			border-top-style: solid;
-			border-top-color: transparent;
-			border-bottom-style: solid;
-			border-bottom-color: transparent;
-
-			border-left-style: solid;
-
-			&--top{
-				top: 56px;
-
-				border-left-width: 150px;
-				border-top-width: 130px;
-				border-bottom-width: 130px;
-				
-				border-left-color: $contact-top-triangle-bg;
-			}
-
-			&--bottom{
-				top: 160px;
-
-				border-left-width: 277px;
-				border-top-width: 246px;
-				border-bottom-width: 246px;
-
-				border-left-color: $contact-bottom-triangle-bg;
-			}
-		}
-	}
-
-	.intro-title{
-		color: $main-titles-color;
-		width: 200px;
-	}
-
-	.intro-description{
-		color: #fff;
-		width: 280px;
-		margin-bottom: 24px;
-	}
-
-	.form-division{
-		position: relative;
-		width: 33px;
-		height: 1px;
-		margin: 0 auto;
-		margin-bottom: 20px;
-		background-color: #fff;
-	}
-
-	.narrated-form{
-		position: relative;
-		width: 90%;
-		margin: 0 auto;
-		padding-bottom: 8px;
-		text-align: center;
-		color: #fff;
-
-		.narrated-line{
-			margin-bottom: 12px;
-
-			.regular-text{
-				font-family: $brand-font-regular;
-			}
-
-			.narrated-input{
-				max-width: 170px;
-				font-family: $brand-font-regular;
-				font-weight: lighter;
-				@include smoothFont();
-				font-size: 1.85em;
-				line-height: 1em;
-				letter-spacing: -0.02em;
-				color: $light-blue-brand;
-				background-color: transparent;
+			.subscribe-inputs{
+				display: block;
+				width: 220px;
+				height: 44px;
+				padding: 8px;
+				margin: 0 auto;
+				@include boxSizeFit();
+				color: $dark-titles;
 				border: none;
-				border-bottom: 1px solid $light-blue-brand;
-				text-align: center;
+				font-family: $brand-font-regular;
+				font-size: 1.3em;
+				font-weight: lighter;
+				@include smoothFont();
+				border: 1px solid transparent;
+				background-color: #f5f7fc;
+
+				&:focus{
+					border: 1px solid rgba(0, 85, 255, 0.5);
+					box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 4px 10px 0 rgba(0, 0, 0, 0.04);
+				}
 
 				&:-ms-input-placeholder { /* Internet Explorer 10-11 */
-				    color: $light-blue-brand;
+				    color: $body-color;
+				    font-family: $brand-font-regular;
+					font-size: 1em;
+					font-weight: lighter;
+					@include smoothFont();
 				}
 
 				&::-ms-input-placeholder { /* Microsoft Edge */
-				    color: $light-blue-brand;
+				    color: $body-color;
+				    font-family: $brand-font-regular;
+					font-size: 1em;
+					font-weight: lighter;
+					@include smoothFont();
+				}
+				
+				&:-moz-placeholder { /* Firefox 18- */
+					color: $body-color;
+				    font-family: $brand-font-regular;
+					font-size: 1em;
+					font-weight: lighter;
+					@include smoothFont();
 				}
 
-				&:-moz-placeholder { /* Firefox 18- */
-					color: $light-blue-brand;
-				}
 				&::-moz-placeholder { /* Firefox 19+ */
-					color: $light-blue-brand;
+					color: $body-color;
+				    font-family: $brand-font-regular;
+					font-size: 1em;
+					font-weight: lighter;
+					@include smoothFont();
 				}
 
 				&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-					color: $light-blue-brand;
+					color: $body-color;
+				    font-family: $brand-font-regular;
+					font-size: 1em;
+					font-weight: lighter;
+					@include smoothFont();
 				}
 
 				&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-				    color: $light-blue-brand;
+				    color: $body-color;
 				    opacity: 1; /* Firefox */
+				    font-family: $brand-font-regular;
+					font-size: 1em;
+					font-weight: lighter;
+					@include smoothFont();
 				}
 			}
 
-			#contact-email{
-				max-width: 95%;
-				margin-top: 10px;
+			#input-subscribe-name{
+				// margin-top: -15px;
+				// margin-bottom: 15px;
+				margin-bottom: 8px;
 			}
+			#submit-subscribe{
+				// top: 10px;
+				margin-top: 52px;
+			}
+		}
+	}
 
-			textarea.narrated-input{
-				max-width: 95%;
-				height: 25px;
+	.contact-section{
+		position: relative;
+		padding-top: 55px;
+		padding-bottom: 60px;
+		color: $body-color;
+		background-color: $main-blue;
+
+		.contact-triangles-bg{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			overflow: hidden;
+
+			.triangle{
+				position: absolute;
+				width: 0;
+				height: 0;
+				display: block;
+				@include opacity(0.4);
+
+				border-top-style: solid;
+				border-top-color: transparent;
+				border-bottom-style: solid;
+				border-bottom-color: transparent;
+
+				border-left-style: solid;
+
+				&--top{
+					top: 56px;
+
+					border-left-width: 150px;
+					border-top-width: 130px;
+					border-bottom-width: 130px;
+					
+					border-left-color: $contact-top-triangle-bg;
+				}
+
+				&--bottom{
+					top: 160px;
+
+					border-left-width: 277px;
+					border-top-width: 246px;
+					border-bottom-width: 246px;
+
+					border-left-color: $contact-bottom-triangle-bg;
+				}
 			}
 		}
 
-		#submit-contact-data{
-			margin-top: 35px;
+		.intro-title{
+			color: $main-titles-color;
+			width: 200px;
+		}
+
+		.intro-description{
+			color: #fff;
+			width: 280px;
+			margin-bottom: 24px;
+		}
+
+		.form-division{
+			position: relative;
+			width: 33px;
+			height: 1px;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			background-color: #fff;
+		}
+
+		.narrated-form{
+			position: relative;
+			width: 90%;
+			margin: 0 auto;
+			padding-bottom: 8px;
+			text-align: center;
+			color: #fff;
+
+			.narrated-line{
+				margin-bottom: 12px;
+
+				.regular-text{
+					font-family: $brand-font-regular;
+				}
+
+				.narrated-input{
+					max-width: 170px;
+					font-family: $brand-font-regular;
+					font-weight: lighter;
+					@include smoothFont();
+					font-size: 1.85em;
+					line-height: 1em;
+					letter-spacing: -0.02em;
+					color: $light-blue-brand;
+					background-color: transparent;
+					border: none;
+					border-bottom: 1px solid $light-blue-brand;
+					text-align: center;
+
+					&:-ms-input-placeholder { /* Internet Explorer 10-11 */
+					    color: $light-blue-brand;
+					}
+
+					&::-ms-input-placeholder { /* Microsoft Edge */
+					    color: $light-blue-brand;
+					}
+
+					&:-moz-placeholder { /* Firefox 18- */
+						color: $light-blue-brand;
+					}
+					&::-moz-placeholder { /* Firefox 19+ */
+						color: $light-blue-brand;
+					}
+
+					&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+						color: $light-blue-brand;
+					}
+
+					&::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+					    color: $light-blue-brand;
+					    opacity: 1; /* Firefox */
+					}
+				}
+
+				#contact-email{
+					max-width: 95%;
+					margin-top: 10px;
+				}
+
+				textarea.narrated-input{
+					max-width: 95%;
+					height: 25px;
+				}
+			}
+
+			#submit-contact-data{
+				margin-top: 35px;
+			}
+		}
+	}
+
+
+// "InView" animation style
+// #section-06 is the "Contact" section ID 
+#section-06{
+	.subscribe-section{
+		.inview-children-peek{
+			opacity: 0;
+			@include translate(0,20px);
+			&.active{
+				opacity: 1;
+				@include translate(0,0);
+			}
+		}
+	}
+
+	.contact-section{
+		.inview-children, .inview-children-peek{
+			opacity: 0;
+			@include translate(0, 20px);
+
+			&.active{
+				@include translate(0,0);
+
+				&.triangle{
+					opacity: .4;
+				}
+				&.intro-title, &.intro-description, &.narrated-line, &.brand-btn, &.form-division{
+					opacity: 1;
+				}
+			}
 		}
 	}
 }
