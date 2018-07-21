@@ -210,7 +210,7 @@
 			height: 40%;
 			top: 50px;
 			left: 0;
-			@include transitions(1s);
+			@include transitions(.6s);
 
 			#default-hero-content{
 				text-align: center;

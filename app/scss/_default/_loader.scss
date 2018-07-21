@@ -1,10 +1,13 @@
 #loaderWrapper{
-	z-index: 1000000;
+	z-index: 100000000;
 	position: fixed;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
 	background-color: #fff;
+	opacity: 1;
+
+	@include fadeOut(.6s);
 
 	img{
 		position: absolute;
@@ -15,6 +18,12 @@
     	animation-duration: 0.7s;
     	animation-iteration-count: infinite;
     	animation-direction: alternate;
+	}
+
+	&.loaded{
+		opacity: 0;
+		// display: none;
+		z-index: -1;
 	}
 }
 

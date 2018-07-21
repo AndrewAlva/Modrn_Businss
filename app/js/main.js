@@ -53,14 +53,14 @@
 	// Wait until jQuery has been loaded
 	$(document).ready(function(){
 		// Remove loading screen
-			TweenMax.to($('#loaderWrapper'), 0.6, {autoAlpha: 0, display:'none', delay:1, onComplete:insertBodyText});
+			$('#loaderWrapper').addClass('loaded');
+
+			// Show hidden elements within viewport (activate InView)
+					inviewTransitions();
 
 			function insertBodyText(){
 				// Show hidden elements at hero section
 					TweenMax.staggerTo($('.intro-hero'), 1, {autoAlpha: 1}, 0.2);
-
-				// Show hidden elements within viewport (activate InView)
-					inviewTransitions();
 
 				// Start switching topics at default hero header
 			        var shiftPhrases = $('#mb-topics');
