@@ -422,9 +422,19 @@
 		}
 	}
 
+	.hero-nav, #section-01 .triangles-canvas, #section-01 .shifting-hero-content{
+		.inview-children-peek{
+			opacity: 0;
+
+			&.active{
+				opacity: 1;
+			}
+		}
+	}
+
 	.hero-nav{
 		.inview-children-peek{
-			@include translate(0, 30px);
+			@include translate(0, -30px);
 
 			&.active{
 				@include translate(0, 0);
@@ -437,18 +447,7 @@
 		@media screen and (min-width: 768px) {
 			.hero-nav{
 				.inview-children-peek{
-					@include translate(50px, 0);
+					@include translate(-50px, 0);
 				}
 			}
 		}
-
-
-.hero-nav, #section-01 .triangles-canvas, #section-01 .shifting-hero-content{
-	.inview-children-peek{
-		opacity: 0;
-
-		&.active{
-			opacity: 1;
-		}
-	}
-}
