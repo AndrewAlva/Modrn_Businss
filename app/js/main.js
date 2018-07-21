@@ -577,10 +577,7 @@
 			  	}
 			});
 
-		// Detect scroll and slide texts
-			$(window).scroll(function(e){
-				console.log($(window).scrollTop());
-			});
+		// Detect scroll and slide texts (pending)
 
 
 		// Contact form "resize-able" inputs and textarea (pending)

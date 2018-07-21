@@ -453,7 +453,8 @@
 			padding: 60px 0;
 
 			.values-inner-wrapper{
-				height: 230px;
+				// height: 230px;
+				height: 240px; /* Special inview property */
 
 				&:last-child{
 					margin-top: 60px;
@@ -469,11 +470,11 @@
 				}
 
 				#core-values-bg{
-					@include translate(-35%,0);
+					// @include translate(-35%,0);
 				}
 
 				#great-aims-bg{
-					@include translate(-60%,0);
+					// @include translate(-60%,0);
 				}
 			}
 
@@ -1706,7 +1707,7 @@
 				}
 
 				#great-aims-bg{
-					@include translate(-40%, 0);
+					// @include translate(-40%, 0);
 				}
 
 				.values-list{

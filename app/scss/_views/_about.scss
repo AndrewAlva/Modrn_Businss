@@ -193,8 +193,10 @@
 		.values-inner-wrapper{
 			position: relative;
 			width: 100%;
-			height: 135px;
+			// height: 135px;
+			height: 140px; /* Special inview property */
 			display: block;
+			overflow: hidden; /* Special inview property */
 
 			&:last-child{
 				margin-top: 50px;
@@ -206,7 +208,8 @@
 				top: 0;
 				font-family: $brand-font-regular;
 				font-size: 17.5em;
-				line-height: 0.6em;
+				// line-height: 0.6em;
+				line-height: 0.65em; /* Special inview property */
 				letter-spacing: -0.03em;
 				color: #fff;
 				text-shadow: 0 0 1.2px $dark-titles;
@@ -215,10 +218,10 @@
 				pointer-events: none;
 			}
 			#core-values-bg{
-				@include translate(-58%,0);
+				// @include translate(-58%,0);
 			}
 			#great-aims-bg{
-				@include translate(-33%,0);
+				// @include translate(-33%,0);
 			}
 
 			.values-list{
@@ -258,7 +261,7 @@
 
 		#great-wrapper{
 			.values-list{
-				margin-top: -12px;
+				// margin-top: -12px; /* Special inview property */
 			}
 		}
 	}
@@ -319,76 +322,153 @@
 
 // "InView" animation style
 // #section-02 is the "About" section ID 
-#section-02{
-	.what-we-do{
-		.inview-children{
-			opacity: 0;
-			@include translate(0, 15px);
+	#section-02{
+		.what-we-do{
+			.inview-children{
+				opacity: 0;
+				@include translate(0, 15px);
 
-			&.active{
-				opacity: 1;
-				@include translate(0,0);
+				&.active{
+					opacity: 1;
+					@include translate(0,0);
+				}
+
+				&:before{
+					left: 0;
+				}
+			}
+		}
+
+		.about-break{
+			.bg-elements.inview-children{
+				@include transformFrom(center, right);
+				@include scaleX(0);
+
+				&.active{
+					@include scaleX(1);
+				}
 			}
 
-			&:before{
-				left: 0;
+			.phrase.inview-children{
+				opacity: 0;
+				@include translate(0, 10px)
+
+				&.active{
+					@include transitionsDelayed(1s, .25s);
+					opacity: 1;
+					@include translate(0, 0)
+				}
+			}
+		}
+
+		.essential-values{
+			.bg-title{
+				.inview-children-peek{
+					display: block;
+					opacity: 0;
+
+					&.active{
+						@include transitions(2.3s);
+						opacity: 1;
+					}
+				}
+			}
+			#core-values-bg{
+				.inview-children-peek{
+					@include translate(0,0);
+
+					&.active{
+						@include translate(-58%,0);
+					}
+				}
+			}
+			#great-aims-bg{
+				.inview-children-peek{
+					@include translate(-60%,0);
+
+					&.active{
+						@include translate(-33%,0);
+					}
+				}
+			}
+
+
+			.values-list{
+				.inview-children{
+					opacity: 0;
+					@include translate(0, 10px);
+		
+					&.active{
+						opacity: 1;
+						@include translate(0, 0)
+					}
+				}
+			}
+		}
+
+		.quote-break{
+			.quote-bg.inview-children{
+				@include transformFrom(center, right);
+				@include scaleX(0);
+
+				&.active{
+					@include scaleX(1);
+				}
+			}
+
+			.paragraph-box.inview-children, .quote-author.inview-children{
+				opacity: 0;
+				@include translate(0, 10px);
+
+				&.active{
+					@include transitionsDelayed(1s, .25s);
+					opacity: 1;
+					@include translate(0, 0)
+				}
 			}
 		}
 	}
 
-	.about-break{
-		.bg-elements.inview-children{
-			@include transformFrom(center, right);
-			@include scaleX(0);
-
-			&.active{
-				@include scaleX(1);
+	// Responsive
+		// Tablets
+		@media screen and (min-width: 768px) {
+			#section-02{
+				.essential-values{
+					#core-values-bg{
+						.inview-children-peek{
+							&.active{
+								@include translate(-35%,0);
+							}
+						}
+					}
+					#great-aims-bg{
+						.inview-children-peek{
+							@include translate(-90%,0);
+	
+							&.active{
+								@include translate(-60%,0);
+							}
+						}
+					}
+				}
 			}
 		}
 
-		.phrase.inview-children{
-			opacity: 0;
-			@include translate(0, 10px)
+		// Small desktop screens and laptops
+		@media screen and (min-width: 1025px) {}
 
-			&.active{
-				@include transitionsDelayed(1s, .25s);
-				opacity: 1;
-				@include translate(0, 0)
+		// Desktop and beyond
+		@media screen and (min-width: 1400px){
+			#section-02{
+				.essential-values{
+					
+					#great-aims-bg{
+						.inview-children-peek{
+							&.active{
+								@include translate(-30%, 0);
+							}
+						}
+					}
+				}
 			}
 		}
-	}
-
-	.essential-values{
-		.inview-children{
-			opacity: 0;
-			@include translate(0, 10px);
-
-			&.active{
-				opacity: 1;
-				@include translate(0, 0)
-			}
-		}
-	}
-
-	.quote-break{
-		.quote-bg.inview-children{
-			@include transformFrom(center, right);
-			@include scaleX(0);
-
-			&.active{
-				@include scaleX(1);
-			}
-		}
-
-		.paragraph-box.inview-children, .quote-author.inview-children{
-			opacity: 0;
-			@include translate(0, 10px);
-
-			&.active{
-				@include transitionsDelayed(1s, .25s);
-				opacity: 1;
-				@include translate(0, 0)
-			}
-		}
-	}
-}
