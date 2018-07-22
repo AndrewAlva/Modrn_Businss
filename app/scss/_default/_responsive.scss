@@ -164,15 +164,22 @@
 		.triangles-canvas {
 			.inner-triangle{
 				&.bg-triangle{
+					top: 0;
+					left: 5%;
 					bottom: -370%;
+					width: 100%;
+					height: 3097px;
 				}
 				&.top-triangle{
-					top: 36%;
+					top: 0;
 					left: 46%;
+					width: 24.47%;
 				}
 				&.bottom-triangle{
 					bottom: -225%;
 					left: 62%;
+					width: 39%;
+					height: 1210px;
 				}
 			}
 		}
@@ -983,14 +990,21 @@
 		.triangles-canvas {
 			.inner-triangle{
 				&.bg-triangle{
-					bottom: -170%;
-					left: 2.3%;
+					width: 1780px;
+					bottom: -350px;
 				}
 				&.top-triangle{
-					top: -44%;
+					width: 350px;
+					height: 680px;
+					top: -500px;
+					left: 400px;
 				}
 				&.bottom-triangle{
-					bottom: -135%;
+					width: 400px;
+					top: 300px;
+					bottom: auto;
+					left: auto;
+					right: 5%;
 				}
 			}
 		}
@@ -1553,18 +1567,17 @@
 
 		.triangles-canvas {
 			.inner-triangle{
-				&.bg-triangle{
-					top: 0;
-					bottom: -10%;
-					left: 7.3%;
-				}
 				&.top-triangle{
-					top: -84%;
-					left: 26%;
+					width: 460px;
+					top: -890px;
+					left: 490px;
 				}
 				&.bottom-triangle{
-					left: 52%;
-					bottom: -85%;
+					width: 650px;
+					height: 1100px;
+					top: 310px;
+					left: auto;
+					right: 10%;
 				}
 			}
 		}

@@ -57,6 +57,7 @@
 
 			// Show hidden elements within viewport (activate InView)
 					inviewTransitions();
+					insertBodyText();
 
 			function insertBodyText(){
 				// Show hidden elements at hero section
