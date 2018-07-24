@@ -401,6 +401,16 @@
 // "InView" animation style
 // #section-01 is the "Hero" section ID 
 	#section-01{
+		.hero-left-col{
+			&.inview-children-peek{
+				@include translate(-120px, 0);
+
+				&.active{
+					@include translate(0, 0);
+				}
+			}
+		}
+
 		.hero-center-col{
 			&.inview-children-peek{
 				@include translate(20px, 0);
