@@ -434,7 +434,7 @@
 			.bg-elements {
 				.triangle{
 					&.t-01{
-						top: 0;
+						top: -15%;
 						left: 80%;
 						border-right-width: 70px;
 						border-top-width: 70px;
@@ -445,8 +445,8 @@
 				.mask-triangle{
 					width: 400px;
 					height: 400px;
-					top: 50%;
-					right: -2%;
+					top: -25%;
+					right: -6%;
 				}
 			}
 
@@ -1155,19 +1155,17 @@
 			.bg-elements {
 				.triangle{
 					&.t-01{
-						top: -32%;
-						left: 85%;
+						top: -20%;
 						border-right-width: 115px;
-						border-top-width: 120px;
-						border-bottom-width: 120px;
+						border-top-width: 100px;
+						border-bottom-width: 100px;
 					}
 				}
 
 				.mask-triangle{
 					width: 600px;
 					height: 600px;
-					top: 40%;
-					right: -12%;
+					top: -35%;
 				}
 			}
 
@@ -1689,17 +1687,20 @@
 			.bg-elements {
 				.triangle{
 					&.t-01{
-						top: -29%;
-						left: 82%;
-						border-right-width: 160px;
-						border-top-width: 160px;
-						border-bottom-width: 160px;
+						top: -26%;
+						left: auto;
+						right: 9%;
+						border-right-width: 175px;
+						border-top-width: 155px;
+						border-bottom-width: 155px;
 					}
 				}
 
 				.mask-triangle{
-					top: 50%;
-					right: 0;
+					top: -27%;
+					right: -2%;
+					width: 720px;
+					height: 720px;
 				}
 			}
 
