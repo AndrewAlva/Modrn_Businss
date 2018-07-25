@@ -259,20 +259,25 @@
 	}
 
 	.contact-section{
-		.inview-children, .inview-children-peek{
+		.contact-triangles-bg .inview-children-peek{
+			opacity: 0;
+			@include translate(-120px, 0);
+
+			&.active{
+				opacity: .4;
+				@include translate(0, 0);
+			}
+		}
+
+		.intro-title.inview-children, .intro-description.inview-children, .form-division.inview-children, .narrated-form .inview-children-peek{
 			opacity: 0;
 			@include translate(0, 20px);
 
 			&.active{
 				@include translate(0,0);
-
-				&.triangle{
-					opacity: .4;
-				}
-				&.intro-title, &.intro-description, &.narrated-line, &.brand-btn, &.form-division{
-					opacity: 1;
-				}
+				opacity: 1;
 			}
 		}
+		
 	}
 }
