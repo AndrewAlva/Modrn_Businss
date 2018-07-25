@@ -73,6 +73,22 @@
     		transform: scaleX($ratio);
 }
 
+@mixin scaleY($ratio){
+    -webkit-transform: scaleY($ratio);
+       -moz-transform: scaleY($ratio);
+        -ms-transform: scaleY($ratio);
+    	 -o-transform: scaleY($ratio);
+    		transform: scaleY($ratio);
+}
+
+@mixin scaleXY($Xratio, $Yratio){
+    -webkit-transform: scale($Xratio, $Yratio);
+       -moz-transform: scale($Xratio, $Yratio);
+        -ms-transform: scale($Xratio, $Yratio);
+    	 -o-transform: scale($Xratio, $Yratio);
+    		transform: scale($Xratio, $Yratio);
+}
+
 @mixin rotate($degs){
     -webkit-transform: -webkit-rotate($degs);
     -webkit-transform: rotate($degs);
