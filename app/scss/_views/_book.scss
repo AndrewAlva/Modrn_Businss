@@ -52,10 +52,13 @@
 				position: relative;
 				display: block;
 				width: 100%;
+				max-width: 330px;
 				height: 100%;
+				margin: 0 auto;
 			}
 
 			.book-photo{
+				display: block;
 				position: relative;
 				width: 100%;
 				max-width: 330px;

@@ -655,6 +655,10 @@
 				padding-left: 0;
 				padding-right: 70px;
 
+				.photo-curtain{
+					max-width: initial;
+				}
+
 				.book-photo{
 					max-width: initial;
 				}
@@ -1873,7 +1877,7 @@
 			.book-photo-wrapper{
 				left: -20px;
 
-				.book-photo{
+				.photo-curtain, .book-photo{
 					max-width: 800px;
 				}
 			}
