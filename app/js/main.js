@@ -602,7 +602,7 @@
 			  		.done(function(e) {
 				        console.log("e",e);
 				        TweenMax.to($('.subscribe-section'), 0.6, {autoAlpha: 0, display: 'none', onComplete:function(){
-				        	$('.subscribe-section').html('<h3 class="intro-title h2"> Thanks for subscribing! </h3> <p class="intro-description h4"> Wait news from us sooon. </p>').fadeIn();
+				        	$('.subscribe-section').html('<h3 class="intro-title h2"> Thanks for subscribing! </h3> <p class="intro-description h4"> Wait news from us soon. </p>').fadeIn();
 				        	TweenMax.to($('.subscribe-section'), 0.6, {autoAlpha: 1, display: 'block'  });
 				        } });
 				        
