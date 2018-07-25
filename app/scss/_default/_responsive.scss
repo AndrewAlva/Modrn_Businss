@@ -266,6 +266,20 @@
 					margin-bottom: 20px;
 					text-align: left;
 
+					#mb-topics{
+						&.show-franchising, &.show-entrepreneur, &.show-business{
+							.topics-complement, .topics-mask{
+								@include translate(0, 0);
+							}
+						}
+
+						.topics-mask{
+							.inner-wrapper{
+								width: 28.5vw;
+							}
+						}
+					}
+
 					.hero-highlight{
 						&:after{
 							height: 8px;

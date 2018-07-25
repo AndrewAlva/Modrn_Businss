@@ -64,14 +64,46 @@
 					TweenMax.staggerTo($('.intro-hero'), 1, {autoAlpha: 1}, 0.2);
 
 				// Start switching topics at default hero header
-			        var shiftPhrases = $('#mb-topics');
-			        for (var i=0; i<shiftPhrases.length; i++) {
-			            var toRotate = shiftPhrases[i].getAttribute('data-type');
-			            var period = shiftPhrases[i].getAttribute('data-period');
-			            if (toRotate) {
-			            	new TxtType(shiftPhrases[i], JSON.parse(toRotate), period);
-			            }
-			        }
+			        // var shiftPhrases = $('#mb-topics');
+			        // for (var i=0; i<shiftPhrases.length; i++) {
+			        //     var toRotate = shiftPhrases[i].getAttribute('data-type');
+			        //     var period = shiftPhrases[i].getAttribute('data-period');
+			        //     if (toRotate) {
+			        //     	new TxtType(shiftPhrases[i], JSON.parse(toRotate), period);
+			        //     }
+			        // }
+
+			        var heroShiftClasses = ['show-franchising', 'show-entrepreneur', 'show-business'];
+			        var heroShiftIds = ['#franchising-txt', '#entrepreneur-txt', '#business-txt'];
+			        var prevIndex = 2;
+			        var shiftIndex = 0;
+			        var nextIndex = 1;
+			        setInterval(function() {
+			        	$('#mb-topics').addClass(heroShiftClasses[nextIndex]);
+        				$('#mb-topics').removeClass(heroShiftClasses[shiftIndex]);
+
+        				// $(heroShiftIds[shiftIndex]).removeClass('waiting');
+        				$(heroShiftIds[shiftIndex]).addClass('passed');
+
+        				$(heroShiftIds[nextIndex]).addClass('active');
+        				$(heroShiftIds[nextIndex]).removeClass('waiting');
+
+        				setTimeout(function(){
+        					$(heroShiftIds[prevIndex]).addClass('waiting');
+        					$(heroShiftIds[prevIndex]).removeClass('active');
+        					$(heroShiftIds[prevIndex]).removeClass('passed');
+        				}, 700);
+        				
+        				prevIndex ++;
+        				if(prevIndex == 3){prevIndex = 0;}
+        				
+        				shiftIndex ++;
+        				if(shiftIndex == 3){shiftIndex = 0;}
+        				
+        				nextIndex ++;
+        				if(nextIndex == 3){nextIndex = 0;}
+
+			        }, 3000);
 			}
 
 

@@ -145,11 +145,11 @@
 }
 
 @mixin fadeOut($timing){
-	-webkit-transition: opacity $timing ease-in, z-index 0s linear $timing;
-	   -moz-transition: opacity $timing ease-in, z-index 0s linear $timing;
-	    -ms-transition: opacity $timing ease-in, z-index 0s linear $timing;
-	     -o-transition: opacity $timing ease-in, z-index 0s linear $timing;
-	        transition: opacity $timing ease-in, z-index 0s linear $timing;
+	-webkit-transition: opacity $timing ease-in, z-index 0.2s linear $timing;
+	   -moz-transition: opacity $timing ease-in, z-index 0.2s linear $timing;
+	    -ms-transition: opacity $timing ease-in, z-index 0.2s linear $timing;
+	     -o-transition: opacity $timing ease-in, z-index 0.2s linear $timing;
+	        transition: opacity $timing ease-in, z-index 0.2s linear $timing;
 }
 
 @mixin grayGradient(){

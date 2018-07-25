@@ -227,31 +227,60 @@
 					display: inline-table;
 					max-height: 1em;
 
+					.topics-complement{
+						position: relative;
+						display: inline-block;
+						margin-right: .3em;
+						@include transitions(.7s);
+					}
+
 					.topics-mask{
 						position: relative;
+						display: inline-block;
 						height: 1.2em;
+						margin-bottom: -.3em;
 						overflow: hidden;
+						color: $main-blue;
+						@include transitions(.7s);
 
 						.inner-wrapper{
 							position: relative;
-							width: 100%;
-
-							&.show-franchising{
-								@include translate(0, 0);
-							}
-							&.show-entrepreneur{
-								@include translate(0, -2.1em);
-							}
-							&.show-business{
-								@include translate(0, -4.15em);
-							}
+							width: 172px;
 
 							.shifting-text{
-								position: relative;
+								position: absolute;
 								display: block;
 								text-align: left;
 								margin-bottom: 1em;
+								@include transitions(.7s);
+
+								&.active{
+									@include translate(0, 0);
+								}
+								&.passed{
+									@include translate(0, -120%);
+								}
+								&.waiting{
+									@include transitions(0s);
+									@include translate(0, 120%);
+								}
 							}
+						}
+					}
+
+					&.show-franchising{
+						.topics-complement, .topics-mask{
+							@include translate(1.1em, 0);
+						}
+					}
+					&.show-entrepreneur{
+						.topics-complement, .topics-mask{
+							@include translate(-.1em, 0)
+						}
+					}
+					&.show-business{
+						.topics-complement, .topics-mask{
+							@include translate(.1em, 0)
 						}
 					}
 				}
@@ -265,13 +294,13 @@
 
 				&#default-header{
 					margin-top: 28px;
-					max-width: 260px;
-					margin: 0 auto;
-					text-align: left;
+					// max-width: 260px;
+					// margin: 0 auto;
+					// text-align: left;
 
-					& ~ .nav-click{
-						margin-right: 146px;
-					}
+					// & ~ .nav-click{
+					// 	margin-right: 146px;
+					// }
 				}
 
 				&#podcast-header{
@@ -427,7 +456,7 @@
 
 
 // "InView" animation style
-// #section-01 is the "Hero" section ID 
+// #section-01 is the "Hero" section ID
 	#section-01{
 		.hero-left-col{
 			&.inview-children-peek{
