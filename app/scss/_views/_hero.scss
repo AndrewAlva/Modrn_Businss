@@ -223,27 +223,55 @@
 				position: relative;
 				margin-bottom: 10px;
 
+				#mb-topics{
+					display: inline-table;
+					max-height: 1em;
+
+					.topics-mask{
+						position: relative;
+						height: 1.2em;
+						overflow: hidden;
+
+						.inner-wrapper{
+							position: relative;
+							width: 100%;
+
+							&.show-franchising{
+								@include translate(0, 0);
+							}
+							&.show-entrepreneur{
+								@include translate(0, -2.1em);
+							}
+							&.show-business{
+								@include translate(0, -4.15em);
+							}
+
+							.shifting-text{
+								position: relative;
+								display: block;
+								text-align: left;
+								margin-bottom: 1em;
+							}
+						}
+					}
+				}
+
 				.hero-highlight{
 					position: relative;
 					display: inline-block;
 					margin-bottom: -20px;
 					color: $main-blue;
-
-					// &:after{
-					// 	content: "";
-					// 	position: relative;
-					// 	display: block;
-					// 	width: 103%;
-					// 	height: 8px;
-					// 	left: -1%;
-					// 	bottom: 8px;
-					// 	background-color: $main-blue-op3;
-					// }
 				}
 
 				&#default-header{
-					// margin-top: 5px;
 					margin-top: 28px;
+					max-width: 260px;
+					margin: 0 auto;
+					text-align: left;
+
+					& ~ .nav-click{
+						margin-right: 146px;
+					}
 				}
 
 				&#podcast-header{
