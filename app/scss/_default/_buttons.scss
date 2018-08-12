@@ -10,7 +10,7 @@
 		font-family: $author-font;
 		@include smoothFont();
 
-		@include transitions(0.4s);
+		@include transitions(.4s);
 		
 		&:after, &:before{
 			content: "";

@@ -743,7 +743,7 @@
 				position: absolute;
 				margin: auto;
 				left: 0; right: 0;
-				padding: 35px 350px 0 0;
+				padding: 28px 350px 0 0;
 				text-align: center;
 			}
 
@@ -1395,7 +1395,7 @@
 
 		.philosophy-break{
 			.philo-title{
-				padding-top: 75px;
+				padding-top: 65px;
 				padding-right: 53vw;
 			}
 
@@ -1406,7 +1406,7 @@
 
 					.phrase-bg{
 						font-size: 14em;
-						line-height: 200px;
+						line-height: 180px;
 					}
 
 					&#ask-motto{
@@ -2018,7 +2018,7 @@
 							right: -40px;
 						}
 						.single-phrase{
-							padding-right: 15vw;
+							padding-right: 13vw;
 						}
 					}
 					&#grow-motto{
@@ -2031,8 +2031,13 @@
 					}
 
 					.phrase-bg{
-						font-size: 17em;
-						line-height: 310px;
+						font-size: 18em;
+						line-height: 270px;
+					}
+
+					.single-phrase{
+						font-size: 3.5em;
+						padding-bottom: 0.2em;
 					}
 				}
 			}
