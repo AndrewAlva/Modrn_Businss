@@ -9,7 +9,7 @@
 
 	@include fadeOut(.6s);
 
-	img{
+	img, svg{
 		position: absolute;
 		margin: auto;
 		top: 0; bottom: 0;
@@ -20,11 +20,15 @@
     	animation-direction: alternate;
 	}
 
+	svg{
+		width: 40px;
+	}
+
 	&.loaded{
 		opacity: 0;
 		z-index: -1;
 
-		img{
+		img, svg{
 			animation: none;
 		}
 	}

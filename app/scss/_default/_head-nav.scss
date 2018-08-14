@@ -19,7 +19,7 @@
 		padding: 24px 0 0;
 		@include boxSizeFit();
 
-		img{
+		img, svg{
 			width: 100%;
 		}
 	}

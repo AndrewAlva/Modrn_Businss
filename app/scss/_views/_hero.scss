@@ -348,9 +348,14 @@
 						margin-top: 0;
 					}
 
+					&.tv-channels .channel{
+						display: inline-block;
+					}
+
 					.channel{
 						position: relative;
-						display: inline-block;
+						// display: inline-block;
+						display: block;
 						margin-left: 0;
 						padding: 8px 0;
 
@@ -360,6 +365,32 @@
 
 						img{
 							width: 56%;
+						}
+						.itunes-svg{
+							width: 60px;
+						}
+						.spotify-svg{
+							width: 60px;
+						}
+						.stitcher-svg{
+							width: 77px;
+						}
+						.soundcloud-svg{
+							width: 93px;
+						}
+						.overcast-svg{
+							width: 67px;
+						}
+
+						.youtube-svg{
+							width: 64px;
+							margin-right: 28px;
+						}
+						.appletv-svg{
+							width: 35px;
+						}
+						.amazon-svg{
+							width: 84px;
 						}
 					}
 				}
