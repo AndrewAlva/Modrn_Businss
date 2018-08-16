@@ -33,18 +33,20 @@
 				}
 
 				.triangle-helper{
-					width: 105px;
-					left: -28px;
-					bottom: 48px;
+					position: absolute;
+					z-index: 1;
+					width: 185px;
+					left: -55px;
+					bottom: -12px;
 				}
 			}
 			
-			.triangle-helper{
-				position: absolute;
-				z-index: 1;
-				bottom: 70px;
-				left: -100px;
-			}
+			// .triangle-helper{
+			// 	position: absolute;
+			// 	z-index: 1;
+			// 	bottom: 70px;
+			// 	left: -100px;
+			// }
 		}
 
 		.description-wrapper{
@@ -325,11 +327,11 @@
 				@include translate(25px, 0);
 			}
 
-			.photo-wrapper img.inview-children-peek, #ryan-quote .inview-children-peek{
+			.photo-wrapper img.inview-children-peek, .photo-wrapper .triangle-helper.inview-children-peek, #ryan-quote .inview-children-peek{
 				@include translate(-25px, 0);
 			}
 
-			.description-wrapper .inview-children-peek, #lawrence-quote .inview-children-peek, .photo-wrapper img.inview-children-peek, #ryan-quote .inview-children-peek{
+			.description-wrapper .inview-children-peek, #lawrence-quote .inview-children-peek, .photo-wrapper img.inview-children-peek, .photo-wrapper .triangle-helper.inview-children-peek, #ryan-quote .inview-children-peek{
 				opacity: 0;
 
 				&.active{
