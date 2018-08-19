@@ -165,21 +165,22 @@
 			.inner-triangle{
 				&.bg-triangle{
 					top: 0;
-					left: 5%;
-					bottom: -370%;
-					width: 100%;
-					height: 3097px;
+					left: 0;
+					bottom: -140px;
+					width: 115vw;
+					height: 174vw;
 				}
 				&.top-triangle{
-					top: 0;
-					left: 46%;
-					width: 24.47%;
+					top: -72%;
+					left: 25%;
+					width: 35vw;
+					height: 41vw;
 				}
 				&.bottom-triangle{
-					bottom: -225%;
-					left: 62%;
-					width: 39%;
-					height: 1210px;
+					bottom: -40%;
+					left: 53%;
+					width: 45vw;
+					height: 60vw;
 				}
 			}
 		}

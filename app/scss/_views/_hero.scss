@@ -81,39 +81,37 @@
 		background-color: #00114e;
 		overflow: hidden;
 
+		.svg-wrapper{
+			position: absolute;
+			top: 0; left: 0;
+			width: 100%;
+			height: 100%;
+		}
+
 		.inner-triangle{
 			position: absolute;
 			margin: auto;
 
 			&.bg-triangle{
-				top: -29%;
+				top: -36%;
 				bottom: auto;
-				left: 15%;
-				background-image: url(../img/hero_bg/bg_triangle.png);
-				background-repeat: no-repeat;
-				background-size: 100%;
-				width: 450px;
-				height: 760px;
+				left: 7%;
+				width: 558px;
+				height: 850px;
 			}
 			&.top-triangle{
-				top: 1%;
-				left: 37%;
+				top: -77%;
+				left: 8%;
 				bottom: 0;
-				background-image: url(../img/hero_bg/top_triangle.png);
-				background-repeat: no-repeat;
-				background-size: 100%;
-				width: 36.5%;
-				height: 759px;
+				width: 358px;
+				height: 429px;
 			}
 			&.bottom-triangle{
-				top: 0;
-				bottom: -10%;
-				left: 62%;
-				background-image: url(../img/hero_bg/bottom_triangle.png);
-				background-repeat: no-repeat;
-				background-size: 100%;
-				width: 260px;
-				height: 50%;
+				top: 43%;
+				bottom: 0;
+				left: 36%;
+				width: 509px;
+				height: 680px;
 			}
 		}
 	}

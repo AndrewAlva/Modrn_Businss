@@ -57,6 +57,10 @@
                     .bottom-step{fill:url(#dark_gradient);}
                     .mid-step{fill:url(#mid_gradient);}
                     .top-step{fill:url(#light_gradient);}
+
+                    .hero_bg_triangle{fill:#001765;}
+                    .hero_top_triangle{fill:#0a2171;}
+                    .hero_bottom_triangle{fill:#0c2681;}
                 </style>
 
                 <filter id="shadowBlur-sm" x="0" y="0">
@@ -68,6 +72,18 @@
 
                 <filter id="founder_dropshadow" x="-74.62%" y="-41.08%" width="276.12%" height="205.35%">
                     <feDropShadow dx="14" dy="16" stdDeviation="50" flood-color="#003770" flood-opacity=".5" />
+                </filter>
+
+                <filter id="hero_bg_triangle_dropshadow" x="-57" y="-52" width="558" height="850">
+                    <feDropShadow dx="16" dy="18" stdDeviation="30" flood-color="#003" flood-opacity=".3" />
+                </filter>
+
+                <filter id="hero_top_triangle_dropshadow" x="-110" y="-101" width="358" height="429">
+                    <feDropShadow dx="27" dy="29" stdDeviation="45" flood-color="#003" flood-opacity=".4" />
+                </filter>
+
+                <filter id="hero_bottom_triangle_dropshadow" x="-110" y="-101" width="509" height="680">
+                    <feDropShadow dx="27" dy="31" stdDeviation="80" flood-color="#003" flood-opacity=".5" />
                 </filter>
 
                 <linearGradient id="dark_vgradient" x1="19.03" y1="26.95" x2="-15.48" y2="26.95" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00115a"/><stop offset="1" stop-color="#0050e3"/></linearGradient>
@@ -241,9 +257,23 @@
             <!-- Hero | Section -->
             <section id="section-01" class="single-section full-height">
                 <div class="triangles-canvas listen-inview">
-                    <figure class="inner-triangle bg-triangle inview-children-peek"></figure>
-                    <figure class="inner-triangle top-triangle inview-children-peek"></figure>
-                    <figure class="inner-triangle bottom-triangle inview-children-peek"></figure>
+                        <figure class="inner-triangle bg-triangle inview-children-peek">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 558 850">
+                                <polygon class="hero_bg_triangle" filter="url(#hero_bg_triangle_dropshadow)" points="481 52 481 768 57 410 481 52"/> </polygon>
+                            </svg>
+                        </figure>
+                        
+                        <figure class="inner-triangle top-triangle inview-children-peek">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 358 429">
+                                <polygon class="hero_top_triangle" filter="url(#hero_top_triangle_dropshadow)" points="214 101 214 276 110 189 214 101"/></polygon>
+                            </svg>
+                        </figure>
+                        
+                        <figure class="inner-triangle bottom-triangle inview-children-peek">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509 680">
+                                <polygon class="hero_bottom_triangle" filter="url(#hero_bottom_triangle_dropshadow)" points="365 101 365 527 110 314 365 101"/>
+                            </svg>
+                        </figure>
                 </div>
 
                 <div class="inner-wrapper">
