@@ -153,10 +153,29 @@
 							margin-bottom: 25px;
 						}
 
+						svg{
+							display: initial;
+							margin-bottom: 12px;
+						}
+
 						h2{
 							font-size: 1.1vw;						
 						}
 					}
+				}
+
+				#podcast-trigger svg{
+					width: 27%;
+					margin-top: 16px;
+				}
+
+				#book-trigger svg{
+					width: 34%;
+					margin-top: 23px;
+				}
+				#tv-trigger svg{
+					width: 34%;
+					margin-top: 12px;
 				}
 			}
 		}
@@ -293,7 +312,7 @@
 					}
 
 					&#podcast-header{
-						margin-bottom: 20px;
+						margin-bottom: 28px;
 					}
 
 					&#book-header{
@@ -307,20 +326,53 @@
 						transform: initial;
 					}
 					&#tv-header{
-						margin-top: 10%;
+						margin-top: 7.5%;
+						margin-bottom: 30px;
 					}
 				}
 
 				.hero-channels{
 					.hero-label{
-						margin-bottom: 15px;
+						margin-bottom: 13px;
 						font-size: 0.8em;
 					}
 
 					.channels-list{
+						&:not(:first-of-type){
+							margin-top: 10px;
+						}
+
 						.channel{
+							display: inline-block;
+							padding: 0;
+							&:not(:first-child){margin-left: 25px;}
+
 							img{
 								width: 70%;
+							}
+
+							.spotify-svg{
+								position: relative;
+								top: 5px;
+							}
+							.stitcher-svg{
+								position: relative;
+								top: 1px;
+							}
+							.overcast-svg{
+								position: relative;
+								top: 4px;
+							}
+							.youtube-svg{
+								margin-right: 0;
+							}
+							.appletv-svg{
+								position: relative;
+								top: 1px;
+							}
+							.amazon-svg{
+								position: relative;
+								top: 4px;
 							}
 						}
 					}
@@ -707,9 +759,9 @@
 					right: 30px;
 
 					.triangle-helper{
-						width: 80px;
-						left: -20px;
-						bottom: 50px;
+						width: 180px;
+						left: -65px;
+						bottom: -26px;
 					}
 				}
 			}
@@ -733,6 +785,10 @@
 				width: 47%;
 				float: left;
 				display: inline-block;
+
+				.single-quote{
+					padding: 0 70px;
+				}
 			}
 			#ryan-quote{
 				margin-top: -20vh;
@@ -956,18 +1012,18 @@
 
 	// Buttons general style: "_default/buttons.scss"
 		.brand-btn{
-			padding: 0 29px;
+			padding: 4px 29px;
 
 			&.md-btn{
 				min-width: 140px;
 
 				&:before{
-					border-bottom-width: 20px;
-					border-right-width: 20px;
+					border-bottom-width: 14px;
+					border-right-width: 14px;
 				}
 				&:after{
-					border-top-width: 20px;
-					border-left-width: 20px;
+					border-top-width: 14px;
+					border-left-width: 14px;
 				}
 			}
 		}
@@ -1009,21 +1065,22 @@
 		.triangles-canvas {
 			.inner-triangle{
 				&.bg-triangle{
-					width: 1780px;
-					bottom: -350px;
+					width: 120vw;
+					height: 182vw;
+					bottom: -180px;
 				}
 				&.top-triangle{
-					width: 350px;
-					height: 680px;
-					top: -500px;
-					left: 400px;
+					width: 60vw;
+					height: 71vw;
+					left: 18%;
 				}
 				&.bottom-triangle{
-					width: 400px;
-					top: 300px;
+					width: 60vw;
+					height: 80vw;
+					top: 120px;
 					bottom: auto;
 					left: auto;
-					right: 5%;
+					right: -5%;
 				}
 			}
 		}
@@ -1050,7 +1107,7 @@
 
 				.hero-img{
 					.hero-logo{
-						top: 26vw;
+						top: 25.1vw;
 					}
 
 					.hero-mic{
@@ -1067,16 +1124,21 @@
 					margin-bottom: 45px;
 
 					&#default-header{
-						margin-top: 12vw;
+						margin-top: 11vw;
 					}
 
 					&#podcast-header{
-						margin-top: 12%;
+						margin-top: 10%;
+						margin-bottom: 38px;
 					}
 
 					&#book-header{
 						margin-top: 15%;
 						margin-bottom: 45px;
+					}
+					&#tv-header{
+						margin-top: 11%;
+						margin-bottom: 40px;
 					}
 
 					.hero-highlight{
@@ -1088,7 +1150,15 @@
 				}
 
 				.hero-channels{
+					.hero-label{
+						margin-bottom: 18px;
+					}
+
 					.channels-list{
+						&:not(:first-of-type){
+							margin-top: 20px;
+						}
+
 						.channel{
 							margin-left: 60px;
 
@@ -1096,9 +1166,26 @@
 								margin-left: 0;
 							}
 
+							&:not(:first-child){
+								margin-left: 40px;
+							}
+
 							img{
 								width: 100%;
 							}
+
+							.itunes-svg{width: 70px;}
+							.spotify-svg{
+								width: 77px;
+								top: 6px;
+							}
+							.stitcher-svg{width: 87px;}
+							.soundcloud-svg{width: 112px;}
+							.overcast-svg{width: 77px;}
+
+							.youtube-svg{width: 74px;}
+							.appletv-svg{width: 45px;}
+							.amazon-svg{width: 104px;}
 						}
 					}
 				}
@@ -1137,6 +1224,8 @@
 				.bulleted-column{ 
 					.column-intro{
 						.column-icon{
+							width: 34px;
+
 							img{
 								width: auto;
 							}
@@ -1163,7 +1252,7 @@
 						}
 
 						.features{
-							padding: 14px 0 14px 35px;
+							padding: 14px 0 14px 25px;
 						}
 					}
 				}
@@ -1359,8 +1448,9 @@
 					}
 
 					.triangle-helper{
-						width: 140px;
-						left: -50px;
+						width: 230px;
+						left: -75px;
+						bottom: -20px;
 					}
 				}
 			}
@@ -1526,7 +1616,7 @@
 			height: $header-height;
 
 			.nav-logo{
-				width: auto;
+				width: 42px;
 				margin-left: 80px;
 				margin-right: 55px;
 				padding: 38.5px 0;
@@ -1584,17 +1674,17 @@
 
 		.triangles-canvas {
 			.inner-triangle{
+				&.bg-triangle{
+					bottom: -260px;
+				}
 				&.top-triangle{
-					width: 460px;
-					top: -890px;
-					left: 490px;
+					width: 58vw;
+					height: 69vw;
+					left: 10.8%;
 				}
 				&.bottom-triangle{
-					width: 650px;
-					height: 1100px;
-					top: 310px;
-					left: auto;
-					right: 10%;
+					top: 145px;
+					right: -3%;
 				}
 			}
 		}
@@ -1615,7 +1705,7 @@
 
 				.hero-img{
 					.hero-logo{
-						top: 24.5vw;
+						top: 23.8vw;
 					}
 				}
 			}
@@ -1666,7 +1756,7 @@
 	// About section: "_views/about.scss"
 		.what-we-do {
 			.intro-description{
-				width: 685px;
+				width: 625px;
 				margin-bottom: 95px;
 			}
 
@@ -1675,7 +1765,9 @@
 
 				.bulleted-column{
 					.column-intro{
-						padding-bottom: 25px;
+						.column-icon{
+							width: 60px;
+						}
 
 						.column-title{
 							left: 32px;
@@ -1687,14 +1779,15 @@
 							li:before{
 								width: 10px;
 								height: 10px;
+								margin-top: 8px;
 							}
 						}
 						&.triangle-bullets {
 							li:before{
-								margin-top: 3px;
+								margin-top: 5px;
 								border-left-width: 10px;
-								border-top-width: 10px;
-								border-bottom-width: 10px;
+								border-top-width: 8px;
+								border-bottom-width: 8px;
 							}
 						}
 					}
@@ -1918,9 +2011,9 @@
 					right: 0;
 
 					.triangle-helper{
-						width: auto;
-						left: -88px;
-						bottom: 84px;
+						width: 370px;
+						left: -135px;
+						bottom: -30px;
 					}
 
 					img{

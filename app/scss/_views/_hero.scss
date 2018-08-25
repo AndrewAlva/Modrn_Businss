@@ -41,7 +41,7 @@
 					display: table-cell;
 					vertical-align: middle;
 
-					img{
+					img, svg{
 						display: none;
 					}
 
@@ -364,11 +364,12 @@
 						img{
 							width: 56%;
 						}
+
 						.itunes-svg{
 							width: 60px;
 						}
 						.spotify-svg{
-							width: 60px;
+							width: 67px;
 						}
 						.stitcher-svg{
 							width: 77px;

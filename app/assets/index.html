@@ -61,6 +61,22 @@
                     .hero_bg_triangle{fill:#001765;}
                     .hero_top_triangle{fill:#0a2171;}
                     .hero_bottom_triangle{fill:#0c2681;}
+
+                    .mic-cable{fill:url(#mic-cable-gradient);}
+                    .mic-body{fill:url(#mic-body-gradient);}
+                    .mic-handgrip{fill:url(#mic-handgrip-gradient);}
+                    .mic-ball-shadow{opacity:0.2;mix-blend-mode:overlay;fill:url(#mic-ball-dropshadow-gradient);}
+                    .mic-ball{fill:url(#mic-ball-gradient);}
+
+                    .book-left-hardcover{fill:url(#book-left-hardcover-gradient);}
+                    .book-left-page{fill:url(#book-left-page-gradient);}
+                    .book-right-hardcover{fill:url(#book-right-hardcover-gradient);}
+                    .book-right-page{fill:url(#book-right-page-gradient);}
+
+                    .cam-lens-body{fill:url(#cam-lens-body-gradient);}
+                    .cam-body{fill:url(#cam-body-gradient);}
+                    .cam-screen{fill:url(#cam-screen-gradient);}
+                    .cam-lens-glass{fill:url(#cam-lens-glass-gradient);}
                 </style>
 
                 <filter id="shadowBlur-sm" x="0" y="0">
@@ -71,19 +87,19 @@
                 </filter>
 
                 <filter id="founder_dropshadow" x="-74.62%" y="-41.08%" width="276.12%" height="205.35%">
-                    <feDropShadow dx="14" dy="16" stdDeviation="50" flood-color="#003770" flood-opacity=".5" />
+                    <feDropShadow dx="14" dy="16" stdDeviation="26" flood-color="#003770" flood-opacity=".5" />
                 </filter>
 
                 <filter id="hero_bg_triangle_dropshadow" x="-57" y="-52" width="558" height="850">
-                    <feDropShadow dx="16" dy="18" stdDeviation="30" flood-color="#003" flood-opacity=".3" />
+                    <feDropShadow dx="16" dy="18" stdDeviation="30" flood-color="#001" flood-opacity=".3" />
                 </filter>
 
                 <filter id="hero_top_triangle_dropshadow" x="-110" y="-101" width="358" height="429">
-                    <feDropShadow dx="27" dy="29" stdDeviation="45" flood-color="#003" flood-opacity=".4" />
+                    <feDropShadow dx="27" dy="29" stdDeviation="45" flood-color="#001" flood-opacity=".4" />
                 </filter>
 
                 <filter id="hero_bottom_triangle_dropshadow" x="-110" y="-101" width="509" height="680">
-                    <feDropShadow dx="27" dy="31" stdDeviation="80" flood-color="#003" flood-opacity=".5" />
+                    <feDropShadow dx="27" dy="31" stdDeviation="80" flood-color="#001" flood-opacity=".5" />
                 </filter>
 
                 <linearGradient id="dark_vgradient" x1="19.03" y1="26.95" x2="-15.48" y2="26.95" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00115a"/><stop offset="1" stop-color="#0050e3"/></linearGradient>
@@ -93,8 +109,25 @@
                 <linearGradient id="dark_gradient" x1="30" y1="25.98" x2="30" y2="57.04" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00115a"/><stop offset="1" stop-color="#0050e3"/></linearGradient>
                 <linearGradient id="mid_gradient" x1="30" y1="14.98" x2="30" y2="50.57" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#004be5"/><stop offset="0.64" stop-color="#0093ff"/><stop offset="1" stop-color="#00a2ff"/></linearGradient>
                 <linearGradient id="light_gradient" x1="30" y1="31.99" x2="30" y2="2.79" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2c9cf3"/><stop offset="1" stop-color="#7ed0ff"/></linearGradient>
+
+                <linearGradient id="mic-cable-gradient" x1="-60.93" y1="84.07" x2="-13.39" y2="84.19" gradientTransform="matrix(1, 0.09, -0.09, 1, 69.72, 1.74)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00115a"/><stop offset="0.61" stop-color="#003ed5"/><stop offset="0.72" stop-color="#0042da"/><stop offset="0.85" stop-color="#004fe7"/><stop offset="0.99" stop-color="#0064fd"/><stop offset="0.99" stop-color="#06f"/></linearGradient>
+                <linearGradient id="mic-body-gradient" x1="-19.43" y1="65.72" x2="-43.09" y2="42.9" gradientTransform="matrix(1, 0.09, -0.09, 1, 69.72, 1.74)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2c9cf3"/><stop offset="1" stop-color="#7ed0ff"/></linearGradient>
+                <linearGradient id="mic-handgrip-gradient" x1="-31.11" y1="71.71" x2="-37.46" y2="39.44" gradientTransform="matrix(1, 0.09, -0.09, 1, 69.72, 1.74)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00115a"/><stop offset="1" stop-color="#003ed5"/></linearGradient>
+                <linearGradient id="mic-ball-dropshadow-gradient" x1="-12.2" y1="28.88" x2="-23.48" y2="48.21" xlink:href="#mic-handgrip-gradient"/>
+                <linearGradient id="mic-ball-gradient" x1="-6198.81" y1="-1098.23" x2="-6156.23" y2="-1114.7" gradientTransform="translate(4607.26 -4305.66) rotate(-53.74)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#004be5"/><stop offset="0.64" stop-color="#0093ff"/><stop offset="1" stop-color="#00a2ff"/></linearGradient>
+
+                <linearGradient id="book-left-hardcover-gradient" x1="96.54" y1="41.6" x2="147.18" y2="41.6" gradientTransform="matrix(-1, 0, 0, 1, 110.23, 0)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2245e6"/><stop offset="0.64" stop-color="#2a91ff"/><stop offset="1" stop-color="#26a1ff"/></linearGradient>
+                <linearGradient id="book-left-page-gradient" x1="52.06" y1="39.59" x2="3.16" y2="39.59" gradientTransform="matrix(1, 0, 0, 1, 0, 0)" xlink:href="#book-left-hardcover-gradient"/>
+                <linearGradient id="book-right-hardcover-gradient" x1="70.03" y1="41.61" x2="120.66" y2="41.61" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00145a"/><stop offset="1" stop-color="#1839d6"/></linearGradient>
+                <linearGradient id="book-right-page-gradient" x1="34.16" y1="39.59" x2="81.99" y2="39.59" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00145a"/><stop offset="1" stop-color="#184be4"/></linearGradient>
+
+                <linearGradient id="cam-lens-body-gradient" x1="89.35" y1="31.4" x2="112.86" y2="31.4" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00145a"/><stop offset="1" stop-color="#184be4"/></linearGradient>
+                <linearGradient id="cam-body-gradient" x1="43.07" y1="103.63" x2="45.42" y2="4.7" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00145a"/><stop offset="0.51" stop-color="#184be4"/><stop offset="1" stop-color="#0d6efa"/></linearGradient>
+                <linearGradient id="cam-screen-gradient" x1="16.35" y1="55.36" x2="64.43" y2="-1.41" xlink:href="#cam-lens-body-gradient"/>
+                <linearGradient id="cam-lens-glass-gradient" x1="106.41" y1="59.88" x2="109.69" y2="1.62" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2245e6"/><stop offset="0.64" stop-color="#2a91ff"/><stop offset="1" stop-color="#26a1ff"/></linearGradient>
             </defs>
         </svg>
+
         <section id="loaderWrapper">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40.04">
                 <polygon class="blue" points="24.74 0 0 0 0 24.74 15.28 40.04 40 40.04 40 15.28 24.74 0"/>
@@ -231,21 +264,48 @@
             <ul class="media-triggers">
                 <li id="podcast-trigger" class="media-button single-trigger inview-children-peek">
                     <div class="media-label">
-                        <img src="img/brand/mic-symbol.png" alt="Podcast Symbol">
+                        <!-- <img src="img/brand/mic-symbol.png" alt="Podcast Symbol"> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 84 97.98">
+                            <path class="mic-cable" d="M52,70.47a11.7,11.7,0,0,0-16.46,0L15.91,89.75a5.43,5.43,0,0,1-7.68,0,5.44,5.44,0,0,1,0-7.68L19.06,71.16l-4.7-4.67L3.85,77.08A12.78,12.78,0,0,0,.09,84.39a12.06,12.06,0,0,0,20.5,10l19.56-19.3a5.05,5.05,0,0,1,7.11,0,5,5,0,0,1,1.48,3.6,5.06,5.06,0,0,1-1.59,3.65l-4.21,4.32a1.91,1.91,0,0,0,0,2.7l2,2a1.91,1.91,0,0,0,2.7,0l4.14-4.25A11.66,11.66,0,0,0,52,70.47Z"/>
+                            <path class="mic-body" d="M45.84,21,10.67,61.57a8.23,8.23,0,0,0,.2,11l2.58,2.76a5.65,5.65,0,0,0,7.71.53L63.34,41.36Z"/>
+                            <path class="mic-handgrip" d="M14.24,57.46A17,17,0,0,0,18.91,66a19.27,19.27,0,0,0,8,5.19L47.53,54.3a55.55,55.55,0,0,1-9.85-7.81,26.74,26.74,0,0,1-5.88-9.27Z"/>
+                            <path class="mic-ball-shadow" d="M45.84,21,37.09,31.12a27.09,27.09,0,0,0,17,17.8l9.23-7.56Z"/>
+                            <circle class="mic-ball" cx="61.18" cy="22.82" r="22.82"/>
+                        </svg>
                         <h2>Podcast</h2>
                     </div>
                 </li>
 
                 <li id="book-trigger" class="media-button single-trigger inview-children-peek">
                     <div class="media-label">
-                        <img src="img/brand/book-symbol.png" alt="Book Series Symbol">
+                        <!-- <img src="img/brand/book-symbol.png" alt="Book Series Symbol"> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 79.22">
+                            <path class="book-left-hardcover" d="M2.25,4H31.92c7.41,0,13.53,3.67,15.29,10.53L50,79.18a11.14,11.14,0,0,1-4.7-.83c-5.79-2.6-11.76-4.16-21.72-4.16H2.25A2.25,2.25,0,0,1,0,71.94V6.25A2.25,2.25,0,0,1,2.25,4Z"/>
+                            <path class="book-left-page" d="M50.42,11.14C47.49,3.18,41.76,0,35.45,0H5.78A2.62,2.62,0,0,0,3.16,2.62V67.57a2.62,2.62,0,0,0,2.62,2.62H27.09c10,0,15.58,3.4,19.67,7.88a3.28,3.28,0,0,0,2.35,1.09h1.34Z"/>
+                            <path class="book-right-hardcover" d="M97.75,4H68.08C60.67,4,54.55,7.67,52.79,14.53L50,79.18a13.58,13.58,0,0,0,5.54-.73c5.68-2.56,10.92-4.26,20.88-4.26H97.75A2.25,2.25,0,0,0,100,71.94V6.25A2.25,2.25,0,0,0,97.75,4Z"/>
+                            <path class="book-right-page" d="M95,0H65.34C57.93,0,51.81,3.68,50,10.53V79.18l1.64,0A3.22,3.22,0,0,0,54,78.07c4.09-4.47,9.71-7.88,19.67-7.88H95a2.25,2.25,0,0,0,2.25-2.25V2.25A2.25,2.25,0,0,0,95,0Z"/>
+                            <rect class="white" x="59.91" y="19.02" width="27.49" height="3.11"/>
+                            <rect class="white" x="59.91" y="27.05" width="27.49" height="3.11"/>
+                            <rect class="white" x="59.91" y="35.08" width="27.49" height="3.11"/>
+                            <rect class="white" x="59.91" y="43.11" width="27.49" height="3.11"/>
+                            <rect class="white" x="59.91" y="51.13" width="14.99" height="3.11"/>
+                        </svg>
                         <h2>Book Series</h2>
                     </div>
                 </li>
 
                 <li id="tv-trigger" class="media-button single-trigger inview-children-peek">
                     <div class="media-label">
-                        <img src="img/brand/tv-symbol.png" alt="TV Show Symbol">
+                        <!-- <img src="img/brand/tv-symbol.png" alt="TV Show Symbol"> -->
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 110 62.81">
+                            <path class="cam-lens-body" d="M82.05,43.17l23.48,16.64A2.83,2.83,0,0,0,110,57.5V5.3A2.84,2.84,0,0,0,105.53,3L82.05,19.64Z"/>
+                            <rect class="cam-body" x="0.15" width="89.29" height="62.81" rx="1.13" ry="1.13"/>
+                            <rect class="white" y="16.1" width="89.41" height="5.09"/>
+                            <rect class="cam-screen" x="12.48" y="9.89" width="48.82" height="42.43" rx="0.45" ry="0.45"/>
+                            <circle class="white" cx="73.91" cy="49.4" r="2.98"/>
+                            <circle class="white" cx="73.91" cy="37.66" r="2.98"/>
+                            <path class="cam-lens-glass" d="M106.17,2.67V60.14A2.82,2.82,0,0,0,110,57.5V5.3A2.82,2.82,0,0,0,106.17,2.67Z"/>
+                        </svg>
                         <h2>TV Show</h2>
                     </div>
                 </li>
@@ -830,7 +890,7 @@
                         <div class="description-wrapper listen-inview">
                             <h3 class="founder-name h2 inview-children-peek">Ryan Hicks</h3>
                             <p class="paragraph-box h4 inview-children-peek">
-                                Ryan is the host of  Modrn Businss Podcast and executive producer of the upcoming Modrn Businss TV Show and Book series. Mr. Hicks serves as the VP of Businss Development for Rallio.com, the leading Social Management Platform for franchise chains, and is a franchise as an associate and partner with Jerry Darnell & Associates and resides in Dallas, Texas.
+                                Ryan is the host of  Modrn Businss Podcast and executive producer of the upcoming Modrn Businss TV Show and Book series. Mr. Hicks serves as the VP of Business Development for Rallio.com, the leading Social Management Platform for franchise chains, and is a franchise as an associate and partner with Jerry Darnell & Associates and resides in Dallas, Texas.
                             </p>
                         </div>
 
