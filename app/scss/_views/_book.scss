@@ -18,6 +18,13 @@
 			.book-title{
 				margin-bottom: 15px;
 				color: $dark-titles;
+
+				.arrow-helper{
+					position: absolute;
+					width: 248px;
+					top: -50px;
+					left: -380px;
+				}
 			}
 
 			.book-intro{
@@ -85,6 +92,25 @@
 		}
 	}
 
+// Big desktop
+// Special query for book title arrow helper
+@media screen and (min-width: 1650px){
+	// .book-title{
+	// 	&:before{
+	// 		content: "";
+	// 		position: absolute;
+	// 		display: block;
+	// 		width: 195px;
+	// 		height: 270px;
+	// 		top: 10px;
+	// 		left: -50px;
+	// 		background-image: url(../img/icons/photo-triangle-helper.png);
+	// 		background-size: 100%;
+	// 		background-repeat: no-repeat;
+	// 	}
+	// }
+}
+
 
 // "InView" animation style
 // #section-04 is the "Book" section ID 
@@ -94,10 +120,8 @@
 				opacity: 0;
 				@include translate(-15px, 0);
 
-				&.book-title:before{
+				&.book-title .arrow-helper{
 					@include transitions(1s);
-					top: -15%;
-					left: -67%;
 					opacity: 0;
 					@include translate(-30px, 0);
 				}
@@ -106,7 +130,7 @@
 					opacity: 1;
 					@include translate(0,0);
 
-					&.book-title:before{
+					&.book-title .arrow-helper{
 						@include transitionsDelayed(1s, 1.3s);
 						opacity: 1;
 						@include translate(0,0);
@@ -206,3 +230,4 @@
 				}
 			}
 		}
+

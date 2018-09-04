@@ -1723,7 +1723,8 @@
 					}
 
 					&#podcast-header{
-						margin-top: 10%;
+						margin-top: 12%;
+						margin-bottom: 50px;
 					}
 
 					&#book-header, &#tv-header{
@@ -1732,21 +1733,32 @@
 				}
 
 				.hero-channels{
-					.hero-label{
-						margin-bottom: 20px;
-					}
-
 					.channels-list{
 						&:last-child{
-							margin-top: 20px;
+							margin-top: 25px;
 						}
 
 						.channel{
 							padding: 0;
 
+							&:not(:first-child){margin-left: 60px;}
+
 							img{
 								width: auto;
 							}
+
+							.itunes-svg{width: 94px;}
+							.spotify-svg{
+								width: 102px;
+								top: 8px;
+							}
+							.stitcher-svg{width: 134px;}
+							.soundcloud-svg{width: 160px;}
+							.overcast-svg{width: 103px;}
+
+							.youtube-svg{width: 111px;}
+							.appletv-svg{width: 73px;}
+							.amazon-svg{width: 146px;}
 						}
 					}
 				}
@@ -1764,6 +1776,10 @@
 				width: 1180px;
 
 				.bulleted-column{
+					&:last-child{
+						min-height: 355px;
+					}
+
 					.column-intro{
 						.column-icon{
 							width: 60px;
@@ -2246,26 +2262,5 @@
 			}
 		}
 }
-
-
-// Big desktop
-// Special query for book title arrow helper
-@media screen and (min-width: 1650px){
-	.book-title{
-		&:before{
-			content: "";
-			position: absolute;
-			display: block;
-			width: 195px;
-			height: 270px;
-			top: 10px;
-			left: -50px;
-			background-image: url(../img/icons/photo-triangle-helper.png);
-			background-size: 100%;
-			background-repeat: no-repeat;
-		}
-	}
-}
-
 
 

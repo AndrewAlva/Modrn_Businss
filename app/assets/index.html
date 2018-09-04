@@ -102,6 +102,10 @@
                     <feDropShadow dx="27" dy="31" stdDeviation="80" flood-color="#001" flood-opacity=".5" />
                 </filter>
 
+                <filter id="book_dropshadow" x="-51" y="-45" width="248" height="337">
+                    <feDropShadow dx="14" dy="16" stdDeviation="30" flood-color="#003770" flood-opacity=".3" />
+                </filter>
+
                 <linearGradient id="dark_vgradient" x1="19.03" y1="26.95" x2="-15.48" y2="26.95" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00115a"/><stop offset="1" stop-color="#0050e3"/></linearGradient>
                 <linearGradient id="mid_vgradient" x1="34.71" y1="26.95" x2="0.21" y2="26.95" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#004be5"/><stop offset="0.64" stop-color="#0093ff"/><stop offset="1" stop-color="#00a2ff"/></linearGradient>
                 <linearGradient id="light_vgradient" x1="18.16" y1="26.95" x2="60.42" y2="26.95" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#2c9cf3"/><stop offset="1" stop-color="#7ed0ff"/></linearGradient>
@@ -316,7 +320,7 @@
         <section id="full-wrapper">
             <!-- Hero | Section -->
             <section id="section-01" class="single-section full-height">
-                <div class="triangles-canvas listen-inview">
+                <!-- <div class="triangles-canvas listen-inview">
                         <figure class="inner-triangle bg-triangle inview-children-peek">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 558 850">
                                 <polygon class="hero_bg_triangle" filter="url(#hero_bg_triangle_dropshadow)" points="481 52 481 768 57 410 481 52"/> </polygon>
@@ -334,7 +338,7 @@
                                 <polygon class="hero_bottom_triangle" filter="url(#hero_bottom_triangle_dropshadow)" points="365 101 365 527 110 314 365 101"/>
                             </svg>
                         </figure>
-                </div>
+                </div> -->
 
                 <div class="inner-wrapper">
                     <!-- Add/Remove "media-display" class to shift content -->
@@ -842,10 +846,15 @@
                 <div class="inner-wrapper">
                     <section class="book-release">
                         <div class="book-description-wrapper listen-inview">
-                            <h3 class="book-title h2 inview-children-peek">The Four Rules of Franchise Social Media Management</h3>
+                            <h3 class="book-title h2 inview-children-peek">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 337" class="arrow-helper">
+                                    <polygon class="blue" filter="url(#book_dropshadow)" points="51 45 181 155 51 264 51 45"/>
+                                </svg>
+                                The Four Rules of Franchise Social Media Management
+                            </h3>
 
                             <p class="book-intro h4 inview-children-peek">
-                                There are 2 billion monthly active user on Facebook, Instagram and Twitter. Acording to people now spend on average 2 hours a day on social media. How is your brand tapping into this unprecedented attention? How are you using these platforms to acquire customers, recruit employees, and recruit franchise candidates?
+                                There are 2 billion monthly active users on Facebook, Instagram and Twitter. According to people now spend on average 2 hours a day on social media. How is your brand tapping into this unprecedented attention? How are you using these platforms to acquire customers, recruit employees, and recruit franchise candidates?
                                 <br>This book will give you a playbook for success.
                             </p>
                         </div>
