@@ -1,7 +1,7 @@
 // Parallax init
 	// Doesn't need jQuery either
-	// var scene = document.getElementById('scene');
-	// var parallaxInstance = new Parallax(scene);
+	var heroTrianglesScene = document.getElementById('triangles-parallax');
+	var parallaxTrianglesInstance = new Parallax(heroTrianglesScene);
 
 
 

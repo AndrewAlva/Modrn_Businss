@@ -129,6 +129,13 @@
 		background-color:#00114e;
 		overflow:hidden;
 
+		.parallax-figure{
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0; left: 0;
+		}
+
 		.inner-triangle{
 			position:absolute;
 			margin:auto;
@@ -136,18 +143,18 @@
 			&.bg-triangle{
 				top:-29%;
 				bottom:auto;
-				left:15%;
-				background-image:url(../img/hero_bg/bg_triangle.png);
+				left:18%;
+				background-image:url(../img/hero_bg/bg_triangle_softshadow.png);
 				background-repeat:no-repeat;
 				background-size:100%;
 				width:450px;
 				height:760px
 			}
 			&.top-triangle{
-				top:1%;
-				left:37%;
+				top:10%;
+				left:32%;
 				bottom:0;
-				background-image:url(../img/hero_bg/top_triangle.png);
+				background-image:url(../img/hero_bg/top_triangle_softshadow.png);
 				background-repeat:no-repeat;
 				background-size:100%;
 				width:36.5%;
@@ -155,9 +162,9 @@
 			}
 			&.bottom-triangle{
 				top:0;
-				bottom:-10%;
-				left:62%;
-				background-image:url(../img/hero_bg/bottom_triangle.png);
+				bottom:-23%;
+				left:59%;
+				background-image:url(../img/hero_bg/bottom_triangle_softshadow.png);
 				background-repeat:no-repeat;
 				background-size:100%;
 				width:260px;
