@@ -228,8 +228,10 @@
 					handler: function(direction){
 						if (direction == "down"){
 							turnNavWhite();
+							$('#header-logo-bg').attr('class', 'dark-blue');
 						} else {
 							turnNavBlue();
+							$('#header-logo-bg').attr('class', 'blue');
 						}
 					},
 					offset: 60
@@ -240,8 +242,10 @@
 					handler: function(direction){
 						if (direction == "up"){
 							turnNavWhite();
+							$('#header-logo-bg').attr('class', 'dark-blue');
 						} else {
 							turnNavBlue();
+							$('#header-logo-bg').attr('class', 'blue');
 						}
 					},
 					offset: 60
@@ -252,8 +256,10 @@
 					handler: function(direction){
 						if (direction == "down"){
 							turnNavWhite();
+							$('#header-logo-bg').attr('class', 'dark-blue');
 						} else {
 							turnNavBlue();
+							$('#header-logo-bg').attr('class', 'blue');
 						}
 					},
 					offset: 60

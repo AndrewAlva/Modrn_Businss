@@ -180,26 +180,51 @@
 			}
 		}
 
-		.triangles-canvas {
+		// SVG style
+			// .triangles-canvas {
+			// 	.inner-triangle{
+			// 		&.bg-triangle{
+			// 			top: 0;
+			// 			left: 0;
+			// 			bottom: -140px;
+			// 			width: 115vw;
+			// 			height: 174vw;
+			// 		}
+			// 		&.top-triangle{
+			// 			top: -72%;
+			// 			left: 25%;
+			// 			width: 35vw;
+			// 			height: 41vw;
+			// 		}
+			// 		&.bottom-triangle{
+			// 			bottom: -40%;
+			// 			left: 53%;
+			// 			width: 45vw;
+			// 			height: 60vw;
+			// 		}
+			// 	}
+			// }
+		// END SVG style
+
+		.triangles-canvas{
 			.inner-triangle{
 				&.bg-triangle{
-					top: 0;
-					left: 0;
-					bottom: -140px;
-					width: 115vw;
-					height: 174vw;
+					top:0;
+					left:5%;
+					bottom:-370%;
+					width:100%;
+					height:3097px
 				}
 				&.top-triangle{
-					top: -72%;
-					left: 25%;
-					width: 35vw;
-					height: 41vw;
+					top:0;
+					left:46%;
+					width:24.47%
 				}
 				&.bottom-triangle{
-					bottom: -40%;
-					left: 53%;
-					width: 45vw;
-					height: 60vw;
+					bottom:-225%;
+					left:62%;
+					width:39%;
+					height:1210px
 				}
 			}
 		}
@@ -1012,18 +1037,18 @@
 
 	// Buttons general style: "_default/buttons.scss"
 		.brand-btn{
-			padding: 4px 29px;
+			padding: 0 29px;
 
 			&.md-btn{
 				min-width: 140px;
 
 				&:before{
-					border-bottom-width: 14px;
-					border-right-width: 14px;
+					border-bottom-width: 20px;
+					border-right-width: 20px;
 				}
 				&:after{
-					border-top-width: 14px;
-					border-left-width: 14px;
+					border-top-width: 20px;
+					border-left-width: 20px;
 				}
 			}
 		}
@@ -1062,25 +1087,49 @@
 			max-height: 699px;
 		}
 
-		.triangles-canvas {
+		// SVG style
+			// .triangles-canvas {
+			// 	.inner-triangle{
+			// 		&.bg-triangle{
+			// 			width: 120vw;
+			// 			height: 182vw;
+			// 			bottom: -180px;
+			// 		}
+			// 		&.top-triangle{
+			// 			width: 60vw;
+			// 			height: 71vw;
+			// 			left: 18%;
+			// 		}
+			// 		&.bottom-triangle{
+			// 			width: 60vw;
+			// 			height: 80vw;
+			// 			top: 120px;
+			// 			bottom: auto;
+			// 			left: auto;
+			// 			right: -5%;
+			// 		}
+			// 	}
+			// }
+		// END SVG style
+
+		.triangles-canvas{
 			.inner-triangle{
 				&.bg-triangle{
-					width: 120vw;
-					height: 182vw;
-					bottom: -180px;
+					width:1780px;
+					bottom:-350px
 				}
 				&.top-triangle{
-					width: 60vw;
-					height: 71vw;
-					left: 18%;
+					width:350px;
+					height:680px;
+					top:-500px;
+					left:400px
 				}
 				&.bottom-triangle{
-					width: 60vw;
-					height: 80vw;
-					top: 120px;
-					bottom: auto;
-					left: auto;
-					right: -5%;
+					width:400px;
+					top:300px;
+					bottom:auto;
+					left:auto;
+					right:5%
 				}
 			}
 		}
@@ -1670,21 +1719,52 @@
 		.hero-nav{
 			min-height: 800px;
 			max-height: 1000px;
+
+			.media-triggers{
+				#podcast-trigger svg{
+					width: 4.4vw;
+				}
+				#book-trigger svg{
+					width: 5.2vw;
+				}
+				#tv-trigger svg{
+					width: 5.7vw;
+				}
+			}
 		}
 
-		.triangles-canvas {
+		// SVG style
+			// .triangles-canvas {
+			// 	.inner-triangle{
+			// 		&.bg-triangle{
+			// 			bottom: -260px;
+			// 		}
+			// 		&.top-triangle{
+			// 			width: 58vw;
+			// 			height: 69vw;
+			// 			left: 10.8%;
+			// 		}
+			// 		&.bottom-triangle{
+			// 			top: 145px;
+			// 			right: -3%;
+			// 		}
+			// 	}
+			// }
+		// END SVG style
+
+		.triangles-canvas{
 			.inner-triangle{
-				&.bg-triangle{
-					bottom: -260px;
-				}
 				&.top-triangle{
-					width: 58vw;
-					height: 69vw;
-					left: 10.8%;
+					width:460px;
+					top:-890px;
+					left:490px
 				}
 				&.bottom-triangle{
-					top: 145px;
-					right: -3%;
+					width:650px;
+					height:1100px;
+					top:310px;
+					left:auto;
+					right:10%
 				}
 			}
 		}

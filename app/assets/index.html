@@ -86,25 +86,14 @@
                     <feGaussianBlur in="SourceGraphic" stdDeviation="35" />
                 </filter>
 
-                <filter id="founder_dropshadow" x="-74.62%" y="-41.08%" width="276.12%" height="205.35%">
+                <filter id="founder_arrow_dropshadow" x="-74.62%" y="-41.08%" width="276.12%" height="205.35%">
                     <feDropShadow dx="14" dy="16" stdDeviation="26" flood-color="#003770" flood-opacity=".5" />
                 </filter>
 
-                <filter id="hero_bg_triangle_dropshadow" x="-57" y="-52" width="558" height="850">
-                    <feDropShadow dx="16" dy="18" stdDeviation="30" flood-color="#001" flood-opacity=".3" />
-                </filter>
-
-                <filter id="hero_top_triangle_dropshadow" x="-110" y="-101" width="358" height="429">
-                    <feDropShadow dx="27" dy="29" stdDeviation="45" flood-color="#001" flood-opacity=".4" />
-                </filter>
-
-                <filter id="hero_bottom_triangle_dropshadow" x="-110" y="-101" width="509" height="680">
-                    <feDropShadow dx="27" dy="31" stdDeviation="80" flood-color="#001" flood-opacity=".5" />
-                </filter>
-
-                <filter id="book_dropshadow" x="-51" y="-45" width="248" height="337">
+                <filter id="book_arrow_dropshadow" x="-51" y="-45" width="248" height="337">
                     <feDropShadow dx="14" dy="16" stdDeviation="30" flood-color="#003770" flood-opacity=".3" />
                 </filter>
+
 
                 <linearGradient id="dark_vgradient" x1="19.03" y1="26.95" x2="-15.48" y2="26.95" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00115a"/><stop offset="1" stop-color="#0050e3"/></linearGradient>
                 <linearGradient id="mid_vgradient" x1="34.71" y1="26.95" x2="0.21" y2="26.95" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#004be5"/><stop offset="0.64" stop-color="#0093ff"/><stop offset="1" stop-color="#00a2ff"/></linearGradient>
@@ -144,7 +133,7 @@
             <figure id="home-trigger" class="nav-logo">
                 <a class="nav-click" href="#section-01">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40.04">
-                        <polygon class="blue" points="24.74 0 0 0 0 24.74 15.28 40.04 40 40.04 40 15.28 24.74 0"/>
+                        <polygon id="header-logo-bg" class="blue" points="24.74 0 0 0 0 24.74 15.28 40.04 40 40.04 40 15.28 24.74 0"/>
                         <path class="white" d="M28.38,37.05H19.21V20.8h9a15.17,15.17,0,0,1,6,.91,3.36,3.36,0,0,1,2,3.35v.14a3.16,3.16,0,0,1-.81,2.36,4.84,4.84,0,0,1-2.54,1.1,5.4,5.4,0,0,1,2.86,1.08,3.17,3.17,0,0,1,.9,2.5v.1a4.92,4.92,0,0,1-.24,1.59,3.31,3.31,0,0,1-.71,1.21,5.54,5.54,0,0,1-2.8,1.47A19.34,19.34,0,0,1,28.38,37.05Zm.07-13.24H22.93v3.42h5.65l1.1,0,.95-.07A3,3,0,0,0,32,26.67a1.25,1.25,0,0,0,.49-1.08V25.5a2,2,0,0,0-.1-.68,1.07,1.07,0,0,0-.31-.46,2.43,2.43,0,0,0-1.29-.45A20.61,20.61,0,0,0,28.45,23.81Zm-.28,6.38H22.93v3.67h5c.67,0,1.25,0,1.75,0a9.79,9.79,0,0,0,1.28-.13,2.51,2.51,0,0,0,1.44-.52,1.47,1.47,0,0,0,.38-1.1V32a2,2,0,0,0-.1-.68,1.08,1.08,0,0,0-.31-.48A2.33,2.33,0,0,0,31,30.32,22.2,22.2,0,0,0,28.17,30.19Z"/>
                         <polygon class="white" points="12.91 9.91 5.05 3 3.03 3 3.03 19.24 6.72 19.24 6.72 9.27 12.66 14.49 12.93 14.49 19.15 9.2 19.15 19.24 22.84 19.24 22.84 3 20.83 3 12.91 9.91"/>
                     </svg>
@@ -320,25 +309,11 @@
         <section id="full-wrapper">
             <!-- Hero | Section -->
             <section id="section-01" class="single-section full-height">
-                <!-- <div class="triangles-canvas listen-inview">
-                        <figure class="inner-triangle bg-triangle inview-children-peek">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 558 850">
-                                <polygon class="hero_bg_triangle" filter="url(#hero_bg_triangle_dropshadow)" points="481 52 481 768 57 410 481 52"/> </polygon>
-                            </svg>
-                        </figure>
-                        
-                        <figure class="inner-triangle top-triangle inview-children-peek">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 358 429">
-                                <polygon class="hero_top_triangle" filter="url(#hero_top_triangle_dropshadow)" points="214 101 214 276 110 189 214 101"/></polygon>
-                            </svg>
-                        </figure>
-                        
-                        <figure class="inner-triangle bottom-triangle inview-children-peek">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509 680">
-                                <polygon class="hero_bottom_triangle" filter="url(#hero_bottom_triangle_dropshadow)" points="365 101 365 527 110 314 365 101"/>
-                            </svg>
-                        </figure>
-                </div> -->
+                <div class="triangles-canvas listen-inview">
+                    <figure class="inner-triangle bg-triangle inview-children-peek"></figure>
+                    <figure class="inner-triangle top-triangle inview-children-peek"></figure>
+                    <figure class="inner-triangle bottom-triangle inview-children-peek"></figure>
+                </div>
 
                 <div class="inner-wrapper">
                     <!-- Add/Remove "media-display" class to shift content -->
@@ -848,7 +823,7 @@
                         <div class="book-description-wrapper listen-inview">
                             <h3 class="book-title h2 inview-children-peek">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 248 337" class="arrow-helper">
-                                    <polygon class="blue" filter="url(#book_dropshadow)" points="51 45 181 155 51 264 51 45"/>
+                                    <polygon class="blue" filter="url(#book_arrow_dropshadow)" points="51 45 181 155 51 264 51 45"/>
                                 </svg>
                                 The Four Rules of Franchise Social Media Management
                             </h3>
@@ -890,7 +865,7 @@
                                 <!-- <img class="triangle-helper inview-children-peek" src="img/icons/photo-triangle-helper.png" alt="Blue triangle"> -->
                                 <figure class="triangle-helper inview-children-peek">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 230">
-                                        <polygon class="blue" filter="url(#founder_dropshadow)" points="50 46 117 102 50 158 50 46"/>
+                                        <polygon class="blue" filter="url(#founder_arrow_dropshadow)" points="50 46 117 102 50 158 50 46"/>
                                     </svg>
                                 </figure>
                             </figure>

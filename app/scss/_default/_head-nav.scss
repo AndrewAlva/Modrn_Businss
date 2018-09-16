@@ -24,6 +24,10 @@
 		}
 	}
 
+	#header-logo-bg{
+		@include transitions(.4s);
+	}
+
 	.inner-nav-wrapper{
 		position: relative;
 		// display: inline-block;
