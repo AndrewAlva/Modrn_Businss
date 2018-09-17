@@ -560,7 +560,7 @@
 
 		// Book timer function
 			var timer;
-			var book_date_string = "September 1, 2018 00:00:00";
+			var book_date_string = "November 1, 2018 00:00:00";
 			var book_date = new Date(book_date_string);
 
 			timer = setInterval(function() {
