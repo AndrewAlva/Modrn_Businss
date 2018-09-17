@@ -433,7 +433,7 @@
 				switch(activeHero) {
 					case "podcast":
 						tl.to($('#podcast-hero-content'), 0.6, {autoAlpha: 0, display:'none'})
-							.to($('#default-hero-content'), 0.6, {autoAlpha: 1, display:'block'});
+							.to($('#default-hero-content'), 0.6, {autoAlpha: 1, display:'block', delay: 0.4});
 
 						TweenMax.to($('#podcast-photo'), 0.6, {autoAlpha: 0});
 						break;
@@ -441,7 +441,7 @@
 
 					case "book":
 						tl.to($('#book-hero-content'), 0.6, {autoAlpha: 0, display:'none'})
-							.to($('#default-hero-content'), 0.6, {autoAlpha: 1, display:'block'});
+							.to($('#default-hero-content'), 0.6, {autoAlpha: 1, display:'block', delay: 0.4});
 
 						TweenMax.to($('#book-photo'), 0.6, {autoAlpha: 0});
 						break;
@@ -449,7 +449,7 @@
 
 					case "tv":
 						tl.to($('#tv-hero-content'), 0.6, {autoAlpha: 0, display:'none'})
-							.to($('#default-hero-content'), 0.6, {autoAlpha: 1, display:'block'});
+							.to($('#default-hero-content'), 0.6, {autoAlpha: 1, display:'block', delay: 0.4});
 
 						TweenMax.to($('#tv-photo'), 0.6, {autoAlpha: 0});
 						break;
