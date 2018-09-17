@@ -6,6 +6,9 @@
 	var heroPhotosScene = document.getElementById('hero-parallax-photos');
 	var heroPhotosInstance = new Parallax(heroPhotosScene);
 
+	var contactTrianglesScene = document.getElementById('contact-parallax-triangles');
+	var contactTrianglesInstance = new Parallax(contactTrianglesScene);
+
 
 
 // Switching topics with typewriter effect functions
