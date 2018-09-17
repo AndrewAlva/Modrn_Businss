@@ -6,6 +6,9 @@
 	var heroPhotosScene = document.getElementById('hero-parallax-photos');
 	var heroPhotosInstance = new Parallax(heroPhotosScene);
 
+	var aboutPhraseScene = document.getElementById('phrase-parallax-triangles');
+	var aboutPhraseInstance = new Parallax(aboutPhraseScene);
+
 	var contactTrianglesScene = document.getElementById('contact-parallax-triangles');
 	var contactTrianglesInstance = new Parallax(contactTrianglesScene);
 
