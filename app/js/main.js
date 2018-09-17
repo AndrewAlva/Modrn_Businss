@@ -9,6 +9,9 @@
 	var aboutPhraseScene = document.getElementById('phrase-parallax-triangles');
 	var aboutPhraseInstance = new Parallax(aboutPhraseScene);
 
+	var founderFiguresScene = document.getElementById('founder-parallax-figures');
+	var founderFiguresInstance = new Parallax(founderFiguresScene);
+
 	var contactTrianglesScene = document.getElementById('contact-parallax-triangles');
 	var contactTrianglesInstance = new Parallax(contactTrianglesScene);
 

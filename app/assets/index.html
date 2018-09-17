@@ -325,14 +325,14 @@
                     <!-- Add/Remove "media-display" class to shift content -->
                     <section id="default-hero" class="shifting-hero-content listen-inview">
                         <div id="hero-parallax-photos" class="hero-left-col inview-children-peek">
-                            <div class="parallax-container layer" data-depth="0.2">
+                            <div class="parallax-container layer" data-depth="0.15">
                                 <svg class="triangle-bg" viewBox="0 0 555 880">
                                     <polygon points="20,20 535,460 20,900" style="fill:rgba(0,0,20,0.35);" filter="url(#shadowBlur-sm)" />
                                     <polygon class="blue" points="0,0 515,440 0,880"/>
                                 </svg>
                             </div>
 
-                            <div class="parallax-container layer" data-depth="0.2">
+                            <div class="parallax-container layer" data-depth="0.15">
                                 <figure class="hero-img">
                                     <!-- Default Hero Image -->
                                     <svg id="logo-photo" class="hero-logo hero-media-photos" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 83.25">
@@ -875,14 +875,16 @@
                 <div class="inner-wrapper">
                     <section class="bio-info">
                         <div class="photo-wrapper listen-inview">
-                            <figure class="person-photo inview-children-peek">
+                            <figure id="founder-parallax-figures" class="person-photo inview-children-peek">
                                 <img class="inview-children-peek" src="img/photos/ryan-photo.png" alt="Ryan Hicks">
                                 <!-- <img class="triangle-helper inview-children-peek" src="img/icons/photo-triangle-helper.png" alt="Blue triangle"> -->
-                                <figure class="triangle-helper inview-children-peek">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 230">
-                                        <polygon class="blue" filter="url(#founder_arrow_dropshadow)" points="50 46 117 102 50 158 50 46"/>
-                                    </svg>
-                                </figure>
+                                    <div class="parallax-container layer" data-depth="0.05">
+                                        <figure class="triangle-helper inview-children-peek">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185 230">
+                                                <polygon class="blue" filter="url(#founder_arrow_dropshadow)" points="50 46 117 102 50 158 50 46"/>
+                                            </svg>
+                                        </figure>
+                                    </div>
                             </figure>
                         </div>
 
