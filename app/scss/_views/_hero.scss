@@ -233,7 +233,7 @@
 
 				.hero-mic, .hero-book, .hero-tv{
 					position: absolute;
-					left: 0;
+					left: -10px;
 					@include opacity(0);
 				}
 				.hero-mic{
